@@ -1,0 +1,41 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--bg:#08080A;--purple:#8B6CFF;--teal:#2DD4BF;--card:#111114;--line:#232329;--muted:#8A8A93}
+.frame{width:1080px;height:1920px;background:var(--bg)}
+.glow{position:absolute;left:-300px;top:-160px;width:1000px;height:900px;background:radial-gradient(closest-side,rgba(139,108,255,.22),rgba(139,108,255,0))}
+.glow2{position:absolute;right:-320px;bottom:-200px;width:1000px;height:900px;background:radial-gradient(closest-side,rgba(45,212,191,.14),rgba(45,212,191,0))}
+.brand{position:absolute;left:84px;top:290px;display:flex;align-items:center;gap:14px;color:#fff}
+.brand i{width:16px;height:16px;background:var(--teal);border-radius:4px;display:block;box-shadow:0 0 18px rgba(45,212,191,.7)}
+.tag{position:absolute;right:84px;top:290px;color:var(--muted)}
+.kick{position:absolute;left:84px;top:380px;font-family:Mono;font-size:26px;color:var(--purple)}
+h1{position:absolute;left:84px;right:84px;top:430px;font-family:Sans;font-weight:600;font-size:96px;line-height:1.02;letter-spacing:-.035em;color:#fff}
+h1 span{color:var(--teal)}
+.card{position:absolute;left:84px;right:84px;top:820px;background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden}
+.row{display:flex;gap:28px;padding:30px 36px;border-bottom:1px solid var(--line);align-items:baseline}
+.row:last-child{border-bottom:0}
+.row .k{font-family:Mono;font-size:22px;color:var(--purple);min-width:150px;letter-spacing:.04em}
+.row .v{font-size:31px;line-height:1.35;color:#D4D4D8}
+.why{position:absolute;left:84px;right:84px;top:1340px;padding-left:30px;border-left:3px solid var(--teal)}
+.why .label{color:var(--teal);font-size:20px;margin-bottom:14px}
+.why p{font-size:34px;line-height:1.35;color:#fff;letter-spacing:-.01em}
+.src{position:absolute;left:84px;top:1550px;font-family:Mono;font-size:24px;color:var(--muted)}
+</style></head>
+<body><div class="frame">
+<div class="glow"></div><div class="glow2"></div>
+<div class="brand label"><i></i>SurgeLabs</div>
+<div class="tag label">AI news</div>
+<div class="kick">// 05 Oct 2026</div>
+<h1>Reflection AI unveils <span>Beam</span>, its first open-weight model.</h1>
+<div class="card">
+  <div class="row"><div class="k">built_for</div><div class="v">Reasoning, coding and agentic tasks</div></div>
+  <div class="row"><div class="k">design</div><div class="v">Mixture-of-experts · 1M-token context · text&#8209;only</div></div>
+  <div class="row"><div class="k">claim</div><div class="v">Reflection says it matches rival open models on reasoning with less inference compute</div></div>
+</div>
+<div class="why">
+  <div class="label">What it means for builders</div>
+  <p>Stronger open weights mean more ways to run agents on your own infrastructure, with control over cost and data.</p>
+</div>
+<div class="src">Source: TechCrunch</div>
+<div class="grain"></div>
+</div></body></html>
