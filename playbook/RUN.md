@@ -18,6 +18,14 @@ One feed post per account per day: @homingo.hackdays and @surgelabs_. Read playb
 8. `create_post` (type feed, caption, alt_texts, theme, idempotency key), then `publish_post`. If PROCESSING, check `get_post` after a minute. Never publish twice.
 9. Append a line to `log.md`: date, account, theme, format, permalink. Commit and push.
 
+## Daily story (each account, after its feed post)
+1. Idempotency key: `<hackdays|surgelabs>-story-YYYY-MM-DD`. Skip if `list_posts` already shows it PUBLISHED.
+2. Design a 1080×1920 (9:16) story in the account's visual system: `posts/<account>/YYYY-MM-DD-story-<slug>.html`, render with `node tools/render.js <html> <same-name>.jpg 1080 1920`. Keep the top 250px and bottom 300px free of text (Instagram UI covers them).
+3. What to post: see "Stories" in each account's playbook. Stories must differ from that day's feed post (complement it, don't repeat it).
+4. Check, commit, push, `add_media_from_url`, then `create_post` with type `story`, caption `""`, alt_texts, theme, and the story key; then `publish_post`.
+5. Instagram's API can't add stickers (links, polls, countdowns), so put any call to action in the image itself ("Link in bio", the site URL).
+6. Log it in `log.md` like the feed posts.
+
 ## Never
 - Invent prize amounts, numbers, sponsors, winners, mentor names, clients or quotes.
 - Post the same format or theme on the same account two days running.

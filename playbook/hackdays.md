@@ -35,6 +35,12 @@ terminal boot screen · patch notes / release notes · error page (404, 500) · 
 - Premium, editorial, generous space. No neon, no stock gradients, no emoji in the image, no clip-art.
 - Reference: posts/hackdays/2026-10-06-edition01-announce.html (copy its structure; link ../../tools/fonts.css).
 
+## Stories (one per day, 1080×1920)
+- Until 15 Nov: a daily registration countdown ("<N> days left · registrations close 15 Nov, 11:59 PM IST"), alternating styles: big serif number with the sunrise motif, git-log commit line, terminal progress bar, clock. On 15 Nov: "Last day. Closes tonight 11:59 PM IST."
+- Some days instead: a "new post" teaser pointing at today's feed post, a one-line track spotlight, or a quick builder tip.
+- 16 Nov onward: countdown to the next milestone in the timeline (team formation ends 18 Nov, kick-off 21 Nov, submissions close 6 Dec, demo day 19 Dec).
+- Always include hackathon.homingo.co.in or "Link in bio".
+
 ## Captions
 - Builder-to-builder, confident, witty through developer culture. Short lines. A clear CTA ("Link in bio") during registration.
 - Up to 5 hashtags, from: #HackDays #AIEngineering #Hackathon #AIAgents #LLM #Automation #StudentDevelopers #IndianDevelopers #BuildInPublic

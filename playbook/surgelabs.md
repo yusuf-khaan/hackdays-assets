@@ -28,5 +28,9 @@ pipeline / architecture diagram · news card with source line · "explained in 4
 - Minimal, premium, enterprise. No loud colours, heavy gradients or bulky cards.
 - Reference: posts/surgelabs/2026-10-06-powering-hackdays.html.
 
+## Stories (one per day, 1080×1920)
+- Rotate: "tech in one line" (a verified fact or headline of the day with its source), a teaser of today's feed post ("New post: <topic>"), a mini explainer (one concept, three short lines), or a Hack Days nudge (countdown to 15 Nov 11:59 PM IST, pointing to @homingo.hackdays).
+- Same visual system as the feed (black, teal, purple, tight sans).
+
 ## Captions
 - Clear, expert, calm. Lead with the insight. Up to 5 hashtags, e.g. #SurgeLabs #AIEngineering #AIAgents #Automation #TechNews. Alt text for every image.
