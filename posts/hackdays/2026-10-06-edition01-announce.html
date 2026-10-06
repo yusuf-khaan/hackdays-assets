@@ -1,0 +1,49 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+.top{position:absolute;left:72px;right:72px;top:64px;display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+.top .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--orange);margin-right:14px;box-shadow:0 0 14px rgba(243,112,33,.9);vertical-align:middle;position:relative;top:-2px}
+.term{position:absolute;left:72px;right:72px;top:150px;background:var(--char);border:1px solid var(--line);border-radius:22px;box-shadow:0 40px 80px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.02) inset}
+.bar{height:58px;border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 24px;gap:12px}
+.bar i{width:14px;height:14px;border-radius:50%;display:block}
+.bar span{margin-left:auto;margin-right:auto;font-family:Mono;font-size:18px;color:#5E5E66;transform:translateX(-30px)}
+.code{padding:34px 38px 38px;font-family:Mono;font-size:25px;line-height:1.85;color:#C9C9CF;white-space:pre}
+.p{color:var(--orange)} .ok{color:var(--blue)} .dim{color:#4A4A52} .w{color:#fff}
+.status{color:var(--orange);font-weight:500}
+.cur{display:inline-block;width:15px;height:30px;background:var(--orange);vertical-align:-5px;margin-left:6px;box-shadow:0 0 16px rgba(243,112,33,.8)}
+.sun{position:absolute;right:-150px;bottom:322px;width:560px;height:280px;border-radius:280px 280px 0 0;background:var(--orange);filter:saturate(1.05)}
+.sunglow{position:absolute;right:-330px;bottom:180px;width:920px;height:560px;background:radial-gradient(closest-side,rgba(243,112,33,.33),rgba(243,112,33,0));}
+.horizon{position:absolute;right:-150px;bottom:300px;width:560px;height:14px;border-radius:7px;background:var(--blue);box-shadow:0 0 30px rgba(30,155,234,.75)}
+.head{position:absolute;left:72px;bottom:300px;font-family:Serif;font-size:250px;line-height:.8;letter-spacing:-.02em}
+.head em{color:var(--orange);font-style:italic;display:block;margin-left:6px}
+.sub{position:absolute;left:72px;right:72px;bottom:92px;display:flex;justify-content:space-between;align-items:flex-end;padding-top:0}
+.sub p{font-size:28px;line-height:1.4;color:#D4D4D8;max-width:560px}
+.sub p b{color:#fff;font-weight:600}
+.sub .url{text-align:right;color:var(--muted)}
+.sub .url div{font-family:Mono;font-size:22px;color:#fff;letter-spacing:0;text-transform:none;margin-bottom:12px}
+</style></head>
+<body><div class="frame">
+<div class="sunglow"></div>
+<div class="sun"></div>
+<div class="horizon"></div>
+
+<div class="top label"><div><span class="dot"></span>Hack Days · Edition 01</div><div>AI Engineering Hackathon</div></div>
+
+<div class="term">
+<div class="bar"><i style="background:#F37021"></i><i style="background:#E4E4E7"></i><i style="background:#1E9BEA"></i><span>~/hackdays — zsh</span></div>
+<div class="code"><span class="p">$</span> <span class="w">hackdays --init --edition 01</span>
+<span class="ok">✓</span> tracks <span class="dim">.........</span> agents, automation, llm_apps
+<span class="ok">✓</span> scale <span class="dim">..........</span> national, all of India
+<span class="ok">✓</span> format <span class="dim">.........</span> online · solo or teams of 2–4
+<span class="ok">✓</span> deadline <span class="dim">.......</span> 15 nov · 23:59 ist
+<span class="p">→</span> status: <span class="status">REGISTRATIONS OPEN</span><span class="cur"></span></div>
+</div>
+
+<div class="head">Hack<em>Days.</em></div>
+
+<div class="sub">
+<p><b>India's AI Engineering hackathon.</b><br>Build agents, automations and LLM apps people actually use.</p>
+<div class="url"><div>hackathon.homingo.co.in</div><span class="label" style="font-size:18px">By Homingo</span></div>
+</div>
+<div class="grain"></div>
+</div></body></html>
