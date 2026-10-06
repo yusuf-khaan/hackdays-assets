@@ -29,7 +29,7 @@ pipeline / architecture diagram · news card with source line · "explained in 4
 - Reference: posts/surgelabs/2026-10-06-powering-hackdays.html.
 
 ## Stories (one per day, 1080×1920)
-- Rotate: "tech in one line" (a verified fact or headline of the day with its source), a teaser of today's feed post ("New post: <topic>"), a mini explainer (one concept, three short lines), or a Hack Days nudge (countdown to 15 Nov 11:59 PM IST, pointing to @homingo.hackdays).
+- Rotate widely, never the same category two days running: tech news of the day (verified, named source), world tech affairs and big-tech moves, mini explainers (one concept in three lines), SurgeLabs capabilities (agent systems, backend automation, scalable infrastructure: what they solve), automation ideas for businesses, tool or pattern of the day, myth vs fact, Hack Days promotion and benefits (pointing to @homingo.hackdays), teaser of today's feed post.
 - Same visual system as the feed (black, teal, purple, tight sans).
 
 ## Captions

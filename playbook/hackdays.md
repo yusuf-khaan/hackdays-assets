@@ -36,10 +36,19 @@ terminal boot screen · patch notes / release notes · error page (404, 500) · 
 - Reference: posts/hackdays/2026-10-06-edition01-announce.html (copy its structure; link ../../tools/fonts.css).
 
 ## Stories (one per day, 1080×1920)
-- Until 15 Nov: a daily registration countdown ("<N> days left · registrations close 15 Nov, 11:59 PM IST"), alternating styles: big serif number with the sunrise motif, git-log commit line, terminal progress bar, clock. On 15 Nov: "Last day. Closes tonight 11:59 PM IST."
-- Some days instead: a "new post" teaser pointing at today's feed post, a one-line track spotlight, or a quick builder tip.
-- 16 Nov onward: countdown to the next milestone in the timeline (team formation ends 18 Nov, kick-off 21 Nov, submissions close 6 Dec, demo day 19 Dec).
-- Always include hackathon.homingo.co.in or "Link in bio".
+Stories cover the same wide range as the feed, not one recurring type. Rotate across all of these, never the same category two days running, and check the last 7 days of stories so the mix stays varied:
+- Tech affairs and news: one verified headline of the day (last 48 hours, named source), with a one-line "what this means for builders".
+- Benefits: one reward or perk per story (cash prize pool for the top 3, Recommendation Certificate, verifiable certificate, internships/freelance with SurgeLabs, fast-track interviews, portfolio reviews, alumni community).
+- Promotion: why join, who it's for, "online, all of India, solo or teams of 2–4", registration call to action.
+- Track spotlights: Agents, Automation, LLM apps, with an example of the kind of thing to build.
+- Builder tips: a short practical tip (prompting, agent design, shipping a demo, writing a good README, demo video).
+- Myth vs fact / FAQ: "Do I need a team?", "Is it online?", "Beginners welcome?" (answer only from the facts above).
+- Mentors: the mentor call, how mentoring works (online, async, no fixed hours).
+- Timeline: what happens next and when.
+- Culture and fun: developer humour, "this or that" (no poll sticker; just the visual), late-night building mood, code till dawn.
+- New-post teaser: points to today's feed post.
+- Countdowns: at most twice a week until 8 Nov; daily from 9 Nov to 15 Nov ("<N> days left · closes 15 Nov, 11:59 PM IST"; on 15 Nov "Last day. Closes tonight 11:59 PM IST."). After 15 Nov, occasional countdowns to the next milestone (team formation ends 18 Nov, kick-off 21 Nov, submissions close 6 Dec, demo day 19 Dec).
+Vary the visual format too (terminal, serif statement, card, list, clock, chat bubble, diff). Include hackathon.homingo.co.in or "Link in bio" when the story promotes registration.
 
 ## Captions
 - Builder-to-builder, confident, witty through developer culture. Short lines. A clear CTA ("Link in bio") during registration.
