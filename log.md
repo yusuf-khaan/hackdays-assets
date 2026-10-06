@@ -6,3 +6,5 @@
 - 2026-10-06 · hackdays · story · story-promotion-who-its-for · todo.md checklist · https://www.instagram.com/stories/homingo.hackdays/4001790236639918523
 - 2026-10-06 · hackdays · story2 · story-track-spotlight-agents · chat thread · https://www.instagram.com/stories/homingo.hackdays/4002011194948616172
 - 2026-10-06 · surgelabs · story2 · story-news-reflection-beam (Source: TechCrunch, 5 Oct) · news card · https://www.instagram.com/stories/surgelabs_/4002011270580318011
+- 2026-10-07 · hackdays · poster (extra) · poster-deadline-countdown · hero bot poster · https://www.instagram.com/p/DeKdbcmDEvp/
+- 2026-10-07 · surgelabs · poster (extra) · hackdays-promo-deadline-countdown · hero bot poster · https://www.instagram.com/p/DeKdcvpjOr-/
