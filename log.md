@@ -1,0 +1,4 @@
+# Post log
+
+- 2026-10-06 · hackdays · edition01-announcement · terminal boot screen · https://www.instagram.com/p/DeJMLmKDM_c/
+- 2026-10-06 · surgelabs · hackdays-promo-powering · pipeline diagram · https://www.instagram.com/p/DeJMNJlDKGh/
