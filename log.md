@@ -12,3 +12,5 @@
 - 2026-10-07 · hackdays · story · story-faq · FAQ list (serif) · https://www.instagram.com/stories/homingo.hackdays/4002507416511723054
 - 2026-10-07 · surgelabs · news-agents-blocked-by-websites (Source: TechCrunch, 6 Oct) · comparison table news card · https://www.instagram.com/p/DeLw1-wjHmX/
 - 2026-10-07 · surgelabs · story · story-capability-backend-automation · before/after automation · https://www.instagram.com/stories/surgelabs_/4002507600222246996
+- 2026-10-07 · hackdays · story2 · story-builder-tip-readme · code diff (README.md) · https://www.instagram.com/stories/homingo.hackdays/4002733099494150435
+- 2026-10-07 · surgelabs · story2 · story-myth-vs-fact-agents · myth vs fact rows · https://www.instagram.com/stories/surgelabs_/4002733192288949995
