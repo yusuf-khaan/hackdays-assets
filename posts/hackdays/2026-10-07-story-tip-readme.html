@@ -1,0 +1,47 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+.frame{height:1920px}
+.top{position:absolute;left:84px;right:84px;top:290px;display:flex;justify-content:space-between;color:var(--muted)}
+.top .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--blue);margin-right:14px;box-shadow:0 0 14px rgba(30,155,234,.9);vertical-align:middle;position:relative;top:-2px}
+h1{position:absolute;left:84px;right:84px;top:370px;font-family:Serif;font-weight:400;font-size:132px;line-height:.92;letter-spacing:-.02em}
+h1 em{color:var(--orange);font-style:italic}
+.sub{position:absolute;left:84px;right:84px;top:640px;font-size:32px;line-height:1.4;color:#C9C9CF}
+.diff{position:absolute;left:84px;right:84px;top:760px;background:var(--char);border:1px solid var(--line);border-radius:22px;overflow:hidden;font-family:Mono;font-size:27px;line-height:1.5}
+.bar{display:flex;justify-content:space-between;padding:20px 30px;border-bottom:1px solid var(--line);color:var(--muted);font-size:22px}
+.bar b{color:#fff;font-weight:400}
+.ln{display:flex;padding:3px 30px;white-space:pre}
+.ln i{font-style:normal;width:34px;flex:none}
+.del{background:rgba(220,70,70,.10);color:#9C8B8B}.del i{color:#D9625E}
+.add{background:rgba(30,155,234,.10);color:#fff}.add i{color:var(--blue)}
+.add .h{color:var(--orange)}
+.gap{height:14px}
+.note{position:absolute;left:84px;right:84px;top:1335px;border-left:3px solid var(--orange);padding:6px 0 6px 30px;font-size:29px;line-height:1.42;color:#C9C9CF}
+.note b{color:#fff;font-weight:600}
+.cta{position:absolute;left:84px;right:84px;bottom:340px;display:flex;justify-content:space-between;align-items:center;background:var(--char);border:1px solid var(--line);border-radius:20px;padding:28px 34px}
+.cta div{font-family:Mono;font-size:28px;color:#fff}
+.cta span{color:var(--orange)}
+</style></head>
+<body><div class="frame">
+<div class="top label"><div><span class="dot"></span>Builder tip</div><div>Hack Days · 01</div></div>
+<h1>Your README<br>is your <em>pitch.</em></h1>
+<div class="sub">Write it so someone can get your project in 30 seconds, without asking you a thing.</div>
+<div class="diff">
+  <div class="bar"><b>README.md</b><div>-3 +6</div></div>
+  <div class="gap"></div>
+  <div class="ln del"><i>-</i># my-project</div>
+  <div class="ln del"><i>-</i>TODO: add description</div>
+  <div class="ln del"><i>-</i>run it somehow</div>
+  <div class="gap"></div>
+  <div class="ln add"><i>+</i><span class="h"># inbox-agent</span></div>
+  <div class="ln add"><i>+</i>Clears your inbox, drafts urgent replies.</div>
+  <div class="ln add"><i>+</i><span class="h">## Demo</span>        → video link</div>
+  <div class="ln add"><i>+</i><span class="h">## How it works</span> → plan, tools, check</div>
+  <div class="ln add"><i>+</i><span class="h">## Run it</span>      → npm i &amp;&amp; npm start</div>
+  <div class="ln add"><i>+</i><span class="h">## What's next</span></div>
+  <div class="gap"></div>
+</div>
+<div class="note">Hack Days submissions are a <b>repo, a demo video and a deck</b> (4–6 Dec). Start the README on day one, not at 11:58 PM.</div>
+<div class="cta"><div>hackathon.homingo.co.in</div><div><span>Link in bio →</span></div></div>
+<div class="grain"></div>
+</div></body></html>
