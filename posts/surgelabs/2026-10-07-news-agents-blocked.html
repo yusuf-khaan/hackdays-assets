@@ -1,0 +1,48 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--bg:#08080A;--purple:#8B6CFF;--teal:#2DD4BF;--card:#111114;--line:#232329;--muted:#8A8A93}
+.frame{background:var(--bg)}
+.glow{position:absolute;left:-300px;top:-200px;width:1000px;height:860px;background:radial-gradient(closest-side,rgba(139,108,255,.22),rgba(139,108,255,0))}
+.glow2{position:absolute;right:-320px;bottom:-240px;width:1000px;height:860px;background:radial-gradient(closest-side,rgba(45,212,191,.14),rgba(45,212,191,0))}
+.brand{position:absolute;left:72px;top:68px;display:flex;align-items:center;gap:14px;color:#fff}
+.brand i{width:16px;height:16px;background:var(--teal);border-radius:4px;display:block;box-shadow:0 0 18px rgba(45,212,191,.7)}
+.tag{position:absolute;right:72px;top:68px;color:var(--muted)}
+.kick{position:absolute;left:72px;top:150px;font-family:Mono;font-size:24px;color:var(--purple)}
+h1{position:absolute;left:72px;right:72px;top:196px;font-family:Sans;font-weight:600;font-size:70px;line-height:1.04;letter-spacing:-.035em;color:#fff}
+h1 span{color:var(--teal)}
+.lede{position:absolute;left:72px;right:72px;top:380px;font-size:26px!important;font-size:28px;line-height:1.42;color:#BDBDC4}
+.tbl{position:absolute;left:72px;right:72px;top:500px;background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.hd,.r{display:grid;grid-template-columns:200px 1fr;gap:28px;padding:18px 34px;border-bottom:1px solid var(--line);align-items:baseline}
+.hd{font-family:Mono;font-size:18px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;padding:18px 34px}
+.r:last-child{border-bottom:0}
+.r .k{font-family:Mono;font-size:23px;color:var(--purple)}
+.r .k i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--purple);margin-right:12px;vertical-align:2px;box-shadow:0 0 10px rgba(139,108,255,.8)}
+.r .v{font-size:25px;line-height:1.36;color:#D4D4D8}
+.r.fix .k{color:var(--teal)} .r.fix .k i{background:var(--teal);box-shadow:0 0 10px rgba(45,212,191,.8)}
+.why{position:absolute;left:72px;right:72px;bottom:140px;padding-left:28px;border-left:3px solid var(--teal)}
+.why .label{color:var(--teal);font-size:19px;margin-bottom:12px}
+.why p{font-size:28px;line-height:1.34;color:#fff;letter-spacing:-.01em}
+.src{position:absolute;left:72px;right:72px;bottom:72px;display:flex;justify-content:space-between;font-family:Mono;font-size:21px;color:var(--muted)}
+</style></head>
+<body><div class="frame">
+<div class="glow"></div><div class="glow2"></div>
+<div class="brand label"><i></i>SurgeLabs</div>
+<div class="tag label">AI news</div>
+<div class="kick">// 06 Oct 2026</div>
+<h1>AI agents can shop now.<br>Websites are <span>blocking them.</span></h1>
+<div class="lede">Personal agents like Meta's Muse and ChatGPT's Dots are running into sites that block them. Three different reasons:</div>
+<div class="tbl">
+  <div class="hd"><div>why</div><div>what's happening</div></div>
+  <div class="r"><div class="k"><i></i>on purpose</div><div class="v">Amazon deliberately blocks Muse from making purchases.</div></div>
+  <div class="r"><div class="k"><i></i>by accident</div><div class="v">Walmart's blocks appear tied to human-verification checks, not policy.</div></div>
+  <div class="r"><div class="k"><i></i>pay to enter</div><div class="v">Yelp requires a paid data licence for agent access.</div></div>
+  <div class="r fix"><div class="k"><i></i>the fix?</div><div class="v">Meta, Walmart, Stripe, Cloudflare and others back an open standard for agent-to-business commerce.</div></div>
+</div>
+<div class="why">
+  <div class="label">What it means for builders</div>
+  <p>Don't build agents that only scrape. Plan for blocks, prefer official APIs and open protocols, and always have a fallback to a human.</p>
+</div>
+<div class="src"><div>Source: TechCrunch</div><div>surgelabs</div></div>
+<div class="grain"></div>
+</div></body></html>

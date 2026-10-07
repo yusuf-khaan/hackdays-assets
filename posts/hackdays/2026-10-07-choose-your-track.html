@@ -1,0 +1,82 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+.top{position:absolute;left:72px;right:72px;top:64px;display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+.top .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--orange);margin-right:14px;box-shadow:0 0 14px rgba(243,112,33,.9);vertical-align:middle;position:relative;top:-2px}
+.kick{position:absolute;left:72px;top:150px;font-family:Mono;font-size:24px;color:var(--blue)}
+h1{position:absolute;left:72px;right:72px;top:196px;font-family:Serif;font-weight:400;font-size:132px;line-height:.92;letter-spacing:-.02em}
+h1 em{color:var(--orange);font-style:italic}
+.grid{position:absolute;left:72px;right:72px;top:476px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.c{position:relative;height:620px;background:var(--char);border:1px solid var(--line);border-radius:22px;padding:30px 28px;overflow:hidden}
+.c.sel{border:2px solid var(--orange);box-shadow:0 0 0 6px rgba(243,112,33,.12),0 30px 60px rgba(0,0,0,.5)}
+.c .n{font-family:Mono;font-size:20px;color:#5E5E66}
+.c.sel .n{color:var(--orange)}
+.c .ico{height:150px;margin:26px 0 18px;position:relative}
+.c h2{white-space:nowrap;font-family:Serif;font-weight:400;font-size:52px;line-height:1;letter-spacing:-.01em}
+.c.sel h2 em{color:var(--orange)}
+.c h2 em{font-style:italic}
+.c p{margin-top:16px;font-size:23px;line-height:1.38;color:#BDBDC4}
+.c .stat{position:absolute;left:28px;right:28px;bottom:28px;font-family:Mono;font-size:18px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+.c .stat b{color:var(--blue);font-weight:500}
+.c.sel .stat b{color:var(--orange)}
+.badge{position:absolute;top:26px;right:24px;font-family:Mono;font-size:15px;color:#0A0A0B;background:var(--orange);padding:5px 10px;border-radius:6px;font-weight:500}
+/* icons */
+.sun{position:absolute;left:0;bottom:22px;width:150px;height:75px;border-radius:75px 75px 0 0;background:var(--orange)}
+.hz{position:absolute;left:0;bottom:12px;width:150px;height:8px;border-radius:4px;background:var(--blue);box-shadow:0 0 18px rgba(30,155,234,.8)}
+.node{position:absolute;width:34px;height:34px;border-radius:9px;border:2px solid var(--blue)}
+.wire{position:absolute;height:2px;background:var(--blue);opacity:.7}
+.cursor{position:absolute;left:0;top:40px;font-family:Mono;font-size:64px;color:#fff}
+.cursor i{display:inline-block;width:22px;height:60px;background:var(--blue);vertical-align:-8px;margin-left:8px;box-shadow:0 0 18px rgba(30,155,234,.8)}
+.foot{position:absolute;left:72px;right:72px;bottom:72px;display:flex;justify-content:space-between;align-items:flex-end}
+.foot p{font-size:27px;line-height:1.4;color:#D4D4D8}
+.foot p b{color:#fff;font-weight:600}
+.foot .url{text-align:right;color:var(--muted)}
+.foot .url div{font-family:Mono;font-size:22px;color:#fff;margin-bottom:12px}
+.press{font-family:Mono;font-size:20px;color:var(--muted)}
+.press span{border:1px solid #3A3A40;border-radius:6px;padding:3px 10px;color:#fff;margin-right:6px}
+</style></head>
+<body><div class="frame">
+<div class="top label"><div><span class="dot"></span>Hack Days · Edition 01</div><div>Select your track</div></div>
+<div class="kick">// player 1, choose wisely</div>
+<h1>Choose your<br><em>track.</em></h1>
+
+<div class="grid">
+  <div class="c sel">
+    <div class="badge">P1</div>
+    <div class="n">01</div>
+    <div class="ico"><div class="sun"></div><div class="hz"></div></div>
+    <h2><em>Agents</em></h2>
+    <p>Autonomous agents that plan, use tools and finish real tasks.</p>
+    <div class="stat">class: <b>planner</b><br>skill: tool use</div>
+  </div>
+  <div class="c">
+    <div class="n">02</div>
+    <div class="ico">
+      <div class="node" style="left:0;top:20px"></div>
+      <div class="wire" style="left:34px;top:37px;width:46px"></div>
+      <div class="node" style="left:80px;top:20px"></div>
+      <div class="wire" style="left:96px;top:54px;width:2px;height:46px"></div>
+      <div class="node" style="left:80px;top:100px;background:var(--blue)"></div>
+    </div>
+    <h2><em>Automation</em></h2>
+    <p>Pipelines and workflows that remove busywork from real operations.</p>
+    <div class="stat">class: <b>builder</b><br>skill: workflows</div>
+  </div>
+  <div class="c">
+    <div class="n">03</div>
+    <div class="ico"><div class="cursor">&gt;_<i></i></div></div>
+    <h2><em>LLM apps</em></h2>
+    <p>Products on large language models, shipped for real users.</p>
+    <div class="stat">class: <b>shipper</b><br>skill: product</div>
+  </div>
+</div>
+
+<div class="foot">
+  <div>
+    <p><b>Online · all of India · solo or teams of 2–4.</b><br>Registrations close 15 Nov, 11:59 PM IST.</p>
+    <div class="press" style="margin-top:18px"><span>A</span>to select · <span>↵</span>to register</div>
+  </div>
+  <div class="url"><div>hackathon.homingo.co.in</div><span class="label" style="font-size:18px">Link in bio</span></div>
+</div>
+<div class="grain"></div>
+</div></body></html>

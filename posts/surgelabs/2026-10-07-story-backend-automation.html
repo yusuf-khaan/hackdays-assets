@@ -1,0 +1,53 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--bg:#08080A;--purple:#8B6CFF;--teal:#2DD4BF;--card:#111114;--line:#232329;--muted:#8A8A93}
+.frame{width:1080px;height:1920px;background:var(--bg)}
+.glow{position:absolute;left:-300px;top:-160px;width:1000px;height:900px;background:radial-gradient(closest-side,rgba(139,108,255,.22),rgba(139,108,255,0))}
+.glow2{position:absolute;right:-320px;bottom:-200px;width:1000px;height:900px;background:radial-gradient(closest-side,rgba(45,212,191,.14),rgba(45,212,191,0))}
+.brand{position:absolute;left:84px;top:290px;display:flex;align-items:center;gap:14px;color:#fff}
+.brand i{width:16px;height:16px;background:var(--teal);border-radius:4px;display:block;box-shadow:0 0 18px rgba(45,212,191,.7)}
+.tag{position:absolute;right:84px;top:290px;color:var(--muted)}
+.kick{position:absolute;left:84px;top:380px;font-family:Mono;font-size:26px;color:var(--purple)}
+h1{position:absolute;left:84px;right:84px;top:430px;font-family:Sans;font-weight:600;font-size:100px;line-height:1;letter-spacing:-.035em;color:#fff}
+h1 span{color:var(--teal)}
+.col{position:absolute;left:84px;right:84px}
+.lab{font-family:Mono;font-size:22px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:14px 34px}
+.it{display:flex;gap:22px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line);font-size:31px;line-height:1.3}
+.it:last-child{border-bottom:0}
+.it b{font-family:Mono;font-weight:400;font-size:24px;min-width:28px}
+.before .lab{color:var(--muted)} .before .it{color:#8E8E96} .before .it b{color:#5E5E66}
+.before .it span{text-decoration:line-through;text-decoration-color:rgba(139,108,255,.6)}
+.after .lab{color:var(--teal)} .after .box{border-color:rgba(45,212,191,.35);box-shadow:0 0 0 1px rgba(45,212,191,.08) inset,0 30px 60px rgba(0,0,0,.45)}
+.after .it{color:#fff} .after .it b{color:var(--teal)}
+.arrow{position:absolute;left:84px;top:1060px;font-family:Mono;font-size:26px;color:var(--purple)}
+.foot{position:absolute;left:84px;right:84px;top:1520px;font-size:30px;line-height:1.38;color:#BDBDC4}
+.foot em{font-style:normal;color:var(--teal)}
+</style></head>
+<body><div class="frame">
+<div class="glow"></div><div class="glow2"></div>
+<div class="brand label"><i></i>SurgeLabs</div>
+<div class="tag label">What we do</div>
+<div class="kick">// backend_automation</div>
+<h1>Busywork,<br><span>automated.</span></h1>
+<div class="col before" style="top:680px">
+  <div class="lab">before</div>
+  <div class="box">
+    <div class="it"><b>×</b><span>Copy-paste between tools</span></div>
+    <div class="it"><b>×</b><span>Reports rebuilt by hand</span></div>
+    <div class="it"><b>×</b><span>Failures found by customers</span></div>
+  </div>
+</div>
+<div class="arrow">↓ pipelines · queues · monitoring</div>
+<div class="col after" style="top:1120px">
+  <div class="lab">after</div>
+  <div class="box">
+    <div class="it"><b>✓</b>Systems sync on events</div>
+    <div class="it"><b>✓</b>Reports build themselves</div>
+    <div class="it"><b>✓</b>Retries and alerts, before anyone notices</div>
+  </div>
+</div>
+<div class="foot" style="top:1480px">Backend automation is one of three things we build, alongside <em>agent systems</em> and <em>scalable infrastructure</em>.</div>
+<div class="grain"></div>
+</div></body></html>
