@@ -1,0 +1,54 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+.frame{height:1920px}
+.top{position:absolute;left:84px;right:84px;top:290px;display:flex;justify-content:space-between;color:var(--muted)}
+.top .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--orange);margin-right:14px;box-shadow:0 0 14px rgba(243,112,33,.9);vertical-align:middle;position:relative;top:-2px}
+h1{position:absolute;left:84px;right:84px;top:360px;font-family:Serif;font-weight:400;font-size:124px;line-height:.92;letter-spacing:-.02em}
+h1 em{color:var(--orange);font-style:italic}
+.sub{position:absolute;left:84px;right:84px;top:615px;font-size:32px;line-height:1.4;color:#C9C9CF}
+.sub b{color:#fff;font-weight:600}
+.sec{position:absolute;left:84px;right:84px;font-family:Mono;font-size:22px;color:var(--blue);letter-spacing:.06em}
+.how{position:absolute;left:84px;right:84px;top:800px;display:flex;gap:16px}
+.chip{flex:1;background:var(--char);border:1px solid var(--line);border-radius:18px;padding:26px 24px}
+.chip .k{font-family:Mono;font-size:20px;color:var(--muted)}
+.chip .v{margin-top:10px;font-family:Serif;font-size:44px;line-height:1}
+.nofix{position:absolute;left:84px;right:84px;top:1010px;font-family:Mono;font-size:28px;color:#fff}
+.nofix span{color:var(--orange)}
+.path{position:absolute;left:84px;right:84px;top:1125px}
+.step{display:flex;align-items:center;gap:28px;padding:16px 0;border-top:1px solid var(--line)}
+.step:last-child{border-bottom:1px solid var(--line)}
+.step .n{width:56px;height:56px;border-radius:50%;border:1.5px solid var(--blue);display:flex;align-items:center;justify-content:center;font-family:Mono;font-size:20px;color:var(--blue);flex:none}
+.step.hot .n{border-color:var(--orange);color:var(--ink);background:var(--orange);box-shadow:0 0 22px rgba(243,112,33,.6)}
+.step h3{font-family:Serif;font-weight:400;font-size:54px;line-height:1}
+.step.hot h3 em{color:var(--orange);font-style:italic}
+.step .arr{margin-left:auto;font-family:Mono;font-size:26px;color:var(--muted)}
+.perks{position:absolute;left:84px;right:84px;top:1405px;font-size:27px;line-height:1.45;color:#C9C9CF}
+.perks b{color:#fff;font-weight:600}
+.cta{position:absolute;left:84px;right:84px;bottom:300px;display:flex;justify-content:space-between;align-items:center;background:var(--char);border:1px solid var(--line);border-radius:20px;padding:26px 34px}
+.cta div{font-family:Mono;font-size:28px;color:#fff}
+.cta span{color:var(--orange)}
+.sunglow{position:absolute;right:-260px;top:420px;width:640px;height:380px;background:radial-gradient(closest-side,rgba(243,112,33,.18),rgba(243,112,33,0))}
+</style></head>
+<body><div class="frame">
+<div class="sunglow"></div>
+<div class="top label"><div><span class="dot"></span>Hack Days · Mentors</div><div>Edition 01</div></div>
+<h1>Mentor from<br><em>anywhere.</em></h1>
+<div class="sub">Been building with AI for a while? Help India's next builders <b>ship</b>, on your own schedule.</div>
+<div class="sec" style="top:760px">// how mentoring works</div>
+<div class="how">
+  <div class="chip"><div class="k">01</div><div class="v">Video calls</div></div>
+  <div class="chip"><div class="k">02</div><div class="v">Chat</div></div>
+  <div class="chip"><div class="k">03</div><div class="v">Async feedback</div></div>
+</div>
+<div class="nofix">&gt; fully online. <span>no fixed hours.</span></div>
+<div class="sec" style="top:1085px">// your path</div>
+<div class="path">
+  <div class="step"><div class="n">01</div><h3>Mentor</h3><div class="arr">→</div></div>
+  <div class="step"><div class="n">02</div><h3>Senior Mentor</h3><div class="arr">→</div></div>
+  <div class="step hot"><div class="n">03</div><h3><em>Judge</em></h3><div class="arr"></div></div>
+</div>
+<div class="perks">Recognition: a <b>mentor certificate</b>, a <b>LinkedIn recommendation from SurgeLabs</b> and <b>early access to talent</b>.</div>
+<div class="cta"><div>hackathon.homingo.co.in</div><div><span>Link in bio →</span></div></div>
+<div class="grain"></div>
+</div></body></html>
