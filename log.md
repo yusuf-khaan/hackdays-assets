@@ -18,3 +18,5 @@
 - 2026-10-08 · hackdays · story · story-benefit-surgelabs-opportunities · perks.json code card · https://www.instagram.com/stories/homingo.hackdays/4003234889515980937 (first publish attempt FAILED: Instagram "media not found"; retry of same post succeeded)
 - 2026-10-08 · surgelabs · explainer-rag-4-steps · explained in 4 steps · https://www.instagram.com/p/DeOWLPCDP3P/
 - 2026-10-08 · surgelabs · story · story-news-synthid-detector (Source: TechCrunch, Engadget, 7 Oct) · terminal news card · https://www.instagram.com/stories/surgelabs_/4003234753125604417
+- 2026-10-08 · hackdays · story2 · story-mentors-call · serif statement + level-up path · https://www.instagram.com/stories/homingo.hackdays/4003458809137472345
+- 2026-10-08 · surgelabs · story2 · story-pattern-idempotency-key · glossary card (pattern of the day) · https://www.instagram.com/stories/surgelabs_/4003458900799800183
