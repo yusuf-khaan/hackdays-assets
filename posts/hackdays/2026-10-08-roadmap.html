@@ -1,0 +1,50 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+.top{position:absolute;left:72px;right:72px;top:64px;display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+.top .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--orange);margin-right:14px;box-shadow:0 0 14px rgba(243,112,33,.9);vertical-align:middle;position:relative;top:-2px}
+.head{position:absolute;left:72px;top:140px;font-family:Serif;font-size:118px;line-height:.95;letter-spacing:-.015em}
+.head em{color:var(--orange);font-style:italic}
+.kick{position:absolute;left:72px;top:390px;font-family:Mono;font-size:22px;color:var(--blue)}
+.road{position:absolute;left:72px;right:72px;top:450px}
+.rail{position:absolute;left:23px;top:22px;bottom:22px;width:2px;background:linear-gradient(var(--orange),var(--blue) 55%,#27272A)}
+.st{position:relative;display:flex;align-items:baseline;padding:0 0 0 76px;height:84px}
+.st .n{position:absolute;left:14px;top:12px;width:20px;height:20px;border-radius:50%;background:#0A0A0B;border:2px solid #4A4A52}
+.st.now .n{background:var(--orange);border-color:var(--orange);box-shadow:0 0 18px rgba(243,112,33,.9)}
+.st .d{font-family:Mono;font-size:23px;color:var(--muted);width:250px;flex:none}
+.st .t{font-size:31px;color:#fff;font-weight:500;letter-spacing:-.01em}
+.st .t small{display:block;font-size:21px;color:#8A8A93;font-weight:400;margin-top:6px;letter-spacing:0}
+.st.now .d{color:var(--orange)}
+.st.big .t{font-family:Serif;font-size:44px;font-weight:400;font-style:italic;color:var(--orange)}
+.pill{display:inline-block;margin-left:16px;font-family:Mono;font-size:16px;color:var(--orange);border:1px solid rgba(243,112,33,.5);border-radius:20px;padding:3px 12px;vertical-align:4px;letter-spacing:.06em}
+.sun{position:absolute;right:-110px;bottom:150px;width:300px;height:150px;border-radius:150px 150px 0 0;background:var(--orange)}
+.sunglow{position:absolute;right:-300px;bottom:40px;width:700px;height:420px;background:radial-gradient(closest-side,rgba(243,112,33,.28),rgba(243,112,33,0))}
+.horizon{position:absolute;right:-110px;bottom:138px;width:300px;height:10px;border-radius:5px;background:var(--blue);box-shadow:0 0 26px rgba(30,155,234,.75)}
+.foot{position:absolute;left:72px;right:72px;bottom:64px;display:flex;justify-content:space-between;align-items:flex-end}
+.foot p{font-size:24px;line-height:1.4;color:#D4D4D8}
+.foot p b{color:#fff;font-weight:600}
+.foot .url{font-family:Mono;font-size:22px;color:#fff;text-align:right}
+.foot .url span{display:block;font-family:Sans;font-weight:600;font-size:17px;letter-spacing:.24em;color:var(--muted);margin-top:10px}
+</style></head>
+<body><div class="frame">
+<div class="sunglow"></div><div class="sun"></div><div class="horizon"></div>
+<div class="top label"><div><span class="dot"></span>Hack Days · Edition 01</div><div>The roadmap</div></div>
+<div class="head">From sign-up<br>to <em>demo day.</em></div>
+<div class="kick">// edition 01 · 2026 · all times IST</div>
+<div class="road">
+  <div class="rail"></div>
+  <div class="st now"><i class="n"></i><div class="d">1 Oct – 15 Nov</div><div class="t">Registration <span class="pill">OPEN NOW</span><small>Closes 15 Nov, 11:59 PM IST</small></div></div>
+  <div class="st"><i class="n"></i><div class="d">until 18 Nov</div><div class="t">Team formation<small>Solo, or a team of 2–4</small></div></div>
+  <div class="st"><i class="n"></i><div class="d">21 Nov</div><div class="t">Kick-off<small>Problem statements drop</small></div></div>
+  <div class="st"><i class="n"></i><div class="d">21 Nov – 6 Dec</div><div class="t">Build phase<small>Agents · Automation · LLM apps</small></div></div>
+  <div class="st"><i class="n"></i><div class="d">4 – 6 Dec</div><div class="t">Submissions<small>Repo, demo video, deck</small></div></div>
+  <div class="st"><i class="n"></i><div class="d">7 – 12 Dec</div><div class="t">Shortlisting</div></div>
+  <div class="st big"><i class="n"></i><div class="d">19 Dec</div><div class="t">Finals &amp; online demo day</div></div>
+  <div class="st"><i class="n"></i><div class="d">21 – 31 Dec</div><div class="t">Results &amp; certificates</div></div>
+</div>
+<div class="foot">
+<p><b>India's AI Engineering hackathon.</b><br>Online, open to all of India.</p>
+<div class="url">hackathon.homingo.co.in<span>LINK IN BIO</span></div>
+</div>
+<div class="grain"></div>
+</div></body></html>

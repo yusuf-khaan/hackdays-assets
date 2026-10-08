@@ -1,0 +1,41 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+.frame{height:1920px}
+.top{position:absolute;left:84px;right:84px;top:290px;display:flex;justify-content:space-between;color:var(--muted)}
+.top .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--orange);margin-right:14px;box-shadow:0 0 14px rgba(243,112,33,.9);vertical-align:middle;position:relative;top:-2px}
+.kick{position:absolute;left:84px;top:400px;font-family:Mono;font-size:26px;color:var(--blue)}
+.head{position:absolute;left:84px;right:84px;top:450px;font-family:Serif;font-size:124px;line-height:.93;letter-spacing:-.015em}
+.head em{color:var(--orange);font-style:italic}
+.card{position:absolute;left:84px;right:84px;top:800px;background:var(--char);border:1px solid var(--line);border-radius:26px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.6)}
+.bar{height:62px;border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 26px;gap:12px}
+.bar i{width:14px;height:14px;border-radius:50%;display:block}
+.bar span{margin-left:auto;margin-right:auto;font-family:Mono;font-size:19px;color:#5E5E66;transform:translateX(-30px)}
+.code{padding:38px 40px 42px;font-family:Mono;font-size:27px;line-height:1.7;color:#C9C9CF;white-space:pre}
+.k{color:var(--blue)} .s{color:#fff} .o{color:var(--orange)} .dim{color:#4A4A52}
+.note{position:absolute;left:84px;right:84px;top:1356px;font-size:32px;line-height:1.42;color:#BDBDC4}
+.note b{color:#fff;font-weight:600}
+.cta{position:absolute;left:84px;right:84px;top:1516px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:34px}
+.cta .u{font-family:Mono;font-size:28px;color:#fff}
+.cta .l{color:var(--orange)}
+.sun{position:absolute;right:-90px;top:250px;width:0}
+</style></head>
+<body><div class="frame">
+<div class="top label"><div><span class="dot"></span>Hack Days</div><div>Perk 01</div></div>
+<div class="kick">// beyond the leaderboard</div>
+<div class="head">Ship it here.<br>Get <em>noticed</em><br>there.</div>
+<div class="card">
+<div class="bar"><i style="background:#F37021"></i><i style="background:#E4E4E7"></i><i style="background:#1E9BEA"></i><span>perks.json</span></div>
+<div class="code">{
+  <span class="k">"from"</span>: <span class="s">"SurgeLabs"</span>,
+  <span class="k">"opportunities"</span>: [
+    <span class="o">"internships"</span>,
+    <span class="o">"freelance work"</span>
+  ],
+  <span class="k">"interviews"</span>: <span class="s">"fast-track consideration"</span>
+}</div>
+</div>
+<div class="note"><b>Hack Days is powered by SurgeLabs</b>, an AI and IT consultancy. Build something real, and your project does the talking.</div>
+<div class="cta"><div class="u">hackathon.homingo.co.in</div><div class="label l">Link in bio</div></div>
+<div class="grain"></div>
+</div></body></html>
