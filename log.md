@@ -14,3 +14,7 @@
 - 2026-10-07 · surgelabs · story · story-capability-backend-automation · before/after automation · https://www.instagram.com/stories/surgelabs_/4002507600222246996
 - 2026-10-07 · hackdays · story2 · story-builder-tip-readme · code diff (README.md) · https://www.instagram.com/stories/homingo.hackdays/4002733099494150435
 - 2026-10-07 · surgelabs · story2 · story-myth-vs-fact-agents · myth vs fact rows · https://www.instagram.com/stories/surgelabs_/4002733192288949995
+- 2026-10-08 · hackdays · edition01-roadmap-timeline · timeline / roadmap · https://www.instagram.com/p/DeOWJCYDH5D/
+- 2026-10-08 · hackdays · story · story-benefit-surgelabs-opportunities · perks.json code card · https://www.instagram.com/stories/homingo.hackdays/4003234889515980937 (first publish attempt FAILED: Instagram "media not found"; retry of same post succeeded)
+- 2026-10-08 · surgelabs · explainer-rag-4-steps · explained in 4 steps · https://www.instagram.com/p/DeOWLPCDP3P/
+- 2026-10-08 · surgelabs · story · story-news-synthid-detector (Source: TechCrunch, Engadget, 7 Oct) · terminal news card · https://www.instagram.com/stories/surgelabs_/4003234753125604417
