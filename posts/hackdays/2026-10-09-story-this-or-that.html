@@ -1,0 +1,47 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+.frame{height:1920px}
+.top{position:absolute;left:84px;right:84px;top:290px;display:flex;justify-content:space-between;color:var(--muted)}
+.top .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--orange);margin-right:14px;box-shadow:0 0 14px rgba(243,112,33,.9);vertical-align:middle;position:relative;top:-2px}
+h1{position:absolute;left:84px;right:84px;top:360px;font-family:Serif;font-weight:400;font-size:140px;line-height:.92;letter-spacing:-.02em}
+h1 em{color:var(--orange);font-style:italic}
+.sub{position:absolute;left:84px;right:84px;top:520px;font-size:32px;line-height:1.4;color:#C9C9CF}
+.sub b{color:#fff;font-weight:600}
+.rows{position:absolute;left:84px;right:84px;top:660px}
+.row{display:grid;grid-template-columns:1fr 90px 1fr;align-items:center;height:142px;border-top:1px solid var(--line)}
+.row:last-child{border-bottom:1px solid var(--line)}
+.side{font-family:Serif;font-size:62px;line-height:1;letter-spacing:-.01em}
+.side.r{text-align:right}
+.or{justify-self:center;width:64px;height:64px;border-radius:50%;border:1.5px solid var(--blue);display:flex;align-items:center;justify-content:center;font-family:Mono;font-size:20px;color:var(--blue)}
+.row .k{position:absolute;left:0;font-family:Mono;font-size:18px;color:var(--muted);margin-top:-104px}
+.row{position:relative}
+.row.hot .or{background:var(--orange);border-color:var(--orange);color:var(--ink);box-shadow:0 0 22px rgba(243,112,33,.6)}
+.row.hot .side{font-style:italic;color:var(--orange)}
+.note{position:absolute;left:84px;right:84px;top:1405px;font-family:Mono;font-size:26px;line-height:1.5;color:#fff}
+.note span{color:var(--orange)}
+.note i{font-style:normal;color:var(--blue)}
+.cta{position:absolute;left:84px;right:84px;bottom:300px;display:flex;justify-content:space-between;align-items:center;background:var(--char);border:1px solid var(--line);border-radius:20px;padding:26px 34px}
+.cta div{font-family:Mono;font-size:28px;color:#fff}
+.cta span{color:var(--orange)}
+.sun{position:absolute;right:134px;top:1398px;width:100px;height:50px;border-radius:100px 100px 0 0;background:var(--orange);box-shadow:0 0 60px rgba(243,112,33,.45)}
+.cursor{position:absolute;right:84px;width:200px;top:1448px;height:3px;background:var(--blue);box-shadow:0 0 18px rgba(30,155,234,.9)}
+.sunglow{position:absolute;right:-260px;top:300px;width:640px;height:380px;background:radial-gradient(closest-side,rgba(243,112,33,.18),rgba(243,112,33,0))}
+</style></head>
+<body><div class="frame">
+<div class="sunglow"></div>
+<div class="top label"><div><span class="dot"></span>Hack Days · After hours</div><div>Edition 01</div></div>
+<h1>This <em>or</em> that.</h1>
+<div class="sub"><b>Builder edition.</b> Screenshot it, circle yours, send it to your teammate.</div>
+<div class="rows">
+  <div class="row"><div class="side">Chai</div><div class="or">or</div><div class="side r">Coffee</div></div>
+  <div class="row"><div class="side">Tabs</div><div class="or">or</div><div class="side r">Spaces</div></div>
+  <div class="row"><div class="side">Solo</div><div class="or">or</div><div class="side r">Team of 2–4</div></div>
+  <div class="row"><div class="side">Agents</div><div class="or">or</div><div class="side r">LLM apps</div></div>
+  <div class="row hot"><div class="side">Code till dawn</div><div class="or">&amp;</div><div class="side r">Ship by sunrise</div></div>
+</div>
+<div class="note">&gt; last row isn't a choice. <span>it's the plan.</span><br>&gt; tracks: <i>agents · automation · llm_apps</i></div>
+<div class="sun"></div><div class="cursor"></div>
+<div class="cta"><div>hackathon.homingo.co.in</div><div><span>Link in bio →</span></div></div>
+<div class="grain"></div>
+</div></body></html>
