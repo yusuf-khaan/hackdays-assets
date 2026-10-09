@@ -24,3 +24,5 @@
 - 2026-10-09 · hackdays · story · story-news-gpt6-intelligent-ui (Source: OpenAI, 7 Oct) · chat bubble + interactive UI card · https://www.instagram.com/stories/homingo.hackdays/4003957572331425252
 - 2026-10-09 · surgelabs · news-google-gemini-agent (Source: TechCrunch, 8 Oct) · architecture diagram news card · https://www.instagram.com/p/DeQ6kMaDGXg/
 - 2026-10-09 · surgelabs · story · story-hackdays-rewards · reward tier cards · https://www.instagram.com/stories/surgelabs_/4003957847771319501
+- 2026-10-09 · hackdays · story2 · story-culture-this-or-that · this-or-that split rows · NOT PUBLISHED: Instagram token expired (INSTAGRAM_TOKEN_EXPIRED, account needs reconnect in Instahook → Accounts); draft post 578c0ddf-b4f2-4ce5-a604-e36d70ae8ee0 left in Instahook
+- 2026-10-09 · surgelabs · story2 · story-automation-ideas-business · event→action flow rows · https://www.instagram.com/stories/surgelabs_/4004185012416839176
