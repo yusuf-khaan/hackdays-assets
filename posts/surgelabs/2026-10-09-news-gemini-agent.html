@@ -1,0 +1,60 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--bg:#08080A;--purple:#8B6CFF;--teal:#2DD4BF;--card:#111114;--line:#232329;--muted:#8A8A93}
+.frame{background:var(--bg)}
+.glow{position:absolute;left:-300px;top:-200px;width:1000px;height:860px;background:radial-gradient(closest-side,rgba(139,108,255,.22),rgba(139,108,255,0))}
+.glow2{position:absolute;right:-320px;bottom:-240px;width:1000px;height:860px;background:radial-gradient(closest-side,rgba(45,212,191,.14),rgba(45,212,191,0))}
+.brand{position:absolute;left:72px;top:68px;display:flex;align-items:center;gap:14px;color:#fff}
+.brand i{width:16px;height:16px;background:var(--teal);border-radius:4px;display:block;box-shadow:0 0 18px rgba(45,212,191,.7)}
+.tag{position:absolute;right:72px;top:68px;color:var(--muted)}
+.kick{position:absolute;left:72px;top:150px;font-family:Mono;font-size:24px;color:var(--purple)}
+h1{position:absolute;left:72px;right:72px;top:196px;font-family:Sans;font-weight:600;font-size:68px;line-height:1.04;letter-spacing:-.035em;color:#fff}
+h1 span{color:var(--teal)}
+.lede{position:absolute;left:72px;right:72px;top:360px;font-size:27px;line-height:1.42;color:#BDBDC4}
+.diag{position:absolute;left:72px;right:72px;top:500px;height:470px}
+.node{position:absolute;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 22px}
+.node .h{font-family:Mono;font-size:17px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.node .b{font-size:24px;line-height:1.34;color:#E4E4E7}
+.node .m{font-family:Mono;font-size:20px;line-height:1.6;color:#D4D4D8}
+.in{left:0;top:150px;width:236px}
+.core{left:300px;top:60px;width:336px;border-color:rgba(139,108,255,.6);box-shadow:0 0 40px rgba(139,108,255,.18)}
+.core .h{color:var(--purple)}
+.core .t{font-weight:600;font-size:30px;letter-spacing:-.02em;color:#fff;margin-bottom:12px}
+.tools{left:700px;top:0;width:236px}
+.tools .m span{color:var(--teal)}
+.out{left:300px;top:340px;width:336px}
+.out .h{color:var(--teal)}
+svg{position:absolute;left:0;top:0;overflow:visible}
+.why{position:absolute;left:72px;right:72px;bottom:150px;padding-left:28px;border-left:3px solid var(--teal)}
+.why .label{color:var(--teal);font-size:19px;margin-bottom:12px}
+.why p{font-size:28px;line-height:1.34;color:#fff;letter-spacing:-.01em}
+.src{position:absolute;left:72px;right:72px;bottom:72px;display:flex;justify-content:space-between;font-family:Mono;font-size:21px;color:var(--muted)}
+</style></head>
+<body><div class="frame">
+<div class="glow"></div><div class="glow2"></div>
+<div class="brand label"><i></i>SurgeLabs</div>
+<div class="tag label">AI news</div>
+<div class="kick">// 08 Oct 2026 · Google Cloud</div>
+<h1>Google's Gemini agent<br>takes <span>objectives.</span></h1>
+<div class="lede">Not just instructions. One agent that plans the work, uses skills and tools, and plugs into company systems. Businesses first, consumers later.</div>
+<div class="diag">
+  <svg width="936" height="470">
+    <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8B6CFF"/></marker></defs>
+    <path d="M236 205 H296" stroke="#8B6CFF" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <path d="M636 150 H696" stroke="#8B6CFF" stroke-width="2" fill="none" marker-end="url(#a)" stroke-dasharray="6 6"/>
+    <path d="M696 260 H640" stroke="#8B6CFF" stroke-width="2" fill="none" marker-end="url(#a)" stroke-dasharray="6 6"/>
+    <path d="M468 296 V336" stroke="#2DD4BF" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  </svg>
+  <div class="node in"><div class="h">input</div><div class="b">An objective, not a step-by-step prompt</div></div>
+  <div class="node core"><div class="h">gemini agent</div><div class="t">plan → act → report</div><div class="b">Picks a model per task, or you choose one, including third-party models like Claude</div></div>
+  <div class="node tools"><div class="h">connects to</div><div class="m">Workspace<br>Microsoft 365<br>Slack · Jira<br>Postgres<br>BigQuery<br><span>any MCP server</span></div></div>
+  <div class="node out"><div class="h">you get</div><div class="b">A tasks inbox to follow its reasoning, plus its own Workspace account and audit trail</div></div>
+</div>
+<div class="why">
+  <div class="label">What it means for builders</div>
+  <p>Agents are becoming coworkers with an identity and a log. Expose your systems through clean APIs and MCP, and make every action auditable.</p>
+</div>
+<div class="src"><div>Source: TechCrunch</div><div>surgelabs</div></div>
+<div class="grain"></div>
+</div></body></html>

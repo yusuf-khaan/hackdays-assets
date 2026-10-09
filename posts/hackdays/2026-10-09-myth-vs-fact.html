@@ -1,0 +1,45 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+.top{position:absolute;left:72px;right:72px;top:64px;display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+.top .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--orange);margin-right:14px;box-shadow:0 0 14px rgba(243,112,33,.9);vertical-align:middle;position:relative;top:-2px}
+h1{position:absolute;left:72px;right:72px;top:132px;font-family:Serif;font-weight:400;font-size:116px;line-height:.92;letter-spacing:-.02em}
+h1 em{color:var(--orange);font-style:italic}
+.rows{position:absolute;left:72px;right:72px;top:400px}
+.row{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.row:last-child{border-bottom:1px solid var(--line)}
+.c{padding:26px 0 26px 0}
+.myth{padding-right:34px;border-right:1px solid var(--line)}
+.fact{padding-left:34px}
+.k{font-family:Mono;font-size:18px;letter-spacing:.06em;margin-bottom:12px}
+.myth .k{color:#5E5E66}
+.fact .k{color:var(--blue)}
+.myth p{font-family:Serif;font-size:40px;line-height:1.1;color:#7C7C85;text-decoration:line-through;text-decoration-color:rgba(243,112,33,.85);text-decoration-thickness:3px}
+.fact p{font-size:26px;line-height:1.38;color:#D4D4D8}
+.fact p b{color:#fff;font-weight:600}
+.fact p em{color:var(--orange);font-style:normal;font-weight:600}
+.sun{position:absolute;right:72px;bottom:112px;width:150px;height:75px;border-radius:75px 75px 0 0;background:var(--orange)}
+.sunglow{position:absolute;right:-60px;bottom:20px;width:420px;height:300px;background:radial-gradient(closest-side,rgba(243,112,33,.28),rgba(243,112,33,0))}
+.horizon{position:absolute;right:62px;bottom:100px;width:170px;height:8px;border-radius:4px;background:var(--blue);box-shadow:0 0 22px rgba(30,155,234,.75)}
+.foot{position:absolute;left:72px;bottom:84px;right:300px}
+.foot p{font-size:27px;line-height:1.38;color:#D4D4D8}
+.foot p b{color:#fff;font-weight:600}
+.foot .url{margin-top:14px;font-family:Mono;font-size:22px;color:#fff}
+.foot .url span{color:var(--orange)}
+</style></head>
+<body><div class="frame">
+<div class="sunglow"></div><div class="sun"></div><div class="horizon"></div>
+<div class="top label"><div><span class="dot"></span>Hack Days · Myth vs fact</div><div>Edition 01</div></div>
+<h1>Hackathon myths,<br><em>debugged.</em></h1>
+<div class="rows">
+  <div class="row"><div class="c myth"><div class="k">// myth 01</div><p>“Hackathons are for senior engineers.”</p></div><div class="c fact"><div class="k">// fact</div><p>Hack Days is built for <b>students and early-career developers</b> across India.</p></div></div>
+  <div class="row"><div class="c myth"><div class="k">// myth 02</div><p>“I can’t enter without a team.”</p></div><div class="c fact"><div class="k">// fact</div><p>Go <b>solo</b>, or bring a <b>team of 2–4</b>. Team formation runs until 18 Nov.</p></div></div>
+  <div class="row"><div class="c myth"><div class="k">// myth 03</div><p>“It’s one sleepless night of code.”</p></div><div class="c fact"><div class="k">// fact</div><p>The build phase runs <b style="white-space:nowrap">21 Nov – 6 Dec</b>, fully online, from wherever you code.</p></div></div>
+  <div class="row"><div class="c myth"><div class="k">// myth 04</div><p>“If you don’t win, you leave with nothing.”</p></div><div class="c fact"><div class="k">// fact</div><p>Everyone who submits gets a <b>verifiable certificate</b>. The top 3 share a <em>cash prize pool</em>.</p></div></div>
+</div>
+<div class="foot">
+  <p><b>Registrations close 15 Nov, 11:59 PM IST.</b></p>
+  <div class="url">hackathon.homingo.co.in <span>· link in bio</span></div>
+</div>
+<div class="grain"></div>
+</div></body></html>

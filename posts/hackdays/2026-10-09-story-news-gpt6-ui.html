@@ -1,0 +1,50 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+.frame{height:1920px}
+.top{position:absolute;left:84px;right:84px;top:290px;display:flex;justify-content:space-between;color:var(--muted)}
+.top .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--blue);margin-right:14px;box-shadow:0 0 14px rgba(30,155,234,.9);vertical-align:middle;position:relative;top:-2px}
+h1{position:absolute;left:84px;right:84px;top:360px;font-family:Serif;font-weight:400;font-size:112px;line-height:.94;letter-spacing:-.02em}
+h1 em{color:var(--orange);font-style:italic}
+.lede{position:absolute;left:84px;right:84px;top:610px;font-size:31px;line-height:1.42;color:#C9C9CF}
+.lede b{color:#fff;font-weight:600}
+.chat{position:absolute;left:84px;right:84px;top:790px}
+.you{margin-left:auto;width:max-content;max-width:640px;background:var(--blue);color:#fff;font-size:29px;line-height:1.35;padding:20px 28px;border-radius:28px 28px 6px 28px}
+.ai{margin-top:26px;width:720px;background:var(--char);border:1px solid var(--line);border-radius:28px 28px 28px 6px;padding:28px 30px}
+.ai .t{font-family:Mono;font-size:20px;color:var(--muted);margin-bottom:18px}
+.ai .t b{color:var(--orange);font-weight:500}
+.field{display:flex;justify-content:space-between;align-items:center;border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:12px;font-size:26px;color:#C9C9CF}
+.field span{font-family:Mono;color:#fff}
+.chips{display:flex;gap:10px;margin:6px 0 18px}
+.chip{border:1px solid var(--line);border-radius:999px;padding:10px 20px;font-size:22px;color:#C9C9CF}
+.chip.on{border-color:var(--orange);color:var(--orange)}
+.btn{background:var(--orange);color:#0A0A0B;text-align:center;border-radius:14px;padding:16px;font-weight:600;font-size:25px}
+.why{position:absolute;left:84px;right:84px;top:1330px;padding-left:28px;border-left:3px solid var(--orange)}
+.why .label{color:var(--orange);font-size:19px;margin-bottom:14px}
+.why p{font-family:Serif;font-size:46px;line-height:1.08;color:#fff}
+.why p em{color:var(--blue);font-style:italic}
+.foot{position:absolute;left:84px;right:84px;bottom:320px;display:flex;justify-content:space-between;align-items:flex-end;font-family:Mono;font-size:22px;color:var(--muted)}
+.foot .r{text-align:right;color:#fff}
+.foot .r span{color:var(--orange)}
+</style></head>
+<body><div class="frame">
+<div class="top label"><div><span class="dot"></span>Today in AI · 07 Oct</div><div>Hack Days</div></div>
+<h1>Chat replies just<br>got an <em>interface.</em></h1>
+<div class="lede">OpenAI is rolling out <b>GPT-6</b> in ChatGPT with <b>Intelligent UI</b>: answers can now come as charts, forms, tappable buttons and small working tools.</div>
+<div class="chat">
+  <div class="you">Split ₹2,400 dinner for 4, I paid</div>
+  <div class="ai">
+    <div class="t">reply · <b>interactive</b></div>
+    <div class="field">Total <span>₹2,400</span></div>
+    <div class="chips"><div class="chip">2</div><div class="chip">3</div><div class="chip on">4 people</div></div>
+    <div class="field">Each owes you <span>₹600</span></div>
+    <div class="btn">Send reminders</div>
+  </div>
+</div>
+<div class="why">
+  <div class="label">What it means for builders</div>
+  <p>A wall of text is no longer the bar. Design the <em>output</em>, not just the prompt.</p>
+</div>
+<div class="foot"><div>Source: OpenAI<br>Illustration, not a screenshot</div><div class="r">Build one in the LLM apps track<br><span>Link in bio →</span></div></div>
+<div class="grain"></div>
+</div></body></html>
