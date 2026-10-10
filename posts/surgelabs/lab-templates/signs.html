@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SurgeLabs lab series: diagnostic list template</title>
+<link rel="stylesheet" href="../../../tools/fonts.css">
+<style>
+  :root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--line:#2A2A31}
+  .lab{width:1080px;height:1350px;padding:72px;display:flex;flex-direction:column;gap:44px;background:var(--bg);color:var(--fg);font-family:Sans}
+  .top{display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase}
+  .mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.03em;text-transform:none}
+  .mark span,.t{color:var(--teal)}
+  .p{color:var(--purple)}
+  .pill{border:1px solid #3A3A42;border-radius:999px;padding:10px 18px;color:var(--soft)}
+  h1{font-weight:600;font-size:96px;line-height:.95;letter-spacing:-.04em}
+  .list{display:flex;flex-direction:column;flex-grow:1}
+  .row{display:flex;gap:28px;align-items:baseline;padding:24px 0;border-top:1px solid var(--line)}
+  .row:last-child{border-bottom:1px solid var(--line)}
+  .n{font-family:Mono;font-size:26px;color:var(--purple);width:64px;flex-shrink:0}
+  .row div:last-child{font-size:34px;font-weight:500;line-height:1.25}
+  .cta{display:flex;justify-content:space-between;align-items:center;background:var(--teal);color:var(--bg);padding:30px 36px;border-radius:20px}
+  .cta b{font-size:30px;font-weight:600}
+  .cta span{font-family:Mono;font-size:22px;font-weight:500}
+</style>
+</head>
+<body>
+<div class="lab">
+  <div class="top">
+    <div class="mark">SurgeLabs<span>_</span></div>
+    <div class="pill">Diagnostic · Save this</div>
+  </div>
+  <h1><span class="p">5 signs</span> your business is ready for an <span class="t">AI agent.</span></h1>
+  <div class="list">
+    <div class="row"><div class="n">[01]</div><div>Your team does the same task every single day.</div></div>
+    <div class="row"><div class="n">[02]</div><div>Customers keep asking the same questions.</div></div>
+    <div class="row"><div class="n">[03]</div><div>Data gets copied between tools by hand.</div></div>
+    <div class="row"><div class="n">[04]</div><div>Reports take hours to put together.</div></div>
+    <div class="row"><div class="n">[05]</div><div>Work stops when one person is away.</div></div>
+  </div>
+  <div class="cta"><b>Ticked 3 or more? Let’s build your agent.</b><span>surgeit.co.in</span></div>
+</div>
+</body>
+</html>

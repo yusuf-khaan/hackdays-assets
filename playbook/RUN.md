@@ -30,6 +30,9 @@ For each story:
 5. Instagram's API can't add stickers (links, polls, countdowns), so put any call to action in the image itself ("Link in bio", the site URL).
 6. Log it in `log.md` like the feed posts.
 
+## SurgeLabs lab series
+Three extra @surgelabs_ feed posts a day run on their own schedule: see playbook/surgelabs-lab.md. The midday SurgeLabs feed post should not repeat a format or topic already posted by the lab series that day (check list_posts).
+
 ## Never
 - Invent prize amounts, numbers, sponsors, winners, mentor names, clients or quotes.
 - Post the same format or theme on the same account two days running.

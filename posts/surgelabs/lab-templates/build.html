@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SurgeLabs lab series: module grid template</title>
+<link rel="stylesheet" href="../../../tools/fonts.css">
+<style>
+  :root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--edge:#3A3A42}
+  .lab{width:1080px;height:1350px;padding:72px;display:flex;flex-direction:column;gap:48px;background:var(--bg);color:var(--fg);font-family:Sans}
+  .top{display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase}
+  .mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.03em;text-transform:none}
+  .mark span{color:var(--teal)}
+  .tag{color:var(--muted)}
+  h1{font-weight:600;font-size:112px;line-height:.92;letter-spacing:-.045em}
+  h1 span{color:var(--purple)}
+  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;flex-grow:1}
+  .card{border:2px solid var(--edge);border-radius:24px;padding:36px;display:flex;flex-direction:column;justify-content:space-between}
+  .card.g{background:var(--teal);border-color:var(--teal);color:var(--bg)}
+  .card.p{background:var(--purple);border-color:var(--purple);color:var(--bg)}
+  .code{font-family:Mono;font-size:22px;font-weight:500}
+  .card:not(.g):not(.p) .code.t{color:var(--teal)}
+  .card:not(.g):not(.p) .code.v{color:var(--purple)}
+  .card h2{font-size:44px;font-weight:600;letter-spacing:-.035em;line-height:1;margin-bottom:10px}
+  .card p{font-size:24px;line-height:1.4}
+  .card:not(.g):not(.p) p{color:var(--soft)}
+  .foot{display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:24px}
+  .foot div:first-child{color:var(--soft)}
+  .foot div:last-child{color:var(--teal)}
+</style>
+</head>
+<body>
+<div class="lab">
+  <div class="top">
+    <div class="mark">SurgeLabs<span>_</span></div>
+    <div class="tag">Index · 04 modules</div>
+  </div>
+  <h1>What we build <span>in the lab.</span></h1>
+  <div class="grid">
+    <div class="card g"><div class="code">MOD-01</div><div><h2>AI Agents</h2><p>Autonomous agents that handle real work, end to end.</p></div></div>
+    <div class="card"><div class="code t">MOD-02</div><div><h2>Backend Automation</h2><p>Workflows that run themselves, behind the scenes.</p></div></div>
+    <div class="card"><div class="code v">MOD-03</div><div><h2>Scalable Infrastructure</h2><p>Systems built to grow without breaking.</p></div></div>
+    <div class="card p"><div class="code">MOD-04</div><div><h2>Custom Integrations</h2><p>Your tools, connected and talking to each other.</p></div></div>
+  </div>
+  <div class="foot"><div>$ start --project</div><div>surgeit.co.in →</div></div>
+</div>
+</body>
+</html>

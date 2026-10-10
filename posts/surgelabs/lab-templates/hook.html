@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SurgeLabs lab series: hook template</title>
+<link rel="stylesheet" href="../../../tools/fonts.css">
+<style>
+  :root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--line:#2A2A31;--grid:#17171C}
+  .lab{width:1080px;height:1350px;padding:72px;display:flex;flex-direction:column;gap:56px;background-color:var(--bg);color:var(--fg);font-family:Sans;
+       background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:90px 90px}
+  .top{display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase}
+  .mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.03em;text-transform:none}
+  .mark span,.t{color:var(--teal)}
+  .tag{color:var(--muted)}
+  .comment{font-family:Mono;font-size:24px;color:var(--teal)}
+  h1{font-weight:600;font-size:124px;line-height:.92;letter-spacing:-.045em}
+  .flow{display:flex;align-items:center;margin-top:auto}
+  .node{border:2px solid var(--fg);border-radius:14px;padding:22px 26px;font-family:Mono;font-size:24px}
+  .node.p{background:var(--purple);border-color:var(--purple);color:var(--bg);font-weight:500}
+  .node.g{background:var(--teal);border-color:var(--teal);color:var(--bg);font-weight:500}
+  .wire{flex-grow:1;height:2px;background:var(--fg)}
+  .foot{display:flex;justify-content:space-between;align-items:flex-end;padding-top:36px;border-top:1px solid var(--line)}
+  .foot p{font-size:28px;line-height:1.4;color:var(--soft);max-width:560px}
+  .url{font-family:Mono;font-size:24px;color:var(--teal)}
+</style>
+</head>
+<body>
+<div class="lab">
+  <div class="top">
+    <div class="mark">SurgeLabs<span>_</span></div>
+    <div class="tag">LAB-01 · Agents</div>
+  </div>
+  <div style="margin-top:40px;display:flex;flex-direction:column;gap:28px">
+    <div class="comment">// experiment: autonomy</div>
+    <h1>We build software that works <span class="t">while you sleep.</span></h1>
+  </div>
+  <div class="flow">
+    <div class="node">trigger</div><div class="wire"></div>
+    <div class="node p">ai agent</div><div class="wire"></div>
+    <div class="node g">done ✓</div>
+  </div>
+  <div class="foot">
+    <p>Autonomous agents, backend automation and infrastructure that scales.</p>
+    <div class="url">surgeit.co.in →</div>
+  </div>
+</div>
+</body>
+</html>
