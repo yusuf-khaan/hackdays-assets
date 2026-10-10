@@ -15,7 +15,7 @@ One feed post per account per day: @homingo.hackdays and @surgelabs_. Read playb
 5. Open the JPEG and check it: spelling, dates (registrations close 15 Nov 11:59 PM IST), nothing clipped or overlapping, contrast, no invented facts. Fix and re-render if needed.
 6. Commit both files and `git push` (rebase on origin/main first).
 7. `add_media_from_url` (if it times out right after a push, wait a minute and retry, up to 3 times) with `https://raw.githubusercontent.com/yusuf-khaan/hackdays-assets/main/posts/<account>/<file>.jpg`, tags `[<account>, <theme>]`.
-8. `create_post` (type feed, caption, alt_texts, theme, idempotency key), then `publish_post`. If PROCESSING, check `get_post` after a minute. Never publish twice.
+8. `create_post` (type feed, caption, alt_texts, theme, idempotency key), then `publish_post`. Publish posts one at a time, never several in parallel. If PROCESSING, check `get_post` after a minute. Never publish twice.
 9. Append a line to `log.md`: date, account, theme, format, permalink. Commit and push.
 
 ## Daily stories (two per account per day)
@@ -26,7 +26,7 @@ For each story:
 1. Skip if `list_posts` already shows that key's story PUBLISHED.
 2. Design a 1080×1920 (9:16) story in the account's visual system: `posts/<account>/YYYY-MM-DD-story-<slug>.html`, render with `node tools/render.js <html> <same-name>.jpg 1080 1920`. Keep the top 250px and bottom 300px free of text (Instagram UI covers them).
 3. What to post: see "Stories" in each account's playbook. Stories must differ from that day's feed post (complement it, don't repeat it).
-4. Check, commit, push, `add_media_from_url`, then `create_post` with type `story`, caption `""`, alt_texts, theme, and the story key; then `publish_post`.
+4. Check, commit, push, `add_media_from_url`, then `create_post` with type `story`, caption `""`, alt_texts, theme, and the story key. Wait about 60 seconds after `create_post` (e.g. `sleep 60`), then `publish_post`, one story at a time. If it returns FAILED with Instagram "media not found" (sometimes in another language), check `get_post` to confirm it is not PUBLISHED, wait another minute and call `publish_post` once more on the same post; retrying a FAILED post cannot create a duplicate. If it fails again, log it and report it.
 5. Instagram's API can't add stickers (links, polls, countdowns), so put any call to action in the image itself ("Link in bio", the site URL).
 6. Log it in `log.md` like the feed posts.
 
