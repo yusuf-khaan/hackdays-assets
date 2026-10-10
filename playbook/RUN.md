@@ -20,7 +20,7 @@ Publishing slots and idempotency keys (IST date):
 | @homingo.hackdays | 10:20, 17:20 | `hackdays-c-YYYY-MM-DD-1`, `-2` |
 | Stories (Hack Days + SurgeLabs) | 12:40 (story 1), 19:40 (story 2) | `<hackdays\|surgelabs>-story-YYYY-MM-DD`, `…-story2-YYYY-MM-DD` |
 
-If a carousel can't be ready before its slot, schedule it for the next free hour that day (never two posts on one account within 2 hours) and say so in the report.
+**Late beats missing.** Every planned item must go live the same day. If a carousel can't be ready before its slot, schedule it for the next free time that day (prefer 2 hours apart on one account, but posting closer is better than not posting) and say so in the report. Never skip a slot because it is late.
 
 ## Morning batch run (05:52)
 1. Setup (below). `list_accounts`; stop and report if any account can't publish. `list_posts` (limit 30) for each account: note what already exists today (PUBLISHED, SCHEDULED, PENDING_APPROVAL) by key, and skip those slots.
@@ -35,7 +35,8 @@ If a carousel can't be ready before its slot, schedule it for the next free hour
 7. Send the owner one message: a table of today's 12 scheduled items (time, account, topic, hook), trend posts and experiments, repo improvements, anything that failed.
 
 ## Evening run (17:52)
-1. Setup. `list_posts` for all four accounts. For every post that has published since yesterday, fill `permalink` in its data line; for any FAILED post, retry it once (`publish_post` on the same post) and report it.
+1. Setup. `list_posts` for all four accounts. For every post that has published since yesterday, fill `permalink` in its data line.
+   **Catch-up first:** compare today's keys (tables above) with what exists. For any FAILED post, call `publish_post` on the same post (up to 3 tries, a minute or two apart; retrying a FAILED post can't duplicate it). If it still fails, recreate it with a new key ending `-r` and publish now. For any planned item that doesn't exist at all (the morning run failed or stopped early), make it now and schedule it for the next free time today, even if the slot has passed. Every planned item goes live today; late is fine, missing is not.
 2. Story 2 for Hack Days and SurgeLabs (one helper, or do it yourself): different category and format from that day's story 1 and carousels. Schedule each for 19:40 with `publish_at`.
 3. Trend check (TRENDS.md) for all four accounts. If a strong, fitting signal appeared today: either make a trend carousel and schedule it into a free evening hour (at most 1 per account per day), or replace a not-yet-published scheduled carousel on that account (`cancel_post` it, schedule the trend carousel at the same time with a new key ending `-t`, and move the cancelled topic back to the learnings backlog). Never touch a post that is already PUBLISHED or due within 15 minutes.
 4. Record data and log lines, improve the repo if something got in your way, commit, push, and send the owner a short message.
