@@ -1,0 +1,49 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+.frame{height:1920px}
+.top{position:absolute;left:72px;right:72px;top:270px;display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+.top .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--orange);margin-right:14px;box-shadow:0 0 14px rgba(243,112,33,.9);vertical-align:middle;position:relative;top:-2px}
+.head{position:absolute;left:72px;right:72px;top:350px;font-family:Serif;font-size:156px;line-height:.9;letter-spacing:-.02em;white-space:nowrap}
+.head em{color:var(--orange);font-style:italic}
+.sub{position:absolute;left:72px;top:530px;font-family:Mono;font-size:24px;color:var(--muted);letter-spacing:.02em}
+.log{position:absolute;left:72px;right:72px;top:630px}
+.line{position:absolute;left:150px;top:24px;bottom:24px;width:2px;background:linear-gradient(#27272A,#3A3A40 60%,rgba(243,112,33,.8))}
+.ev{position:relative;display:flex;align-items:baseline;height:134px}
+.ev .t{width:150px;font-family:Mono;font-size:30px;color:#5E5E66;padding-top:8px}
+.ev .d{position:absolute;left:142px;top:20px;width:18px;height:18px;border-radius:50%;background:#0A0A0B;border:2px solid #4A4A52}
+.ev .x{padding-left:62px;font-family:Serif;font-size:56px;line-height:1.05;color:#E4E4E7}
+.ev .x small{display:block;font-family:Sans;font-size:22px;color:var(--muted);margin-top:8px;letter-spacing:.01em}
+.ev.code .x{font-family:Mono;font-size:40px;color:var(--blue)}
+.ev.last .t{color:var(--orange)}
+.ev.last .d{background:var(--orange);border-color:var(--orange);box-shadow:0 0 22px rgba(243,112,33,.9)}
+.ev.last .x{color:#fff} .ev.last .x em{color:var(--orange);font-style:italic}
+.ev:nth-child(3) .d{border-color:#6A6A72} .ev:nth-child(4) .d{border-color:#8A8A93}
+.ev.code .d{border-color:var(--blue);box-shadow:0 0 14px rgba(30,155,234,.7)}
+.sunglow{position:absolute;left:50%;margin-left:-560px;bottom:200px;width:1120px;height:560px;background:radial-gradient(closest-side,rgba(243,112,33,.28),rgba(243,112,33,0))}
+.sun{position:absolute;left:50%;margin-left:-170px;bottom:452px;width:340px;height:170px;border-radius:170px 170px 0 0;background:var(--orange)}
+.horizon{position:absolute;left:72px;right:72px;bottom:442px;height:10px;border-radius:5px;background:var(--blue);box-shadow:0 0 28px rgba(30,155,234,.75)}
+.cta{position:absolute;left:72px;right:72px;bottom:310px;display:flex;justify-content:space-between;align-items:flex-end}
+.cta .label{color:var(--muted);font-size:19px;display:block;margin-bottom:14px}
+.cta .u{font-family:Mono;font-size:28px;color:#fff}
+.cta .r{font-family:Serif;font-style:italic;font-size:44px;color:#fff}
+</style></head>
+<body><div class="frame">
+<div class="sunglow"></div><div class="sun"></div><div class="horizon"></div>
+<div class="top label"><div><span class="dot"></span>Night build</div><div>Hack Days · Ed. 01</div></div>
+
+<div class="head">Code till <em>dawn.</em></div>
+<div class="sub">// a typical hackathon night, roughly</div>
+
+<div class="log">
+<div class="line"></div>
+<div class="ev"><div class="t">22:00</div><div class="d"></div><div class="x">"What if we just…"<small>The idea lands in the group chat</small></div></div>
+<div class="ev"><div class="t">00:40</div><div class="d"></div><div class="x">Works on my machine.<small>Only on my machine</small></div></div>
+<div class="ev"><div class="t">02:47</div><div class="d"></div><div class="x">The bug was a comma.<small>Two hours. One comma.</small></div></div>
+<div class="ev code"><div class="t">05:58</div><div class="d"></div><div class="x">git push origin main<small style="font-family:Sans">Demo runs end to end</small></div></div>
+<div class="ev last"><div class="t">06:00</div><div class="d"></div><div class="x">Ship by <em>sunrise.</em></div></div>
+</div>
+
+<div class="cta"><div><span class="label">Registrations open · Link in bio</span><div class="u">hackathon.homingo.co.in</div></div></div>
+<div class="grain"></div>
+</div></body></html>
