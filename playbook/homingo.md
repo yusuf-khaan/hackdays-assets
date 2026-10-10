@@ -43,5 +43,12 @@ Lucknow news this week (events, metro, new openings, festivals, weather that aff
 - Up to 8 hashtags from: #lucknow #lucknowcity #lucknowrentals #pginlucknow #roomforrent #lucknowstudents #secondhand #buyandsell #gomtinagar #aliganj #hazratganj #homingo
 - Alt text for every slide.
 
-## Stories
-None scheduled for this account yet. Carousels only.
+## Stories (two per day, 1080×1920)
+Story 1 (13:22) and story 2 (20:22). Rotate widely; never the same type two days running:
+- Tip of the day: one practical tip for renters, buyers or sellers.
+- Red flag: one warning sign when renting a room or buying second-hand.
+- How to in the app: one step on one drawn screen (search, filters, chat or call, Sell, My Ads), sample data only.
+- Lucknow moment: a verified local fact, place, food or event this week.
+- Teaser of today's carousel: the hook and "on our feed now".
+- Download nudge: why Homingo, with "Link in bio".
+Same Homingo visual system as the feed. Never show fake listings, prices or reviews as real. Keep the top 250px and bottom 300px free of text.

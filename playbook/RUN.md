@@ -3,12 +3,13 @@
 Four Instagram accounts, published through the Instahook connector by scheduled runs. Every feed post is a carousel. Stories run on @homingo.hackdays and @surgelabs_.
 
 ## How the day runs (IST)
-Two scheduled runs a day make everything and schedule it in Instahook with `publish_at`; Instahook publishes at the slot time.
+Scheduled runs make everything and schedule it in Instahook with `publish_at`; Instahook publishes at the slot time.
 
 | Run | When | Makes |
 |---|---|---|
-| Morning batch | 05:52 | all 10 carousels + story 1 on Hack Days and SurgeLabs, scheduled for today's slots |
-| Evening run | 17:52 | story 2 on Hack Days and SurgeLabs + trend check (may add or swap a carousel) |
+| Morning batch | 04:52 | all 10 carousels + story 1 on all four accounts, scheduled for today's slots |
+| Morning repair | 07:22 | checks the morning batch and repairs everything; all repairs done before 11:00 |
+| Evening run | 17:52 | catch-up, story 2 on all four accounts, trend check (may add or swap a carousel) |
 | Weekly review | Sunday 23:07 | learning + system improvement |
 
 Publishing slots and idempotency keys (IST date):
@@ -18,26 +19,38 @@ Publishing slots and idempotency keys (IST date):
 | @surgelabs_ | 09:12, 18:12 | `surgelabs-c-YYYY-MM-DD-1`, `-2` |
 | @homingo._ | 09:52, 18:52 | `homingo-c-YYYY-MM-DD-1`, `-2` |
 | @homingo.hackdays | 10:20, 17:20 | `hackdays-c-YYYY-MM-DD-1`, `-2` |
-| Stories (Hack Days + SurgeLabs) | 12:40 (story 1), 19:40 (story 2) | `<hackdays\|surgelabs>-story-YYYY-MM-DD`, `…-story2-YYYY-MM-DD` |
+| Stories: Hack Days + SurgeLabs | 12:40 (story 1), 19:40 (story 2) | `<hackdays\|surgelabs>-story-YYYY-MM-DD`, `…-story2-YYYY-MM-DD` |
+| Stories: Verse | 14:47 (story 1), 21:47 (story 2) | `verse-story-YYYY-MM-DD`, `verse-story2-YYYY-MM-DD` |
+| Stories: Homingo | 13:22 (story 1), 20:22 (story 2) | `homingo-story-YYYY-MM-DD`, `homingo-story2-YYYY-MM-DD` |
+
+A day is 10 carousels and 8 stories: the morning batch makes 14 items, the evening run makes 4.
 
 **Late beats missing.** Every planned item must go live the same day. If a carousel can't be ready before its slot, schedule it for the next free time that day (prefer 2 hours apart on one account, but posting closer is better than not posting) and say so in the report. Never skip a slot because it is late.
 
-## Morning batch run (05:52)
+## Morning batch run (04:52)
 1. Setup (below). `list_accounts`; stop and report if any account can't publish. `list_posts` (limit 30) for each account: note what already exists today (PUBLISHED, SCHEDULED, PENDING_APPROVAL) by key, and skip those slots.
 2. Read FEEDBACK.md, this file, CAROUSEL.md, TRENDS.md and LEARNING.md once yourself.
 3. Fill in metrics if an insights tool exists (LEARNING.md), then pull, so helpers start from fresh data.
 4. Hand the creative work to helpers (the Agent tool), each with a fresh context, at most 3 running at once:
-   - Verse A: verse slots 1 and 2 · Verse B: verse slots 3 and 4 (tell B which categories A is doing, so all 4 categories are covered once)
-   - SurgeLabs: both carousels + story 1 · Hack Days: both carousels + story 1 · Homingo: both carousels
+   - Verse A: verse slots 1 and 2 · Verse B: verse slots 3 and 4 + verse story 1 (tell B which categories A is doing, so all 4 categories are covered once)
+   - SurgeLabs: both carousels + story 1 · Hack Days: both carousels + story 1 · Homingo: both carousels + story 1
    Each helper: reads its account playbook, learnings/<handle>.md and the end of data/<handle>.jsonl; checks trends; decides topics (different categories, nothing repeated); does the research, hooks, design and rendering exactly as "Making one carousel" says; writes only its own files (decks, JPEGs, and edits to its own learnings file); never runs git and never calls Instahook. It returns, per post: deck path, slide JPEG paths in order, caption, alt text per slide, theme, the full data line (without post_id/permalink), and any repo improvement it made or suggests.
 5. You, the lead: check each returned post (open the contact sheet; reject and send back anything with a WARN, a weak hook below the gate, an unsourced fact or a repeated topic). Then commit all files, `git pull --rebase`, push. For each post: `add_media_from_url` per slide, `create_post` with `publish_at` = its slot, type `carousel` (or `story`, caption ""), alt texts, theme, key. Check the result is SCHEDULED (or PENDING_APPROVAL, which you report).
 6. Append the data lines (with post_id; permalink is filled by the evening run once published) and log.md lines. Apply small repo improvements the helpers suggested if they are safe; note them in the learnings changelog. Commit, pull --rebase, push.
-7. Send the owner one message: a table of today's 12 scheduled items (time, account, topic, hook), trend posts and experiments, repo improvements, anything that failed.
+7. Send the owner one message: a table of today's 14 scheduled items (time, account, topic, hook), trend posts and experiments, repo improvements, anything that failed.
+
+## Morning repair run (07:22)
+Its one job: by 11:00 every item the morning batch should have scheduled for today exists, is good, and is SCHEDULED or PUBLISHED. Work in order of slot time, earliest first.
+1. Setup. `list_posts` for all four accounts; compare with today's keys (tables above): 10 carousels and 4 story 1s.
+2. For each item: missing → make it (helpers allowed, as in the morning batch) and schedule it at its slot, or as soon as possible if the slot is passed or too close. FAILED → `publish_post` on the same post (up to 3 tries); if it still fails, recreate with a key ending `-r` and publish now. PENDING_APPROVAL → report to the owner at once. A single-image feed post or a post that breaks a Facts or Never rule → cancel it if not yet published and replace it.
+3. Quality pass: open the contact sheets of today's decks (posts/*/YYYY-MM-DD-*-sheet.jpg if present, or render them). Fix anything clearly broken (typo, clipped text, wrong fact) before its slot by cancelling and rescheduling a corrected version with a key ending `-f`. Never touch a PUBLISHED post or one due within 15 minutes.
+4. Find why the morning batch failed or fell short, and fix the cause (playbook, tool, or a note for the owner if it is the scheduled task prompt). Record data and log lines for anything you made. Commit, push.
+5. Message the owner only if something was missing, failed or fixed, or needs them; say what and when it goes out. If all was fine, a one-line "all 14 morning items scheduled" is enough.
 
 ## Evening run (17:52)
 1. Setup. `list_posts` for all four accounts. For every post that has published since yesterday, fill `permalink` in its data line.
    **Catch-up first:** compare today's keys (tables above) with what exists. For any FAILED post, call `publish_post` on the same post (up to 3 tries, a minute or two apart; retrying a FAILED post can't duplicate it). If it still fails, recreate it with a new key ending `-r` and publish now. For any planned item that doesn't exist at all (the morning run failed or stopped early), make it now and schedule it for the next free time today, even if the slot has passed. Every planned item goes live today; late is fine, missing is not.
-2. Story 2 for Hack Days and SurgeLabs (one helper, or do it yourself): different category and format from that day's story 1 and carousels. Schedule each for 19:40 with `publish_at`.
+2. Story 2 on all four accounts (helpers allowed): different category and format from that day's story 1 and carousels. Schedule at each account's story 2 slot with `publish_at`.
 3. Trend check (TRENDS.md) for all four accounts. If a strong, fitting signal appeared today: either make a trend carousel and schedule it into a free evening hour (at most 1 per account per day), or replace a not-yet-published scheduled carousel on that account (`cancel_post` it, schedule the trend carousel at the same time with a new key ending `-t`, and move the cancelled topic back to the learnings backlog). Never touch a post that is already PUBLISHED or due within 15 minutes.
 4. Record data and log lines, improve the repo if something got in your way, commit, push, and send the owner a short message.
 
@@ -69,8 +82,8 @@ The steps below describe one carousel end to end. In the batch runs, helpers do 
 12. Improve the system if something got in your way (LEARNING.md "improve"). Commit, pull --rebase, push.
 13. Send the owner a short message: permalink, category and topic, the hook, whether it was a trend or experiment post, any repo improvement, and anything that failed.
 
-## Making a story (@homingo.hackdays and @surgelabs_)
-- Story 1 (made in the morning batch, scheduled 12:40): key `<hackdays|surgelabs>-story-YYYY-MM-DD`. Story 2 (made in the evening run, scheduled 19:40): key `<hackdays|surgelabs>-story2-YYYY-MM-DD`.
+## Making a story (all four accounts)
+- Story 1 is made in the morning batch, story 2 in the evening run; slots and keys are in the tables above.
 - Skip a story whose key is already PUBLISHED.
 - What to post: "Stories" in each account playbook. A strong trend (TRENDS.md) can be a story too. Stories complement that day's carousels (tease them, add a fact, ask a question); never repeat them.
 - Design 1080×1920: `posts/<folder>/YYYY-MM-DD-story-<slug>.html` (or `story2`), render with `node tools/render.js <html> <same-name>.jpg 1080 1920`. Keep the top 250px and bottom 300px free of text. Instagram's API can't add stickers, so put calls to action in the image ("Link in bio", the site).

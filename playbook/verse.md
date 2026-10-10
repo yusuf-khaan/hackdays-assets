@@ -46,5 +46,13 @@ A premium museum-and-atlas feel. One system across categories, with a category p
 - Up to 8 specific hashtags (for example #indianhistory #ancientindia #isro #spacefacts #mahabharata #ramayana #chinesehistory #silkroad #didyouknow).
 - Alt text for every slide.
 
-## Stories
-None scheduled for this account yet. Carousels only.
+## Stories (two per day, 1080×1920)
+Story 1 (14:47) and story 2 (21:47). Rotate widely; never the same type two days running:
+- Teaser of today's carousel: the hook and "Swipe today's post on our feed" (no stickers; write it in the image).
+- On this day: one verified event that happened on today's date in history, science or space.
+- Tonight's sky: what's visible from India tonight (planets, Moon phase, meteor shower), from a reputable source.
+- One-frame wonder: a single astonishing verified fact with one strong illustration.
+- The epic says: a 2–3 line moment from the Ramayana, Mahabharata or Puranas, framed as the text says it.
+- Word origin: a word we still use that comes from Sanskrit, Persian, Chinese or an ancient trade route.
+- Map moment: a trade route, empire or mission path drawn as a map.
+Same visual system as the feed (category palettes). Sources in alt text when a fact is stated. Keep the top 250px and bottom 300px free of text.
