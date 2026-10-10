@@ -1,17 +1,11 @@
-# @surgelabs_ lab series (3 feed posts a day)
+# @surgelabs_ lab look (visual and voice direction for every SurgeLabs carousel)
 
-The owner approved this look on 2026-10-10. It runs alongside the daily run in RUN.md and does not replace it. Read playbook/surgelabs.md first: its facts and rules ("What the account is for", "Rules") apply here too.
-
-## Schedule and keys
-- Three runs a day at 09:12, 15:12 and 21:12 IST. Each run publishes exactly ONE lab post.
-- Slot by IST hour of the run: before 12:00 → 1, 12:00–17:59 → 2, 18:00 or later → 3.
-- Idempotency key: `surgelabs-lab-YYYY-MM-DD-<slot>` (IST date). If that key is already PUBLISHED, stop: never publish twice.
-- Account: find the account whose handle is `surgelabs_` with `list_accounts` (use its id; don't rely on a stored id).
+The owner approved this look on 2026-10-10. Since 2026-10-11 the separate 3-a-day lab series is replaced by 2 carousels a day (see playbook/surgelabs.md and RUN.md); this file now sets the look and voice for those carousels. Read playbook/surgelabs.md first: its facts and rules apply here too.
 
 ## What the series is
 SurgeLabs presented as an engineering lab, not an agency: building, experiments, systems. Teach and show how things work; invite businesses to build with us.
 
-## Formats (a starting list, not a limit: invent new formats too; rotate; check list_posts and log.md, never the same format twice in one day or two lab posts running)
+## Slide formats (a starting list, not a limit: invent new ones; mix them inside a carousel)
 1. Lab hook: one bold claim + a small visual idea (example: posts/surgelabs/lab-templates/hook.html).
 2. Diagnostic list: "N signs…" / "N questions to ask before…" (example: signs.html).
 3. Module grid: a set of parts, e.g. what we build, parts of an agent, layers of a backend (example: build.html).
@@ -34,9 +28,9 @@ Brand constants (keep these) and defaults (vary freely):
 - Every post ends with surgeit.co.in.
 - Filled teal or purple cards carry dark #0A0A0C text; outlined cards carry light text.
 
-## Making each post
-Follow RUN.md steps 4–9 for a feed post: write `posts/surgelabs/YYYY-MM-DD-lab<slot>-<slug>.html` as a fresh design (link ../../tools/fonts.css; borrow from the examples only where it helps), render with `node tools/render.js <html> <same-name>.jpg`, open the JPEG and check it (spelling, nothing clipped or overlapping, contrast, no invented facts), commit, rebase on origin/main, push, add_media_from_url, create_post (type feed, caption, alt_texts, theme `lab-<format>`), publish_post. Log the line in log.md as `surgelabs · lab<slot> · <slug> · <format> · <permalink>`.
+## Making each carousel
+Follow RUN.md "Feed carousel run". Deck file: `posts/surgelabs/YYYY-MM-DD-c<slot>-<slug>.html`. Theme: `<category>: <topic>`.
 
 ## Copy rules
 - Never invent clients, case studies, numbers, results, prices or partnerships. Describe SurgeLabs only as in surgelabs.md.
-- Captions: lead with the insight, 2–4 short lines, end with "Build with us → surgeit.co.in", up to 5 hashtags (#SurgeLabs #AIAgents #Automation #AIEngineering #BackendEngineering).
+- Captions: lead with the insight (the hook reworded), 2–4 short lines, end with "Build with us → surgeit.co.in", up to 5 hashtags (#SurgeLabs #AIAgents #Automation #AIEngineering #BackendEngineering).

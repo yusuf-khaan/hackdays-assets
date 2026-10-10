@@ -1,0 +1,131 @@
+<!doctype html>
+<!-- EXAMPLE DECK (reference for quality and structure, not a template; not published).
+     Shows: one HTML file, slides side by side in .deck, a .bleed element crossing the slide 1→2 edge,
+     open-loop endings, payoff on the second-to-last slide, twist + CTA last.
+     Weak points to beat: the stick-figure niches on slide 4 and the plain note on slide 8 are too simple;
+     real posts should draw richer, more detailed illustrations. Facts: Wikipedia, UNESCO, RBI. -->
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--ink:#0E0B08;--parch:#EFE6D2;--ochre:#D98E2B;--red:#8E2A1E;--mute:#9C8F78}
+body{background:var(--ink)}
+.deck{display:flex;position:relative;width:max-content}
+.slide{width:1080px;height:1350px;flex:none;position:relative;overflow:hidden;background:var(--ink);color:var(--parch);font-family:Sans}
+.slide.light{background:var(--parch);color:var(--ink)}
+.lab{position:absolute;left:80px;top:72px;font:600 22px Sans;letter-spacing:.24em;text-transform:uppercase;color:var(--ochre)}
+.num{position:absolute;right:80px;top:72px;font:500 22px Mono;color:var(--mute)}
+.h{font-family:Fraunces;font-weight:600;letter-spacing:-.025em;line-height:1.02}
+.h em{font-style:italic;font-weight:400;color:var(--ochre)}
+.body{font:400 40px/1.4 Sans;color:#D9CFBA}
+.light .body{color:#3A3226}
+.next{font-family:Fraunces;font-style:italic;font-size:46px;color:var(--ochre)}
+.grain{position:absolute;inset:0;opacity:.08;pointer-events:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.bleed{position:absolute;z-index:2;pointer-events:none}
+.ill{position:absolute;font:500 18px Mono;letter-spacing:.12em;color:var(--mute);text-transform:uppercase}
+</style></head><body><div class="deck">
+
+<!-- 1 · hook -->
+<section class="slide">
+  <div class="lab">Indian History</div>
+  <div class="h" style="position:absolute;left:80px;right:80px;top:170px;font-size:104px">A queen built a temple that goes <em>seven storeys</em> down.</div>
+  <div class="body" style="position:absolute;left:80px;top:690px;width:620px;font-size:44px;color:#F2E9D5">Then a river swallowed it.</div>
+  <div class="ill" style="left:80px;bottom:72px">Swipe →</div>
+  <div class="grain"></div>
+</section>
+
+<!-- 2 · second hook -->
+<section class="slide">
+  <div class="num">02 / 08</div>
+  <div class="h" style="position:absolute;left:80px;top:150px;width:900px;font-size:76px">Gujarat, <em>11th century.</em></div>
+  <div class="body" style="position:absolute;left:80px;top:300px;width:560px">Queen Udayamati of the Chaulukya dynasty commissioned it, most likely in memory of her husband, King Bhima I.</div>
+  <div class="next" style="position:absolute;left:80px;top:640px;width:520px">But it was never a temple to pray in…</div>
+  <div class="grain"></div>
+</section>
+
+<!-- 3 -->
+<section class="slide light">
+  <div class="lab" style="color:var(--red)">Indian History</div><div class="num">03 / 08</div>
+  <div class="h" style="position:absolute;left:80px;top:170px;font-size:150px;color:var(--red)">It was<br>a <em style="color:var(--ochre)">well.</em></div>
+  <div class="body" style="position:absolute;left:80px;top:560px;width:900px">A stepwell: about 65 metres long and 28 metres deep, with seven levels of stairs walking you down to the water.</div>
+  <svg style="position:absolute;left:80px;top:830px" width="920" height="300" viewBox="0 0 920 300">
+    <g fill="none" stroke="#8E2A1E" stroke-width="3">
+      <path d="M0 20 H120 V60 H240 V100 H360 V140 H480 V180 H600 V220 H720 V260 H860"/>
+    </g>
+    <rect x="860" y="230" width="60" height="70" fill="#D98E2B" opacity=".55"/>
+    <g font-family="Mono" font-size="18" fill="#6B5D47"><text x="0" y="12">GROUND</text><text x="760" y="290">WATER · ~28 M</text></g>
+  </svg>
+  <div class="next" style="position:absolute;left:80px;bottom:80px;color:var(--red)">And the walls weren't plain…</div>
+  <div class="grain"></div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <div class="num">04 / 08</div>
+  <div class="h" style="position:absolute;left:80px;top:160px;font-size:220px;color:var(--ochre)">500+</div>
+  <div class="body" style="position:absolute;left:80px;top:420px;width:880px;color:#F2E9D5">principal sculptures, and more than a thousand smaller ones: gods, goddesses and celestial dancers lining every level down to the water.</div>
+  <svg style="position:absolute;left:80px;top:720px" width="920" height="260" viewBox="0 0 920 260">
+    <g fill="none" stroke="#D98E2B" stroke-width="2" opacity=".85">
+      <g id="niche"><path d="M10 250 V80 Q10 20 60 20 Q110 20 110 80 V250"/><circle cx="60" cy="90" r="18"/><path d="M60 108 V190 M35 140 H85 M60 190 L42 240 M60 190 L78 240"/></g>
+      <use href="#niche" x="135"/><use href="#niche" x="270"/><use href="#niche" x="405"/><use href="#niche" x="540"/><use href="#niche" x="675"/><use href="#niche" x="810"/>
+    </g>
+  </svg>
+  <div class="ill" style="left:80px;top:1000px">Illustration</div>
+  <div class="next" style="position:absolute;left:80px;bottom:80px">Then the Saraswati river flooded.</div>
+  <div class="grain"></div>
+</section>
+
+<!-- 5 -->
+<section class="slide" style="background:#2A2116">
+  <div class="num">05 / 08</div>
+  <div class="h" style="position:absolute;left:80px;top:160px;width:900px;font-size:92px">Silt filled it, level by level, until it <em>disappeared.</em></div>
+  <div class="body" style="position:absolute;left:80px;top:560px;width:860px">When British surveyors visited in the 1890s, all they found was a pit in the ground.</div>
+  <div class="next" style="position:absolute;left:80px;top:860px;width:860px">But under the mud, something unexpected was happening…</div>
+  <div class="grain"></div>
+</section>
+
+<!-- 6 -->
+<section class="slide light">
+  <div class="lab" style="color:var(--red)">Indian History</div><div class="num">06 / 08</div>
+  <div class="h" style="position:absolute;left:80px;top:170px;width:920px;font-size:96px;color:var(--ink)">The mud <em style="color:var(--red)">protected</em> it.</div>
+  <div class="body" style="position:absolute;left:80px;top:400px;width:880px">Excavations began in the 1940s. The Archaeological Survey of India restored it between 1981 and 1987, and the carvings came out remarkably well preserved.</div>
+  <div class="body" style="position:absolute;left:80px;top:760px;width:880px;font-weight:600;color:var(--ink)">They even found a sculpture of the queen herself.</div>
+  <div class="next" style="position:absolute;left:80px;bottom:80px;color:var(--red)">So what is it called?</div>
+  <div class="grain"></div>
+</section>
+
+<!-- 7 · payoff -->
+<section class="slide">
+  <div class="num">07 / 08</div>
+  <div style="position:absolute;left:80px;top:200px;font:600 64px 'Noto Serif Devanagari';color:var(--ochre)">रानी की वाव</div>
+  <div class="h" style="position:absolute;left:80px;top:320px;font-size:136px">Rani ki Vav.</div>
+  <div class="body" style="position:absolute;left:80px;top:520px;width:860px">The Queen's Stepwell, in Patan, Gujarat. A UNESCO World Heritage Site since 2014.</div>
+  <div class="next" style="position:absolute;left:80px;top:820px;width:860px">And there's a good chance it's in your pocket right now…</div>
+  <div class="grain"></div>
+</section>
+
+<!-- 8 · twist + CTA -->
+<section class="slide light">
+  <div class="num">08 / 08</div>
+  <div class="h" style="position:absolute;left:80px;top:150px;width:920px;font-size:96px">It's on the back of the <em style="color:var(--red)">₹100 note.</em></div>
+  <svg style="position:absolute;left:80px;top:470px" width="920" height="420" viewBox="0 0 920 420">
+    <rect x="1" y="1" width="918" height="418" rx="16" fill="#C9B8D8" stroke="#6E5A86" stroke-width="2"/>
+    <g fill="none" stroke="#4F3D66" stroke-width="3">
+      <path d="M140 330 H780"/><path d="M180 330 V250 H740 V330"/><path d="M220 250 V190 H700 V250"/><path d="M270 190 V140 H650 V190"/>
+      <path d="M320 140 V100 H600 V140"/>
+    </g>
+    <text x="40" y="70" font-family="Fraunces" font-weight="600" font-size="60" fill="#4F3D66">₹100</text>
+    <text x="880" y="390" text-anchor="end" font-family="Mono" font-size="18" fill="#4F3D66">ILLUSTRATION · NOT TO SCALE</text>
+  </svg>
+  <div class="body" style="position:absolute;left:80px;top:950px;width:900px;color:var(--ink)">On the note since 2018. Check your wallet, then send this to someone who's never noticed.</div>
+  <div style="position:absolute;left:80px;bottom:72px;font:500 22px Mono;color:var(--red)">homingo.verse</div>
+  <div class="grain"></div>
+</section>
+
+<!-- bleed: the stairs start on slide 1 and keep descending onto slide 2 -->
+<svg class="bleed" style="left:520px;top:860px" width="1100" height="490" viewBox="0 0 1100 490">
+  <g fill="none" stroke="#D98E2B" stroke-width="4">
+    <path d="M0 0 H140 V70 H280 V140 H420 V210 H560 V280 H700 V350 H840 V420 H1100"/>
+  </g>
+  <g fill="#D98E2B" opacity=".12"><path d="M0 0 H140 V70 H280 V140 H420 V210 H560 V280 H700 V350 H840 V420 H1100 V490 H0 Z"/></g>
+</svg>
+
+</div></body></html>

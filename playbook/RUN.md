@@ -1,42 +1,58 @@
-# Daily posting run
+# Running the content system
 
-One feed post per account per day: @homingo.hackdays and @surgelabs_. Read playbook/hackdays.md and playbook/surgelabs.md first; they are the source of truth for facts, tone and visuals.
+Four Instagram accounts, published through the Instahook connector by scheduled runs. Every feed post is a carousel. Stories run on @homingo.hackdays and @surgelabs_.
+
+## Schedule (IST)
+| Run | Times | Account | Per run |
+|---|---|---|---|
+| Verse carousels | 08:47, 12:47, 16:47, 20:47 | @homingo.verse | 1 carousel (slot 1–4) |
+| Homingo carousels | 09:52, 18:52 | @homingo._ | 1 carousel (slot 1–2) |
+| SurgeLabs carousels | 09:12, 18:12 | @surgelabs_ | 1 carousel (slot 1–2) |
+| Hack Days carousels | 10:20, 17:20 | @homingo.hackdays | 1 carousel (slot 1–2) |
+| Stories | 12:40, 19:40 | @homingo.hackdays + @surgelabs_ | 1 story each (story / story2) |
+| Weekly review | Sunday 23:07 | all | learning + system improvement |
+
+Slot from the run's IST hour. Four-a-day accounts: before 11:00 → 1, 11:00–14:59 → 2, 15:00–18:59 → 3, 19:00 or later → 4. Two-a-day accounts: before 14:00 → 1, otherwise 2.
+
+## Read first, every run
+1. playbook/FEEDBACK.md (the owner's word, overrides everything but facts and Never rules)
+2. The account playbook: verse.md, homingo.md, hackdays.md, or surgelabs.md + surgelabs-lab.md
+3. playbook/CAROUSEL.md (carousel runs), playbook/TRENDS.md, playbook/LEARNING.md
+4. learnings/<handle>.md and the last 20 lines of data/<handle>.jsonl
 
 ## Setup (fresh session)
-1. Work in the clone of yusuf-khaan/hackdays-assets (attach it with push access if needed and `git pull`).
-2. `cd tools && npm ci` (installs fonts and playwright-core). Chromium is at /opt/pw-browsers/chromium-1194/chrome-linux/chrome.
-3. Load the Instahook tools; `list_accounts` must show both handles with can_publish true.
+1. Attach yusuf-khaan/hackdays-assets with push access (add_repo), clone it, work in the clone.
+2. `cd tools && npm ci` (fonts and playwright-core). Chromium: /opt/pw-browsers/chromium-1194/chrome-linux/chrome (tools pick it up; set CHROME_PATH if it moved).
+3. Load the Instahook tools. `list_accounts`: find the account by handle and use that id. If the account is missing or `can_publish` is false, stop and tell the owner (it probably needs reconnecting in Instahook → Accounts).
 
-## For each account
-1. Today's date in IST. Idempotency key: `<hackdays|surgelabs>-YYYY-MM-DD`.
-2. `list_posts` (last 14 days). If a post with today's key/date already exists and is PUBLISHED, skip this account. Note recent themes and formats; don't repeat them.
-3. Choose the theme from the phase calendar / mix in the playbook. For news, research with web search first; skip news if nothing solid.
-4. Write `posts/<account>/YYYY-MM-DD-<slug>.html` (1080×1350, link ../../tools/fonts.css, reuse the reference post's structure). Render: `node tools/render.js <html> <same-name>.jpg`.
-5. Open the JPEG and check it: spelling, dates (registrations close 15 Nov 11:59 PM IST), nothing clipped or overlapping, contrast, no invented facts. Fix and re-render if needed.
-6. Commit both files and `git push` (rebase on origin/main first).
-7. `add_media_from_url` (if it times out right after a push, wait a minute and retry, up to 3 times) with `https://raw.githubusercontent.com/yusuf-khaan/hackdays-assets/main/posts/<account>/<file>.jpg`, tags `[<account>, <theme>]`.
-8. `create_post` (type feed, caption, alt_texts, theme, idempotency key), then `publish_post`. Publish posts one at a time, never several in parallel. If PROCESSING, check `get_post` after a minute. Never publish twice.
-9. Append a line to `log.md`: date, account, theme, format, permalink. Commit and push.
+## Feed carousel run
+1. Today's IST date and slot. Idempotency key: `<verse|homingo|hackdays|surgelabs>-c-YYYY-MM-DD-<slot>`.
+2. `list_posts` (limit 30). If this key is already PUBLISHED, stop. Note everything posted recently on the account (including the owner's own reels and posts) so you don't repeat topics.
+3. If an Instahook insights tool exists, fill in metrics for older posts (LEARNING.md "measure").
+4. Trend check (TRENDS.md). Then decide category, topic, hook archetype, format and whether this is an experiment (LEARNING.md "decide").
+5. Research: web search; confirm every fact as the account playbook requires. Write the payoff sentence.
+6. Write 10+ hooks, score them, pick one that clears the gate (CAROUSEL.md). Write all slides; run the swipe test.
+7. Design the deck: `posts/<folder>/YYYY-MM-DD-c<slot>-<slug>.html` (folders: verse, homingo, hackdays, surgelabs). Link `../../tools/fonts.css`. Render: `node tools/carousel.js <deck.html>`. Fix every WARN, look at the contact sheet and at slides 1, 2 and the payoff at full size; check spelling, facts, contrast, clipping. Re-render until it is right.
+8. `git add` the deck and its JPEGs, commit, `git pull --rebase`, push.
+9. For each slide in order: `add_media_from_url` with `https://raw.githubusercontent.com/yusuf-khaan/hackdays-assets/main/<path>.jpg` (if it fails right after a push, wait a minute and retry, up to 3 times).
+10. `create_post`: type `carousel`, media_ids in slide order, caption, alt_texts for every slide, theme `<category>: <topic>`, the key. Then `publish_post`. If PROCESSING, check `get_post` each minute for up to 5 minutes. If FAILED with "media not found", wait a minute and publish the same post once more. Never create a second post for the same key.
+11. Append the data line (LEARNING.md "record") with an honest self_review, and a line to log.md: `- YYYY-MM-DD · <account> · c<slot> · <category>: <topic> · <hook archetype> · <permalink>`.
+12. Improve the system if something got in your way (LEARNING.md "improve"). Commit, pull --rebase, push.
+13. Send the owner a short message: permalink, category and topic, the hook, whether it was a trend or experiment post, any repo improvement, and anything that failed.
 
-## Daily stories (two per account per day)
-- Midday run (with the feed post): story 1, key `<hackdays|surgelabs>-story-YYYY-MM-DD`.
-- Evening run (stories only, no feed post): story 2, key `<hackdays|surgelabs>-story2-YYYY-MM-DD`. Story 2 must use a different category and visual format from that day's story 1 and feed post (check list_posts).
-
-For each story:
-1. Skip if `list_posts` already shows that key's story PUBLISHED.
-2. Design a 1080×1920 (9:16) story in the account's visual system: `posts/<account>/YYYY-MM-DD-story-<slug>.html`, render with `node tools/render.js <html> <same-name>.jpg 1080 1920`. Keep the top 250px and bottom 300px free of text (Instagram UI covers them).
-3. What to post: see "Stories" in each account's playbook. Stories must differ from that day's feed post (complement it, don't repeat it).
-4. Check, commit, push, `add_media_from_url`, then `create_post` with type `story`, caption `""`, alt_texts, theme, and the story key. Wait about 60 seconds after `create_post` (e.g. `sleep 60`), then `publish_post`, one story at a time. If it returns FAILED with Instagram "media not found" (sometimes in another language), check `get_post` to confirm it is not PUBLISHED, wait another minute and call `publish_post` once more on the same post; retrying a FAILED post cannot create a duplicate. If it fails again, log it and report it.
-5. Instagram's API can't add stickers (links, polls, countdowns), so put any call to action in the image itself ("Link in bio", the site URL).
-6. Log it in `log.md` like the feed posts.
-
-## SurgeLabs lab series
-Three extra @surgelabs_ feed posts a day run on their own schedule: see playbook/surgelabs-lab.md. The midday SurgeLabs feed post should not repeat a format or topic already posted by the lab series that day (check list_posts).
+## Stories run (@homingo.hackdays and @surgelabs_)
+- 12:40 run: key `<hackdays|surgelabs>-story-YYYY-MM-DD`. 19:40 run: key `<hackdays|surgelabs>-story2-YYYY-MM-DD`.
+- Skip a story whose key is already PUBLISHED.
+- What to post: "Stories" in each account playbook. A strong trend (TRENDS.md) can be a story too. Stories complement that day's carousels (tease them, add a fact, ask a question); never repeat them.
+- Design 1080×1920: `posts/<folder>/YYYY-MM-DD-story-<slug>.html` (or `story2`), render with `node tools/render.js <html> <same-name>.jpg 1080 1920`. Keep the top 250px and bottom 300px free of text. Instagram's API can't add stickers, so put calls to action in the image ("Link in bio", the site).
+- Even a single story frame should hook: open a question or tease the carousel ("Swipe through today's post: #3 surprised us").
+- Push, `add_media_from_url`, `create_post` (type `story`, caption `""`, alt text, theme, key), wait about 60 seconds, `publish_post`, one story at a time. On "media not found", wait a minute and publish the same post once more.
+- Record a `"kind":"story"` data line and a log.md line.
 
 ## Never
-- Invent prize amounts, numbers, sponsors, winners, mentor names, clients or quotes.
-- Post the same format or theme on the same account two days running.
-- Retry a publish that returned PUBLISHED, or change an idempotency key to force a duplicate.
-
-## At the end
-Send the user a short message: both permalinks, the theme of each post, and anything that failed.
+- Invent facts, prize amounts, numbers, sponsors, winners, mentor names, clients, results, quotes, listings, prices, reviews or testimonials.
+- Post a single-image feed post. Feed = carousel.
+- Repeat the same topic on an account within 14 days, or the same category and format two runs in a row.
+- Publish twice, retry a PUBLISHED post, or change an idempotency key to force a duplicate.
+- Post one account's content on another account.
+- Edit FEEDBACK.md, any playbook's Facts or Never sections, or published files and data lines (except filling metrics).
