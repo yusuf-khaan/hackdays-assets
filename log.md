@@ -32,3 +32,5 @@
 - 2026-10-10 · surgelabs · explainer-agent-queues · system log · https://www.instagram.com/p/DeTf74cDJD1/
 - 2026-10-10 · surgelabs · story · story-news-goodfire-monitors (Source: TechCrunch, 8 Oct) · 3-step flow news card · https://www.instagram.com/stories/surgelabs_/4004685584278504388 (first publish attempt FAILED: Instagram "media not found"; retry of same post succeeded)
 - 2026-10-10 · flag (resolved) · homingo.hackdays reel scheduled 11 Oct 19:00 IST (post b549ca22-00fe-46e3-be48-3b5dc15d30ab) was set up by the owner, who confirmed its caption ("₹5,000 to the winner", "Certificates for every participant") is correct. Playbook not yet updated.
+- 2026-10-10 · hackdays · story2 · story-culture-night-build · night-build hour timeline + rising sun · https://www.instagram.com/stories/homingo.hackdays/4004903778037570973
+- 2026-10-10 · surgelabs · story2 · story-hackdays-key-dates · key-dates schedule table · https://www.instagram.com/stories/surgelabs_/4004904411763338938
