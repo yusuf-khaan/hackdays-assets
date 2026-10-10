@@ -1,0 +1,45 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+.frame{height:1920px}
+.top{position:absolute;left:72px;right:72px;top:270px;display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+.top .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--blue);margin-right:14px;box-shadow:0 0 14px rgba(30,155,234,.9);vertical-align:middle;position:relative;top:-2px}
+.head{position:absolute;left:72px;right:72px;top:360px;font-family:Serif;font-size:150px;line-height:.9;letter-spacing:-.02em}
+.head em{color:var(--orange);font-style:italic}
+.lede{position:absolute;left:72px;right:120px;top:680px;font-size:32px;line-height:1.45;color:#D4D4D8}
+.lede b{color:#fff;font-weight:600}
+.term{position:absolute;left:72px;right:72px;top:830px;background:var(--char);border:1px solid var(--line);border-radius:22px;box-shadow:0 40px 80px rgba(0,0,0,.6)}
+.bar{height:58px;border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 24px;gap:12px}
+.bar i{width:14px;height:14px;border-radius:50%;display:block}
+.bar span{margin-left:auto;margin-right:auto;font-family:Mono;font-size:18px;color:#5E5E66;transform:translateX(-30px)}
+.code{padding:30px 36px 34px;font-family:Mono;font-size:23px;line-height:1.75;color:#C9C9CF}
+.row{padding:14px 0;border-bottom:1px dashed #2A2A2E}
+.row:last-child{border-bottom:none}
+.c{color:#4A4A52} .t{color:var(--blue)} .s{color:#fff} .r{color:var(--orange)}
+.idea{display:block;font-family:Sans;font-size:22px;color:var(--muted);margin-top:2px}
+.sunglow{position:absolute;right:-280px;bottom:300px;width:860px;height:520px;background:radial-gradient(closest-side,rgba(243,112,33,.30),rgba(243,112,33,0))}
+.sun{position:absolute;right:-110px;bottom:380px;width:420px;height:210px;border-radius:210px 210px 0 0;background:var(--orange)}
+.horizon{position:absolute;right:-110px;bottom:364px;width:420px;height:12px;border-radius:6px;background:var(--blue);box-shadow:0 0 28px rgba(30,155,234,.75)}
+.cta{position:absolute;left:72px;bottom:330px}
+.cta .label{color:var(--muted);font-size:19px;display:block;margin-bottom:16px}
+.cta div{font-family:Mono;font-size:30px;color:#fff}
+</style></head>
+<body><div class="frame">
+<div class="sunglow"></div><div class="sun"></div><div class="horizon"></div>
+<div class="top label"><div><span class="dot"></span>Track spotlight</div><div>Automation</div></div>
+
+<div class="head">Automate<br>the <em>busywork.</em></div>
+<p class="lede"><b>Pipelines and workflows that remove busywork from real operations.</b> The kind of thing you could build:</p>
+
+<div class="term">
+<div class="bar"><i style="background:#F37021"></i><i style="background:#E4E4E7"></i><i style="background:#1E9BEA"></i><span>crontab -e</span></div>
+<div class="code">
+<div class="row"><span class="t">0 9 * * 1-5</span>  <span class="s">triage_inbox</span> <span class="r">→</span> tickets<span class="idea">Sort support mail into owned tickets every morning</span></div>
+<div class="row"><span class="t">*/15 * * * *</span> <span class="s">sync_orders</span> <span class="r">→</span> sheet<span class="idea">Keep orders and stock in sync, no copy-paste</span></div>
+<div class="row"><span class="t">0 18 * * 5</span>  <span class="s">weekly_report</span> <span class="r">→</span> draft<span class="idea">Turn the week's data into a report, ready to send</span></div>
+</div>
+</div>
+
+<div class="cta"><span class="label">Pick your track · Link in bio</span><div>hackathon.homingo.co.in</div></div>
+<div class="grain"></div>
+</div></body></html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+.top{position:absolute;left:72px;right:72px;top:64px;display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+.top .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--orange);margin-right:14px;box-shadow:0 0 14px rgba(243,112,33,.9);vertical-align:middle;position:relative;top:-2px}
+.sunglow{position:absolute;right:-260px;top:40px;width:760px;height:460px;background:radial-gradient(closest-side,rgba(243,112,33,.28),rgba(243,112,33,0))}
+.sun{position:absolute;right:72px;top:182px;width:220px;height:110px;border-radius:110px 110px 0 0;background:var(--orange)}
+.horizon{position:absolute;right:72px;top:296px;width:220px;height:8px;border-radius:4px;background:var(--blue);box-shadow:0 0 24px rgba(30,155,234,.75)}
+.head{position:absolute;left:72px;top:140px;font-family:Serif;font-size:168px;line-height:.86;letter-spacing:-.02em}
+.head em{color:var(--orange);font-style:italic}
+.ver{position:absolute;left:76px;top:470px;font-family:Mono;font-size:22px;color:var(--muted)}
+.ver b{color:#fff;font-weight:500}
+.notes{position:absolute;left:72px;right:72px;top:530px;background:var(--char);border:1px solid var(--line);border-radius:22px;padding:30px 40px 30px}
+.sec{display:grid;grid-template-columns:200px 1fr;column-gap:24px;padding:18px 0;border-bottom:1px solid var(--line)}
+.sec:last-child{border-bottom:none}
+.tag{font-family:Sans;font-weight:600;font-size:17px;letter-spacing:.22em;text-transform:uppercase;padding-top:7px}
+.tag.o{color:var(--orange)} .tag.b{color:var(--blue)} .tag.m{color:#D4D4D8}
+ul{list-style:none}
+li{font-size:26px;line-height:1.5;color:#D4D4D8;padding-left:30px}
+li::before{content:"+";font-family:Mono;color:var(--blue);margin-left:-30px;display:inline-block;width:30px}
+li.warn::before{content:"!";color:var(--orange)}
+li b{color:#fff;font-weight:600}
+.sub{position:absolute;left:72px;right:72px;bottom:64px;display:flex;justify-content:space-between;align-items:flex-end}
+.sub p{font-family:Serif;font-style:italic;font-size:36px;color:#fff}
+.sub .url{text-align:right;color:var(--muted)}
+.sub .url div{font-family:Mono;font-size:22px;color:#fff;margin-bottom:10px}
+</style></head>
+<body><div class="frame">
+<div class="sunglow"></div><div class="sun"></div><div class="horizon"></div>
+<div class="top label"><div><span class="dot"></span>Hack Days · Edition 01</div><div>Changelog</div></div>
+
+<div class="head">Release<br><em>notes.</em></div>
+<div class="ver"><b>v01.0</b> · India's AI Engineering hackathon · online</div>
+
+<div class="notes">
+<div class="sec"><div class="tag b">Added</div><ul>
+<li>Three tracks: <b>Agents</b>, <b>Automation</b>, <b>LLM apps</b></li>
+<li>Online, open to all of India</li>
+<li>Solo or teams of 2–4</li></ul></div>
+<div class="sec"><div class="tag o">Rewards</div><ul>
+<li><b>Cash prize pool</b> for the top 3</li>
+<li>Recommendation Certificate from SurgeLabs, top 3</li>
+<li>Verifiable certificate (unique ID + QR) for everyone who submits</li></ul></div>
+<div class="sec"><div class="tag m">Perks</div><ul>
+<li>Internship and freelance opportunities with SurgeLabs</li>
+<li>Portfolio reviews · alumni community</li></ul></div>
+<div class="sec"><div class="tag o">Known issue</div><ul>
+<li class="warn">Registrations close <b>15 Nov, 11:59 PM IST</b></li></ul></div>
+</div>
+
+<div class="sub">
+<p>Code till dawn. Ship by sunrise.</p>
+<div class="url"><div>hackathon.homingo.co.in</div><span class="label" style="font-size:18px">Link in bio</span></div>
+</div>
+<div class="grain"></div>
+</div></body></html>
