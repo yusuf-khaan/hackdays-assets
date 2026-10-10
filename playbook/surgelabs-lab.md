@@ -11,10 +11,10 @@ The owner approved this look on 2026-10-10. It runs alongside the daily run in R
 ## What the series is
 SurgeLabs presented as an engineering lab, not an agency: building, experiments, systems. Teach and show how things work; invite businesses to build with us.
 
-## Formats (rotate; check list_posts and log.md, never the same format twice in one day or two lab posts running)
-1. Lab hook: one bold claim + a tiny 3-node flow (template: posts/surgelabs/lab-templates/hook.html).
-2. Diagnostic list: "N signs…" / "N questions to ask before…", numbered [01]–[05], teal CTA bar (template: signs.html).
-3. Module grid: four cards with MOD-0X codes, e.g. what we build, parts of an agent, layers of a backend (template: build.html).
+## Formats (a starting list, not a limit: invent new formats too; rotate; check list_posts and log.md, never the same format twice in one day or two lab posts running)
+1. Lab hook: one bold claim + a small visual idea (example: posts/surgelabs/lab-templates/hook.html).
+2. Diagnostic list: "N signs…" / "N questions to ask before…" (example: signs.html).
+3. Module grid: a set of parts, e.g. what we build, parts of an agent, layers of a backend (example: build.html).
 4. Experiment card: "EXP-0X" hypothesis → setup → what it shows, about a general technique (never a fake client result).
 5. Under the hood: how one system works, as a labelled pipeline of nodes and wires.
 6. Lab notes: 3 short numbered engineering tips in mono labels.
@@ -23,8 +23,11 @@ SurgeLabs presented as an engineering lab, not an agency: building, experiments,
 
 Topics: autonomous agents, backend automation, scalable infrastructure, integrations, and the concepts behind them (RAG, MCP, queues, retries, idempotency, observability, vector databases, evals). Practical value for businesses first.
 
-## Visual system (copy the templates; keep it consistent)
-- 1080×1350. Background flat #0A0A0C (hooks may add the faint 90px grid #17171C). No glows, no gradients other than that grid.
+## Visual direction
+The three files in posts/surgelabs/lab-templates/ are examples of ONE taste the owner liked, not templates every post must copy. Use them to understand the quality bar and the feel (premium, technical, confident, lots of contrast, lab details), then design each post fresh: new layouts, compositions, diagrams, type scales, crops and visual ideas. Avoid a feed where every post looks the same; never reuse the same layout twice in a row. Stay recognisably SurgeLabs through the palette, type and the small lab details below.
+
+Brand constants (keep these) and defaults (vary freely):
+- 1080×1350. Dark grounds by default (#0A0A0C or the #08080A of surgelabs.md); grids, schematics, light glows from surgelabs.md, inverted light posts or full teal/purple fields are all fine when the idea calls for it. Keep it minimal and premium: no loud colours or heavy gradients.
 - Teal #2DD4BF and purple #A78BFA as accents; text #F2F2F0; secondary #C8C8CE; muted #9A9AA3; lines #2A2A31; card edges #3A3A42.
 - Type: "Sans" weight 600, big tight headlines (letter-spacing about -0.045em), key words in teal or purple; "Mono" for lab labels, codes ([01], MOD-01, LAB-01, EXP-01), comments (// …) and terminal lines ($ …).
 - Brand mark top-left: "SurgeLabs_" with the underscore in teal; a mono uppercase label top-right (e.g. "LAB-04 · Agents").
@@ -32,7 +35,7 @@ Topics: autonomous agents, backend automation, scalable infrastructure, integrat
 - Filled teal or purple cards carry dark #0A0A0C text; outlined cards carry light text.
 
 ## Making each post
-Follow RUN.md steps 4–9 for a feed post: write `posts/surgelabs/YYYY-MM-DD-lab<slot>-<slug>.html` starting from the closest template (copy its <style>, link ../../tools/fonts.css), render with `node tools/render.js <html> <same-name>.jpg`, open the JPEG and check it (spelling, nothing clipped or overlapping, contrast, no invented facts), commit, rebase on origin/main, push, add_media_from_url, create_post (type feed, caption, alt_texts, theme `lab-<format>`), publish_post. Log the line in log.md as `surgelabs · lab<slot> · <slug> · <format> · <permalink>`.
+Follow RUN.md steps 4–9 for a feed post: write `posts/surgelabs/YYYY-MM-DD-lab<slot>-<slug>.html` as a fresh design (link ../../tools/fonts.css; borrow from the examples only where it helps), render with `node tools/render.js <html> <same-name>.jpg`, open the JPEG and check it (spelling, nothing clipped or overlapping, contrast, no invented facts), commit, rebase on origin/main, push, add_media_from_url, create_post (type feed, caption, alt_texts, theme `lab-<format>`), publish_post. Log the line in log.md as `surgelabs · lab<slot> · <slug> · <format> · <permalink>`.
 
 ## Copy rules
 - Never invent clients, case studies, numbers, results, prices or partnerships. Describe SurgeLabs only as in surgelabs.md.
