@@ -12,11 +12,13 @@
 //   <name>-01.jpg … <name>-NN.jpg   the slides, in order
 //   <name>-sheet.jpg                all slides tiled small, to check the whole story in one look
 // It also prints WARN lines for text that overflows its box or content that crosses
-// a slide edge without the "bleed" class. Fix every WARN before publishing.
+// a slide edge without the "bleed" class, text that overlaps other text, and unquoted
+// font-family:Serif (tools/lint.js). Fix every WARN before publishing.
 const { chromium } = require('playwright-core');
 const path = require('path');
 const fs = require('fs');
 const claims = require('./claims');
+const lint = require('./lint');
 
 const W = 1080, H = 1350;
 const CHROME = process.env.CHROME_PATH || '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
@@ -66,6 +68,9 @@ const CHROME = process.env.CHROME_PATH || '/opt/pw-browsers/chromium-1194/chrome
     return out;
   }, { W, H });
 
+  // Text overlap + unquoted Serif checks (tools/lint.js)
+  warns.push(...await page.evaluate(lint.inPage, { width: W }));
+
   // Retired-claims check (playbook/retired-claims.json): wording that is now wrong
   const deckText = await page.evaluate(() => document.body.innerText);
   claims.check(deckText).forEach(c => warns.push(`CLAIM ${c}`));
@@ -79,7 +84,7 @@ const CHROME = process.env.CHROME_PATH || '/opt/pw-browsers/chromium-1194/chrome
 
   // Contact sheet: up to 5 per row at 1/4 size, with slide numbers
   const cols = Math.min(n, 5), rows = Math.ceil(n / cols), tw = W / 4, th = H / 4, gap = 12;
-  const sheet = await browser.newPage({ viewport: { width: cols * tw + (cols + 1) * gap, height: rows * (th + 28) + (rows + 1) * gap } });
+  const sheet = await browser.newPage({ viewport: { width: Math.ceil(cols * tw + (cols + 1) * gap), height: Math.ceil(rows * (th + 28) + (rows + 1) * gap) } });
   const imgs = files.map((f, i) => `<figure><img src="data:image/jpeg;base64,${fs.readFileSync(f).toString('base64')}"><figcaption>${i + 1}</figcaption></figure>`).join('');
   await sheet.setContent(`<html><body style="margin:0;background:#222;padding:${gap}px;display:grid;grid-template-columns:repeat(${cols},${tw}px);gap:${gap}px;font:14px sans-serif;color:#ccc">
     <style>figure{margin:0}img{width:${tw}px;height:${th}px;display:block}figcaption{text-align:center;padding-top:6px}</style>${imgs}</body></html>`);
