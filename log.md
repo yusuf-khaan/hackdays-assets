@@ -52,3 +52,9 @@
 - 2026-10-11 · homingo · c1+c2 fix · end slides now show the real app UI (owner's screenshots, brand/homingo-app/). Old posts 796025c5 and 10f17c9a cancelled; replacements acfefa1d (16:45) and bbaeb433 (18:52), keys ending -f
 - 2026-10-11 · surgelabs · story · scheduled publish at 15:50 FAILED (Instagram 'media not found', message localised in Marathi); retried publish_post on the same post, PUBLISHED https://www.instagram.com/stories/surgelabs_/4005525669261609739 (same transient error as 10 Oct)
 - 2026-10-11 · homingo · c2 recolour · owner: @homingo._ must be blue and white like the app. Deck recoloured (light #F5F6FA, #2563EB, no orange/dark); post bbaeb433 cancelled, a3ed4218 (key -b) scheduled 18:52. Bike c1 (16:45) and red-flag story (15:40) had already published in the dark/orange style.
+- 2026-10-11 · evening run · catch-up: all 10 carousels + 4 story 1s already existed (none FAILED or missing); permalinks filled for the 10 published items (data lines for replaced posts got final_post_id)
+- 2026-10-11 · hackdays · story2 · how: what to submit, 2 required links · serif statement + terminal checklist · scheduled 19:40 IST (post 719ce63c-ae24-4f0c-b71f-191a6ae1707a)
+- 2026-10-11 · surgelabs · story2 · build: today's failed story publish, retried safely · incident timeline · scheduled 19:40 IST (post 91d977b3-a5df-4d04-a9e4-df0551dd4acd)
+- 2026-10-11 · homingo · story2 · app: budget + distance filters · real Home screen + 4 steps (blue/white) · scheduled 20:22 IST (post 8af27dcc-0169-4199-a02c-c0d4ceb2356d)
+- 2026-10-11 · verse · story2 · space: tonight's sky, Saturn after opposition · illustration + fact rows · scheduled 21:47 IST (post fa0e0a9a-3746-416f-9eb4-dbc6e2f82733)
+- 2026-10-11 · evening trend check · no new mass-reaction signal today that fits an account (Navratri already covered on verse c4; Deno→Cloudflare already covered on surgelabs c1; Saturn opposition was 4 Oct, used as a story). No trend carousel.
