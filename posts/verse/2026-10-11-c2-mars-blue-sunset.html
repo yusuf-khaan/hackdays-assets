@@ -1,0 +1,199 @@
+<!doctype html>
+<!-- verse-c-2026-10-11-2 · Space: why sunsets on Mars are blue · hook: versus
+     Facts: NASA/JPL PIA19400 "Sunset in Mars' Gale Crater" (sol 956, 15 Apr 2015, Mastcam), NASA Curiosity news (May 2015),
+     Smithsonian Magazine, Universe Today. Bleed: Gale Crater ground silhouette runs from slide 1 onto slide 2. -->
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--space:#05060A;--white:#E8EEF7;--ion:#6EA8FF;--amber:#FFB347;--mute:#9AA6BA;--rust:#7A3B22;--dust:#C98A4B}
+body{background:var(--space)}
+.deck{display:flex;position:relative;width:max-content}
+.slide{width:1080px;height:1350px;flex:none;position:relative;overflow:hidden;background:var(--space);color:var(--white);font-family:Sans}
+.lab{position:absolute;left:80px;top:72px;font:600 22px Sans;letter-spacing:.24em;text-transform:uppercase;color:var(--ion)}
+.num{position:absolute;right:80px;top:72px;font:500 22px Mono;color:var(--mute)}
+.h{font-family:Fraunces;font-weight:600;letter-spacing:-.025em;line-height:1.02}
+.h em{font-style:italic;font-weight:400;color:var(--amber)}
+.h .b{font-style:italic;font-weight:400;color:var(--ion)}
+.body{font:400 40px/1.4 Sans;color:#D5DDEA}
+.next{font-family:Fraunces;font-style:italic;font-size:48px;line-height:1.15;color:var(--amber)}
+.mono{font-family:Mono;font-size:20px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.stars{position:absolute;inset:0}
+.grain{position:absolute;inset:0;opacity:.07;pointer-events:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.bleed{position:absolute;z-index:2;pointer-events:none}
+.ill{position:absolute;font:500 18px Mono;letter-spacing:.12em;color:var(--mute);text-transform:uppercase}
+.card{position:absolute;border-radius:18px;overflow:hidden}
+</style></head><body><div class="deck">
+
+<!-- 1 · hook -->
+<section class="slide">
+  <svg class="stars" data-stars="70" width="1080" height="1350"></svg>
+  <div class="lab">Space</div>
+  <div class="h" style="position:absolute;left:80px;top:170px;width:920px;font-size:96px">Earth: <span class="b">blue</span> sky, <span style="color:#FF7A59;font-style:italic;font-weight:400">red</span> sunset.</div>
+  <div class="h" style="position:absolute;left:80px;top:400px;width:920px;font-size:150px">Mars: <em>guess.</em></div>
+  <!-- Earth scene -->
+  <svg class="card" style="left:80px;top:640px" width="440" height="400" viewBox="0 0 440 400">
+    <defs><linearGradient id="eSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1F4FA8"/><stop offset=".55" stop-color="#6C8FD0"/><stop offset=".8" stop-color="#F29A5C"/><stop offset="1" stop-color="#E0533A"/></linearGradient></defs>
+    <rect width="440" height="400" fill="url(#eSky)"/>
+    <circle cx="220" cy="320" r="46" fill="#FF6A3D"/>
+    <rect y="320" width="440" height="80" fill="#1A1F2B"/>
+    <text x="24" y="44" font-family="Mono" font-size="22" fill="#fff" letter-spacing="3">EARTH</text>
+  </svg>
+  <!-- Mars scene, withheld -->
+  <svg class="card" style="left:560px;top:640px" width="440" height="400" viewBox="0 0 440 400">
+    <rect width="440" height="400" fill="#141820"/>
+    <circle cx="220" cy="320" r="46" fill="none" stroke="#9AA6BA" stroke-width="3" stroke-dasharray="8 8"/>
+    <rect y="320" width="440" height="80" fill="#2A1A14"/>
+    <text x="220" y="230" text-anchor="middle" font-family="Fraunces" font-weight="600" font-size="150" fill="#FFB347">?</text>
+    <text x="24" y="44" font-family="Mono" font-size="22" fill="#fff" letter-spacing="3">MARS</text>
+  </svg>
+  <div class="mono" style="position:absolute;right:80px;top:1060px;color:var(--white)">Swipe →</div>
+  <div class="grain"></div>
+</section>
+
+<!-- 2 · second hook -->
+<section class="slide">
+  <svg class="stars" data-stars="60" width="1080" height="1350"></svg>
+  <div class="num">02 / 07</div>
+  <div class="h" style="position:absolute;left:80px;top:170px;width:920px;font-size:84px">Mars is red because its dust is full of <em>rust.</em></div>
+  <div class="body" style="position:absolute;left:80px;top:470px;width:900px">Its surface dust is rich in iron oxide. So you'd bet its sunsets glow an even deeper red than ours.</div>
+  <svg style="position:absolute;left:620px;top:960px" width="380" height="240" viewBox="0 0 380 240">
+    <g fill="none" stroke="#E8EEF7" stroke-width="4" stroke-linejoin="round">
+      <rect x="60" y="120" width="220" height="56" rx="6"/>
+      <path d="M240 120 V40 M220 40 H272 V20 H220 Z"/>
+      <path d="M90 176 L70 206 M170 176 V206 M250 176 L270 206"/>
+      <path d="M280 140 L340 110 L356 132"/>
+    </g>
+    <g fill="#05060A" stroke="#E8EEF7" stroke-width="4"><circle cx="70" cy="210" r="18"/><circle cx="170" cy="210" r="18"/><circle cx="270" cy="210" r="18"/></g>
+    <path d="M272 30 L380 0" stroke="#FFB347" stroke-width="2" stroke-dasharray="6 6"/>
+  </svg>
+  <div class="ill" style="left:620px;top:930px">Illustration · rover</div>
+  <div class="next" style="position:absolute;left:80px;top:760px;width:900px">On 15 April 2015, a NASA rover pointed its camera at the setting Sun…</div>
+  <div class="grain"></div>
+</section>
+
+<!-- 3 · how Earth works -->
+<section class="slide">
+  <div class="num">03 / 07</div>
+  <div class="lab">First, Earth</div>
+  <div class="h" style="position:absolute;left:80px;top:150px;width:920px;font-size:80px">Why our sky is <span class="b">blue</span> and our sunsets <span style="color:#FF7A59;font-style:italic;font-weight:400">red.</span></div>
+  <svg style="position:absolute;left:80px;top:420px" width="920" height="400" viewBox="0 0 920 400">
+    <!-- Earth surface + atmosphere -->
+    <path d="M0 400 Q460 250 920 400" fill="#1A2A4A"/>
+    <path d="M0 400 Q460 130 920 400" fill="none" stroke="#6EA8FF" stroke-width="2" stroke-dasharray="6 8"/>
+    <text x="760" y="300" font-family="Mono" font-size="18" fill="#6EA8FF">ATMOSPHERE</text>
+    <!-- noon: short path -->
+    <path d="M460 20 V312" stroke="#FFB347" stroke-width="4"/>
+    <text x="476" y="50" font-family="Mono" font-size="20" fill="#FFB347">NOON · SHORT PATH</text>
+    <g stroke="#6EA8FF" stroke-width="3" fill="none"><path d="M460 280 q-20 -10 -40 0 t-40 0"/><path d="M460 250 q20 -10 40 0 t40 0"/><path d="M460 300 q20 -10 40 0 t40 0"/></g>
+    <text x="560" y="250" font-family="Mono" font-size="18" fill="#6EA8FF">BLUE SCATTERS EVERYWHERE</text>
+    <!-- sunset: long path -->
+    <path d="M0 170 L450 318" stroke="#FF7A59" stroke-width="4"/>
+    <text x="0" y="150" font-family="Mono" font-size="20" fill="#FF7A59">SUNSET · LONG PATH</text>
+    <circle cx="460" cy="324" r="10" fill="#E8EEF7"/>
+    <text x="440" y="370" font-family="Mono" font-size="20" fill="#E8EEF7">YOU</text>
+  </svg>
+  <div class="ill" style="left:80px;top:830px">Diagram · not to scale</div>
+  <div class="body" style="position:absolute;left:80px;top:880px;width:920px;font-size:36px">Air molecules scatter blue light across the whole sky. At sunset, sunlight crosses far more air, most of the blue is scattered out of the beam, and reds and oranges reach you.</div>
+  <div class="next" style="position:absolute;left:80px;top:1130px;width:920px">Now go to Mars. It barely has air…</div>
+  <div class="grain"></div>
+</section>
+
+<!-- 4 · thin air, dusty sky -->
+<section class="slide" style="background:#1E130D">
+  <div class="num">04 / 07</div>
+  <div class="h" style="position:absolute;left:80px;top:150px;font-size:260px;color:var(--amber)">&lt;1%</div>
+  <div class="body" style="position:absolute;left:80px;top:470px;width:920px;color:#F1E3D3">Mars's atmosphere is less than 1% as dense as Earth's: too thin for air to turn the sky blue.</div>
+  <div class="body" style="position:absolute;left:80px;top:700px;width:920px;color:#F1E3D3">So fine dust colours it instead. By day, the Martian sky looks <b style="color:var(--amber);font-weight:600">butterscotch</b>, a yellowish brown.</div>
+  <div style="position:absolute;left:80px;top:950px;width:920px;height:36px;border-radius:18px;background:linear-gradient(90deg,#3A2416,#8A5A32,#C99A5E,#D9B07A)"></div>
+  <div class="ill" style="left:80px;top:1000px;color:#C9A98A">Approximate daytime sky colours</div>
+  <div class="next" style="position:absolute;left:80px;top:1080px;width:920px">But that dust treats blue light differently…</div>
+  <div class="grain"></div>
+</section>
+
+<!-- 5 · the mechanism -->
+<section class="slide">
+  <svg class="stars" data-stars="40" width="1080" height="1350"></svg>
+  <div class="num">05 / 07</div>
+  <div class="lab">The trick</div>
+  <div class="h" style="position:absolute;left:80px;top:150px;width:920px;font-size:80px">The dust lets <span class="b">blue</span> through, straight ahead.</div>
+  <svg style="position:absolute;left:80px;top:400px" width="920" height="420" viewBox="0 0 920 420">
+    <circle cx="60" cy="210" r="48" fill="#FFF3D6"/>
+    <text x="20" y="300" font-family="Mono" font-size="20" fill="#9AA6BA">SUN</text>
+    <!-- dust band -->
+    <g fill="#C98A4B" opacity=".75">
+      <circle cx="360" cy="120" r="5"/><circle cx="400" cy="200" r="4"/><circle cx="430" cy="300" r="6"/><circle cx="470" cy="160" r="5"/><circle cx="510" cy="250" r="4"/><circle cx="380" cy="340" r="5"/><circle cx="450" cy="80" r="4"/><circle cx="540" cy="330" r="5"/><circle cx="520" cy="110" r="5"/><circle cx="410" cy="250" r="3"/><circle cx="560" cy="200" r="4"/>
+    </g>
+    <text x="370" y="40" font-family="Mono" font-size="20" fill="#C98A4B">FINE DUST</text>
+    <!-- blue: narrow forward cone -->
+    <g stroke="#6EA8FF" stroke-width="5" fill="none"><path d="M110 200 L860 186"/><path d="M110 210 L860 210"/><path d="M110 220 L860 234"/></g>
+    <!-- red/orange: spread wide -->
+    <g stroke="#FFB347" stroke-width="3" fill="none" opacity=".9"><path d="M470 160 L720 30"/><path d="M510 250 L760 400"/><path d="M400 200 L640 60"/><path d="M430 300 L640 410"/></g>
+    <circle cx="880" cy="210" r="16" fill="none" stroke="#E8EEF7" stroke-width="3"/>
+    <text x="800" y="270" font-family="Mono" font-size="20" fill="#E8EEF7">ROVER</text>
+  </svg>
+  <div class="ill" style="left:80px;top:830px">Diagram · simplified</div>
+  <div class="body" style="position:absolute;left:80px;top:880px;width:920px;font-size:36px">NASA's explanation: the grains are the right size to pass blue light forward, close to the Sun's direction. Scientists are still refining the exact physics.</div>
+  <div class="next" style="position:absolute;left:80px;top:1120px;width:920px">At sunset, the light crosses the most dust of all…</div>
+  <div class="grain"></div>
+</section>
+
+<!-- 6 · payoff -->
+<section class="slide">
+  <svg style="position:absolute;inset:0" width="1080" height="1350" viewBox="0 0 1080 1350">
+    <defs>
+      <linearGradient id="mSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B0A10"/><stop offset=".45" stop-color="#3B2A22"/><stop offset=".75" stop-color="#6E4A30"/><stop offset="1" stop-color="#7C5636"/></linearGradient>
+      <radialGradient id="halo" cx="540" cy="900" r="360" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#E9F2FF"/><stop offset=".08" stop-color="#BFD8FF"/><stop offset=".3" stop-color="#5E8FD6" stop-opacity=".85"/><stop offset=".65" stop-color="#3C5E94" stop-opacity=".35"/><stop offset="1" stop-color="#3C5E94" stop-opacity="0"/></radialGradient>
+    </defs>
+    <rect width="1080" height="1350" fill="url(#mSky)"/>
+    <ellipse cx="540" cy="900" rx="420" ry="320" fill="url(#halo)"/>
+    <circle cx="540" cy="905" r="22" fill="#F4F8FF"/>
+    <path d="M0 960 L120 935 L230 948 L330 925 L470 942 L600 930 L720 950 L860 922 L980 940 L1080 930 V1350 H0 Z" fill="#1A100B"/>
+  </svg>
+  <div class="num" style="color:#C9D3E3">06 / 07</div>
+  <div class="h" style="position:absolute;left:80px;top:160px;width:940px;font-size:136px;white-space:nowrap">A <span class="b" style="color:#8EC0FF">blue</span> sunset.</div>
+  <div class="body" style="position:absolute;left:80px;top:350px;width:920px;color:#F1E9E0">A cool blue glow around the Sun, with a yellow-orange sky all around it.</div>
+  <div class="ill" style="left:80px;top:1000px;color:#C9B8A6">Illustration, based on Curiosity's photo</div>
+  <div class="body" style="position:absolute;left:80px;top:1040px;width:920px;font-size:30px;color:#E6DDD2">Curiosity, Gale Crater · sol 956 · 15 April 2015. NASA colour-calibrated the image; the camera is slightly less sensitive to blue than human eyes.</div>
+  <div class="next" style="position:absolute;left:80px;top:1190px;width:920px;font-size:44px;color:var(--amber)">Which means everything is flipped…</div>
+  <div class="grain"></div>
+</section>
+
+<!-- 7 · twist + CTA -->
+<section class="slide">
+  <svg class="stars" data-stars="80" width="1080" height="1350"></svg>
+  <div class="num">07 / 07</div>
+  <svg style="position:absolute;left:80px;top:170px" width="920" height="400" viewBox="0 0 920 400">
+    <defs>
+      <radialGradient id="mars" cx=".4" cy=".35"><stop offset="0" stop-color="#E07A45"/><stop offset="1" stop-color="#7A2E15"/></radialGradient>
+      <radialGradient id="earth" cx=".4" cy=".35"><stop offset="0" stop-color="#5DA0FF"/><stop offset="1" stop-color="#123A80"/></radialGradient>
+    </defs>
+    <circle cx="210" cy="200" r="150" fill="url(#mars)"/>
+    <path d="M90 110 A150 150 0 0 1 330 110" fill="none" stroke="#6EA8FF" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="710" cy="200" r="150" fill="url(#earth)"/>
+    <path d="M590 110 A150 150 0 0 1 830 110" fill="none" stroke="#FF7A59" stroke-width="10" stroke-linecap="round"/>
+    <text x="210" y="395" text-anchor="middle" font-family="Mono" font-size="22" fill="#E8EEF7" letter-spacing="3">MARS</text>
+    <text x="710" y="395" text-anchor="middle" font-family="Mono" font-size="22" fill="#E8EEF7" letter-spacing="3">EARTH</text>
+  </svg>
+  <div class="h" style="position:absolute;left:80px;top:640px;width:920px;font-size:84px">Red planet, <span class="b">blue</span> sunset.<br>Blue planet, <span style="color:#FF7A59;font-style:italic;font-weight:400">red</span> sunset.</div>
+  <div class="body" style="position:absolute;left:80px;top:900px;width:920px">Same Sun, opposite colours, and it's all down to what the light passes through.</div>
+  <div class="body" style="position:absolute;left:80px;top:1080px;width:920px;font-weight:600;color:var(--white)">Send this to the person you watch sunsets with.</div>
+  <div style="position:absolute;left:80px;bottom:72px;font:500 22px Mono;color:var(--ion)">homingo.verse</div>
+  <div class="grain"></div>
+</section>
+
+<!-- bleed: Gale Crater ground starts on slide 1 and continues onto slide 2 -->
+<svg class="bleed" style="left:0;top:1150px" width="2160" height="200" viewBox="0 0 2160 200">
+  <path d="M0 120 L140 100 L260 112 L380 86 L520 104 L640 80 L760 96 L900 70 L1040 88 L1180 64 L1320 90 L1460 72 L1600 98 L1760 78 L1900 104 L2040 90 L2160 100 V200 H0 Z" fill="#3A1F14"/>
+  <path d="M0 120 L140 100 L260 112 L380 86 L520 104 L640 80 L760 96 L900 70 L1040 88 L1180 64 L1320 90 L1460 72 L1600 98 L1760 78 L1900 104 L2040 90 L2160 100" fill="none" stroke="#C98A4B" stroke-width="3"/>
+</svg>
+
+</div>
+<script>
+// deterministic starfields
+let seed=11; const rnd=()=>{seed=(seed*16807)%2147483647;return seed/2147483647};
+document.querySelectorAll('svg.stars').forEach(svg=>{
+  const n=+svg.dataset.stars; let s='';
+  for(let i=0;i<n;i++){const r=rnd()<.1?2.2:1.1; s+=`<circle cx="${(rnd()*1080).toFixed(1)}" cy="${(rnd()*1350).toFixed(1)}" r="${r}" fill="#E8EEF7" opacity="${(.25+rnd()*.6).toFixed(2)}"/>`;}
+  svg.innerHTML=s;
+});
+</script>
+</body></html>
