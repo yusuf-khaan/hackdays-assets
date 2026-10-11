@@ -30,3 +30,4 @@ _Nothing proven yet: a pattern needs at least 3 posts beating the account median
 - 2026-10-10: learnings file created with the carousel system.
 - 2026-10-11: WebFetch could not resolve news hosts (DNS ENOTFOUND for forbes.com, betanews.com, techcrunch.com) in the helper sandbox; facts were confirmed through several WebSearch queries that agreed across outlets instead. If this persists, note it in RUN.md trend steps.
 - 2026-10-11: emoji glyphs don't render reliably in the headless Chromium fonts; keep emojis out of slide text (caption only).
+- 2026-10-11 (evening): story 2 told today's real failed publish + safe retry as an incident timeline (experiment: real pipeline incidents vs generic explainers).

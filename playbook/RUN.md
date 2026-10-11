@@ -69,6 +69,8 @@ Its one job: by 11:00 every item the morning batch should have scheduled for tod
 - **Usage limit:** the 04:52 batch and 07:22 repair both failed with ROUTINE_RUN_FAILURE_REASON_USAGE_LIMIT_REACHED (weekly plan limit). The evening run's catch-up step is the fallback; nothing in the repo can prevent this.
 - **Media import:** Instahook allows 10 `add_media_from_url` calls per minute. raw.githubusercontent.com often times out ("Downloading the URL took too long"); use `https://cdn.jsdelivr.net/gh/yusuf-khaan/hackdays-assets@<commit-sha>/<path>` (pin the pushed commit SHA, never @main, so the CDN serves the new file).
 - **Research:** WebFetch fails with DNS errors in the cloud sandbox; use WebSearch and require 2+ agreeing sources.
+- **Scheduled stories failing with "media not found":** @surgelabs_ story 1 failed this way on both 10 and 11 Oct; `publish_post` on the same post fixed it each time. The evening catch-up checks every story 1 for FAILED first.
+- **WebSearch** often returns only titles and URLs, no snippets. For trend checks, judge mass reaction by how many separate outlets carry the same headline; for facts, run a second, more specific query and require 2+ agreeing outlets.
 - **Fonts:** write `font-family:"Serif"` with quotes. Unquoted `Serif` is the generic CSS keyword and renders Times, not Instrument Serif.
 
 ## Making one carousel (used by helpers; the lead does the git and Instahook steps)
@@ -92,7 +94,7 @@ The steps below describe one carousel end to end. In the batch runs, helpers do 
 - Story 1 is made in the morning batch, story 2 in the evening run; slots and keys are in the tables above.
 - Skip a story whose key is already PUBLISHED.
 - What to post: "Stories" in each account playbook. A strong trend (TRENDS.md) can be a story too. Stories complement that day's carousels (tease them, add a fact, ask a question); never repeat them.
-- Design 1080×1920: `posts/<folder>/YYYY-MM-DD-story-<slug>.html` (or `story2`), render with `node tools/render.js <html> <same-name>.jpg 1080 1920`. Keep the top 250px and bottom 300px free of text. Instagram's API can't add stickers, so put calls to action in the image ("Link in bio", the site).
+- Design 1080×1920: `posts/<folder>/YYYY-MM-DD-story-<slug>.html` (or `story2`), render with `node tools/render.js <html> <same-name>.jpg 1080 1920`. Keep the top 250px and bottom 300px free of text (nothing below y=1620). Put a headline and its sub-line in ONE element (sub-line as a `display:block` span), never two absolutely positioned blocks: a longer headline then overlaps the sub-line and no tool warns (hit three times on 11 Oct). Instagram's API can't add stickers, so put calls to action in the image ("Link in bio", the site).
 - Even a single story frame should hook: open a question or tease the carousel ("Swipe through today's post: #3 surprised us").
 - Push, `add_media_from_url`, `create_post` (type `story`, caption `""`, alt text, theme, key, `publish_at` = its slot). If a story ever has to go out immediately instead: create it without `publish_at`, wait about 60 seconds, `publish_post`; on "media not found", wait a minute and publish the same post once more.
 - Record a `"kind":"story"` data line and a log.md line.

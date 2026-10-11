@@ -27,3 +27,4 @@ _Nothing proven yet: a pattern needs at least 3 posts beating the account median
 ## Changelog
 - 2026-10-10: learnings file created with the carousel system.
 - 2026-10-11: first homingo decks (c1 used-bike papers-first, c2 which-ad-would-you-tap, story red-flag deposit). Design note: tools/carousel.js does not catch two absolutely positioned text blocks overlapping each other (seen twice today); stack a headline and its sub-line in ONE element (span display:block) instead of two top-positioned divs. Blue used: #2563EB (app theme, per lead brief), orange #F37021 secondary (#D9561A on the light variant for contrast).
+- 2026-10-11 (evening): story 2 'two dropdowns' was the first blue-and-white story, built on the real home.jpg. Next time match the screenshot to the topic (rooms: listing-rental.png / search-rent.jpg).

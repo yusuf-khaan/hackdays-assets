@@ -24,6 +24,7 @@ After publishing, append one line to `data/<account>.jsonl`:
 Stories get a line too, with `"kind":"story"` (no hook score needed).
 - `self_review` is one honest sentence: the weakest part of this post and what to try next time. Be specific; "looks good" is useless.
 - Never edit another post's line except to fill in `metrics`.
+- When a post is replaced (keys ending `-f`, `-r`, `-b`, `-t`), keep the original line and add `"final_post_id"` for the live replacement, so the evening run fills `permalink` from the post that actually published. Record `idempotency_key` on new lines.
 
 ## Every run: measure what's measurable
 Before choosing today's topic, look for an Instahook tool that returns post insights (a tool whose name contains "insight", "metric" or "stat"; check with ToolSearch). If one exists, fill `metrics` for this account's posts that are 48 hours to 14 days old and still have `metrics: null`: reach, views, likes, comments, saves, shares, as available, plus `"measured_at"`. If no such tool exists, leave metrics null; the loop then learns from self-reviews and owner feedback only, and says so in the weekly review.

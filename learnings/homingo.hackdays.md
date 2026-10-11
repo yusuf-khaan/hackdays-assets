@@ -28,3 +28,4 @@ _Nothing proven yet: a pattern needs at least 3 posts beating the account median
 ## Changelog
 - 2026-10-11: decks c1/c2 quote the "Serif" family; suggested fixing fonts.css or existing templates so the generic-keyword trap can't recur.
 - 2026-10-10: learnings file created with the carousel system.
+- 2026-10-11 (evening): story 2 'two links to submit' (terminal checklist). The headline/sub-line overlap trap hit again; RUN.md story rules now say to stack them in one element.
