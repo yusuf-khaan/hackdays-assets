@@ -9,6 +9,8 @@ screens that copy this layout exactly. No more invented app designs.
 | home.jpg | Home | "Home" title with the blue house icon, "Lucknow ▾" location, search bar "Search for anything…" + filter button, category pills (All, Furniture, Electronics, Home…), "Featured for you · See all", "Range: Any budget" and "Distance: Any" dropdowns, listing cards (photo, heart, blue price "Rs 18,000", bold title, 📍 area, "13d ago", category chip), floating blue "Services" button, bottom nav |
 | listing.jpg | Listing detail | back arrow, "Listing", heart and ⋯; photo carousel with dots; big title; blue price; "SALE" tag, blue verified tick, "7 views"; 📍 area; description; "Quick specs" chips (Age, Box, Bill, Type, Brand); bottom bar with a blue "Chat with seller" button and a "Call" button |
 | my-ads.jpg | My Ads | "My Ads · Manage all your ads in one place"; stat cards Total Ads / Total Views / Total Inquiries; All / Active / Inactive tabs; ad cards with Views, Inquiries, "Available"; blue "Boost this ad"; Edit / Stats / Mark Sold / Relist |
+| listing-rental.png | Listing (rental) | the same listing screen for a rent ad: "RENT" tag, Rs 11,000, Gomti Nagar; use it for room/flat posts |
+| app-icon.png | App icon | the real Homingo app icon (blue rounded square, white H with a house); use it on CTA slides |
 | search-rent.jpg | Search | Search for "rent" in Lucknow: suggestion list (rent-apartments, 1 BHK flat for rent…) |
 
 Not in this repo: the Chats screen. It shows real people's names and must never be published.
