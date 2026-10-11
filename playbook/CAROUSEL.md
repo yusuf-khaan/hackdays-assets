@@ -10,7 +10,7 @@ Pick a topic, then find the single most surprising true thing inside it: the twi
 Write the payoff in one sentence before writing any slide. Example: "The stepwell that vanished for 700 years is printed on the ₹100 note in your wallet."
 
 ## 2. The hook (slide 1)
-Write at least 10 candidate hooks using different archetypes, score each one, and use the best. Tag the archetype in data/posts.csv so the learning loop can compare them.
+Write 6 candidate hooks using different archetypes, score the best 3 in full, and use the winner. Tag the archetype in data/posts.csv so the learning loop can compare them.
 
 Hook archetypes (codes used in the data):
 - `impossible`: an impossible-sounding true fact ("A machine detected an earthquake nobody could feel. In 132 AD.")

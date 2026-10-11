@@ -10,8 +10,8 @@ This repo is the content team's memory. Every run reads what earlier runs learne
 - `tools/stats.js`: summarises data/*.jsonl by hook archetype, category, format, slot and trend vs planned (`node tools/stats.js [account] [days]`).
 
 ## Every run: decide
-1. Read FEEDBACK.md, the account playbook, CAROUSEL.md, TRENDS.md and learnings/<account>.md.
-2. **Trend check** (TRENDS.md). A strong signal that fits the account replaces the planned topic.
+1. Read only what RUN.md "Token budget" rule 2 lists.
+2. **Trend**: the lead's one trend scan (RUN.md Token budget rule 3). A strong signal that fits the account replaces the planned topic.
 3. Otherwise **choose the category** the account playbook allows for this slot (avoid what was posted most recently; respect any "do more of" rule in learnings), then a **topic** that hasn't been covered (search data/<account>.jsonl and the backlog). Owed part-2s come first when due.
 4. **Explore or exploit**: about 7 posts in 10 use hook archetypes and formats that learnings mark as working; about 3 in 10 deliberately try something untested (a new archetype, format, slide count, visual idea, CTA type or posting angle). Mark those `"experiment": "<hypothesis>"` in the data line, and add them under "Experiments running" in learnings.
 5. Write and design the carousel by CAROUSEL.md. The hook must clear the score gate.
@@ -26,18 +26,18 @@ Stories get a line too, with `"kind":"story"` (no hook score needed).
 - Never edit another post's line except to fill in `metrics`.
 - When a post is replaced (keys ending `-f`, `-r`, `-b`, `-t`), keep the original line and add `"final_post_id"` for the live replacement, so the evening run fills `permalink` from the post that actually published. Record `idempotency_key` on new lines.
 
-## Every run: measure what's measurable
-Before choosing today's topic, look for an Instahook tool that returns post insights (a tool whose name contains "insight", "metric" or "stat"; check with ToolSearch). If one exists, fill `metrics` for this account's posts that are 48 hours to 14 days old and still have `metrics: null`: reach, views, likes, comments, saves, shares, as available, plus `"measured_at"`. If no such tool exists, leave metrics null; the loop then learns from self-reviews and owner feedback only, and says so in the weekly review.
+## Weekly review: measure what's measurable
+Daily runs skip this. The weekly review looks for an Instahook tool that returns post insights (a tool whose name contains "insight", "metric" or "stat"; check with ToolSearch). If one exists, fill `metrics` for this account's posts that are 48 hours to 14 days old and still have `metrics: null`: reach, views, likes, comments, saves, shares, as available, plus `"measured_at"`. If no such tool exists, leave metrics null; the loop then learns from self-reviews and owner feedback only, and says so in the weekly review.
 
-## Every run: improve the system
-If something in the repo slowed you down, confused you or produced a weak result (an unclear playbook line, a tool bug, a missing helper, a repeated design problem), fix it in the same run when the fix is small and safe:
+## Improve the system
+Daily runs fix the repo only when something broke or blocked them in that run (a tool bug, a wrong or contradictory line), small and safe. Every other improvement idea goes as one line in the learnings changelog, and the weekly review does it:
 - Tools: change them, then prove they still work by rendering this run's deck with them.
 - Playbooks: clarify or tighten wording; add a new format, hook archetype or visual idea that worked; remove a line that proved wrong.
 - Reusable pieces: add proven layouts or SVG motifs to `assets/components/` with a one-line comment on when to use them.
 Write one line under "Changelog" in learnings/<account>.md (or in the review if it touches everything) saying what changed and why.
 
 ## Weekly review (Sunday night, its own scheduled task)
-1. `git pull`; run `node tools/stats.js` for each account over 7 and 28 days.
+1. `git pull`; run `node tools/stats.js` for each account over 7 and 28 days. Work from the stats output and the learnings files; read raw data lines or log.md only for a specific question (`grep`, `tail`), never whole.
 2. If metrics exist, rank by **share + save rate** (saves + shares divided by reach) first, then reach. Without metrics, use self-reviews, hook scores and owner feedback, and say the evidence is weak.
 3. Per account, rewrite learnings/<account>.md:
    - **Proven** (do more): a pattern goes here only after at least 3 posts beat the account's median.

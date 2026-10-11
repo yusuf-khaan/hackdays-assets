@@ -1,6 +1,6 @@
 # Trend radar: when the internet is reacting, we post about it in our way
 
-Every carousel run spends a few minutes checking whether something happened recently that a lot of people are reacting to. If it fits the account, it replaces the planned topic. Being early and having a sharp angle matters more than being comprehensive.
+The lead of each run does one scan for all accounts (at most 5 searches, RUN.md Token budget) checking whether something happened recently that a lot of people are reacting to. If it fits the account, it replaces the planned topic. Being early and having a sharp angle matters more than being comprehensive.
 
 ## How to scan (5 searches at most, use WebSearch)
 1. Search the account's world for the last 24 to 72 hours (search terms are in each account playbook under "Trend radar"), plus a broad "trending in India today" / "viral this week" style search.
