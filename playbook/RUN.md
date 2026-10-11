@@ -1,21 +1,21 @@
 # Running the content system
 
-Four Instagram accounts, published through the Instahook connector by scheduled runs. Every feed post is a carousel. Stories run on @homingo.hackdays and @surgelabs_.
+Four Instagram accounts, published through the Instahook connector by scheduled runs. Feed posts are carousels on @homingo._, @homingo.hackdays and @surgelabs_, and **reels only on @homingo.verse** (owner, 2026-10-11). Stories run on all four accounts.
 
 ## How the day runs (IST)
 Scheduled runs make everything and schedule it in Instahook with `publish_at`; Instahook publishes at the slot time.
 
 | Run | When | Makes |
 |---|---|---|
-| Morning batch | 04:52 | all 10 carousels + story 1 on all four accounts, scheduled for today's slots |
+| Morning batch | 04:52 | 4 verse reels + 6 carousels + story 1 on all four accounts, scheduled for today's slots |
 | Morning repair | 07:22 | checks the morning batch and repairs everything; all repairs done before 11:00 |
-| Evening run | 17:52 | catch-up, story 2 on all four accounts, trend check (may add or swap a carousel) |
+| Evening run | 17:52 | catch-up, story 2 on all four accounts, trend check (may add or swap a carousel, or a reel on verse) |
 | Weekly review | Sunday 23:07 | learning + system improvement |
 
 Publishing slots and idempotency keys (IST date):
-| Account | Slots | Carousel keys |
+| Account | Slots | Feed keys |
 |---|---|---|
-| @homingo.verse | 08:47, 12:47, 16:47, 20:47 | `verse-c-YYYY-MM-DD-1` … `-4` |
+| @homingo.verse (reels) | 08:47, 12:47, 16:47, 20:47 | `verse-r-YYYY-MM-DD-1` … `-4` |
 | @surgelabs_ | 09:12, 18:12 | `surgelabs-c-YYYY-MM-DD-1`, `-2` |
 | @homingo._ | 09:52, 18:52 | `homingo-c-YYYY-MM-DD-1`, `-2` |
 | @homingo.hackdays | 10:20, 17:20 | `hackdays-c-YYYY-MM-DD-1`, `-2` |
@@ -23,27 +23,27 @@ Publishing slots and idempotency keys (IST date):
 | Stories: Verse | 14:47 (story 1), 21:47 (story 2) | `verse-story-YYYY-MM-DD`, `verse-story2-YYYY-MM-DD` |
 | Stories: Homingo | 13:22 (story 1), 20:22 (story 2) | `homingo-story-YYYY-MM-DD`, `homingo-story2-YYYY-MM-DD` |
 
-A day is 10 carousels and 8 stories: the morning batch makes 14 items, the evening run makes 4.
+A day is 4 verse reels, 6 carousels and 8 stories: the morning batch makes 14 items, the evening run makes 4. A `verse-c-` key from before 12 Oct is a retired carousel slot: never recreate it.
 
-**Late beats missing.** Every planned item must go live the same day. If a carousel can't be ready before its slot, schedule it for the next free time that day (prefer 2 hours apart on one account, but posting closer is better than not posting) and say so in the report. Never skip a slot because it is late.
+**Late beats missing.** Every planned item must go live the same day. If a reel or carousel can't be ready before its slot, schedule it for the next free time that day (prefer 2 hours apart on one account, but posting closer is better than not posting) and say so in the report. Never skip a slot because it is late.
 
 ## Morning batch run (04:52)
 1. Setup (below). `list_accounts`; stop and report if any account can't publish. `list_posts` (limit 30) for each account: note what already exists today (PUBLISHED, SCHEDULED, PENDING_APPROVAL) by key, and skip those slots.
-2. Read FEEDBACK.md, this file, CAROUSEL.md, TRENDS.md and LEARNING.md once yourself.
+2. Read FEEDBACK.md, this file, CAROUSEL.md, TRENDS.md, LEARNING.md and verse.md (reels and the logo palette) once yourself.
 3. Fill in metrics if an insights tool exists (LEARNING.md), then pull, so helpers start from fresh data.
 4. Hand the creative work to helpers (the Agent tool), each with a fresh context, at most 3 running at once:
-   - Verse A: verse slots 1 and 2 · Verse B: verse slots 3 and 4 + verse story 1 (tell B which categories A is doing, so all 4 categories are covered once)
+   - Verse A: verse reels 1 and 2 · Verse B: verse reels 3 and 4 + verse story 1 (tell B which categories A is doing, so all 4 categories are covered once). Verse helpers follow "Making one reel", never "Making one carousel".
    - SurgeLabs: both carousels + story 1 · Hack Days: both carousels + story 1 · Homingo: both carousels + story 1
-   Each helper: reads its account playbook, learnings/<handle>.md and the end of data/<handle>.jsonl; checks trends; decides topics (different categories, nothing repeated); does the research, hooks, design and rendering exactly as "Making one carousel" says; writes only its own files (decks, JPEGs, and edits to its own learnings file); never runs git and never calls Instahook. It returns, per post: deck path, slide JPEG paths in order, caption, alt text per slide, theme, the full data line (without post_id/permalink), and any repo improvement it made or suggests.
-5. You, the lead: check each returned post (open the contact sheet; reject and send back anything with a WARN, a weak hook below the gate, an unsourced fact or a repeated topic). Then commit all files, `git pull --rebase`, push. For each post: `add_media_from_url` per slide, `create_post` with `publish_at` = its slot, type `carousel` (or `story`, caption ""), alt texts, theme, key. Check the result is SCHEDULED (or PENDING_APPROVAL, which you report).
+   Each helper: reads its account playbook, learnings/<handle>.md and the end of data/<handle>.jsonl; checks trends; decides topics (different categories, nothing repeated); does the research, hooks, design and rendering exactly as "Making one carousel" (or, for verse, "Making one reel") says; writes only its own files (decks, JPEGs, and edits to its own learnings file); never runs git and never calls Instahook. It returns, per post: deck path, slide JPEG paths in order (for a reel: the MP4 path and cover path), caption, alt text per slide (reel: one alt text), theme, the full data line (without post_id/permalink), and any repo improvement it made or suggests.
+5. You, the lead: check each returned post (open the contact sheet; reject and send back anything with a WARN, a weak hook below the gate, an unsourced fact or a repeated topic). Then commit all files, `git pull --rebase`, push. For each post: `add_media_from_url` per slide (a reel: one call for the MP4), `create_post` with `publish_at` = its slot, type `carousel` (verse: type `reel`; stories: `story`, caption ""), alt texts, theme, key. Check the result is SCHEDULED (or PENDING_APPROVAL, which you report).
 6. Append the data lines (with post_id; permalink is filled by the evening run once published) and log.md lines. Apply small repo improvements the helpers suggested if they are safe; note them in the learnings changelog. Commit, pull --rebase, push.
-7. Send the owner one message: a table of today's 14 scheduled items (time, account, topic, hook), trend posts and experiments, repo improvements, anything that failed.
+7. Send the owner one message: a table of today's 14 scheduled items (4 reels, 6 carousels, 4 stories) (time, account, topic, hook), trend posts and experiments, repo improvements, anything that failed.
 
 ## Morning repair run (07:22)
 Its one job: by 11:00 every item the morning batch should have scheduled for today exists, is good, and is SCHEDULED or PUBLISHED. Work in order of slot time, earliest first.
-1. Setup. `list_posts` for all four accounts; compare with today's keys (tables above): 10 carousels and 4 story 1s.
-2. For each item: missing → make it (helpers allowed, as in the morning batch) and schedule it at its slot, or as soon as possible if the slot is passed or too close. FAILED → `publish_post` on the same post (up to 3 tries); if it still fails, recreate with a key ending `-r` and publish now. PENDING_APPROVAL → report to the owner at once. A single-image feed post or a post that breaks a Facts or Never rule → cancel it if not yet published and replace it.
-3. Quality pass: open the contact sheets of today's decks (posts/*/YYYY-MM-DD-*-sheet.jpg if present, or render them). Fix anything clearly broken (typo, clipped text, wrong fact) before its slot by cancelling and rescheduling a corrected version with a key ending `-f`. Never touch a PUBLISHED post or one due within 15 minutes.
+1. Setup. `list_posts` for all four accounts; compare with today's keys (tables above): 4 verse reels, 6 carousels and 4 story 1s.
+2. For each item: missing → make it (helpers allowed, as in the morning batch) and schedule it at its slot, or as soon as possible if the slot is passed or too close. FAILED → `publish_post` on the same post (up to 3 tries); if it still fails, recreate with a key ending `-r` and publish now. PENDING_APPROVAL → report to the owner at once. A single-image feed post, a carousel on @homingo.verse, or a post that breaks a Facts or Never rule → cancel it if not yet published and replace it.
+3. Quality pass: open the contact sheets of today's decks and reels (posts/*/YYYY-MM-DD-*-sheet.jpg if present, or render them). Fix anything clearly broken (typo, clipped text, wrong fact) before its slot by cancelling and rescheduling a corrected version with a key ending `-f`. Never touch a PUBLISHED post or one due within 15 minutes.
 4. Find why the morning batch failed or fell short, and fix the cause (playbook, tool, or a note for the owner if it is the scheduled task prompt). Record data and log lines for anything you made. Commit, push.
 5. Message the owner only if something was missing, failed or fixed, or needs them; say what and when it goes out. If all was fine, a one-line "all 14 morning items scheduled" is enough.
 
@@ -51,7 +51,7 @@ Its one job: by 11:00 every item the morning batch should have scheduled for tod
 1. Setup. `list_posts` for all four accounts. For every post that has published since yesterday, fill `permalink` in its data line.
    **Catch-up first:** compare today's keys (tables above) with what exists. For any FAILED post, call `publish_post` on the same post (up to 3 tries, a minute or two apart; retrying a FAILED post can't duplicate it). If it still fails, recreate it with a new key ending `-r` and publish now. For any planned item that doesn't exist at all (the morning run failed or stopped early), make it now and schedule it for the next free time today, even if the slot has passed. Every planned item goes live today; late is fine, missing is not.
 2. Story 2 on all four accounts (helpers allowed): different category and format from that day's story 1 and carousels. Schedule at each account's story 2 slot with `publish_at`.
-3. Trend check (TRENDS.md) for all four accounts. If a strong, fitting signal appeared today: either make a trend carousel and schedule it into a free evening hour (at most 1 per account per day), or replace a not-yet-published scheduled carousel on that account (`cancel_post` it, schedule the trend carousel at the same time with a new key ending `-t`, and move the cancelled topic back to the learnings backlog). Never touch a post that is already PUBLISHED or due within 15 minutes.
+3. Trend check (TRENDS.md) for all four accounts. If a strong, fitting signal appeared today: either make a trend carousel (on verse: a trend reel) and schedule it into a free evening hour (at most 1 per account per day), or replace a not-yet-published scheduled carousel or reel on that account (`cancel_post` it, schedule the trend post at the same time with a new key ending `-t`, and move the cancelled topic back to the learnings backlog). Never touch a post that is already PUBLISHED or due within 15 minutes.
 4. Record data and log lines, improve the repo if something got in your way, commit, push, and send the owner a short message.
 
 ## Read first, every run
@@ -90,6 +90,17 @@ The steps below describe one carousel end to end. In the batch runs, helpers do 
 12. Improve the system if something got in your way (LEARNING.md "improve"). Commit, pull --rebase, push.
 13. Send the owner a short message: permalink, category and topic, the hook, whether it was a trend or experiment post, any repo improvement, and anything that failed.
 
+## Making one reel (@homingo.verse feed; helpers do steps 3–6, the lead does git and Instahook)
+1. Key `verse-r-YYYY-MM-DD-<slot>`. `list_posts` (limit 30): stop if the key is PUBLISHED; note recent topics, including reels the owner posted himself.
+2. Trend check (TRENDS.md), then category, topic, hook archetype and experiment flag (LEARNING.md "decide").
+3. Research and verify every fact as verse.md "Facts and sourcing" requires. Write the payoff sentence; write 10+ hooks and pass the hook gate (CAROUSEL.md).
+4. Write 5–9 scenes, one idea and at most about 18 words each; scene 1 is the hook. Run the swipe test as a "stay test": would someone stop scrolling on scene 1 and stay for scene 2?
+5. Design `posts/verse/YYYY-MM-DD-r<slot>-<slug>.html` with the logo palette (verse.md "Visual system"): `.reel{display:flex}`, `<section class="scene v-scene">` per scene, link `../../tools/fonts.css` and `../../assets/components/verse-brand.css`, the `.v-mark` on every scene. Start from `posts/verse/example-reel-logo-palette.html`.
+6. Render: `node tools/reel.js <reel.html>`. Fix every WARN. Look at the contact sheet and at the cover at full size; check spelling, facts, contrast, the palette rules and clipping. Re-render until it is right.
+7. Commit the HTML, the MP4, the cover and the sheet (not the `-sNN.jpg` frames), pull --rebase, push.
+8. `add_media_from_url` with the jsDelivr URL of the MP4 pinned to the pushed commit SHA. `create_post`: type `reel`, the one media id, caption (verse.md "Captions"), alt text if accepted, theme `<category>: <topic>`, the key, `publish_at` = its slot. Check it is SCHEDULED. Instahook needs H.264 + AAC at 23–60 fps (tools/reel.js outputs exactly that). If it rejects the video, report the exact error; never fall back to a carousel or single image on verse.
+9. Record the data line with `"kind":"reel"` and a log.md line (`· r<slot> ·`).
+
 ## Making a story (all four accounts)
 - Story 1 is made in the morning batch, story 2 in the evening run; slots and keys are in the tables above.
 - Skip a story whose key is already PUBLISHED.
@@ -107,7 +118,8 @@ The steps below describe one carousel end to end. In the batch runs, helpers do 
 
 ## Never
 - Invent facts, prize amounts, numbers, sponsors, winners, mentor names, clients, results, quotes, listings, prices, reviews or testimonials.
-- Post a single-image feed post. Feed = carousel.
+- Post a single-image feed post. Feed = carousel, except @homingo.verse where feed = reel.
+- Post a carousel on @homingo.verse.
 - Repeat the same topic on an account within 14 days, or the same category and format two runs in a row.
 - Publish twice, retry a PUBLISHED post, or change an idempotency key to force a duplicate.
 - Post one account's content on another account.
