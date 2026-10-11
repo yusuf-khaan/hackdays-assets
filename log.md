@@ -50,3 +50,4 @@
 - 2026-10-11 · verse · c4 · mythology: Durga and Mahishasura, Navratri day 1 · impossible · scheduled 19:00 IST (post c3a6bc46-e78a-418f-bd6b-bc000cf72c00) · late catch-up
 - 2026-10-11 · hackdays · c1 fix · slides 4 and 7 said 'live demo'; owner confirmed submission = public repo + demo video (live link optional). Old post 72c32b1a cancelled, corrected post 030f2259 (key hackdays-c-2026-10-11-1-f) scheduled 16:00 IST
 - 2026-10-11 · homingo · c1+c2 fix · end slides now show the real app UI (owner's screenshots, brand/homingo-app/). Old posts 796025c5 and 10f17c9a cancelled; replacements acfefa1d (16:45) and bbaeb433 (18:52), keys ending -f
+- 2026-10-11 · surgelabs · story · scheduled publish at 15:50 FAILED (Instagram 'media not found', message localised in Marathi); retried publish_post on the same post, PUBLISHED https://www.instagram.com/stories/surgelabs_/4005525669261609739 (same transient error as 10 Oct)
