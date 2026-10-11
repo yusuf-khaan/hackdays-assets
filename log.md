@@ -49,3 +49,4 @@
 - 2026-10-11 · verse · c2 · space: Why sunsets on Mars are blue · versus · scheduled 19:45 IST (post f4d39cf2-1a53-41fb-b4e8-88401016f62b; permalink filled by evening run) · late catch-up: 04:52 batch + 07:22 repair failed on the usage limit
 - 2026-10-11 · verse · c4 · mythology: Durga and Mahishasura, Navratri day 1 · impossible · scheduled 19:00 IST (post c3a6bc46-e78a-418f-bd6b-bc000cf72c00) · late catch-up
 - 2026-10-11 · hackdays · c1 fix · slides 4 and 7 said 'live demo'; owner confirmed submission = public repo + demo video (live link optional). Old post 72c32b1a cancelled, corrected post 030f2259 (key hackdays-c-2026-10-11-1-f) scheduled 16:00 IST
+- 2026-10-11 · homingo · c1+c2 fix · end slides now show the real app UI (owner's screenshots, brand/homingo-app/). Old posts 796025c5 and 10f17c9a cancelled; replacements acfefa1d (16:45) and bbaeb433 (18:52), keys ending -f
