@@ -33,9 +33,9 @@ Lucknow news this week (events, metro, new openings, festivals, weather that aff
 
 ## Visual system
 - **The app's real interface is the reference (owner, 2026-10-11).** Any phone screen, app flow or UI element in a post must match `brand/homingo-app/` (real screenshots + README with tokens). Prefer the real screenshots in a phone frame; never invent a different-looking app.
-- 1080×1350. Homingo palette = the app's: primary blue #2563EB (buttons, prices, accents), light ground #F5F6FA with white rounded cards (radius ~28px), near-black text #111827, grey #6B7280. Dark variant allowed: black #0A0A0B ground with the same blue. Orange #F37021 only as a small warning/highlight accent (red flags), never as the main colour.
+- **Blue and white only, like the app (owner, 2026-10-11).** Every @homingo._ carousel and story uses the app's light theme: ground #F5F6FA (or white #FFFFFF), white rounded cards (radius ~28px, thin #E5E7EB border, soft shadow), primary blue #2563EB for buttons, prices, key words and accents, a full #2563EB slide allowed for the CTA, near-black text #111827, grey #6B7280. NO black/dark backgrounds, NO orange, NO other accent colours (red flags use blue or #111827 bold text, not orange). 1080×1350 feed, 1080×1920 stories.
 - Prices in app screens use the app's own format "Rs 18,000".
-- Type: "Sans" (Inter) 600, big and tight, for headlines; key word in blue or orange; "Mono" for small labels (prices, distances, "TIP 03").
+- Type: "Sans" (Inter) 600, big and tight, for headlines; key word in blue; "Mono" for small labels (prices, distances, "TIP 03").
 - Compact, minimal UI feel: no loud colours, no heavy gradients, no bulky cards. Drawn icons and phone mockups in HTML/SVG.
 - Last slide: the CTA plus "Homingo · Lucknow's local marketplace" and "Link in bio".
 
