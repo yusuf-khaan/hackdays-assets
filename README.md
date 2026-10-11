@@ -13,6 +13,6 @@ Instagram carousels and stories for @homingo.verse, @homingo._, @homingo.hackday
 - `reviews/`: weekly review reports
 - `tools/carousel.js`: render a deck to slides + contact sheet + layout warnings
 - `tools/render.js`: render a single image (stories)
-- `tools/reel.js`: render a reel scene deck to MP4 + cover + contact sheet (@homingo.verse feed)
+- `tools/reel.js`: render a reel scene deck to MP4 + cover + contact sheet (reference only: verse reels come from the owner's laptop)
 - `tools/stats.js`: performance summary for the learning loop
 - `posts/verse/example-rani-ki-vav.html`: a reference deck

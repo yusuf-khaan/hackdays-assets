@@ -2,7 +2,7 @@
 
 Yusuf's notes to the content runs. Every run reads this first; it overrides everything except facts and the "Never" rules. Runs never edit this file. Add the newest note at the top, with a date.
 
-- 2026-10-11: @homingo.verse feed is REELS ONLY. No carousels and no single images on that account. Stories continue.
+- 2026-10-11: @homingo.verse feed is REELS ONLY, and my laptop makes the reels. Cloud runs make only stories on verse (no carousels, no single images, no reels); carousels and stories on the other three accounts.
 - 2026-10-11: @homingo.verse posts must match the logo: navy #0B1640 ground, logo blue #1F50FE, logo orange #F3701F, white text, the orbit-dot mark in the same place on every scene. One look for all four categories; the old per-category palettes are retired. (@homingo._ keeps its own blue-and-white rule below.)
 - 2026-10-11: @homingo._ carousels and stories must be BLUE AND WHITE like the app screenshots (brand/homingo-app/): light #F5F6FA/white ground, #2563EB blue, #111827 text. No dark backgrounds, no orange.
 - 2026-10-11: Posts about the Homingo app must reference the real app UI in brand/homingo-app/ (Home, Listing, My Ads, Search screenshots). App blue is #2563EB. Never publish the Chats screen.

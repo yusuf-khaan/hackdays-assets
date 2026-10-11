@@ -1,6 +1,6 @@
 # Carousel craft: hooks that force the swipe
 
-Every feed post on @homingo._, @homingo.hackdays and @surgelabs_ is a carousel (2 to 10 slides, usually 6 to 9). Single-image feed posts are retired. @homingo.verse posts reels only (verse.md, RUN.md "Making one reel"), but the story craft below (payoff, hooks, gate) applies to its reels too. Stories stay single 9:16 images (see RUN.md).
+Every feed post on @homingo._, @homingo.hackdays and @surgelabs_ is a carousel (2 to 10 slides, usually 6 to 9). Single-image feed posts are retired. @homingo.verse posts reels only, made by the owner's laptop; cloud runs make only its stories (verse.md). Stories stay single 9:16 images (see RUN.md).
 
 The job of a carousel is one thing: **make the reader unable to stop swiping, then reward them so they save, share and follow.** Instagram reshows carousels to people who didn't swipe the first time, starting from slide 2, so slide 2 is a second hook, not filler.
 

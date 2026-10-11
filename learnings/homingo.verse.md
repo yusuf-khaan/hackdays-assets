@@ -9,8 +9,7 @@ _Nothing proven yet: a pattern needs at least 3 posts beating the account median
 - Topics covered by reels in the last 14 days (check list_posts): Chandrayaan-3 landing and hop (part 1, 10 Oct), AI-agent bug-fix humour (10 Oct).
 
 ## Experiments running
-- From 12 Oct: the feed is reels only, in the logo palette. Compare reel reach and shares with the carousel days (10–11 Oct) in the weekly review.
-- Reel length: 5–6 scenes (~20 s) vs 8–9 scenes (~35 s); note which keeps people watching and gets more shares.
+- From 12 Oct: the feed is reels only (owner's laptop), stories in the logo palette (cloud). In the weekly review, compare reach with the carousel days (10–11 Oct).
 - Week 1: test `vanished`, `impossible` and `cliffhanger-story` hooks against each other in every category; note which one gets the best share+save rate.
 - Week 1: test 7 slides vs 9 slides.
 - Week 1: test a seamless panorama across slides 1–2 vs a plain arrow swipe cue.
@@ -33,7 +32,7 @@ _Nothing proven yet: a pattern needs at least 3 posts beating the account median
 - Mythology: why the Ramayana says the bridge to Lanka was built by the vanara army (Ram Setu), and what geology says about the shoals.
 
 ## Changelog
-- 2026-10-11 (owner): feed switched to reels only; the logo palette replaces the per-category palettes. New tool tools/reel.js, brand layer assets/components/verse-brand.css, reference posts/verse/example-reel-logo-palette.html. Backlog topics still apply: tell each one as a reel.
+- 2026-10-11 (owner): feed switched to reels only, made by the owner's laptop; cloud runs make only verse stories. The logo palette (assets/components/verse-brand.css) replaces the per-category palettes. Backlog topics can feed stories.
 - 2026-10-11: Verse A notes: WebFetch fails in the cloud workspace (DNS ENOTFOUND for wikipedia/jpl.nasa.gov); WebSearch summaries work, so name the outlet the search attributes each fact to. Iron pillar phosphorus figures disagree across sources (~0.25% vs ~1%): say "far more than modern iron", not a number.
 - 2026-10-10: learnings file created with the carousel system.
 - 2026-10-11 (Verse B): c3 China "sealed tomb" (cliffhanger-story, 8 slides, ground cross-section bleed 1→2), c4 Mythology Durga/Mahishasura for Navratri day 1 (impossible hook, gift-inventory grid, trend post), story 1 word origin chai/tea map. Backlog used: Terracotta Army (as the Qin tomb mercury angle). Note: a "+" mark on a hill reads as a cross; draw temple markers as a small shikhara instead. Mysuru Dasara / Vijayadashami (20 Oct) can carry a follow-up story; Oct 2026 Weibo debate on the tomb's mercury source (SCMP, The Star, 3 Oct) is a possible part 2: "Where did the emperor's mercury come from?" (Xunyang cinnabar mines, 2024 survey).

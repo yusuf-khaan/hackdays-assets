@@ -1,3 +1,4 @@
+// Reference tool: cloud runs do NOT post reels (verse reels come from the owner's laptop).
 // Render a reel "scene deck" to an MP4 (H.264 + AAC, 1080×1920, 30 fps), a cover JPEG,
 // a contact sheet and a layout check.
 //
