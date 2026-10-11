@@ -97,6 +97,12 @@ The steps below describe one carousel end to end. In the batch runs, helpers do 
 - Push, `add_media_from_url`, `create_post` (type `story`, caption `""`, alt text, theme, key, `publish_at` = its slot). If a story ever has to go out immediately instead: create it without `publish_at`, wait about 60 seconds, `publish_post`; on "media not found", wait a minute and publish the same post once more.
 - Record a `"kind":"story"` data line and a log.md line.
 
+## Facts gate (owner, 2026-10-11, after a wrong prize claim went out on 9-10 Oct)
+- The **only** source of facts is the account playbook's Facts section (plus web-verified outside facts). Never copy a claim, number or reward from an older post, deck, caption or data line: old posts can be out of date. Three posts on 9-10 Oct said "prize pool for the top 3" after the rule had become "₹5,000 to the winner only".
+- `tools/carousel.js` and `tools/render.js` now print `CLAIM` warnings for wording listed in `playbook/retired-claims.json`. A CLAIM warning blocks scheduling like any WARN.
+- Before every `create_post`, the lead runs the caption through the check: `echo "<caption>" | node tools/claims.js -`. It must print `OK: no retired claims`.
+- Whenever the owner corrects a fact, add the old wording to `playbook/retired-claims.json` (pattern, why, instead) in the same run, so it can never come back.
+
 ## Never
 - Invent facts, prize amounts, numbers, sponsors, winners, mentor names, clients, results, quotes, listings, prices, reviews or testimonials.
 - Post a single-image feed post. Feed = carousel.

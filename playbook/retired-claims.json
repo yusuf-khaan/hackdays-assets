@@ -1,0 +1,32 @@
+[
+  {
+    "pattern": "prize pool",
+    "why": "there is no prize pool: the cash prize goes to the winner only (owner, 2026-10-10; hackdays.md Facts)",
+    "instead": "₹5,000 to the winner; Recommendation Certificates for the top 3"
+  },
+  {
+    "pattern": "top[ -]?(3|three)[^.]{0,40}(cash|share|₹|prize money)|(cash|₹|prize money)[^.]{0,40}top[ -]?(3|three)",
+    "why": "no cash for 2nd or 3rd place",
+    "instead": "₹5,000 to the winner; Recommendation Certificates for the top 3"
+  },
+  {
+    "pattern": "\\bunpaid\\b",
+    "why": "owner rule: never write 'unpaid' for the campus ambassador role, and never imply payment either",
+    "instead": "campus ambassador role"
+  },
+  {
+    "pattern": "search(ing)? (for )?[\"'“]?homingo",
+    "why": "an unrelated 'Homingo' app exists on the App Store",
+    "instead": "the direct Play Store / App Store links, or 'link in bio'"
+  },
+  {
+    "pattern": "next city|city by city|coming soon to [A-Z]|expanding to",
+    "why": "no expansion claims: Homingo is live in Lucknow only (owner, 2026-10-10)",
+    "instead": "live in Lucknow"
+  },
+  {
+    "pattern": "demo day",
+    "why": "there is no separate demo day; 19 Dec is the online finals & review day (hackdays.md Facts)",
+    "instead": "finals & review day (online, 19 Dec)"
+  }
+]

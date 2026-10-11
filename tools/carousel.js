@@ -16,6 +16,7 @@
 const { chromium } = require('playwright-core');
 const path = require('path');
 const fs = require('fs');
+const claims = require('./claims');
 
 const W = 1080, H = 1350;
 const CHROME = process.env.CHROME_PATH || '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
@@ -65,6 +66,10 @@ const CHROME = process.env.CHROME_PATH || '/opt/pw-browsers/chromium-1194/chrome
     return out;
   }, { W, H });
 
+  // Retired-claims check (playbook/retired-claims.json): wording that is now wrong
+  const deckText = await page.evaluate(() => document.body.innerText);
+  claims.check(deckText).forEach(c => warns.push(`CLAIM ${c}`));
+
   const files = [];
   for (let i = 0; i < n; i++) {
     const out = path.join(outDir, `${base}-${String(i + 1).padStart(2, '0')}.jpg`);
@@ -86,5 +91,5 @@ const CHROME = process.env.CHROME_PATH || '/opt/pw-browsers/chromium-1194/chrome
   files.forEach(f => console.log('SLIDE', path.relative(process.cwd(), f)));
   console.log('SHEET', path.relative(process.cwd(), sheetPath));
   warns.forEach(w => console.log('WARN', w));
-  console.log(warns.length ? `${warns.length} warning(s): fix them and re-render` : 'OK: no layout warnings');
+  console.log(warns.length ? `${warns.length} warning(s): fix them and re-render` : 'OK: no layout warnings, no retired claims');
 })();
