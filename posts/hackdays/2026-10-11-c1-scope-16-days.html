@@ -1,0 +1,165 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+.deck{display:flex;position:relative;width:max-content}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;background:var(--ink);color:#fff;font-family:Sans;flex:none}
+.top{position:absolute;left:72px;right:72px;top:64px;display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+.top .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--orange);margin-right:14px;box-shadow:0 0 14px rgba(243,112,33,.9);vertical-align:middle;position:relative;top:-2px}
+.label{font-size:20px}
+.h{position:absolute;left:72px;right:72px;font-family:"Serif";line-height:.95;letter-spacing:-.02em}
+.h em{color:var(--orange);font-style:italic}
+.body{position:absolute;left:72px;right:72px;font-size:38px;line-height:1.35;color:#D4D4D8}
+.body b{color:#fff;font-weight:600}
+.next{position:absolute;left:72px;right:72px;bottom:96px;font-family:"Serif";font-style:italic;font-size:52px;line-height:1.1;color:#fff}
+.next em{color:var(--orange)}
+.mono{font-family:Mono}
+.card{position:absolute;left:72px;right:72px;background:var(--char);border:1px solid var(--line);border-radius:24px}
+.file{display:flex;justify-content:space-between;padding:22px 34px;border-bottom:1px solid var(--line);font-family:Mono;font-size:22px;color:var(--muted)}
+.file span:first-child{color:#D4D4D8}
+.code{padding:30px 34px;font-family:Mono;font-size:30px;line-height:1.6;color:#D4D4D8}
+.code .c{color:#5E5E66}
+.code .k{color:var(--blue)}
+.code .o{color:var(--orange)}
+.del{background:rgba(243,112,33,.10);color:#F5A574;display:block;padding:4px 14px;margin:0 -14px;border-radius:8px}
+.add{background:rgba(30,155,234,.12);color:#9BD3F7;display:block;padding:4px 14px;margin:0 -14px;border-radius:8px}
+.del::before{content:"- ";color:var(--orange)} .add::before{content:"+ ";color:var(--blue)}
+.big{position:absolute;left:72px;right:72px;font-family:"Serif";font-size:300px;line-height:.8;letter-spacing:-.04em}
+/* bleed: the cursor line runs across every slide edge */
+.rail{position:absolute;z-index:5;left:0;top:1296px;height:6px;width:8640px;background:linear-gradient(90deg,rgba(30,155,234,.15),rgba(30,155,234,.9) 85%,var(--orange));box-shadow:0 0 22px rgba(30,155,234,.55)}
+.sun{position:absolute;width:260px;height:130px;border-radius:130px 130px 0 0;background:var(--orange)}
+.sunglow{position:absolute;width:900px;height:520px;background:radial-gradient(closest-side,rgba(243,112,33,.26),rgba(243,112,33,0))}
+.days{position:absolute;left:72px;right:72px;display:grid;grid-template-columns:repeat(8,1fr);gap:14px}
+.days div{height:96px;border-radius:14px;border:1px solid var(--line);background:var(--char);font-family:Mono;font-size:22px;color:var(--muted);display:flex;align-items:flex-end;justify-content:flex-start;padding:10px 12px}
+.days div.burn{background:rgba(243,112,33,.16);border-color:rgba(243,112,33,.6);color:#F5A574}
+.three{position:absolute;left:72px;right:72px;display:flex;flex-direction:column;gap:22px}
+.three .r{display:grid;grid-template-columns:120px 1fr;align-items:center;background:var(--char);border:1px solid var(--line);border-radius:22px;padding:30px 36px}
+.three .n{font-family:"Serif";font-size:96px;line-height:.8;color:var(--orange)}
+.three .t{font-family:"Serif";font-size:60px;line-height:1}
+.three .t small{display:block;font-family:Sans;font-size:26px;color:var(--muted);margin-top:10px;line-height:1.3}
+.strip{position:absolute;left:72px;right:72px;top:1010px;display:grid;grid-template-columns:2.2fr repeat(15,1fr);gap:8px}
+.strip div{height:84px;border-radius:10px;background:var(--char);border:1px solid var(--line)}
+.strip .d1{background:var(--orange);border-color:var(--orange);box-shadow:0 0 26px rgba(243,112,33,.6);font-family:Mono;font-size:20px;color:#0A0A0B;font-weight:500;display:flex;align-items:flex-end;padding:8px 10px}
+.list{position:absolute;left:72px;right:72px;list-style:none}
+.list li{font-size:42px;line-height:1.3;color:#D4D4D8;padding:22px 0 22px 64px;border-bottom:1px solid var(--line);position:relative}
+.list li::before{content:"[ ]";font-family:Mono;font-size:28px;color:var(--muted);position:absolute;left:0;top:28px}
+.list li.done::before{content:"[x]";color:var(--blue)}
+.list li b{color:#fff;font-weight:600}
+.cta{position:absolute;left:72px;right:72px;bottom:150px;display:flex;justify-content:space-between;align-items:flex-end}
+.cta .u{font-family:Mono;font-size:26px;color:#fff;margin-bottom:10px}
+</style></head>
+<body><div class="deck">
+<div class="rail bleed"></div>
+
+<!-- 1 HOOK -->
+<section class="slide">
+<div class="sunglow" style="right:-300px;top:20px"></div>
+<div class="top label"><div><span class="dot"></span>Hack Days · Builder tips</div><div>Scope</div></div>
+<div class="h" style="top:250px;font-size:150px">16 days<br>to build.</div>
+<div class="h" style="top:560px;font-size:112px;line-height:1">Don't spend <em>day 1</em><br>like this.</div>
+<div class="body" style="top:880px;font-size:36px;color:var(--muted)">One scoping trap, and the 3-line fix that saves the other 15 days.</div>
+<div class="strip"><div class="d1">day 1</div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+<div class="mono" style="position:absolute;left:72px;top:1130px;font-size:24px;color:var(--muted)">21 Nov → 6 Dec · build phase</div>
+<div class="mono" style="position:absolute;right:72px;top:1124px;font-size:32px;color:var(--orange)">swipe →</div>
+<div class="grain"></div>
+</section>
+
+<!-- 2 SECOND HOOK -->
+<section class="slide">
+<div class="top label"><div>02 / 08</div><div>idea.md · day 1</div></div>
+<div class="body" style="top:200px;color:var(--muted);font-size:32px">The build phase runs 21 Nov – 6 Dec. Day 1, someone writes this:</div>
+<div class="card" style="top:330px">
+  <div class="file"><span>idea.md</span><span>draft</span></div>
+  <div class="code" style="font-size:40px;line-height:1.45"><span class="c"># our hackathon project</span><br>An AI agent that manages<br><span class="o">your whole college life.</span></div>
+</div>
+<div class="body" style="top:720px;font-size:44px">It sounds huge. It sounds like a winner. It gets a "let's go" in the group chat.</div>
+<div class="next">Then someone lists what it actually has to do…</div>
+<div class="grain"></div>
+</section>
+
+<!-- 3 FEATURE LIST -->
+<section class="slide">
+<div class="top label"><div>03 / 08</div><div>todo.md</div></div>
+<div class="h" style="top:170px;font-size:84px">"Whole college life" means:</div>
+<ul class="list" style="top:300px">
+<li>Timetable and class changes</li>
+<li>Attendance tracking</li>
+<li>Assignment deadlines</li>
+<li>Exam prep plans</li>
+<li>Fee reminders</li>
+<li>Email summaries</li>
+</ul>
+<div class="next" style="bottom:170px">Six features. Now do the maths…</div>
+<div class="grain"></div>
+</section>
+
+<!-- 4 THE MATHS -->
+<section class="slide">
+<div class="top label"><div>04 / 08</div><div>the maths</div></div>
+<div class="big" style="top:200px">16<span style="font-size:150px;color:var(--muted)"> ÷ </span>6</div>
+<div class="days" style="top:520px">
+<div class="burn">d1</div><div class="burn">d2</div><div class="burn">d3</div><div>d4</div><div>d5</div><div>d6</div><div>d7</div><div>d8</div>
+<div>d9</div><div>d10</div><div>d11</div><div>d12</div><div>d13</div><div>d14</div><div>d15</div><div>d16</div>
+</div>
+<div class="body" style="top:790px">Under <b>3 days per feature</b>, before testing, the README, the live demo, or a single night of sleep.</div>
+<div class="next" style="bottom:170px">So you cut. But cut to <em>what?</em></div>
+<div class="grain"></div>
+</section>
+
+<!-- 5 THE FIX -->
+<section class="slide">
+<div class="top label"><div>05 / 08</div><div>the 3-line scope</div></div>
+<div class="h" style="top:170px;font-size:92px">Write your idea in <em>3 lines.</em></div>
+<div class="three" style="top:400px">
+<div class="r"><div class="n">1</div><div class="t">One user<small>Not "students". Which student, doing what?</small></div></div>
+<div class="r"><div class="n">2</div><div class="t">One task<small>The single job your project does for them.</small></div></div>
+<div class="r"><div class="n">3</div><div class="t">One "done" moment<small>What you can show working, start to finish.</small></div></div>
+</div>
+<div class="next" style="bottom:170px">Here's the day-1 idea, rewritten…</div>
+<div class="grain"></div>
+</section>
+
+<!-- 6 THE DIFF -->
+<section class="slide">
+<div class="top label"><div>06 / 08</div><div>git diff idea.md</div></div>
+<div class="card" style="top:170px">
+  <div class="file"><span>idea.md</span><span>-1 +3</span></div>
+  <div class="code" style="font-size:31px;line-height:1.55">
+  <span class="del">An AI agent that manages your whole college life.</span>
+  <br>
+  <span class="add">User: a 2nd-year who misses deadlines posted in class groups.</span>
+  <span class="add">Task: read the notice, add the deadline to their calendar.</span>
+  <span class="add">Done: a reminder lands 24 hours before it's due.</span>
+  </div>
+</div>
+<div class="body" style="top:900px">Same spirit. One loop. An <b>Agents</b> track project you can actually finish.</div>
+<div class="next" style="bottom:170px">And that changes what your demo looks like…</div>
+<div class="grain"></div>
+</section>
+
+<!-- 7 PAYOFF -->
+<section class="slide">
+<div class="sunglow" style="left:90px;top:880px"></div>
+<div class="sun" style="left:410px;top:1166px"></div>
+<div class="top label"><div>07 / 08</div><div>the payoff</div></div>
+<div class="h" style="top:180px;font-size:104px;line-height:1">One loop that <em>works</em><br>beats six that<br>half-work.</div>
+<div class="body" style="top:600px">Small scope means your 16 days go into making it run end to end, so your public repo and live demo show the real thing, not a promise.</div>
+<div class="grain"></div>
+</section>
+
+<!-- 8 CTA -->
+<section class="slide">
+<div class="top label"><div>08 / 08</div><div>stretch goals, later</div></div>
+<div class="h" style="top:170px;font-size:84px">Only when "done" works:</div>
+<ul class="list" style="top:290px">
+<li class="done"><b>Done:</b> deadline to calendar to reminder</li>
+<li>Stretch: read PDF notices too</li>
+<li>Stretch: handle more than one class group</li>
+</ul>
+<div class="h" style="top:740px;font-size:74px;line-height:1.05"><em>Save this</em> for kick-off on 21 Nov. Write your 3 lines today.</div>
+<div class="cta" style="display:block;bottom:140px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><div class="u">hackathon.homingo.co.in</div><div class="u" style="color:var(--orange)">Link in bio</div></div>
+<div style="font-size:24px;color:var(--muted);margin-top:14px">Free · online · solo or teams of 2–4 · registration closes 15 Nov, 11:59 PM IST</div>
+</div>
+<div class="grain"></div>
+</section>
+</div></body></html>
