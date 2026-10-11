@@ -28,5 +28,15 @@
     "pattern": "demo day",
     "why": "there is no separate demo day; 19 Dec is the online finals & review day (hackdays.md Facts)",
     "instead": "finals & review day (online, 19 Dec)"
+  },
+  {
+    "pattern": "live demo",
+    "why": "submission is a public GitHub repo + a short demo VIDEO link (both required); a live website link is optional (owner, 2026-10-10/11)",
+    "instead": "public GitHub repo + short demo video (live link optional)"
+  },
+  {
+    "pattern": "(demo video|video),? (and|\\+) (a )?(pitch )?deck|deck (is )?required",
+    "why": "a deck is optional, not required",
+    "instead": "public GitHub repo + short demo video (live link and deck optional)"
   }
 ]
