@@ -59,3 +59,12 @@
 - 2026-10-11 · verse · story2 · space: tonight's sky, Saturn after opposition · illustration + fact rows · scheduled 21:47 IST (post fa0e0a9a-3746-416f-9eb4-dbc6e2f82733)
 - 2026-10-11 · evening trend check · no new mass-reaction signal today that fits an account (Navratri already covered on verse c4; Deno→Cloudflare already covered on surgelabs c1; Saturn opposition was 4 Oct, used as a story). No trend carousel.
 - 2026-10-11 · homingo · owner request · switched @homingo._ to campaign-ad style; reference deck 2026-10-12-c1 'Your room is full of money' scheduled 09:52 12 Oct
+- 2026-10-12 · surgelabs_ · c1 · agents: Clinic front desk before/after an AI agent: WhatsApp 24-hour window and approved templates · before-after · scheduled 09:12 (post 71694c75-5600-41b7-9f6f-74155570e936)
+- 2026-10-12 · surgelabs_ · c2 · websites: 5 ways a website loses the WhatsApp lead (generic example site) · countdown-list · scheduled 18:12 (post 68bedb9d-a1fb-4dcd-a65d-3cb92dd3fa8b)
+- 2026-10-12 · surgelabs_ · story · teaser: teaser: 5 ways a website loses the WhatsApp lead · cliffhanger-story · scheduled 12:40 (post efc8e675-ca99-4a33-aae4-f6fc59b8f0f6)
+- 2026-10-12 · homingo.hackdays · c1 · ideas: one-loop campus idea per track + 3-line scope template · you-in-it · scheduled 10:20 (post abcf94bb-00c4-4901-831c-546fcb8a9223)
+- 2026-10-12 · homingo.hackdays · c2 · countdown: week-by-week plan from today to kick-off on 21 Nov · number-twist · scheduled 17:20 (post 0039bcb0-e860-48dc-b9ca-d3f735c33ee5)
+- 2026-10-12 · homingo.hackdays · story · myth-fact: 3 myths: tech city, team required, college only · - · scheduled 12:40 (post 73a27fdc-bf02-4def-8eb2-b11b5c2d9351)
+- 2026-10-12 · homingo._ · c2 · app: My Ads: your ad reports back (views + inquiries) · question · scheduled 18:52 (post dde217ef-bebe-4ed7-b011-7a8a8695619e)
+- 2026-10-12 · homingo._ · story · sell: this or that: keep it or sell it (unused guitar) · question · scheduled 13:22 (post 52cbb5bc-5c63-4129-b45b-3af4eec7c2a5)
+- 2026-10-12 · homingo.verse · story · space: on this day: Voskhod 1, 12 Oct 1964, the first multi-person crew · impossible · scheduled 14:47 (post e1e0db72-d003-4483-ad5f-63be007ea737)
