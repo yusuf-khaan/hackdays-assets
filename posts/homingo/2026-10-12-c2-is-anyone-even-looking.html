@@ -1,0 +1,133 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--hb:#2563EB;--hb2:#1D4ED8;--hb3:#93B4F8;--hb4:#DCE6FD;--hb5:#EEF3FE;--ink:#111827;--mut:#6B7280;--bg:#F5F6FA;--line:#E5E7EB}
+html,body{background:var(--bg);margin:0}
+.deck{display:flex;position:relative;width:max-content}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;background:var(--bg);color:var(--ink);font-family:"Sans";flex:none}
+.num{position:absolute;top:72px;right:80px;font-family:"Mono";font-size:22px;color:var(--mut);letter-spacing:.1em}
+.kick{position:absolute;top:72px;left:80px;font-family:"Mono";font-size:22px;letter-spacing:.18em;color:var(--hb);text-transform:uppercase;font-weight:500}
+.it{font-family:"Serif";font-style:italic;color:var(--hb);font-weight:400}
+.h{position:absolute;left:80px;right:80px;font-family:"Serif";font-weight:400;line-height:.98;letter-spacing:-.015em;color:var(--ink)}
+.h small{display:block;font-family:"Sans";font-size:36px;line-height:1.38;color:#374151;letter-spacing:0;margin-top:34px}
+.h small b{color:var(--ink);font-weight:600}
+.pin{position:absolute;background:#fff;border-radius:30px;box-shadow:0 30px 60px -20px rgba(17,24,39,.18),0 0 0 1.5px var(--line);overflow:hidden}
+.lab{position:absolute;font-family:"Mono";font-size:19px;letter-spacing:.12em;color:var(--mut);text-transform:uppercase}
+.tagc{position:absolute;font-family:"Mono";font-size:22px;font-weight:500;color:#fff;background:var(--hb);padding:12px 22px 12px 34px;border-radius:10px 14px 14px 10px;letter-spacing:.06em}
+.tagc:before{content:"";position:absolute;left:12px;top:50%;width:10px;height:10px;margin-top:-5px;border-radius:50%;background:#fff}
+.end{position:absolute;left:80px;right:80px;bottom:140px;font-size:34px;font-weight:500;line-height:1.25;color:var(--mut)}
+.end b{color:var(--hb);font-weight:600}
+.bleed{position:absolute;pointer-events:none;z-index:5}
+.phone{position:absolute;border-radius:64px;background:#0F172A;padding:16px;box-shadow:0 50px 90px -30px rgba(17,24,39,.35)}
+.phone img{display:block;border-radius:50px;width:100%}
+.sticky{position:absolute;width:300px;padding:34px 30px;background:#fff;border-radius:22px;box-shadow:0 24px 50px -20px rgba(17,24,39,.2),0 0 0 1.5px var(--line);font-family:"Serif";font-size:52px;line-height:1.02;color:var(--ink)}
+.sticky:after{content:"";position:absolute;top:-12px;left:50%;width:24px;height:24px;margin-left:-12px;border-radius:50%;background:var(--hb);box-shadow:0 4px 8px rgba(17,24,39,.25)}
+.crop{position:absolute;border-radius:30px;background-repeat:no-repeat;box-shadow:0 40px 80px -30px rgba(17,24,39,.3),0 0 0 1.5px var(--line)}
+</style></head>
+<body><div class="deck">
+
+<svg width="0" height="0" style="position:absolute"><defs>
+  <g id="cycle">
+    <g fill="none" stroke="#111827" stroke-width="12"><circle cx="110" cy="260" r="78"/><circle cx="290" cy="260" r="78"/></g>
+    <g fill="none" stroke="#2563EB" stroke-width="14" stroke-linejoin="round" stroke-linecap="round"><path d="M110 260 L170 160 L270 160 L290 260 M170 160 L205 260 L270 160 M205 260 L110 260"/></g>
+    <g stroke="#111827" stroke-width="10" stroke-linecap="round"><line x1="160" y1="140" x2="190" y2="140"/><path d="M262 120 L282 120 M270 120 L270 160" fill="none"/></g>
+    <circle cx="205" cy="260" r="14" fill="#111827"/>
+  </g>
+  <g id="eye"><path d="M10 50 C 40 10, 110 10, 140 50 C 110 90, 40 90, 10 50Z" fill="none" stroke="#2563EB" stroke-width="7"/><circle cx="75" cy="50" r="19" fill="#2563EB"/></g>
+  <g id="myads"><rect x="0" y="0" width="200" height="200" rx="52" fill="#2563EB"/><g fill="none" stroke="#fff" stroke-width="13" stroke-linejoin="round"><rect x="46" y="54" width="108" height="30" rx="7"/><path d="M56 84 V140 a10 10 0 0 0 10 10 H134 a10 10 0 0 0 10 -10 V84"/></g><rect x="82" y="104" width="36" height="12" rx="6" fill="#fff"/></g>
+</defs></svg>
+
+<!-- one dotted blue "signal" thread runs under every slide -->
+<svg class="bleed" style="left:0;top:0" width="7560" height="1350" viewBox="0 0 7560 1350">
+  <path d="M-20 1300 C 300 1285, 700 1315, 1080 1295 S 1700 1275, 2160 1300 S 2900 1320, 3240 1295 S 3900 1275, 4320 1300 S 5000 1320, 5400 1295 S 6100 1275, 6480 1300 S 7200 1320, 7580 1298" fill="none" stroke="#2563EB" stroke-width="3" stroke-dasharray="2 12" stroke-linecap="round" opacity=".7"/>
+</svg>
+
+<!-- 1 COVER -->
+<section class="slide">
+  <div class="kick">Homingo · Lucknow</div>
+  <div class="h" style="top:150px;font-size:108px">You listed your<br>old cycle. Is anyone<br>even <span class="it">looking?</span></div>
+  <div class="pin" style="left:150px;top:620px;width:560px;height:540px;transform:rotate(-3deg);background:linear-gradient(180deg,#fff 0%,#F3F6FE 100%)">
+    <svg width="560" height="460" viewBox="10 70 380 300" style="margin-top:20px"><use href="#cycle"/></svg>
+    <div class="lab" style="left:34px;bottom:30px">Your old cycle · listed, day 2</div>
+  </div>
+  <div class="tagc" style="left:560px;top:600px;transform:rotate(8deg)">LISTED ✓</div>
+  <svg style="position:absolute;left:770px;top:720px;transform:rotate(6deg)" width="210" height="140" viewBox="0 0 150 100"><use href="#eye"/></svg>
+  <div style="position:absolute;left:770px;top:880px;width:210px;text-align:center;font-family:'Serif';font-size:150px;line-height:1;color:var(--hb);font-style:italic">?</div>
+  <div style="position:absolute;right:80px;top:1110px;font-size:30px;font-weight:600;color:var(--hb)">swipe →</div>
+</section>
+
+<!-- 2 GUESSING -->
+<section class="slide" style="background:#fff">
+  <div class="kick">Day 2 of refreshing</div><div class="num">02 / 07</div>
+  <div class="h" style="top:170px;font-size:112px">Selling used to mean <span class="it">guessing.</span></div>
+  <div class="sticky" style="left:90px;top:520px;transform:rotate(-5deg)">Did anyone <span class="it">see</span> it?</div>
+  <div class="sticky" style="left:410px;top:610px;transform:rotate(3deg)">Is the price <span class="it">wrong?</span></div>
+  <div class="sticky" style="left:720px;top:500px;width:270px;transform:rotate(-2deg)">Bad <span class="it">photo?</span></div>
+  <div class="sticky" style="left:250px;top:900px;width:340px;transform:rotate(2deg)">Should I just <span class="it">keep it?</span></div>
+  <div class="sticky" style="left:650px;top:860px;width:300px;transform:rotate(-4deg)">Hello…? <span class="it">Anyone?</span></div>
+  <div class="end">Unless your ad could <b>talk back…</b></div>
+</section>
+
+<!-- 3 THE TURN: My Ads icon -->
+<section class="slide">
+  <div class="num">03 / 07</div>
+  <div style="position:absolute;left:50%;top:150px;width:700px;height:700px;margin-left:-350px;border-radius:50%;background:radial-gradient(circle,#DCE6FD 0%,rgba(220,230,253,0) 70%)"></div>
+  <svg style="position:absolute;left:50%;top:310px;margin-left:-170px;filter:drop-shadow(0 40px 50px rgba(37,99,235,.45))" width="340" height="340" viewBox="0 0 200 200"><use href="#myads"/></svg>
+  <div style="position:absolute;left:0;right:0;top:700px;text-align:center;font-family:'Mono';font-size:26px;letter-spacing:.2em;color:var(--hb);font-weight:500">MY ADS</div>
+  <div class="h" style="top:790px;font-size:116px;text-align:center">It can. <span class="it">Meet My Ads.</span><small>Every ad you post on Homingo<br>reports back to you.</small></div>
+  <div class="end" style="text-align:center">Here's what it tells you →</div>
+</section>
+
+<!-- 4 PRODUCT HERO: real My Ads screen -->
+<section class="slide" style="background:#fff">
+  <div class="num">04 / 07</div>
+  <div class="h" style="top:170px;font-size:96px;right:540px">Every ad.<br>Its views.<br>Its inquiries.<br><span class="it">One screen.</span></div>
+  <div class="phone" style="left:580px;top:150px;width:420px"><img src="../../brand/homingo-app/my-ads.jpg"></div>
+  <div class="lab" style="left:80px;top:760px;width:440px;line-height:1.5">The real My Ads screen.<br>Numbers: one seller's own ads.</div>
+  <div class="end" style="right:540px;bottom:140px">Now look closer at those <b>two numbers…</b></div>
+</section>
+
+<!-- 5 ZOOM: views + inquiries -->
+<section class="slide">
+  <div class="num">05 / 07</div>
+  <div class="crop" style="left:80px;top:170px;width:920px;height:600px;background-image:url(../../brand/homingo-app/my-ads.jpg);background-size:1000px auto;background-position:-40px -690px;transform:rotate(-1.5deg)"></div>
+  <div class="lab" style="left:80px;top:800px">Real app screen · zoomed in</div>
+  <div class="h" style="top:860px;font-size:80px">Views: they're <span class="it">looking.</span><br>Inquiries: they <span class="it">want it.</span></div>
+  <div class="end" style="color:#374151;font-weight:400">Buyers chat or call you directly. <b>So here's the plan…</b></div>
+</section>
+
+<!-- 6 PAYOFF -->
+<section class="slide" style="background:#fff">
+  <div class="num">06 / 07</div>
+  <div class="h" style="top:170px;font-size:150px;line-height:.92">Stop refreshing.<br><span class="it">Start knowing.</span></div>
+  <div style="position:absolute;left:80px;right:80px;top:640px;display:flex;align-items:center;justify-content:space-between">
+    <div style="text-align:center;width:260px">
+      <div style="width:200px;height:200px;margin:0 auto;border-radius:50%;background:var(--hb);box-shadow:0 30px 60px -20px rgba(37,99,235,.55),0 0 0 22px rgba(37,99,235,.10)"><svg width="200" height="200" viewBox="0 0 200 200"><g stroke="#fff" stroke-width="16" stroke-linecap="round"><line x1="100" y1="60" x2="100" y2="140"/><line x1="60" y1="100" x2="140" y2="100"/></g></svg></div>
+      <div style="margin-top:44px;font-size:36px;font-weight:600">Tap Sell</div>
+    </div>
+    <div style="font-family:'Serif';font-size:90px;color:var(--hb3)">→</div>
+    <div style="text-align:center;width:260px">
+      <svg width="200" height="200" viewBox="0 0 200 200" style="filter:drop-shadow(0 30px 30px rgba(37,99,235,.35))"><use href="#myads"/></svg>
+      <div style="margin-top:44px;font-size:36px;font-weight:600">Watch it</div>
+    </div>
+  </div>
+  <div style="position:absolute;left:80px;right:80px;top:1000px;text-align:center;font-size:34px;color:#374151;line-height:1.4">Views and inquiries on every ad, in one place.</div>
+  <div class="end" style="bottom:150px;font-size:38px;color:var(--ink);font-weight:600">Listing is free. Your cycle is <b>waiting →</b></div>
+</section>
+
+<!-- 7 CTA -->
+<section class="slide" style="background:var(--hb);color:#fff">
+  <div class="num" style="color:#C7D7FB">07 / 07</div>
+  <div class="kick" style="color:#fff">Homingo · Lucknow's local marketplace</div>
+  <div class="h" style="top:200px;font-size:160px;color:#fff;line-height:.92">List it.<br><span style="font-style:italic">Watch it.</span><br>Let it go.</div>
+  <div style="position:absolute;left:80px;right:80px;top:820px;background:#fff;color:var(--ink);border-radius:36px;padding:44px;display:flex;align-items:center;gap:36px">
+    <img src="../../brand/homingo-app/app-icon.png" style="width:150px;height:150px;border-radius:34px">
+    <div style="flex:1">
+      <div style="font-size:44px;font-weight:600;letter-spacing:-.02em">List it free on Homingo</div>
+      <div style="font-size:30px;color:var(--mut);margin-top:10px">Track views and inquiries in My Ads.</div>
+    </div>
+  </div>
+  <div style="position:absolute;left:80px;bottom:120px;font-size:40px;font-weight:600">Link in bio →</div>
+</section>
+
+</div></body></html>

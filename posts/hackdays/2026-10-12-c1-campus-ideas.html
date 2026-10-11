@@ -1,0 +1,184 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+.deck{display:flex;position:relative;width:max-content}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;background:var(--ink);color:#fff;font-family:"Sans";flex:none}
+.top{position:absolute;left:72px;right:72px;top:64px;display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+.top .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--orange);margin-right:14px;box-shadow:0 0 14px rgba(243,112,33,.9);vertical-align:middle;position:relative;top:-2px}
+.label{font-size:20px}
+.h{position:absolute;left:72px;right:72px;font-family:"Serif";line-height:.98;letter-spacing:-.02em}
+.h em{color:var(--orange);font-style:italic}
+.body{position:absolute;left:72px;right:72px;font-size:38px;line-height:1.35;color:#D4D4D8}
+.body b{color:#fff;font-weight:600}
+.next{position:absolute;left:72px;right:72px;bottom:96px;font-family:"Serif";font-style:italic;font-size:52px;line-height:1.1;color:#fff}
+.next em{color:var(--orange)}
+.mono{font-family:"Mono"}
+.issue{position:absolute;left:72px;right:72px;background:var(--char);border:1px solid var(--line);border-radius:24px;overflow:hidden}
+.issue .bar{display:flex;justify-content:space-between;align-items:center;padding:22px 34px;border-bottom:1px solid var(--line);font-family:"Mono";font-size:22px;color:var(--muted)}
+.tag{display:inline-block;padding:8px 20px;border-radius:999px;font-family:"Mono";font-size:24px;letter-spacing:.04em}
+.tag.o{background:rgba(243,112,33,.14);color:#F5A574;border:1px solid rgba(243,112,33,.5)}
+.tag.b{background:rgba(30,155,234,.14);color:#9BD3F7;border:1px solid rgba(30,155,234,.5)}
+.issue .title{padding:36px 40px 10px;font-family:"Serif";font-size:84px;line-height:1}
+.issue .prob{padding:10px 40px 32px;font-size:35px;line-height:1.4;color:#A1A1AA}
+.scope{border-top:1px solid var(--line);padding:30px 40px 34px;font-family:"Mono";font-size:33px;line-height:1.75;color:#D4D4D8}
+.scope .k{color:var(--blue);display:inline-block;width:160px}
+.scope .o{color:var(--orange)}
+.stretch{padding:26px 40px;border-top:1px dashed var(--line);font-size:31px;line-height:1.35;color:#A1A1AA}
+.stretch b{color:#D4D4D8;font-weight:500}
+.rail{position:absolute;z-index:5;left:0;top:1296px;height:6px;width:8640px;background:linear-gradient(90deg,rgba(30,155,234,.15),rgba(30,155,234,.9) 85%,var(--orange));box-shadow:0 0 22px rgba(30,155,234,.55)}
+.sun{position:absolute;width:260px;height:130px;border-radius:130px 130px 0 0;background:var(--orange)}
+.sunglow{position:absolute;width:900px;height:520px;background:radial-gradient(closest-side,rgba(243,112,33,.26),rgba(243,112,33,0))}
+.loop{position:absolute;left:72px;right:72px;display:flex;align-items:center;gap:18px}
+.loop .s{flex:1;background:var(--char);border:1px solid var(--line);border-radius:22px;padding:28px 24px;text-align:center}
+.loop .s .l{font-family:"Mono";font-size:20px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+.loop .s .v{font-family:"Serif";font-size:50px;line-height:1.05;margin-top:12px}
+.loop .s.hot{border-color:rgba(243,112,33,.6);background:rgba(243,112,33,.10)}
+.loop .ar{font-family:"Mono";font-size:40px;color:var(--orange)}
+.blank{display:inline-block;width:560px;border-bottom:3px solid #52525B;height:40px;vertical-align:bottom}
+</style></head>
+<body><div class="deck">
+<div class="rail bleed"></div>
+
+<!-- 1 HOOK -->
+<section class="slide">
+<div class="sunglow" style="right:-320px;top:-40px"></div>
+<div class="top label"><div><span class="dot"></span>Hack Days · Project ideas</div><div>Campus</div></div>
+<div class="h" style="top:190px;font-size:128px">You walk past<br><em>3 hackathon ideas</em><br>every day.</div>
+<div class="body" style="top:600px;font-size:38px;color:#A1A1AA">The fee counter. The hostel desk.<br>The rulebook you never read.</div>
+<svg style="position:absolute;left:0;top:780px" width="1080" height="420" viewBox="0 0 1080 420">
+  <g fill="none" stroke="#27272A" stroke-width="2">
+    <rect x="72" y="40" width="300" height="190" rx="18"/>
+    <rect x="420" y="120" width="250" height="250" rx="18"/>
+    <rect x="720" y="30" width="330" height="170" rx="18"/>
+    <path d="M222 230 V300 H420" stroke-dasharray="8 10"/>
+    <path d="M372 135 H420 M670 200 H720 V115" stroke-dasharray="8 10"/>
+  </g>
+  <g font-family="Mono" font-size="20" fill="#8A8A93" letter-spacing="2">
+    <text x="96" y="78">ACCOUNTS OFFICE</text>
+    <text x="444" y="158">HOSTEL</text>
+    <text x="744" y="68">LIBRARY</text>
+  </g>
+  <g>
+    <circle cx="222" cy="150" r="34" fill="rgba(243,112,33,.18)"/><circle cx="222" cy="150" r="14" fill="#F37021"/>
+    <circle cx="545" cy="260" r="34" fill="rgba(30,155,234,.18)"/><circle cx="545" cy="260" r="14" fill="#1E9BEA"/>
+    <circle cx="1060" cy="120" r="34" fill="rgba(243,112,33,.18)"/><circle cx="1060" cy="120" r="14" fill="#F37021"/>
+  </g>
+</svg>
+<div class="mono" style="position:absolute;right:72px;top:1140px;font-size:32px;color:var(--orange)">swipe →</div>
+<div class="grain"></div>
+</section>
+
+<!-- 2 SECOND HOOK -->
+<section class="slide">
+<div class="top label"><div>02 / 08</div><div>where ideas live</div></div>
+<div class="h" style="top:190px;font-size:112px">Ideas from your feed are <em>everyone's</em> ideas.</div>
+<div class="body" style="top:560px;font-size:42px">Ideas from a queue on your campus are <b>yours</b>. You know the user. You've stood in the line.</div>
+<div style="position:absolute;left:72px;right:72px;top:820px;display:flex;gap:16px">
+  <span class="tag o">Agents</span><span class="tag b">Automation</span><span class="tag o">LLM apps</span>
+</div>
+<div class="body" style="top:900px;font-size:34px;color:var(--muted)">Hack Days has 3 tracks. Here's one campus idea for each.</div>
+<div class="next">First stop: the <em>fee counter</em>…</div>
+<div class="grain"></div>
+</section>
+
+<!-- 3 AUTOMATION -->
+<section class="slide">
+<div class="top label"><div>03 / 08</div><div>idea 1 of 3</div></div>
+<div class="issue" style="top:170px">
+  <div class="bar"><span>#1 · accounts office</span><span class="tag b">Automation</span></div>
+  <div class="title">The fee reminder that sends itself</div>
+  <div class="prob">Today: someone in the office checks a list and reminds students one by one, by hand.</div>
+  <div class="scope">
+    <span class="k">user:</span>the accounts office<br>
+    <span class="k">task:</span>read the dues list, remind<br><span class="k"></span>each student once<br>
+    <span class="k">done:</span><span class="o">a log of who was reminded</span>
+  </div>
+  <div class="stretch"><b>Stretch:</b> mark who paid and stop reminding them.</div>
+</div>
+<div class="next">That one removes busywork. The next one has to <em>decide</em>…</div>
+<div class="grain"></div>
+</section>
+
+<!-- 4 AGENTS -->
+<section class="slide">
+<div class="top label"><div>04 / 08</div><div>idea 2 of 3</div></div>
+<div class="issue" style="top:170px">
+  <div class="bar"><span>#2 · hostel desk</span><span class="tag o">Agents</span></div>
+  <div class="title">The complaint that finds the right fixer</div>
+  <div class="prob">"Fan not working, room 214." Who gets it: the electrician, the warden, or nobody?</div>
+  <div class="scope">
+    <span class="k">user:</span>the hostel warden<br>
+    <span class="k">task:</span>sort a complaint, check for<br><span class="k"></span>a duplicate, route it<br>
+    <span class="k">done:</span><span class="o">the right person has it</span>
+  </div>
+  <div class="stretch"><b>Stretch:</b> follow up if nothing changes in 48 hours.</div>
+</div>
+<div class="next">That one acts. The last one has to <em>answer</em>…</div>
+<div class="grain"></div>
+</section>
+
+<!-- 5 LLM APPS -->
+<section class="slide">
+<div class="top label"><div>05 / 08</div><div>idea 3 of 3</div></div>
+<div class="issue" style="top:170px">
+  <div class="bar"><span>#3 · library</span><span class="tag o">LLM apps</span></div>
+  <div class="title">Ask the rulebook, get the page</div>
+  <div class="prob">"How many leaves can I take before attendance is a problem?" The answer is in the handbook. Somewhere.</div>
+  <div class="scope">
+    <span class="k">user:</span>a first-year student<br>
+    <span class="k">task:</span>answer from the college<br><span class="k"></span>handbook PDF only<br>
+    <span class="k">done:</span><span class="o">answer + the page it came from</span>
+  </div>
+  <div class="stretch"><b>Stretch:</b> say "not in the handbook" instead of guessing.</div>
+</div>
+<div class="next">Three tracks. Three ideas. Notice what they <em>share</em>?</div>
+<div class="grain"></div>
+</section>
+
+<!-- 6 PAYOFF -->
+<section class="slide">
+<div class="sunglow" style="left:90px;top:760px"></div>
+<div class="top label"><div>06 / 08</div><div>the pattern</div></div>
+<div class="h" style="top:180px;font-size:120px">Each one is<br><em>one loop.</em></div>
+<div class="loop" style="top:520px">
+  <div class="s"><div class="l">in</div><div class="v">one input</div></div>
+  <div class="ar">→</div>
+  <div class="s"><div class="l">do</div><div class="v">one task</div></div>
+  <div class="ar">→</div>
+  <div class="s hot"><div class="l">out</div><div class="v">one finish line</div></div>
+</div>
+<div class="body" style="top:800px;font-size:40px">Not "an AI that runs the whole college". One user, one task, one done. That's a size that fits a <b><span style="white-space:nowrap">16-day build</span></b> (21 Nov – 6 Dec).</div>
+<div class="next">Problem statements drop 21 Nov. Practise the shape <em>now</em>…</div>
+<div class="grain"></div>
+</section>
+
+<!-- 7 TEMPLATE -->
+<section class="slide">
+<div class="top label"><div>07 / 08</div><div>your turn</div></div>
+<div class="h" style="top:170px;font-size:96px">Walk to one queue.<br>Fill <em>3 lines.</em></div>
+<div class="issue" style="top:460px">
+  <div class="bar"><span>scope.md</span><span>fill me in</span></div>
+  <div class="scope" style="border-top:none;font-size:34px;line-height:2.3;padding:30px 34px">
+    <span class="k">user:</span><span class="blank"></span><br>
+    <span class="k">task:</span><span class="blank"></span><br>
+    <span class="k">done:</span><span class="blank"></span>
+  </div>
+</div>
+<div class="body" style="top:900px;font-size:30px;color:var(--muted)">Try it at: the canteen line · the placement cell · the lab booking sheet · the bus pass window</div>
+<div class="next">If a line won't fit, the idea is <em>too big</em>.</div>
+<div class="grain"></div>
+</section>
+
+<!-- 8 CTA -->
+<section class="slide">
+<div class="sunglow" style="left:90px;top:620px"></div>
+<div class="sun" style="left:410px;top:770px"></div>
+<div class="top label"><div>08 / 08</div><div>Hack Days · Edition 01</div></div>
+<div class="h" style="top:190px;font-size:116px"><em>Save this</em><br>for the next queue<br>you stand in.</div>
+<div class="body" style="top:560px;font-size:34px;color:#A1A1AA">Agents · Automation · LLM apps. Online, all of India, solo or teams of 2–4.</div>
+<div class="body" style="top:960px;font-size:34px;text-align:center">Registration closes <b>15 Nov, 11:59 PM IST</b></div>
+<div class="mono" style="position:absolute;left:72px;right:72px;top:1040px;text-align:center;font-size:30px;color:#fff">hackathon.homingo.co.in · Link in bio</div>
+<div class="grain"></div>
+</section>
+
+</div></body></html>

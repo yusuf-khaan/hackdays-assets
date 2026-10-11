@@ -1,0 +1,184 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+.deck{display:flex;position:relative;width:max-content}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;background:var(--ink);color:#fff;font-family:"Sans";flex:none}
+.top{position:absolute;left:72px;right:72px;top:64px;display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+.top .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--orange);margin-right:14px;box-shadow:0 0 14px rgba(243,112,33,.9);vertical-align:middle;position:relative;top:-2px}
+.label{font-size:20px}
+.h{position:absolute;left:72px;right:72px;font-family:"Serif";line-height:.98;letter-spacing:-.02em}
+.h em{color:var(--orange);font-style:italic}
+.body{position:absolute;left:72px;right:72px;font-size:38px;line-height:1.4;color:#D4D4D8}
+.body b{color:#fff;font-weight:600}
+.next{position:absolute;left:72px;right:72px;bottom:96px;font-family:"Serif";font-style:italic;font-size:52px;line-height:1.1;color:#fff}
+.next em{color:var(--orange)}
+.mono{font-family:"Mono"}
+.wk{position:absolute;left:72px;top:170px;font-family:"Mono";font-size:26px;color:var(--orange);letter-spacing:.06em}
+.wk span{color:var(--muted)}
+.cal{position:absolute;left:72px;right:72px;display:grid;grid-template-columns:repeat(7,1fr);gap:12px}
+.cal div{height:118px;border-radius:16px;border:1px solid var(--line);background:var(--char);padding:12px 14px;display:flex;flex-direction:column;justify-content:space-between}
+.cal div i{font-style:normal;font-family:"Mono";font-size:18px;color:#5E5E66;letter-spacing:.08em}
+.cal div b{font-family:"Serif";font-weight:400;font-size:52px;line-height:.9;color:#D4D4D8}
+.cal div.now{border-color:rgba(30,155,234,.7);background:rgba(30,155,234,.12)}
+.cal div.now b{color:#9BD3F7}
+.cal div.dead{border-color:var(--orange);background:rgba(243,112,33,.22);box-shadow:0 0 30px rgba(243,112,33,.45)}
+.cal div.dead b,.cal div.dead i{color:#fff}
+.cal div.blue{border-color:rgba(30,155,234,.7);background:rgba(30,155,234,.12)}
+.cal div.blue b{color:#9BD3F7}
+.cal div.off{visibility:hidden}
+.left{position:absolute;right:72px;top:160px;text-align:right;font-family:"Mono";font-size:22px;color:var(--muted);letter-spacing:.08em}
+.left b{display:block;font-family:"Serif";font-weight:400;font-size:96px;line-height:1;color:#fff;letter-spacing:-.02em}
+.chips{position:absolute;left:72px;right:72px;display:flex;gap:16px;flex-wrap:wrap}
+.chip{padding:14px 26px;border-radius:999px;border:1px solid var(--line);background:var(--char);font-size:32px;color:#D4D4D8}
+.chip.o{border-color:rgba(243,112,33,.6);color:#F5A574}
+.chip.b{border-color:rgba(30,155,234,.6);color:#9BD3F7}
+.card{position:absolute;left:72px;right:72px;background:var(--char);border:1px solid var(--line);border-radius:24px;overflow:hidden}
+.file{display:flex;justify-content:space-between;padding:20px 34px;border-bottom:1px solid var(--line);font-family:"Mono";font-size:22px;color:var(--muted)}
+.code{padding:26px 34px;font-family:"Mono";font-size:30px;line-height:1.65;color:#D4D4D8}
+.code .c{color:#5E5E66}.code .k{color:var(--blue)}.code .o{color:var(--orange)}
+.rail{position:absolute;z-index:5;left:0;top:1296px;height:6px;width:8640px;background:linear-gradient(90deg,rgba(30,155,234,.15),rgba(30,155,234,.9) 80%,var(--orange));box-shadow:0 0 22px rgba(30,155,234,.55)}
+.sun{position:absolute;width:300px;height:150px;border-radius:150px 150px 0 0;background:var(--orange)}
+.sunglow{position:absolute;width:900px;height:520px;background:radial-gradient(closest-side,rgba(243,112,33,.28),rgba(243,112,33,0))}
+.clock{position:absolute;left:72px;right:72px;display:flex;gap:20px}
+.clock .t{flex:1;background:var(--char);border:1px solid var(--line);border-radius:22px;padding:22px 26px}
+.clock .t b{display:block;font-family:"Serif";font-weight:400;font-size:150px;line-height:.9;letter-spacing:-.03em}
+.clock .t i{font-style:normal;font-family:"Mono";font-size:22px;color:var(--muted);letter-spacing:.08em}
+.clock .t.o{border-color:rgba(243,112,33,.6);background:rgba(243,112,33,.10)}
+.clock .t.o b{color:var(--orange)}
+</style></head>
+<body><div class="deck">
+<div class="rail bleed"></div>
+
+<!-- 1 HOOK -->
+<section class="slide">
+<div class="sunglow" style="right:-300px;top:-60px"></div>
+<div class="top label"><div><span class="dot"></span>Hack Days · Countdown</div><div>12 Oct</div></div>
+<div class="h" style="top:200px;font-size:140px"><em>40 days</em><br>to kick-off.</div>
+<div class="h" style="top:500px;font-size:84px;line-height:1.02">Registration closes<br>on day 34.</div>
+<div class="body" style="top:720px;font-size:36px;color:#A1A1AA">Six weeks, one job each. Week 5 has a hard stop.</div>
+<div class="clock" style="top:860px">
+  <div class="t"><b>40</b><i>DAYS TO 21 NOV</i></div>
+  <div class="t o"><b>34</b><i>DAYS TO 15 NOV</i></div>
+</div>
+<div class="mono" style="position:absolute;right:72px;top:1160px;font-size:32px;color:var(--orange)">swipe →</div>
+<div class="grain"></div>
+</section>
+
+<!-- 2 WEEK 1 -->
+<section class="slide">
+<div class="top label"><div>02 / 08</div><div>week 1 of 6</div></div>
+<div class="wk">WEEK 1 <span>· 12 – 18 OCT</span></div>
+<div class="left">TO KICK-OFF<b>40</b></div>
+<div class="h" style="top:330px;font-size:120px">Register.<br>Pick a <em>track.</em></div>
+<div class="chips" style="top:600px"><span class="chip o">Agents</span><span class="chip b">Automation</span><span class="chip o">LLM apps</span></div>
+<div class="cal" style="top:740px">
+  <div class="now"><i>MON</i><b>12</b></div><div><i>TUE</i><b>13</b></div><div><i>WED</i><b>14</b></div><div><i>THU</i><b>15</b></div><div><i>FRI</i><b>16</b></div><div><i>SAT</i><b>17</b></div><div><i>SUN</i><b>18</b></div>
+</div>
+<div class="body" style="top:900px;font-size:34px;color:#A1A1AA">Pick the track, not the project. Don't lock an idea yet…</div>
+<div class="next">The problem statements only land on <em>kick-off day</em>.</div>
+<div class="grain"></div>
+</section>
+
+<!-- 3 WEEK 2 -->
+<section class="slide">
+<div class="top label"><div>03 / 08</div><div>week 2 of 6</div></div>
+<div class="wk">WEEK 2 <span>· 19 – 25 OCT</span></div>
+<div class="left">TO KICK-OFF<b>33</b></div>
+<div class="h" style="top:330px;font-size:120px">Solo, or a<br><em>squad</em> of 2–4?</div>
+<svg style="position:absolute;left:72px;top:600px" width="936" height="110" viewBox="0 0 936 110">
+  <circle cx="55" cy="55" r="44" fill="none" stroke="#F37021" stroke-width="4"/>
+  <text x="130" y="68" font-family="Mono" font-size="30" fill="#8A8A93">or</text>
+  <g fill="none" stroke="#1E9BEA" stroke-width="4"><circle cx="250" cy="55" r="44"/><circle cx="350" cy="55" r="44"/><circle cx="450" cy="55" r="44"/><circle cx="550" cy="55" r="44"/></g>
+</svg>
+<div class="cal" style="top:740px">
+  <div><i>MON</i><b>19</b></div><div><i>TUE</i><b>20</b></div><div><i>WED</i><b>21</b></div><div><i>THU</i><b>22</b></div><div><i>FRI</i><b>23</b></div><div><i>SAT</i><b>24</b></div><div><i>SUN</i><b>25</b></div>
+</div>
+<div class="body" style="top:900px;font-size:34px;color:#A1A1AA">Team formation runs until 18 Nov. Decide early anyway, so week 3 isn't spent asking around.</div>
+<div class="next">Then get your hands <em>dirty</em>…</div>
+<div class="grain"></div>
+</section>
+
+<!-- 4 WEEK 3 -->
+<section class="slide">
+<div class="top label"><div>04 / 08</div><div>week 3 of 6</div></div>
+<div class="wk">WEEK 3 <span>· 26 OCT – 1 NOV</span></div>
+<div class="left">TO KICK-OFF<b>26</b></div>
+<div class="h" style="top:330px;font-size:120px">Build a <em>toy.</em><br>Then bin it.</div>
+<div class="card" style="top:590px">
+  <div class="file"><span>toy.py</span><span>throwaway</span></div>
+  <div class="code" style="padding:18px 34px;font-size:28px"><span class="c"># one tiny thing in your track</span><br><span class="k">reply</span> = ask_model(<span class="o">"hello"</span>)</div>
+</div>
+<div class="cal" style="top:820px">
+  <div><i>MON</i><b>26</b></div><div><i>TUE</i><b>27</b></div><div><i>WED</i><b>28</b></div><div><i>THU</i><b>29</b></div><div><i>FRI</i><b>30</b></div><div><i>SAT</i><b>31</b></div><div><i>SUN</i><b>1</b></div>
+</div>
+<div class="body" style="top:980px;font-size:34px;color:#A1A1AA">The point isn't the toy. It's that the tools stop being new.</div>
+<div class="next">Because of what you'll <em>hand in</em>…</div>
+<div class="grain"></div>
+</section>
+
+<!-- 5 WEEK 4 -->
+<section class="slide">
+<div class="top label"><div>05 / 08</div><div>week 4 of 6</div></div>
+<div class="wk">WEEK 4 <span>· 2 – 8 NOV</span></div>
+<div class="left">TO KICK-OFF<b>19</b></div>
+<div class="h" style="top:330px;font-size:110px">Rehearse the<br><em>submission.</em></div>
+<div class="card" style="top:580px">
+  <div class="file"><span>submit · 4 – 6 Dec</span><span>dry run</span></div>
+  <div class="code" style="padding:18px 34px;font-size:28px;line-height:1.6">
+    <span class="k">required</span> public GitHub repo link<br>
+    <span class="k">required</span> short demo video link<br>
+    <span class="c">optional live link · deck</span>
+  </div>
+</div>
+<div class="cal" style="top:860px">
+  <div><i>MON</i><b>2</b></div><div><i>TUE</i><b>3</b></div><div><i>WED</i><b>4</b></div><div><i>THU</i><b>5</b></div><div><i>FRI</i><b>6</b></div><div><i>SAT</i><b>7</b></div><div><i>SUN</i><b>8</b></div>
+</div>
+<div class="body" style="top:1010px;font-size:32px;color:#A1A1AA">Push your toy to a public repo. Record a short screen video of it.</div>
+<div class="next">Then the week with the <em>hard stop</em>.</div>
+<div class="grain"></div>
+</section>
+
+<!-- 6 WEEK 5 -->
+<section class="slide">
+<div class="sunglow" style="right:-260px;top:620px"></div>
+<div class="top label"><div>06 / 08</div><div>week 5 of 6</div></div>
+<div class="wk">WEEK 5 <span>· 9 – 15 NOV</span></div>
+<div class="left">TO CLOSE<b>6</b></div>
+<div class="h" style="top:330px;font-size:120px">Last week to<br><em>register.</em></div>
+<div class="cal" style="top:640px">
+  <div><i>MON</i><b>9</b></div><div><i>TUE</i><b>10</b></div><div><i>WED</i><b>11</b></div><div><i>THU</i><b>12</b></div><div><i>FRI</i><b>13</b></div><div><i>SAT</i><b>14</b></div><div class="dead"><i>SUN</i><b>15</b></div>
+</div>
+<div class="body" style="top:800px;font-size:40px">Registration closes <b>15 Nov, 11:59 PM IST.</b> Don't leave it for 11:58.</div>
+<div class="next">Then six days that <em>set the clock</em>…</div>
+<div class="grain"></div>
+</section>
+
+<!-- 7 WEEK 6 / PAYOFF -->
+<section class="slide">
+<div class="sunglow" style="left:90px;top:840px"></div>
+<div class="sun" style="left:390px;top:1020px"></div>
+<div class="top label"><div>07 / 08</div><div>week 6 of 6</div></div>
+<div class="wk">WEEK 6 <span>· 16 – 21 NOV</span></div>
+<div class="h" style="top:240px;font-size:104px">21 Nov: problem<br>statements land.<br><em>The clock starts.</em></div>
+<div class="cal" style="top:600px">
+  <div><i>MON</i><b>16</b></div><div><i>TUE</i><b>17</b></div><div class="blue"><i>WED</i><b>18</b></div><div><i>THU</i><b>19</b></div><div><i>FRI</i><b>20</b></div><div class="dead"><i>SAT</i><b>21</b></div><div class="off"></div>
+</div>
+<div class="mono" style="position:absolute;left:343px;top:740px;font-size:22px;color:#9BD3F7">18 · team formation ends</div><div class="mono" style="position:absolute;left:749px;top:740px;font-size:22px;color:#F5A574">21 · kick-off</div>
+<div class="body" style="top:820px;font-size:38px">Build phase: 21 Nov – 6 Dec. Done the last five weeks? Then day 1 is <b>building</b>, not installing.</div>
+<div class="grain"></div>
+</section>
+
+<!-- 8 CTA -->
+<section class="slide">
+<div class="sunglow" style="left:90px;top:640px"></div>
+<div class="top label"><div>08 / 08</div><div>Hack Days · Edition 01</div></div>
+<div class="h" style="top:200px;font-size:132px">Week 1<br>starts <em>today.</em></div>
+<div class="body" style="top:520px;font-size:36px;color:#A1A1AA">Online AI Engineering hackathon. All of India. Students 16+ and early-career developers. Solo or teams of 2–4.</div>
+<div class="card" style="top:800px">
+  <div class="code" style="font-size:32px;line-height:1.7"><span class="c">$</span> open <span class="o">hackathon.homingo.co.in</span><br><span class="c"># or tap the link in bio</span></div>
+</div>
+<div class="mono" style="position:absolute;left:72px;right:72px;top:1070px;font-size:24px;color:var(--muted)">Registration closes 15 Nov, 11:59 PM IST</div>
+<div class="grain"></div>
+</section>
+
+</div></body></html>

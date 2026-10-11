@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SurgeLabs c1 2026-10-12: clinic front desk, before and after an agent</title>
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+  :root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--line:#2A2A31;--edge:#3A3A42;--card:#111114;--grid:#16161B;--red:#F2767A}
+  html,body{background:var(--bg)}
+  .deck{display:flex;position:relative;width:max-content}
+  .slide{width:1080px;height:1350px;flex:none;position:relative;overflow:hidden;padding:72px;display:flex;flex-direction:column;
+    background-color:var(--bg);color:var(--fg);font-family:Sans;
+    background-image:radial-gradient(600px 500px at 0% 0%,rgba(167,139,250,.16),transparent 70%),radial-gradient(600px 500px at 100% 100%,rgba(45,212,191,.10),transparent 70%),linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:auto,auto,90px 90px,90px 90px}
+  .top{display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.03em;text-transform:none;color:var(--fg)}
+  .t{color:var(--teal)} .p{color:var(--purple)} .m{color:var(--muted)} .r{color:var(--red)}
+  .cm{font-family:Mono;font-size:24px;color:var(--teal);letter-spacing:.02em}
+  h1{font-weight:600;font-size:112px;line-height:.95;letter-spacing:-.045em}
+  h2{font-weight:600;font-size:76px;line-height:1;letter-spacing:-.04em}
+  .body{font-size:34px;line-height:1.35;color:var(--soft);letter-spacing:-.01em}
+  .end{font-size:36px;line-height:1.3;font-weight:600;letter-spacing:-.02em}
+  .num{font-family:Mono;font-size:22px;color:var(--muted);letter-spacing:.1em}
+  .grain{position:absolute;inset:0;opacity:.06;pointer-events:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+  .bleed{position:absolute;pointer-events:none;z-index:3}
+  .phone{border:2px solid var(--edge);border-radius:44px;background:#0E0E12;padding:34px 30px;display:flex;flex-direction:column;gap:22px}
+  .bub{max-width:560px;border-radius:26px;padding:22px 28px;font-size:32px;line-height:1.3}
+  .in{background:#1C1C22;border:1px solid var(--edge);align-self:flex-start}
+  .out{background:var(--teal);color:#0A0A0C;align-self:flex-end;font-weight:500}
+  .stamp{font-family:Mono;font-size:22px;color:var(--muted)}
+  .chip{display:inline-block;font-family:Mono;font-size:22px;padding:8px 16px;border-radius:10px;letter-spacing:.06em;text-transform:uppercase}
+  .node{border:2px solid var(--fg);border-radius:16px;padding:20px 24px;font-family:Mono;font-size:26px;background:var(--bg)}
+  .node.g{background:var(--teal);border-color:var(--teal);color:#0A0A0C;font-weight:500}
+  .node.pp{background:var(--purple);border-color:var(--purple);color:#0A0A0C;font-weight:500}
+  .card{border:2px solid var(--edge);border-radius:22px;padding:30px 32px;background:rgba(17,17,20,.85)}
+  .url{font-family:Mono;font-size:28px;color:var(--teal)}
+</style>
+</head>
+<body>
+<div class="deck">
+
+<!-- 1: hook -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>LAB-07 · Agents</div></div>
+  <div style="margin-top:70px;display:flex;flex-direction:column;gap:26px">
+    <div class="cm">// imagine a clinic · before</div>
+    <h1>11:40 PM: “Any slot tomorrow?” <span class="m">It waited till 9 AM.</span></h1>
+  </div>
+  <div class="phone" style="margin-top:56px;width:760px">
+    <div class="bub in">Hi, any slot tomorrow evening for my mother?</div>
+    <div class="stamp">11:40 PM · delivered</div>
+    <div class="stamp r" style="align-self:flex-end">seen 9:02 AM</div>
+  </div>
+  <div style="margin-top:44px;width:936px">
+    <div style="display:flex;justify-content:space-between" class="stamp"><span>11:40 PM</span><span>clinic closed · no reply</span><span>9:02 AM</span></div>
+    <div style="margin-top:12px;height:20px;border-radius:10px;background:linear-gradient(90deg,var(--red),#3A3A42)"></div>
+  </div>
+  <div class="end" style="margin-top:auto;margin-bottom:60px">Now add an AI agent. It books tonight. <span class="t">Then the hard part starts →</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 2: second hook -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>02 / 08</div></div>
+  <div style="margin-top:70px;display:flex;flex-direction:column;gap:26px">
+    <div class="cm">// before: the morning inbox</div>
+    <h2>Every clinic morning starts with <span class="t">last night’s questions.</span></h2>
+  </div>
+  <div style="margin-top:50px;display:flex;flex-direction:column;gap:16px">
+    <div class="card" style="display:flex;justify-content:space-between;font-size:36px;padding:34px 34px"><span>“Is the doctor in on Sunday?”</span><span class="stamp">10:15 PM</span></div>
+    <div class="card" style="display:flex;justify-content:space-between;font-size:36px;padding:34px 34px"><span>“What’s the consultation fee?”</span><span class="stamp">10:52 PM</span></div>
+    <div class="card" style="display:flex;justify-content:space-between;font-size:36px;padding:34px 34px"><span>“Any slot tomorrow evening?”</span><span class="stamp">11:40 PM</span></div>
+    <div class="card" style="display:flex;justify-content:space-between;font-size:36px;padding:34px 34px"><span>“Where do I park?”</span><span class="stamp">6:58 AM</span></div>
+  </div>
+  <div class="body" style="margin-top:auto">Same questions, every day, answered by hand at opening time. Some people won’t wait that long.</div>
+  <div class="end" style="margin-top:22px">So what does the night look like <span class="t">with an agent?</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 3: after flow -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>03 / 08</div></div>
+  <div style="margin-top:70px;display:flex;flex-direction:column;gap:26px">
+    <div class="cm">// after: same message, 11:40 PM</div>
+    <h2>The agent reads it, checks the diary, <span class="t">offers two slots.</span></h2>
+  </div>
+  <div style="margin-top:56px;display:flex;flex-direction:column;align-items:flex-start;gap:0">
+    <div class="node">msg in · “slot tomorrow?”</div>
+    <div style="width:2px;height:40px;background:var(--fg);margin-left:60px"></div>
+    <div class="node pp">agent · intent = booking</div>
+    <div style="width:2px;height:40px;background:var(--fg);margin-left:60px"></div>
+    <div class="node">calendar.free(tomorrow, evening)</div>
+    <div style="width:2px;height:40px;background:var(--fg);margin-left:60px"></div>
+    <div class="node">reply · “6:30 or 7:15 PM?”</div>
+    <div style="width:2px;height:40px;background:var(--fg);margin-left:60px"></div>
+    <div class="node g">booked ✓ · confirmation sent</div>
+  </div>
+  <div class="end" style="margin-top:auto">Booked before midnight. Easy part done. <span class="t">But not everything should go to the bot…</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 4: handles vs hands over -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>04 / 08</div></div>
+  <div style="margin-top:70px;display:flex;flex-direction:column;gap:26px">
+    <div class="cm">// rule 1: draw the line first</div>
+    <h2>What the agent answers. <span class="p">What it hands to a person.</span></h2>
+  </div>
+  <div style="margin-top:56px;display:grid;grid-template-columns:1fr 1fr;gap:24px">
+    <div class="card" style="border-color:var(--teal)">
+      <div class="chip" style="background:var(--teal);color:#0A0A0C">agent</div>
+      <div class="body" style="margin-top:30px;color:var(--fg);display:flex;flex-direction:column;gap:30px;font-size:38px">
+        <span>Free slots</span><span>Timings &amp; holidays</span><span>Fees, from the clinic’s own list</span><span>Directions, parking</span><span>Reschedule, cancel</span>
+      </div>
+    </div>
+    <div class="card" style="border-color:var(--purple)">
+      <div class="chip" style="background:var(--purple);color:#0A0A0C">human</div>
+      <div class="body" style="margin-top:30px;color:var(--fg);display:flex;flex-direction:column;gap:30px;font-size:38px">
+        <span>Symptoms</span><span>Any medical question</span><span>Reports &amp; results</span><span>Complaints</span><span>Anything unclear</span>
+      </div>
+    </div>
+  </div>
+  <div class="end" style="margin-top:auto">That part you design on paper. <span class="t">The next part is set by WhatsApp itself…</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 5: the 24h rule -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>05 / 08</div></div>
+  <div style="margin-top:70px;display:flex;flex-direction:column;gap:26px">
+    <div class="cm">// rule 2: the 24-hour window</div>
+    <h2>On the WhatsApp Business Platform, free replies get <span class="t">24 hours.</span></h2>
+  </div>
+  <div style="margin-top:70px">
+    <div style="display:flex;justify-content:space-between" class="stamp"><span>patient’s last message</span><span>+24 h</span><span>after</span></div>
+    <div style="display:flex;margin-top:16px;height:150px;border-radius:18px;overflow:hidden;border:2px solid var(--edge)">
+      <div style="flex:2;background:var(--teal);color:#0A0A0C;font-family:Mono;font-size:26px;display:flex;align-items:center;padding-left:26px;font-weight:500">any reply, any wording</div>
+      <div style="flex:1;background:#17171C;color:var(--muted);font-family:Mono;font-size:26px;display:flex;align-items:center;padding-left:26px">templates only</div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;margin-top:22px" class="stamp"><span class="t">▲ agent replies, books</span><span>▲ reminder day</span></div>
+  <div class="body" style="margin-top:56px;font-size:38px">Inside the window the agent can say anything useful. Outside it, a business can only send <span style="color:var(--fg)">message templates Meta has approved in advance.</span></div>
+  <div class="end" style="margin-top:auto;font-size:44px">So who sends the reminder <span class="t">for an appointment two days later?</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 6: payoff -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>06 / 08</div></div>
+  <div style="margin-top:70px;display:flex;flex-direction:column;gap:26px">
+    <div class="cm">// the reveal</div>
+    <h2>Not the AI. <span class="t">A template approved in advance.</span></h2>
+  </div>
+  <div class="card" style="margin-top:50px;font-family:Mono;font-size:34px;line-height:1.5;padding:40px">
+    <div class="m">template: appointment_reminder</div>
+    <div style="margin-top:14px">Hi <span class="p">{{1}}</span>, your appointment is on <span class="p">{{2}}</span> at <span class="p">{{3}}</span>. Reply 1 to confirm, 2 to reschedule.</div>
+  </div>
+  <div style="margin-top:30px;display:flex;align-items:center;gap:20px">
+    <div class="node">patient replies “2”</div>
+    <div style="flex:1;height:2px;background:var(--fg)"></div>
+    <div class="node g">window reopens → agent</div>
+  </div>
+  <div class="body" style="margin-top:auto;font-size:40px;color:var(--fg)">The patient’s reply opens a new 24-hour window, and the agent takes over again. Plan the templates <span style="color:var(--fg)">before</span> launch, not after.</div>
+  <div class="grain"></div>
+</section>
+
+<!-- 7: before / after -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>07 / 08</div></div>
+  <div style="margin-top:70px;display:flex;flex-direction:column;gap:26px">
+    <div class="cm">// before → after (illustrative)</div>
+    <h2>Same front desk. <span class="t">Different nights.</span></h2>
+  </div>
+  <div style="margin-top:50px;display:flex;flex-direction:column;gap:22px;font-size:36px;line-height:1.25">
+    <div style="display:grid;grid-template-columns:1fr 60px 1fr;align-items:center" class="card"><span class="m">Replies at opening time</span><span class="t">→</span><span>Replies at any hour</span></div>
+    <div style="display:grid;grid-template-columns:1fr 60px 1fr;align-items:center" class="card"><span class="m">Reminders by phone call</span><span class="t">→</span><span>Approved templates</span></div>
+    <div style="display:grid;grid-template-columns:1fr 60px 1fr;align-items:center" class="card"><span class="m">Same questions by hand</span><span class="t">→</span><span>Agent answers from clinic data</span></div>
+    <div style="display:grid;grid-template-columns:1fr 60px 1fr;align-items:center" class="card"><span class="m">Medical questions in a queue</span><span class="t">→</span><span>Straight to a person</span></div>
+  </div>
+  <div class="end" style="margin-top:auto">Before you switch one on, <span class="t">three things to write down →</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 8: lab notes + CTA -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>08 / 08</div></div>
+  <div style="margin-top:70px;display:flex;flex-direction:column;gap:26px">
+    <div class="cm">// lab notes</div>
+    <h2>Design these <span class="t">before</span> the agent goes live.</h2>
+  </div>
+  <div style="margin-top:70px;display:flex;flex-direction:column;gap:56px">
+    <div style="display:flex;gap:28px;align-items:baseline"><span class="cm">[01]</span><span class="body" style="color:var(--fg);font-size:44px;line-height:1.25">What it may answer, from your own data.</span></div>
+    <div style="display:flex;gap:28px;align-items:baseline"><span class="cm">[02]</span><span class="body" style="color:var(--fg);font-size:44px;line-height:1.25">When it hands over to a person.</span></div>
+    <div style="display:flex;gap:28px;align-items:baseline"><span class="cm">[03]</span><span class="body" style="color:var(--fg);font-size:44px;line-height:1.25">Your templates for anything sent after 24 hours.</span></div>
+  </div>
+  <div style="margin-top:auto;border-top:1px solid var(--line);padding-top:36px;display:flex;justify-content:space-between;align-items:flex-end">
+    <div class="body" style="max-width:600px">Save this for when you plan yours. Agents and automations, built properly.</div>
+    <div class="url">surgeit.co.in →</div>
+  </div>
+  <div class="grain"></div>
+</section>
+
+<!-- bleed: teal wire running across slides 1→2→3 -->
+<div class="bleed" style="left:860px;top:1300px;width:1500px;height:3px;background:linear-gradient(90deg,rgba(45,212,191,0),var(--teal) 15%,var(--teal) 85%,rgba(45,212,191,0))"></div>
+<div class="bleed" style="left:1068px;top:1289px;width:24px;height:24px;border-radius:50%;background:var(--teal);box-shadow:0 0 24px var(--teal)"></div>
+</div>
+</body>
+</html>

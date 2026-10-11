@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SurgeLabs c2 2026-10-12: 5 ways a website loses the WhatsApp lead</title>
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+  :root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--line:#2A2A31;--edge:#3A3A42;--grid:#16161B;--red:#F2767A}
+  html,body{background:var(--bg)}
+  .deck{display:flex;position:relative;width:max-content}
+  .slide{width:1080px;height:1350px;flex:none;position:relative;overflow:hidden;padding:72px;display:flex;flex-direction:column;
+    background-color:var(--bg);color:var(--fg);font-family:Sans;
+    background-image:radial-gradient(700px 600px at 100% 0%,rgba(45,212,191,.10),transparent 70%),radial-gradient(700px 600px at 0% 100%,rgba(167,139,250,.14),transparent 70%)}
+  .top{display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.03em;text-transform:none;color:var(--fg)}
+  .t{color:var(--teal)} .p{color:var(--purple)} .m{color:var(--muted)} .r{color:var(--red)}
+  .cm{font-family:Mono;font-size:24px;color:var(--teal);letter-spacing:.02em}
+  h1{font-weight:600;font-size:108px;line-height:.95;letter-spacing:-.045em}
+  h2{font-weight:600;font-size:72px;line-height:1;letter-spacing:-.04em}
+  .big{font-family:Mono;font-weight:500;font-size:200px;line-height:.8;letter-spacing:-.06em;color:var(--teal)}
+  .body{font-size:36px;line-height:1.35;color:var(--soft);letter-spacing:-.01em}
+  .end{font-size:40px;line-height:1.25;font-weight:600;letter-spacing:-.02em}
+  .grain{position:absolute;inset:0;opacity:.06;pointer-events:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+  .bleed{position:absolute;pointer-events:none;z-index:3}
+  /* mock phone site */
+  .ph{width:420px;border:3px solid var(--edge);border-radius:48px;padding:16px;background:#050506;flex:none}
+  .scr{border-radius:34px;overflow:hidden;background:#F5F5F2;color:#18181B;font-family:Sans}
+  .bar{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;font-size:18px;color:#6B6B73;border-bottom:1px solid #E2E2DE;font-family:Mono}
+  .hero{padding:26px 22px;background:#E9E7E1}
+  .hero b{display:block;font-size:30px;line-height:1.1;letter-spacing:-.02em}
+  .hero span{display:block;font-size:18px;color:#6B6B73;margin-top:8px}
+  .img{height:150px;background:repeating-linear-gradient(45deg,#D8D6CF 0 14px,#E2E0DA 14px 28px)}
+  .row{padding:16px 22px;font-size:18px;color:#3F3F46;border-top:1px solid #E2E2DE}
+  .pin{width:52px;height:52px;border-radius:50%;background:var(--red);color:#0A0A0C;font-family:Mono;font-weight:500;font-size:24px;display:flex;align-items:center;justify-content:center;flex:none}
+  .pin.g{background:var(--teal)}
+  .card{border:2px solid var(--edge);border-radius:22px;padding:30px 32px;background:rgba(17,17,20,.85)}
+  .chip{display:inline-block;font-family:Mono;font-size:22px;padding:8px 16px;border-radius:10px;letter-spacing:.06em;text-transform:uppercase}
+  .code{font-family:Mono;font-size:38px;line-height:1.45;word-break:break-all}
+  .url{font-family:Mono;font-size:28px;color:var(--teal)}
+</style>
+</head>
+<body>
+<div class="deck">
+
+<!-- 1 hook -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>LAB-08 · Websites</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:24px">
+    <div class="cm">// site review · example site</div>
+    <h1>5 ways a website loses the WhatsApp lead.</h1>
+    <div class="end" style="font-size:48px"><span class="t">#5 is the button itself.</span></div>
+  </div>
+  <div style="margin-top:56px;display:flex;gap:40px;align-items:flex-start">
+    <div class="ph">
+      <div class="scr">
+        <div class="bar"><span>example-site</span><span>≡</span></div>
+        <div class="hero"><b>Welcome to our website</b><span>Quality you can trust since forever</span></div>
+        <div class="img"></div>
+        <div class="row">Call: (image of a number)</div>
+        <div class="row" style="display:flex;justify-content:flex-end"><span style="width:26px;height:26px;border-radius:50%;background:#25A35A;display:block"></span></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:22px;padding-top:30px">
+      <div style="display:flex;gap:18px;align-items:center"><div class="pin">1</div><span class="body">loads slowly</span></div>
+      <div style="display:flex;gap:18px;align-items:center"><div class="pin">2</div><span class="body">vague offer</span></div>
+      <div style="display:flex;gap:18px;align-items:center"><div class="pin">3</div><span class="body">tiny targets</span></div>
+      <div style="display:flex;gap:18px;align-items:center"><div class="pin">4</div><span class="body">untappable number</span></div>
+      <div style="display:flex;gap:18px;align-items:center"><div class="pin">5</div><span class="body t">swipe →</span></div>
+    </div>
+  </div>
+  <div class="grain"></div>
+</section>
+
+<!-- 2 second hook -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>02 / 08</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:24px">
+    <div class="cm">// the setup</div>
+    <h2>A customer has one question. They want to ask it <span class="t">on WhatsApp.</span></h2>
+  </div>
+  <div style="margin-top:60px;display:flex;align-items:center;gap:0">
+    <div class="card" style="font-family:Mono;font-size:32px;flex:none">tap link</div>
+    <div style="flex:1;height:2px;background:var(--edge)"></div>
+    <div class="pin">1</div><div style="flex:1;height:2px;background:var(--edge)"></div>
+    <div class="pin">2</div><div style="flex:1;height:2px;background:var(--edge)"></div>
+    <div class="pin">3</div><div style="flex:1;height:2px;background:var(--edge)"></div>
+    <div class="pin">4</div><div style="flex:1;height:2px;background:var(--edge)"></div>
+    <div class="pin">5</div>
+  </div>
+  <div style="margin-top:60px;display:flex;align-items:center;gap:0;justify-content:flex-end">
+    <div class="card" style="font-family:Mono;font-size:28px;border-color:var(--teal);color:var(--teal)">chat opens with you</div>
+  </div>
+  <div class="body" style="margin-top:80px;font-size:46px;line-height:1.25;color:var(--fg)">Five things on a typical small-business site stand in the way. None of them is about design taste.</div>
+  <div class="end" style="margin-top:auto">And #1 happens <span class="t">before they see a single word…</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 3 speed -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>03 / 08</div></div>
+  <div style="margin-top:64px;display:flex;gap:40px;align-items:flex-start">
+    <div class="big">#1</div>
+    <h2 style="padding-top:14px">The page takes <span class="t">too long</span> to show up.</h2>
+  </div>
+  <div style="margin-top:70px">
+    <div style="display:flex;justify-content:space-between;font-family:Mono;font-size:24px" class="m"><span>0 s</span><span>1 s</span><span>2 s</span><span class="r">3 s</span></div>
+    <div style="margin-top:14px;height:64px;border-radius:32px;background:#17171C;border:2px solid var(--edge);overflow:hidden"><div style="width:100%;height:100%;background:linear-gradient(90deg,var(--teal),var(--red))"></div></div>
+  </div>
+  <div class="card" style="margin-top:56px;display:flex;gap:34px;align-items:center">
+    <div style="font-family:Mono;font-size:120px;font-weight:500;letter-spacing:-.05em;color:var(--red);line-height:1">53%</div>
+    <div class="body" style="color:var(--fg)">of mobile visits are abandoned when a page takes longer than 3 seconds to load.<span class="m" style="display:block;font-size:24px;font-family:Mono;margin-top:10px">Google research, 2016</span></div>
+  </div>
+  <div class="body" style="margin-top:56px;font-size:42px;color:var(--fg)"><span class="t">Fix:</span> compress the big photos, drop scripts you don’t use.</div>
+  <div class="end" style="margin-top:auto">Say they wait. <span class="t">Now they read the first line…</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 4 offer -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>04 / 08</div></div>
+  <div style="margin-top:64px;display:flex;gap:40px;align-items:flex-start">
+    <div class="big">#2</div>
+    <h2 style="padding-top:14px">The first screen doesn’t say <span class="t">what you do.</span></h2>
+  </div>
+  <div style="margin-top:60px;display:flex;flex-direction:column;gap:24px">
+    <div class="card" style="border-color:var(--red)">
+      <span class="chip" style="background:var(--red);color:#0A0A0C">before</span>
+      <div style="margin-top:26px;font-size:62px;font-weight:600;letter-spacing:-.03em">Welcome to our website</div>
+      <div class="body m" style="margin-top:8px">Quality you can trust</div>
+    </div>
+    <div class="card" style="border-color:var(--teal)">
+      <span class="chip" style="background:var(--teal);color:#0A0A0C">after</span>
+      <div style="margin-top:26px;font-size:62px;font-weight:600;letter-spacing:-.03em;line-height:1.05">Physiotherapy at home. Same-week visits.</div>
+      <div class="body" style="margin-top:8px">What, for whom, and the next step: one tap to chat.</div>
+    </div>
+  </div>
+  <div class="end" style="margin-top:auto">Now they want to tap. <span class="t">Their thumb has other ideas…</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 5 tap targets -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>05 / 08</div></div>
+  <div style="margin-top:64px;display:flex;gap:40px;align-items:flex-start">
+    <div class="big">#3</div>
+    <h2 style="padding-top:14px">Buttons <span class="t">too small</span> for a thumb.</h2>
+  </div>
+  <div style="margin-top:60px;display:grid;grid-template-columns:1fr 1fr;gap:24px">
+    <div class="card" style="height:520px;display:flex;flex-direction:column;justify-content:space-between">
+      <span class="chip" style="background:var(--red);color:#0A0A0C;align-self:flex-start">before</span>
+      <div style="display:flex;gap:10px;align-self:center"><span style="width:22px;height:22px;border-radius:50%;background:#25A35A;display:block"></span><span style="width:22px;height:22px;border-radius:50%;background:#5B8DEF;display:block"></span><span style="width:22px;height:22px;border-radius:50%;background:#C8C8CE;display:block"></span></div>
+      <div class="body m" style="font-size:28px">icons crammed together</div>
+    </div>
+    <div class="card" style="height:520px;display:flex;flex-direction:column;justify-content:space-between;border-color:var(--teal)">
+      <span class="chip" style="background:var(--teal);color:#0A0A0C;align-self:flex-start">after</span>
+      <div style="align-self:stretch;height:96px;border-radius:20px;background:#25A35A;color:#fff;font-size:32px;font-weight:600;display:flex;align-items:center;justify-content:center">Chat on WhatsApp</div>
+      <div class="body" style="font-size:28px">one wide button</div>
+    </div>
+  </div>
+  <div class="body" style="margin-top:50px;font-size:40px">Google’s Lighthouse guideline: tap targets at least <span style="color:var(--fg)">48 × 48 px</span>, with space between them.</div>
+  <div class="end" style="margin-top:auto">So they try calling instead. <span class="t">They can’t…</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 6 untappable number -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>06 / 08</div></div>
+  <div style="margin-top:64px;display:flex;gap:40px;align-items:flex-start">
+    <div class="big">#4</div>
+    <h2 style="padding-top:14px">The number is <span class="t">a picture,</span> not a link.</h2>
+  </div>
+  <div class="card" style="margin-top:80px;padding:44px 32px">
+    <div class="m" style="font-family:Mono;font-size:24px">// before: copy it by hand, switch apps, paste</div>
+    <div class="code r" style="margin-top:14px">&lt;img src="phone-number.png"&gt;</div>
+    <div class="m" style="font-family:Mono;font-size:24px;margin-top:40px">// after: one tap</div>
+    <div class="code t" style="margin-top:14px">&lt;a href="tel:+91XXXXXXXXXX"&gt;Call&lt;/a&gt;</div>
+  </div>
+  <div class="body" style="margin-top:56px;font-size:44px;color:var(--fg)">A number inside an image can’t be tapped, copied or read by a screen reader.</div>
+  <div class="end" style="margin-top:auto">Which leaves the one button built for this. <span class="t">And it’s broken too…</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 7 payoff -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>07 / 08</div></div>
+  <div style="margin-top:64px;display:flex;gap:40px;align-items:flex-start">
+    <div class="big">#5</div>
+    <h2 style="padding-top:14px">The WhatsApp link has the <span class="t">wrong number format.</span></h2>
+  </div>
+  <div class="card" style="margin-top:70px;border-color:var(--red);padding:38px 32px">
+    <span class="chip" style="background:var(--red);color:#0A0A0C">broken</span>
+    <div class="code" style="margin-top:18px">wa.me/<span class="r">+91 0</span>XXXXX-XXXXX</div>
+  </div>
+  <div class="card" style="margin-top:24px;border-color:var(--teal);padding:38px 32px">
+    <span class="chip" style="background:var(--teal);color:#0A0A0C">works</span>
+    <div class="code" style="margin-top:18px">wa.me/<span class="t">91XXXXXXXXXX</span><span class="p">?text=Hi</span></div>
+  </div>
+  <div class="body" style="margin-top:56px;color:var(--fg);font-size:42px">Full international number: no +, no leading 0, no spaces or dashes. Add <span class="p">?text=</span> so the chat opens with a first line ready.</div>
+  <div class="grain"></div>
+</section>
+
+<!-- 8 recap + CTA -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>08 / 08</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:24px">
+    <div class="cm">// 5-minute check, on your phone</div>
+    <h2>Test your own site <span class="t">tonight.</span></h2>
+  </div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;gap:22px;align-items:center"><div class="pin g">1</div><span class="body" style="color:var(--fg);font-size:40px">Loads in under 3 seconds on mobile data</span></div>
+    <div style="display:flex;gap:22px;align-items:center"><div class="pin g">2</div><span class="body" style="color:var(--fg);font-size:40px">First screen says what you do</span></div>
+    <div style="display:flex;gap:22px;align-items:center"><div class="pin g">3</div><span class="body" style="color:var(--fg);font-size:40px">Buttons at least 48 × 48 px</span></div>
+    <div style="display:flex;gap:22px;align-items:center"><div class="pin g">4</div><span class="body" style="color:var(--fg);font-size:40px">Phone number is a tel: link</span></div>
+    <div style="display:flex;gap:22px;align-items:center"><div class="pin g">5</div><span class="body" style="color:var(--fg);font-size:40px">WhatsApp link opens your chat, first line ready</span></div>
+  </div>
+  <div style="margin-top:auto;border-top:1px solid var(--line);padding-top:36px;display:flex;justify-content:space-between;align-items:flex-end">
+    <div class="body" style="max-width:600px">Send this to someone whose website gets WhatsApp enquiries.</div>
+    <div class="url">surgeit.co.in →</div>
+  </div>
+  <div class="grain"></div>
+</section>
+
+<!-- bleed: path line from slide 1 into slide 2 -->
+<div class="bleed" style="left:900px;top:1310px;width:1400px;height:3px;background:linear-gradient(90deg,rgba(242,118,122,0),var(--red) 20%,var(--teal) 80%,rgba(45,212,191,0))"></div>
+<div class="bleed" style="left:1068px;top:1299px;width:24px;height:24px;border-radius:50%;background:var(--red);box-shadow:0 0 22px var(--red)"></div>
+</div>
+</body>
+</html>
