@@ -65,6 +65,12 @@ Its one job: by 11:00 every item the morning batch should have scheduled for tod
 2. `cd tools && npm ci` (fonts and playwright-core). Chromium: /opt/pw-browsers/chromium-1194/chrome-linux/chrome (tools pick it up; set CHROME_PATH if it moved).
 3. Load the Instahook tools. `list_accounts`: find the account by handle and use that id. If the account is missing or `can_publish` is false, stop and tell the owner (it probably needs reconnecting in Instahook → Accounts).
 
+### Known environment issues (learned 2026-10-11)
+- **Usage limit:** the 04:52 batch and 07:22 repair both failed with ROUTINE_RUN_FAILURE_REASON_USAGE_LIMIT_REACHED (weekly plan limit). The evening run's catch-up step is the fallback; nothing in the repo can prevent this.
+- **Media import:** Instahook allows 10 `add_media_from_url` calls per minute. raw.githubusercontent.com often times out ("Downloading the URL took too long"); use `https://cdn.jsdelivr.net/gh/yusuf-khaan/hackdays-assets@<commit-sha>/<path>` (pin the pushed commit SHA, never @main, so the CDN serves the new file).
+- **Research:** WebFetch fails with DNS errors in the cloud sandbox; use WebSearch and require 2+ agreeing sources.
+- **Fonts:** write `font-family:"Serif"` with quotes. Unquoted `Serif` is the generic CSS keyword and renders Times, not Instrument Serif.
+
 ## Making one carousel (used by helpers; the lead does the git and Instahook steps)
 The steps below describe one carousel end to end. In the batch runs, helpers do steps 4–7 and the lead does steps 1–3 and 8–13, scheduling with `publish_at` instead of publishing now.
 
