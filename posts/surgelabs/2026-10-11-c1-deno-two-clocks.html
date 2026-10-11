@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>SurgeLabs c1: Deno's two clocks</title>
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--line:#2A2A31;--edge:#3A3A42;--grid:#16161B}
+.deck{display:flex;position:relative;width:max-content}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;flex:none;color:var(--fg);font-family:Sans;background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:90px 90px}
+.glow{position:absolute;width:1000px;height:900px;pointer-events:none}
+.gp{background:radial-gradient(closest-side,rgba(167,139,250,.20),rgba(167,139,250,0))}
+.gt{background:radial-gradient(closest-side,rgba(45,212,191,.14),rgba(45,212,191,0))}
+.top{position:absolute;left:72px;right:72px;top:64px;display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.03em;text-transform:none;color:var(--fg)}
+.mark span{color:var(--teal)}
+.num{font-family:Mono;font-size:22px;letter-spacing:.1em;color:var(--muted)}
+.c{position:absolute;left:72px;right:72px;font-family:Mono;font-size:26px;color:var(--teal)}
+h1,h2{position:absolute;left:72px;right:72px;font-weight:600;letter-spacing:-.045em;line-height:.95}
+h1{font-size:118px}
+h2{font-size:84px;line-height:1}
+.t{color:var(--teal)} .p{color:var(--purple)}
+.body{position:absolute;left:72px;right:72px;font-size:40px;line-height:1.38;color:var(--soft)}
+.body b{color:var(--fg);font-weight:600}
+.next{position:absolute;left:72px;right:72px;bottom:110px;font-size:46px;line-height:1.15;font-weight:600;letter-spacing:-.03em;color:var(--fg)}
+.next .arrow{color:var(--teal)}
+/* clocks */
+.clock{position:absolute;left:72px;right:72px;border:2px solid var(--edge);border-radius:24px;padding:30px 34px;background:rgba(10,10,12,.85)}
+.clock .lab{display:flex;justify-content:space-between;font-family:Mono;font-size:24px;color:var(--soft);margin-bottom:16px}
+.clock .lab b{font-weight:500;color:var(--fg)}
+.bar{height:36px;border-radius:10px;background:#16161B;border:1px solid var(--line);position:relative;overflow:hidden}
+.bar i{position:absolute;left:0;top:0;bottom:0;border-radius:9px}
+.ticks{display:flex;justify-content:space-between;font-family:Mono;font-size:20px;color:var(--muted);margin-top:12px}
+/* card */
+.card{position:absolute;left:72px;right:72px;border:2px solid var(--edge);border-radius:24px;padding:36px 40px;background:rgba(10,10,12,.85)}
+.card .k{font-family:Mono;font-size:22px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
+.card .v{font-size:46px;font-weight:600;letter-spacing:-.03em;line-height:1.12}
+.card.g{background:var(--teal);border-color:var(--teal);color:var(--bg)}
+.card.g .k{color:#0A0A0C;opacity:.75}
+.card.pp{background:var(--purple);border-color:var(--purple);color:var(--bg)}
+.card.pp .k{color:#0A0A0C;opacity:.75}
+/* layers */
+.layer{position:absolute;left:72px;right:72px;height:150px;border-radius:22px;display:flex;align-items:center;justify-content:space-between;padding:0 40px}
+.layer .n{font-size:46px;font-weight:600;letter-spacing:-.03em}
+.layer .s{font-family:Mono;font-size:24px;text-align:right;line-height:1.35}
+/* flow */
+.flow{position:absolute;left:72px;right:72px;display:flex;align-items:center}
+.node{border:2px solid var(--fg);border-radius:14px;padding:20px 22px;font-family:Mono;font-size:24px;white-space:nowrap}
+.node.pn{background:var(--purple);border-color:var(--purple);color:var(--bg);font-weight:500}
+.node.gn{background:var(--teal);border-color:var(--teal);color:var(--bg);font-weight:500}
+.wire{flex-grow:1;height:2px;background:var(--fg)}
+/* notes */
+.notes{position:absolute;left:72px;right:72px;display:flex;flex-direction:column;gap:22px}
+.note{display:grid;grid-template-columns:110px 1fr;border-top:1px solid var(--line);padding-top:26px}
+.note .i{font-family:Mono;font-size:28px;color:var(--teal)}
+.note .q{font-size:48px;font-weight:600;letter-spacing:-.03em;line-height:1.1}
+.note .q small{display:block;font-family:Sans;font-weight:400;font-size:31px;letter-spacing:0;color:var(--soft);margin-top:10px;line-height:1.35}
+.foot{position:absolute;left:72px;right:72px;bottom:72px;display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid var(--line);padding-top:30px}
+.foot .src{font-family:Mono;font-size:21px;color:var(--muted);line-height:1.5}
+.foot .src b{color:var(--soft);font-weight:500}
+.url{font-family:Mono;font-size:28px;color:var(--teal)}
+/* bleed: a countdown wire that runs across every slide edge */
+.wireline{position:absolute;z-index:4;left:0;top:1290px;height:3px;width:8640px;background:linear-gradient(90deg,var(--teal),rgba(167,139,250,.9) 70%,rgba(167,139,250,.2));box-shadow:0 0 18px rgba(45,212,191,.45)}
+</style></head>
+<body><div class="deck">
+<div class="wireline bleed"></div>
+
+<!-- 1 HOOK -->
+<section class="slide">
+<div class="glow gp" style="left:-380px;top:-260px"></div><div class="glow gt" style="right:-420px;bottom:-200px"></div>
+<div class="top"><div class="mark">SurgeLabs<span>_</span></div><div>LAB-NEWS · Infra</div></div>
+<div class="c" style="top:220px">// 9 Oct 2026 · Deno's team joins Cloudflare</div>
+<h1 style="top:282px;font-size:104px;line-height:1.0">The runtime<br>got <span class="t">1 year.</span><br>The hosting<br>got <span class="p">6 months.</span></h1>
+<div class="clock" style="top:735px;padding:24px 34px">
+  <div class="lab"><b>deno · runtime</b><span>open source</span></div>
+  <div class="bar"><i style="width:100%;background:var(--teal)"></i></div>
+  <div class="ticks"><span>now</span><span>6 mo</span><span>12 mo</span></div>
+</div>
+<div class="clock" style="top:920px;padding:24px 34px">
+  <div class="lab"><b>deno deploy · hosting</b><span>closing</span></div>
+  <div class="bar"><i style="width:50%;background:var(--purple)"></i></div>
+  <div class="ticks"><span>now</span><span>6 mo</span><span>12 mo</span></div>
+</div>
+<div class="body" style="top:1120px;font-size:30px;color:var(--soft);right:300px">Same deal. Two clocks. Only one forces your app to move.</div>
+<div style="position:absolute;right:72px;top:1120px;font-family:Mono;font-size:32px;color:var(--teal)">swipe →</div>
+</section>
+
+<!-- 2 SECOND HOOK -->
+<section class="slide">
+<div class="glow gp" style="right:-420px;top:-200px"></div>
+<div class="top"><div class="num">02 / 08</div><div>What happened</div></div>
+<h2 style="top:200px">On 9 Oct, the whole <span class="t">Deno team</span> said it's joining <span class="p">Cloudflare.</span></h2>
+<div class="body" style="top:520px"><b>Deno</b> is a JavaScript and TypeScript runtime from <b>Ryan Dahl</b>, the engineer who created <b>Node.js</b>.</div>
+<div class="body" style="top:720px">Big news on its own. But builders shouldn't stop at the headline. Inside the announcement were <b>two deadlines</b>, for two different things.</div>
+<div class="next">Deadline one is the gentle one <span class="arrow">→</span></div>
+</section>
+
+<!-- 3 CLOCK ONE -->
+<section class="slide">
+<div class="glow gt" style="left:-420px;top:-200px"></div>
+<div class="top"><div class="num">03 / 08</div><div>Clock 01 · Runtime</div></div>
+<div class="c" style="top:190px">// the deno runtime</div>
+<h2 style="top:250px">One more <span class="t">year</span> of fixes. Then official work stops.</h2>
+<div class="card" style="top:560px">
+  <div class="k">Reported plan</div>
+  <div class="v">12 months of bug fixes and security updates. After that, official development ends.</div>
+</div>
+<div class="card g" style="top:850px">
+  <div class="k">But</div>
+  <div class="v">The code stays open source. Anyone can still run it, fork it, keep it alive.</div>
+</div>
+<div class="next">So the code doesn't die. Clock two is different <span class="arrow">→</span></div>
+</section>
+
+<!-- 4 CLOCK TWO -->
+<section class="slide">
+<div class="glow gp" style="right:-420px;top:-200px"></div>
+<div class="top"><div class="num">04 / 08</div><div>Clock 02 · Hosting</div></div>
+<div class="c" style="top:190px;color:var(--purple)">// deno deploy, the hosted platform</div>
+<h2 style="top:250px">Hosting closes in about <span class="p" style="white-space:nowrap">6 months.</span></h2>
+<div class="flow" style="top:560px">
+  <div class="node">your app</div><div class="wire"></div>
+  <div class="node pn">deno deploy</div><div class="wire"></div>
+  <div class="node gn">cf workers</div>
+</div>
+<div class="body" style="top:720px">Paid users are being helped to move to <b>Cloudflare Workers</b>. Nobody can fork a hosting service. When it closes, your app has to <b>move</b>.</div>
+<div class="next">So why did Cloudflare want the team? <span class="arrow">→</span></div>
+</section>
+
+<!-- 5 WHY -->
+<section class="slide">
+<div class="glow gt" style="right:-420px;bottom:-200px"></div>
+<div class="top"><div class="num">05 / 08</div><div>The real prize</div></div>
+<div class="c" style="top:190px">// celld, released by deno in august</div>
+<h2 style="top:250px">A way to run Cloudflare Workers on <span class="t">your own servers.</span></h2>
+<div class="card" style="top:580px">
+  <div class="k">celld</div>
+  <div class="v" style="font-size:38px">An open-source, self-hostable take on the Workers model, Durable Objects included.</div>
+</div>
+<div class="card pp" style="top:830px">
+  <div class="k">The plan</div>
+  <div class="v" style="font-size:38px">Merge it into workerd, Cloudflare's open-source Workers runtime.</div>
+</div>
+<div class="next">Read that twice. It's the whole lesson <span class="arrow">→</span></div>
+</section>
+
+<!-- 6 PAYOFF -->
+<section class="slide">
+<div class="glow gp" style="left:-380px;top:-260px"></div><div class="glow gt" style="right:-420px;bottom:-200px"></div>
+<div class="top"><div class="num">06 / 08</div><div>The lesson</div></div>
+<h2 style="top:190px;font-size:96px">Code you own outlives platforms you <span class="t">rent.</span></h2>
+<div class="layer" style="top:530px;border:2px solid var(--teal)"><div class="n">Your code</div><div class="s t">portable<br>moves with you</div></div>
+<div class="layer" style="top:700px;border:2px solid var(--edge)"><div class="n">Open runtime</div><div class="s" style="color:var(--soft)">forkable<br>survives a sunset</div></div>
+<div class="layer" style="top:870px;background:var(--purple)"><div class="n" style="color:var(--bg)">Hosted platform</div><div class="s" style="color:var(--bg)">rented<br>can close</div></div>
+<div class="body" style="top:1060px;font-size:36px">Your risk lives in the layer <b>you can't run yourself.</b></div>
+</section>
+
+<!-- 7 LAB NOTES -->
+<section class="slide">
+<div class="glow gt" style="left:-420px;top:-200px"></div>
+<div class="top"><div class="num">07 / 08</div><div>Lab notes · Exit plan</div></div>
+<h2 style="top:190px">3 checks before the <span class="p">deadline email</span> arrives.</h2>
+<div class="notes" style="top:480px;gap:44px">
+  <div class="note"><div class="i">[01]</div><div class="q">Can it run on a box you control?<small>A container or an open runtime, tested once, not assumed.</small></div></div>
+  <div class="note"><div class="i">[02]</div><div class="q">Can you export your data today?<small>Database, files, env config. A real export, not a promise.</small></div></div>
+  <div class="note"><div class="i">[03]</div><div class="q">Where are the vendor-only APIs?<small>Keep them behind one thin adapter, so a move is one file of changes.</small></div></div>
+</div>
+</section>
+
+<!-- 8 CTA -->
+<section class="slide">
+<div class="glow gp" style="right:-380px;top:-200px"></div><div class="glow gt" style="left:-420px;bottom:-200px"></div>
+<div class="top"><div class="num">08 / 08</div><div>Build with us</div></div>
+<div class="c" style="top:220px">// scalable infrastructure, no hostage stack</div>
+<h2 style="top:290px;font-size:100px">Build systems that can <span class="t">move</span> when the platform does.</h2>
+<div class="body" style="top:700px">SurgeLabs builds backends, agents and automation with the exit plan designed in.</div>
+<div class="body" style="top:880px;font-size:46px;color:var(--fg);font-weight:600;letter-spacing:-.02em">Work with SurgeLabs. DM us.</div>
+<div class="foot">
+  <div class="src">Sources: <b>Deno blog</b> · 9 Oct 2026<br><b>Forbes</b>, <b>The New Stack</b> · 9–10 Oct 2026<br>Plans as announced by the companies</div>
+  <div class="url">surgeit.co.in →</div>
+</div>
+</section>
+
+</div></body></html>
