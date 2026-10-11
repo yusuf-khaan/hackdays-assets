@@ -58,3 +58,4 @@
 - 2026-10-11 · homingo · story2 · app: budget + distance filters · real Home screen + 4 steps (blue/white) · scheduled 20:22 IST (post 8af27dcc-0169-4199-a02c-c0d4ceb2356d)
 - 2026-10-11 · verse · story2 · space: tonight's sky, Saturn after opposition · illustration + fact rows · scheduled 21:47 IST (post fa0e0a9a-3746-416f-9eb4-dbc6e2f82733)
 - 2026-10-11 · evening trend check · no new mass-reaction signal today that fits an account (Navratri already covered on verse c4; Deno→Cloudflare already covered on surgelabs c1; Saturn opposition was 4 Oct, used as a story). No trend carousel.
+- 2026-10-11 · homingo · owner request · switched @homingo._ to campaign-ad style; reference deck 2026-10-12-c1 'Your room is full of money' scheduled 09:52 12 Oct

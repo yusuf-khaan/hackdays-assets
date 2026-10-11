@@ -6,6 +6,7 @@ Read on every run; the weekly review rewrites it. Keep it under about 120 lines.
 _Nothing proven yet: a pattern needs at least 3 posts beating the account median. Until metrics exist, lean on CAROUSEL.md._
 
 ## Avoid
+- (Owner, 2026-10-11) Explainer, how-to and checklist carousels. The feed is brand advertising now; see homingo.md "Campaign lines".
 - Repeating the reels' generic app overview (posted 10 Oct, more scheduled). Carousels should be specific, useful how-tos and checklists, not app summaries.
 
 ## Experiments running
@@ -17,15 +18,17 @@ _Nothing proven yet: a pattern needs at least 3 posts beating the account median
 ## Owed (promised part 2s and follow-ups)
 - None.
 
-## Backlog (verify every fact before use)
-- Finding: 5 things to check before paying a PG deposit (water, power backup, lock-in period, written receipt, notice period). (Story 2026-10-11 used a 3-point version; a full carousel is still open.)
-- Finding: used phone checks before you pay (IMEI on box/bill vs *#06#, iCloud/Google lock, battery health). Verify each step first.
-- Finding: second-hand furniture checks (wobble, termites, fabric, will it fit the stairs).
-- Selling: how to price a used phone (check recent listings, condition, bill and box).
-- App: use the distance filter to find rooms near your college.
-- Lucknow life: first week in Lucknow checklist for students.
+## Backlog (ad campaign ideas; verify any fact before use)
+- Let it go: "Moving out? Don't carry it." (hostel/PG move-out; boxes that never get unpacked).
+- Let it go: "The treadmill is now a clothes stand." Exhibits series part 2 (treadmill, exam books, the second mattress).
+- Let it go: "Upgraded your phone? Your old one has a second life waiting." (time with a phone launch).
+- Let it go: Diwali safai: "Clean the house. Fill the wallet."
+- Find it here: "Furnish a whole room. Buy nothing new."
+- The app: product-hero ad for "Chat or Call: straight to the person who listed it."
+- Lucknow: "Lucknow shares. Tehzeeb, chai, and now your old cycle."
 
 ## Changelog
 - 2026-10-10: learnings file created with the carousel system.
 - 2026-10-11: first homingo decks (c1 used-bike papers-first, c2 which-ad-would-you-tap, story red-flag deposit). Design note: tools/carousel.js does not catch two absolutely positioned text blocks overlapping each other (seen twice today); stack a headline and its sub-line in ONE element (span display:block) instead of two top-positioned divs. Blue used: #2563EB (app theme, per lead brief), orange #F37021 secondary (#D9561A on the light variant for contrast).
 - 2026-10-11 (evening): story 2 'two dropdowns' was the first blue-and-white story, built on the real home.jpg. Next time match the screenshot to the topic (rooms: listing-rental.png / search-rent.jpg).
+- 2026-10-11 (owner): switched @homingo._ from explainers to campaign ads (Pinterest-level, "Let it go" storyline). Reference deck c1 2026-10-12 "Your room is full of money" (Serif headlines, pin-card moodboard, dotted thread bleed). Old how-to backlog retired.
