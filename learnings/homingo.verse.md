@@ -9,6 +9,7 @@ _Nothing proven yet: a pattern needs at least 3 posts beating the account median
 - Topics covered by reels in the last 14 days (check list_posts): Chandrayaan-3 landing and hop (part 1, 10 Oct), AI-agent bug-fix humour (10 Oct).
 
 ## Experiments running
+- From 12 Oct: stories made by a Sonnet helper, carousels stay on Opus. Weekly review: compare sent_back counts and self-reviews of Sonnet stories with earlier Opus stories; if they fall short, move stories back to Opus.
 - From 12 Oct: the feed is reels only (owner's laptop), stories in the logo palette (cloud). In the weekly review, compare reach with the carousel days (10–11 Oct).
 - Week 1: test `vanished`, `impossible` and `cliffhanger-story` hooks against each other in every category; note which one gets the best share+save rate.
 - Week 1: test 7 slides vs 9 slides.

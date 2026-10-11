@@ -10,6 +10,7 @@ _Nothing proven yet: a pattern needs at least 3 posts beating the account median
 - Formats already used as single posts (log.md): terminal boot screen, character-select, timeline/roadmap, myth vs fact, patch notes. Reuse them only as slides inside richer carousels.
 
 ## Experiments running
+- From 12 Oct: stories made by a Sonnet helper, carousels stay on Opus. Weekly review: compare sent_back counts and self-reviews of Sonnet stories with earlier Opus stories; if they fall short, move stories back to Opus.
 - 2026-10-11: `versus` hook + comment CTA ("Solo or squad?") vs save-CTA tips posts: does a comment prompt beat saves on a how-it-works topic?
 - 2026-10-11: one cursor-line `.rail` bleed across all slides as the continuity cue (instead of a per-slide swipe arrow).
 - Week 1: `you-in-it` ("You're a judge…") vs `countdown-list` hooks.

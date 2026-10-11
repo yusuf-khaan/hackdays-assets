@@ -9,6 +9,7 @@ _Nothing proven yet: a pattern needs at least 3 posts beating the account median
 - Repeating the reels' generic app overview (posted 10 Oct, more scheduled). Carousels should be specific, useful how-tos and checklists, not app summaries.
 
 ## Experiments running
+- From 12 Oct: stories made by a Sonnet helper, carousels stay on Opus. Weekly review: compare sent_back counts and self-reviews of Sonnet stories with earlier Opus stories; if they fall short, move stories back to Opus.
 - Week 1: `mistake-warning` vs `countdown-list` hooks in Finding and Selling.
 - Week 1: a save CTA ("Save this for your room hunt") vs a share CTA ("Send this to a friend moving to Lucknow").
 - From 2026-10-11 (c2): interactive `you-in-it` opener ("Which ad do you tap?" with two drawn sample ads, A vs B) on a Selling post. Hypothesis: a choice on slide 1 pulls more swipes and comments than a list hook.

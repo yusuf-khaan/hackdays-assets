@@ -21,7 +21,7 @@ After publishing, append one line to `data/<account>.jsonl`:
 ```json
 {"date":"2026-10-11","time":"09:12","account":"homingo.verse","slot":1,"kind":"carousel","category":"indian-history","topic":"Rani ki Vav","trend":false,"hook_archetype":"vanished","hook":"A queen built a palace that goes underground…","hook_score":27,"slides":8,"format":"story-reveal","visual":"svg cutaway + map","cta":"share","experiment":null,"post_id":"…","permalink":"…","metrics":null,"self_review":"Slide 4 was text-heavy; the ₹100 reveal landed. Next time show the note earlier as a silhouette."}
 ```
-Stories get a line too, with `"kind":"story"` (no hook score needed).
+Stories get a line too, with `"kind":"story"` (no hook score needed). Every line records `"model"` (opus or sonnet) and `"sent_back"` (how many times the lead returned it), so the weekly review can tell whether Sonnet stories hold the bar.
 - `self_review` is one honest sentence: the weakest part of this post and what to try next time. Be specific; "looks good" is useless.
 - Never edit another post's line except to fill in `metrics`.
 - When a post is replaced (keys ending `-f`, `-r`, `-b`, `-t`), keep the original line and add `"final_post_id"` for the live replacement, so the evening run fills `permalink` from the post that actually published. Record `idempotency_key` on new lines.

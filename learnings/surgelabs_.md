@@ -9,6 +9,7 @@ _Nothing proven yet: a pattern needs at least 3 posts beating the account median
 - Recently used as single posts (log.md): system log (agent queues), RAG in 4 steps, architecture news card. Go deeper or pick other topics.
 
 ## Experiments running
+- From 12 Oct: stories made by a Sonnet helper, carousels stay on Opus. Weekly review: compare sent_back counts and self-reviews of Sonnet stories with earlier Opus stories; if they fall short, move stories back to Opus.
 - Week 1: `before-after` vs `impossible` hooks in AI agents and automation.
 - Week 1: Developer humour as a swipe story with a punchline on the second-to-last slide. Running: 2026-10-11 c2 "one failing test" (timestamped chat/terminal saga, 7 slides, share CTA).
 - 2026-10-11: news through a "two clocks" builder lens (number-twist hook, lesson slide + 3-check exit plan) instead of a straight news recap. Compare saves against straight news cards.
