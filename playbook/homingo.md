@@ -22,7 +22,7 @@ The owner's laptop automation also posts reels here. Don't repeat a reel's topic
 ## Categories (two different ones a day; cover all four every two days)
 - **Finding** (`finding`): rooms, flats and PGs on rent; second-hand bikes, cars, phones, furniture. Checklists, red flags, questions to ask, what to inspect, how to compare.
 - **Selling** (`selling`): listing for free, pricing an item, photos and titles that get more inquiries, staying safe when meeting buyers.
-- **Using the app well** (`app`): budget and distance filters, chatting or calling the seller, tracking your ads. Show the flow as clean drawn phone screens (illustrative, built in HTML, no fake listings with real-looking names; use obviously sample data like "2BHK · Sample").
+- **Using the app well** (`app`): budget and distance filters, chatting or calling the seller, tracking your ads. Show the flow with the REAL app UI: the screenshots in `brand/homingo-app/` (Home, Listing, My Ads, Search), or screens redrawn to match them exactly (sample data labelled "Sample"). See brand/homingo-app/README.md.
 - **Lucknow life** (`lucknow`): moving to the city, areas, student and newcomer tips, local culture and food, all tied to the marketplace where it fits.
 
 ## Our angle
@@ -32,7 +32,9 @@ The smart friend who already lives in Lucknow and has been burned before: practi
 Lucknow news this week (events, metro, new openings, festivals, weather that affects moving), college admissions and hostel season in Lucknow, Lucknow viral, UP students, rent and housing news India, second-hand market news (phone launches that make old phones cheaper, bike prices). Skip crime, accidents, politics.
 
 ## Visual system
-- 1080×1350. Homingo palette: black #0A0A0B ground, Homingo blue as the primary accent (default #1E6BFF until the owner gives the exact app colour in FEEDBACK.md), Hermès orange #F37021 as the strong secondary, white text, muted #8A8A93. Light variant allowed: off-white #F6F5F2 ground with black text and the same accents.
+- **The app's real interface is the reference (owner, 2026-10-11).** Any phone screen, app flow or UI element in a post must match `brand/homingo-app/` (real screenshots + README with tokens). Prefer the real screenshots in a phone frame; never invent a different-looking app.
+- 1080×1350. Homingo palette = the app's: primary blue #2563EB (buttons, prices, accents), light ground #F5F6FA with white rounded cards (radius ~28px), near-black text #111827, grey #6B7280. Dark variant allowed: black #0A0A0B ground with the same blue. Orange #F37021 only as a small warning/highlight accent (red flags), never as the main colour.
+- Prices in app screens use the app's own format "Rs 18,000".
 - Type: "Sans" (Inter) 600, big and tight, for headlines; key word in blue or orange; "Mono" for small labels (prices, distances, "TIP 03").
 - Compact, minimal UI feel: no loud colours, no heavy gradients, no bulky cards. Drawn icons and phone mockups in HTML/SVG.
 - Last slide: the CTA plus "Homingo · Lucknow's local marketplace" and "Link in bio".
@@ -47,7 +49,7 @@ Lucknow news this week (events, metro, new openings, festivals, weather that aff
 Story 1 (13:22) and story 2 (20:22). Rotate widely; never the same type two days running:
 - Tip of the day: one practical tip for renters, buyers or sellers.
 - Red flag: one warning sign when renting a room or buying second-hand.
-- How to in the app: one step on one drawn screen (search, filters, chat or call, Sell, My Ads), sample data only.
+- How to in the app: one step on one real screen from `brand/homingo-app/` (search, filters, chat or call, Sell, My Ads), or a redraw matching it with sample data labelled "Sample".
 - Lucknow moment: a verified local fact, place, food or event this week.
 - Teaser of today's carousel: the hook and "on our feed now".
 - Download nudge: why Homingo, with "Link in bio".
