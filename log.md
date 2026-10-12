@@ -73,3 +73,14 @@
 - 2026-10-12 · homingo._ · story2 · download: 1K+ active listings, rooms to bikes · number-twist · scheduled 20:22
 - 2026-10-12 · homingo.verse · story2 · indian-history: checkmate word origin (chaturanga → shatranj) · impossible · scheduled 21:47
 - 2026-10-12 · evening run · all 10 morning items present; verse story 1 had FAILED at 14:47 and was already republished 14:59; trend scan (3 searches): no strong signal, no trend post
+- 2026-10-13 · homingo.hackdays · c1 · tips: README that gets your public repo understood · question · scheduled 07:12
+- 2026-10-13 · homingo._ · c1 · sell: Homingo Museum Exhibit 01 (treadmill now a clothes stand) · before-after · scheduled 07:32
+- 2026-10-13 · homingo.hackdays · story · teaser: which file do they read first (README) · question · scheduled 07:40
+- 2026-10-13 · surgelabs_ · story · explainer: RAG in three lines · question · scheduled 07:40
+- 2026-10-13 · surgelabs_ · c1 · build: webhook signatures (HMAC raw body, constant-time, replay) · you-in-it · scheduled 08:12
+- 2026-10-13 · homingo._ · story · rent: room hunt, real rental listing screen · question · scheduled 08:22
+- 2026-10-13 · homingo.verse · story · technology: on this day, first commercial cell call (1983) · impossible · scheduled 08:47
+- 2026-10-13 · homingo.hackdays · c2 · how: mentors are async, skip the hi · mistake-warning · scheduled 17:20
+- 2026-10-13 · surgelabs_ · c2 · humour: green on laptop, red on CI (case-only rename) · cliffhanger-story · scheduled 18:12
+- 2026-10-13 · homingo._ · c2 · lucknow: Pehle aap, you go first · cliffhanger-story · scheduled 18:52
+- 2026-10-13 · morning batch · all 10 scheduled by 05:13; trend scan (5 searches): no fresh fitting signal (AI chatbot outage was 4 Sept); Hack Days story 1 sent back once (perks topic repeated 12 Oct reel), remade as README teaser
