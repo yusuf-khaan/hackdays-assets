@@ -7,8 +7,8 @@ Scheduled runs make everything and schedule it in Instahook with `publish_at`; I
 
 | Run | When | Makes |
 |---|---|---|
-| Morning batch | 04:52 | 6 carousels + story 1 on all four accounts, scheduled for today's slots |
-| Morning repair | 07:22 | checks the morning batch and repairs everything; all repairs done before 11:00 |
+| Morning batch | 04:52 | 6 carousels + story 1 on all four accounts, scheduled for today's slots (carousel 1 and story 1 go out early morning, 06:52–08:47) |
+| Morning repair | 06:12 | checks the morning batch before the first slot and repairs everything; all repairs done before 11:00 |
 | Evening run | 17:52 | catch-up, story 2 on all four accounts, trend check (may add or swap a carousel; on verse only a story) |
 | Weekly review | Sunday 23:07 | learning + system improvement |
 
@@ -16,14 +16,14 @@ Publishing slots and idempotency keys (IST date):
 | Account | Slots | Feed keys |
 |---|---|---|
 | @homingo.verse | none: reels come from the owner's laptop | cloud runs never create a verse feed post |
-| @surgelabs_ | 09:12, 18:12 | `surgelabs-c-YYYY-MM-DD-1`, `-2` |
-| @homingo._ | 09:52, 18:52 | `homingo-c-YYYY-MM-DD-1`, `-2` |
-| @homingo.hackdays | 10:20, 17:20 | `hackdays-c-YYYY-MM-DD-1`, `-2` |
-| Stories: Hack Days + SurgeLabs | 12:40 (story 1), 19:40 (story 2) | `<hackdays\|surgelabs>-story-YYYY-MM-DD`, `…-story2-YYYY-MM-DD` |
-| Stories: Verse | 14:47 (story 1), 21:47 (story 2) | `verse-story-YYYY-MM-DD`, `verse-story2-YYYY-MM-DD` |
-| Stories: Homingo | 13:22 (story 1), 20:22 (story 2) | `homingo-story-YYYY-MM-DD`, `homingo-story2-YYYY-MM-DD` |
+| @surgelabs_ | 06:52, 18:12 | `surgelabs-c-YYYY-MM-DD-1`, `-2` |
+| @homingo._ | 07:32, 18:52 | `homingo-c-YYYY-MM-DD-1`, `-2` |
+| @homingo.hackdays | 07:12, 17:20 | `hackdays-c-YYYY-MM-DD-1`, `-2` |
+| Stories: Hack Days + SurgeLabs | 07:40 (story 1), 19:40 (story 2) | `<hackdays\|surgelabs>-story-YYYY-MM-DD`, `…-story2-YYYY-MM-DD` |
+| Stories: Verse | 08:47 (story 1), 21:47 (story 2) | `verse-story-YYYY-MM-DD`, `verse-story2-YYYY-MM-DD` |
+| Stories: Homingo | 08:22 (story 1), 20:22 (story 2) | `homingo-story-YYYY-MM-DD`, `homingo-story2-YYYY-MM-DD` |
 
-A cloud day is 6 carousels and 8 stories: the morning batch makes 10 items, the evening run makes 4. `verse-c-` keys (until 11 Oct) are retired: never recreate them.
+Since 2026-10-13 (owner, 2026-10-12): carousel 1 and story 1 on every account go out early morning for reach; carousel 2 and story 2 stay in the evening. A cloud day is 6 carousels and 8 stories: the morning batch makes 10 items, the evening run makes 4. `verse-c-` keys (until 11 Oct) are retired: never recreate them.
 
 **Late beats missing.** Every planned item must go live the same day. If a carousel or story can't be ready before its slot, schedule it for the next free time that day (prefer 2 hours apart on one account, but posting closer is better than not posting) and say so in the report. Never skip a slot because it is late.
 
@@ -35,7 +35,7 @@ These rules apply to every run and every helper. They cut cost without cutting t
 4. **Research only what you state.** Verify each fact you put on a slide; stop at 2 agreeing sources. About 6 searches per carousel, 2 per story.
 5. **Hooks:** write 6 candidates across different archetypes, score the best 3 in full, use the winner (the gate is unchanged: 24/30, True = 5).
 6. **Images cost tokens.** Helpers look at the contact sheet and slide 1 at full size; open other slides only when a WARN or a doubt points there. The lead opens only contact sheets. At most 3 render rounds per post.
-7. **Helpers and models.** Carousel helpers run on Opus (the Agent tool's default; never downgrade them): SurgeLabs, Hack Days, Homingo, all three in parallel. Stories go to one **story helper on Sonnet** (Agent tool `model: "sonnet"`), started as soon as a carousel helper finishes, since the first story slot is 12:40. Quality guard: the lead views every story JPEG at full size; if a story is sent back twice, the lead remakes it itself on Opus. Every data line records `"model"`. Give each helper its brief in a few lines; don't paste playbooks into the brief.
+7. **Helpers and models.** Carousel helpers run on Opus (the Agent tool's default; never downgrade them): SurgeLabs, Hack Days, Homingo, all three in parallel. Stories go to one **story helper on Sonnet** (Agent tool `model: "sonnet"`), started as soon as a carousel helper finishes, since the first story slot is 07:40; schedule the early carousels first and make stories right after. Quality guard: the lead views every story JPEG at full size; if a story is sent back twice, the lead remakes it itself on Opus. Every data line records `"model"`. Give each helper its brief in a few lines; don't paste playbooks into the brief.
 8. **Improve the repo only when something broke or blocked you** in this run. Other ideas: one line in the learnings changelog for the weekly review. Metrics are filled by the weekly review only.
 9. **Short reports.** The owner message is a compact list; no recap of steps.
 
@@ -50,7 +50,7 @@ These rules apply to every run and every helper. They cut cost without cutting t
 5. Append the data lines (with post_id; permalink is filled by the evening run once published) and log.md lines (`cat >>`, don't read log.md). Apply a helper's repo fix only if it fixes something that broke. Commit, pull --rebase, push.
 6. Send the owner one message: today's 10 scheduled items (time, account, topic, hook), trend and experiment posts, anything that failed.
 
-## Morning repair run (07:22)
+## Morning repair run (06:12)
 Its one job: by 11:00 every item the morning batch should have scheduled for today exists, is good, and is SCHEDULED or PUBLISHED. Work in order of slot time, earliest first.
 1. `list_accounts` + `list_posts` for all four accounts (no clone yet); compare with today's keys (tables above): 6 carousels and 4 story 1s. **If all 10 exist and none is FAILED or PENDING_APPROVAL, send "all 10 morning items scheduled" and stop.** Only FAILED items → retry them with `publish_post` (no clone needed). Clone and set up only if something must be made or fixed.
 2. For each item: missing → make it (helpers allowed, as in the morning batch) and schedule it at its slot, or as soon as possible if the slot is passed or too close. FAILED → `publish_post` on the same post (up to 3 tries); if it still fails, recreate with a key ending `-r` and publish now. PENDING_APPROVAL → report to the owner at once. A single-image feed post, any cloud-made feed post on @homingo.verse, or a post that breaks a Facts or Never rule → cancel it if not yet published and replace it.

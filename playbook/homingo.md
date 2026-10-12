@@ -48,7 +48,7 @@ Lucknow news this week (events, metro, new openings, festivals, weather that aff
 - Alt text for every slide.
 
 ## Stories (two per day, 1080×1920)
-Story 1 (13:22) and story 2 (20:22). Stories are ads too (same campaign voice and craft as the feed); rotate widely, never the same type two days running:
+Story 1 (08:22) and story 2 (20:22). Stories are ads too (same campaign voice and craft as the feed); rotate widely, never the same type two days running:
 - Let it go: one unused object, one witty line, "Tap Sell. List it free."
 - Product hero: one real screen from `brand/homingo-app/` shown big and beautiful (Sell, chat or call, My Ads, filters), or a redraw matching it with sample data labelled "Sample".
 - This or that / poll-style ad: "Keep it or sell it?" with one object.

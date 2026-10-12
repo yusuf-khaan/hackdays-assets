@@ -2,6 +2,7 @@
 
 Yusuf's notes to the content runs. Every run reads this first; it overrides everything except facts and the "Never" rules. Runs never edit this file. Add the newest note at the top, with a date.
 
+- 2026-10-12: Post early in the morning for better reach. Carousel 1 and story 1 on each account go out early morning (06:52–08:47; slots in RUN.md). Keep 2 carousels + 2 stories per account a day (verse: 2 stories, no feed posts).
 - 2026-10-11: @homingo._ posts must ADVERTISE Homingo like a marketing agency would, not explain. No more explainer/how-to/checklist carousels. Beautiful, Pinterest-level creative templates with a storyline: you have unused goods → sell them on Homingo with one tap. Keep it beautiful. (Facts and Never rules still apply; see homingo.md.)
 - 2026-10-11: @homingo.verse feed is REELS ONLY, and my laptop makes the reels. Cloud runs make only stories on verse (no carousels, no single images, no reels); carousels and stories on the other three accounts.
 - 2026-10-11: @homingo.verse posts must match the logo: navy #0B1640 ground, logo blue #1F50FE, logo orange #F3701F, white text, the orbit-dot mark in the same place on every scene. One look for all four categories; the old per-category palettes are retired. (@homingo._ keeps its own blue-and-white rule below.)

@@ -50,7 +50,7 @@ For reference, so the laptop reels and the cloud stories look like one account: 
 - Alt text for the reel if `create_post` accepts one: one or two sentences on what the scenes show.
 
 ## Stories (two per day, 1080×1920)
-Story 1 (14:47) and story 2 (21:47). Rotate widely; never the same type two days running:
+Story 1 (08:47) and story 2 (21:47). Rotate widely; never the same type two days running:
 - Teaser of today's reel: the hook and "Watch today's reel on our feed" (no stickers; write it in the image).
 - On this day: one verified event that happened on today's date in history, science or space.
 - Tonight's sky: what's visible from India tonight (planets, Moon phase, meteor shower), from a reputable source.
