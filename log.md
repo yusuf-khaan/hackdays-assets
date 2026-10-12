@@ -68,3 +68,8 @@
 - 2026-10-12 · homingo._ · c2 · app: My Ads: your ad reports back (views + inquiries) · question · scheduled 18:52 (post dde217ef-bebe-4ed7-b011-7a8a8695619e)
 - 2026-10-12 · homingo._ · story · sell: this or that: keep it or sell it (unused guitar) · question · scheduled 13:22 (post 52cbb5bc-5c63-4129-b45b-3af4eec7c2a5)
 - 2026-10-12 · homingo.verse · story · space: on this day: Voskhod 1, 12 Oct 1964, the first multi-person crew · impossible · scheduled 14:47 (post e1e0db72-d003-4483-ad5f-63be007ea737)
+- 2026-10-12 · homingo.hackdays · story2 · tips: log every prompt and reply from day 1 · mistake-warning · scheduled 19:40
+- 2026-10-12 · surgelabs_ · story2 · explainer: the queue pattern · number-twist · scheduled 19:40
+- 2026-10-12 · homingo._ · story2 · download: 1K+ active listings, rooms to bikes · number-twist · scheduled 20:22
+- 2026-10-12 · homingo.verse · story2 · indian-history: checkmate word origin (chaturanga → shatranj) · impossible · scheduled 21:47
+- 2026-10-12 · evening run · all 10 morning items present; verse story 1 had FAILED at 14:47 and was already republished 14:59; trend scan (3 searches): no strong signal, no trend post
