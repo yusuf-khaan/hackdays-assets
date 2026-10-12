@@ -1,0 +1,150 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+.deck{display:flex;position:relative;width:max-content}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;background:var(--ink);color:#fff;font-family:"Sans";flex:none}
+.top{position:absolute;left:72px;right:72px;top:64px;display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+.top .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--orange);margin-right:14px;box-shadow:0 0 14px rgba(243,112,33,.9);vertical-align:middle;position:relative;top:-2px}
+.label{font-size:20px;letter-spacing:.14em;text-transform:uppercase}
+.h{position:absolute;left:72px;right:72px;font-family:"Serif";line-height:.98;letter-spacing:-.02em}
+.h em{color:var(--orange);font-style:italic}
+.body{position:absolute;left:72px;right:72px;font-size:38px;line-height:1.35;color:#D4D4D8}
+.body b{color:#fff;font-weight:600}
+.next{position:absolute;left:72px;right:72px;bottom:96px;font-family:"Serif";font-style:italic;font-size:52px;line-height:1.1;color:#fff}
+.next em{color:var(--orange)}
+.mono{font-family:"Mono"}
+.win{position:absolute;left:72px;right:72px;background:var(--char);border:1px solid var(--line);border-radius:24px;overflow:hidden}
+.win .bar{display:flex;justify-content:space-between;align-items:center;padding:22px 32px;border-bottom:1px solid var(--line);font-family:"Mono";font-size:24px;color:var(--muted)}
+.win .bar b{color:#fff;font-weight:500}
+.pub{border:1px solid #3F3F46;border-radius:999px;padding:4px 16px;font-size:20px;color:#A1A1AA}
+.row{display:flex;justify-content:space-between;align-items:center;padding:20px 32px;border-bottom:1px solid var(--line);font-family:"Mono";font-size:28px;color:#D4D4D8}
+.row .ic{color:var(--blue);margin-right:18px}
+.row .t{color:#71717A;font-size:22px}
+.row.hot{background:rgba(243,112,33,.12);border-left:6px solid var(--orange);color:#fff}
+.row.hot .t{color:var(--orange);font-size:24px}
+.blur{padding:28px 32px}
+.blur i{display:block;height:20px;border-radius:10px;background:#2A2A2E;margin:16px 0}
+.code{font-family:"Mono";font-size:31px;line-height:1.7;padding:28px 34px;color:#D4D4D8}
+.del{color:#F87171;background:rgba(248,113,113,.08);display:block;margin:0 -34px;padding:0 34px}
+.add{color:#86EFAC;background:rgba(134,239,172,.07);display:block;margin:0 -34px;padding:0 34px}
+.note{color:var(--orange);float:right;font-size:22px;letter-spacing:.1em;margin-top:8px}
+.q{position:absolute;left:72px;right:72px;display:flex;gap:34px;align-items:baseline;border-top:1px solid var(--line);padding-top:30px}
+.q .n{font-family:"Mono";font-size:30px;color:var(--orange);width:70px;flex:none}
+.q .v{font-family:"Serif";font-size:84px;line-height:1}
+.q .s{font-size:30px;color:var(--muted);margin-top:14px;font-family:"Sans";line-height:1.3}
+.node{position:absolute;width:420px;min-height:330px;background:var(--char);border:1px solid var(--line);border-radius:26px;padding:34px 34px 30px}
+.node .l{font-family:"Mono";font-size:22px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+.node .v{font-family:"Serif";font-size:72px;line-height:1;margin-top:16px}
+.node .r{display:inline-block;margin-top:22px;padding:6px 18px;border-radius:999px;font-family:"Mono";font-size:22px;background:rgba(243,112,33,.14);color:#F5A574;border:1px solid rgba(243,112,33,.5)}
+.blank{display:inline-block;width:520px;border-bottom:3px solid #52525B;height:36px;vertical-align:bottom}
+.rail{position:absolute;z-index:5;left:0;top:1296px;height:6px;width:6480px;background:linear-gradient(90deg,rgba(30,155,234,.15),rgba(30,155,234,.9) 85%,var(--orange));box-shadow:0 0 22px rgba(30,155,234,.55)}
+.sun{position:absolute;width:260px;height:130px;border-radius:130px 130px 0 0;background:var(--orange)}
+.sunglow{position:absolute;width:900px;height:520px;background:radial-gradient(closest-side,rgba(243,112,33,.26),rgba(243,112,33,0))}
+</style></head>
+<body><div class="deck">
+<div class="rail bleed"></div>
+
+<!-- 1 HOOK -->
+<section class="slide">
+<div class="sunglow" style="right:-340px;top:-60px"></div>
+<div class="top label"><div><span class="dot"></span>Hack Days · Builder tips</div><div>your repo</div></div>
+<div class="h" style="top:180px;font-size:118px">Whoever opens your repo reads <em>one file</em> first.</div>
+<div class="body" style="top:450px;font-size:46px;color:#A1A1AA">It isn't your code.</div>
+<div class="win" style="top:590px">
+  <div class="bar"><span><b>you / hackdays-agent</b></span><span class="pub">Public</span></div>
+  <div class="row"><span><span class="ic">▸</span>src/</span><span class="t">day 9</span></div>
+  <div class="row"><span><span class="ic">▸</span>agent.py</span><span class="t">day 14</span></div>
+  <div class="row"><span><span class="ic">▸</span>.env.example</span><span class="t">day 2</span></div>
+  <div class="row hot"><span><span class="ic" style="color:var(--orange)">▸</span><span style="filter:blur(9px)">README</span>.md</span><span class="t">read first</span></div>
+  <div class="blur"><i style="width:46%"></i><i style="width:82%"></i><i style="width:64%"></i></div>
+</div>
+<div class="mono" style="position:absolute;right:72px;top:1170px;font-size:32px;color:var(--orange)">swipe →</div>
+<div class="grain"></div>
+</section>
+
+<!-- 2 SECOND HOOK -->
+<section class="slide">
+<div class="top label"><div>02 / 06</div><div>the front page</div></div>
+<div class="h" style="top:170px;font-size:104px">It's <em>README.md.</em></div>
+<div class="body" style="top:330px;font-size:38px">GitHub shows it on your repo's front page. Its own docs call the README <b>"often the first item a visitor will see."</b></div>
+<div class="body" style="top:600px;font-size:26px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)">What a 5 AM README looks like</div>
+<div class="win" style="top:660px">
+  <div class="bar"><span>README.md</span><span>2 lines</span></div>
+  <div class="code" style="font-size:40px;line-height:1.8">
+    # hackdays-agent<br>
+    <span style="color:#71717A">npm start</span>
+  </div>
+</div>
+<div class="body" style="top:1000px;font-size:34px;color:#A1A1AA">What is it? Who is it for? Does <span class="mono" style="font-size:31px">npm start</span> even work?</div>
+<div class="next">GitHub already wrote the <em>3 questions</em> it should answer…</div>
+<div class="grain"></div>
+</section>
+
+<!-- 3 THREE QUESTIONS -->
+<section class="slide">
+<div class="top label"><div>03 / 06</div><div>GitHub Docs · Open Source Guides</div></div>
+<div class="h" style="top:170px;font-size:96px">A README answers <em>three</em> questions.</div>
+<div class="q" style="top:430px"><div class="n">01</div><div><div class="v">What does it do?</div><div class="s">One line. The user and the task.</div></div></div>
+<div class="q" style="top:650px"><div class="n">02</div><div><div class="v">Why is it useful?</div><div class="s">The busywork or problem it removes.</div></div></div>
+<div class="q" style="top:870px"><div class="n">03</div><div><div class="v">How do I start?</div><div class="s">Commands that run on a fresh clone.</div></div></div>
+<div class="next">Here's each one in a real <em>diff</em> →</div>
+<div class="grain"></div>
+</section>
+
+<!-- 4 DIFF -->
+<section class="slide">
+<div class="top label"><div>04 / 06</div><div>git diff README.md</div></div>
+<div class="h" style="top:160px;font-size:84px">Same repo. Same code. <em>New first screen.</em></div>
+<div class="win" style="top:370px">
+  <div class="bar"><span>README.md</span><span><span style="color:#F87171">−2</span> <span style="color:#86EFAC">+8</span></span></div>
+  <div class="code" style="font-size:34px;line-height:1.75">
+    <span class="del">- # hackdays-agent</span>
+    <span class="del">- npm start</span>
+    <span class="add">+ # FeeNudge<span class="note">WHAT</span></span>
+    <span class="add">+ Reminds students about fee dues,</span>
+    <span class="add">+ so the office stops doing it<span class="note">WHY</span></span>
+    <span class="add">+ by hand.</span>
+    <span class="add">+ ![it working](demo.gif)</span>
+    <span class="add">+ ## Run it<span class="note">HOW</span></span>
+    <span class="add">+ cp .env.example .env</span>
+    <span class="add">+ npm install &amp;&amp; npm start</span>
+  </div>
+</div>
+<div class="next">One line is still <em>missing</em>…</div>
+<div class="grain"></div>
+</section>
+
+<!-- 5 PAYOFF -->
+<section class="slide">
+<div class="sunglow" style="left:90px;top:520px"></div>
+<div class="top label"><div>05 / 06</div><div>line 2</div></div>
+<div class="h" style="top:170px;font-size:104px">Line 2 is your <em>demo video.</em></div>
+<div class="node" style="left:72px;top:470px"><div class="l">required</div><div class="v">Public GitHub repo</div><div class="r">README line 2 → video</div></div>
+<div class="node" style="right:72px;top:470px"><div class="l">required</div><div class="v">Short demo video</div><div class="r">description → repo</div></div>
+<svg style="position:absolute;left:472px;top:620px" width="136" height="120" viewBox="0 0 136 120"><g stroke="#F37021" stroke-width="4" fill="none"><path d="M10 40 H118 M100 24 L118 40 L100 56"/><path d="M126 84 H18 M36 68 L18 84 L36 100" stroke="#1E9BEA"/></g></svg>
+<div class="body" style="top:900px;font-size:38px">Hack Days asks for both. Link each one from the other, and whichever opens first leads to the second. <span style="color:var(--muted)">Live link and deck: optional.</span></div>
+<div class="next">Now the part nobody does on <em>day 1</em>…</div>
+<div class="grain"></div>
+</section>
+
+<!-- 6 CTA -->
+<section class="slide">
+<div class="sunglow" style="left:90px;top:760px"></div>
+<div class="sun" style="left:410px;top:900px"></div>
+<div class="top label"><div>06 / 06</div><div>Hack Days · Edition 01</div></div>
+<div class="h" style="top:160px;font-size:92px">Write it on <em>day 1.</em><br>Fill it in by day 16.</div>
+<div class="win" style="top:420px">
+  <div class="bar"><span>README.md</span><span>template</span></div>
+  <div class="code" style="font-size:31px;line-height:2.1">
+    # <span class="blank" style="width:600px"></span><br>
+    <span style="color:var(--blue)">demo:</span> <span class="blank" style="width:540px"></span><br>
+    <span style="color:var(--blue)">does:</span> <span class="blank" style="width:540px"></span><br>
+    <span style="color:var(--blue)">run:</span>&nbsp; <span class="blank" style="width:540px"></span>
+  </div>
+</div>
+<div class="body" style="top:820px;font-size:34px;color:#A1A1AA">Build phase 21 Nov – 6 Dec. <b>Save this</b> for your first commit.</div>
+<div class="mono" style="position:absolute;left:72px;right:72px;top:1080px;text-align:center;font-size:30px;color:#fff">hackathon.homingo.co.in · Link in bio</div>
+<div class="grain"></div>
+</section>
+
+</div></body></html>

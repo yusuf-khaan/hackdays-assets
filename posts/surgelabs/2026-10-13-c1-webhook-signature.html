@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SurgeLabs c1 2026-10-13: why a webhook needs a signature</title>
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+  :root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--line:#2A2A31;--edge:#3A3A42;--red:#F2767A;--card:#111114}
+  html,body{background:var(--bg)}
+  .deck{display:flex;position:relative;width:max-content}
+  .slide{width:1080px;height:1350px;flex:none;position:relative;overflow:hidden;padding:72px;display:flex;flex-direction:column;
+    background-color:var(--bg);color:var(--fg);font-family:Sans;
+    background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px),radial-gradient(760px 620px at 0% 0%,rgba(167,139,250,.16),transparent 70%),radial-gradient(700px 600px at 100% 100%,rgba(45,212,191,.11),transparent 70%);
+    background-size:54px 54px,54px 54px,auto,auto}
+  .top{display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.03em;text-transform:none;color:var(--fg)}
+  .t{color:var(--teal)} .p{color:var(--purple)} .m{color:var(--muted)} .r{color:var(--red)} .w{color:var(--fg)}
+  .cm{font-family:Mono;font-size:26px;color:var(--teal);letter-spacing:.02em}
+  h1{font-weight:600;font-size:112px;line-height:.95;letter-spacing:-.045em}
+  h2{font-weight:600;font-size:76px;line-height:1;letter-spacing:-.042em}
+  .body{font-size:38px;line-height:1.35;color:var(--soft);letter-spacing:-.01em}
+  .end{font-size:42px;line-height:1.22;font-weight:600;letter-spacing:-.02em}
+  .grain{position:absolute;inset:0;opacity:.06;pointer-events:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+  .bleed{position:absolute;pointer-events:none;z-index:3}
+  .term{border:2px solid var(--edge);border-radius:22px;background:rgba(8,8,10,.92);overflow:hidden}
+  .term .tb{display:flex;gap:10px;align-items:center;padding:16px 22px;border-bottom:2px solid var(--line);font-family:Mono;font-size:22px;color:var(--muted)}
+  .dot{width:14px;height:14px;border-radius:50%;background:var(--edge);display:block}
+  .term pre{font-family:Mono;font-size:30px;line-height:1.55;padding:24px 28px;white-space:pre-wrap;color:var(--soft)}
+  .card{border:2px solid var(--edge);border-radius:22px;padding:30px 32px;background:rgba(17,17,20,.88)}
+  .chip{display:inline-block;font-family:Mono;font-size:22px;padding:8px 16px;border-radius:10px;letter-spacing:.06em;text-transform:uppercase}
+  .node{border:2px solid var(--edge);border-radius:18px;padding:22px 26px;background:var(--card);font-family:Mono;font-size:28px}
+  .num{font-family:Mono;font-weight:500;font-size:30px;color:var(--teal)}
+  .lbl{font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="deck">
+
+<!-- teal wire from slide 1 into slide 2 -->
+<svg class="bleed" style="left:860px;top:1122px" width="560" height="60" viewBox="0 0 560 60"><path d="M0 30 H560" stroke="#2DD4BF" stroke-width="4" stroke-dasharray="14 10"/><circle cx="0" cy="30" r="10" fill="#2DD4BF"/></svg>
+
+<!-- 1 hook -->
+<section class="slide" style="padding-bottom:150px">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>LAB-09 · Build</div></div>
+  <div style="margin-top:70px;display:flex;flex-direction:column;gap:28px">
+    <div class="cm">// imagine a small online shop</div>
+    <h1>Your server got <span class="t">“payment succeeded”.</span> Nobody paid.</h1>
+  </div>
+  <div class="term" style="margin-top:60px">
+    <div class="tb"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span style="margin-left:12px">orders.log</span></div>
+    <pre><span class="m">14:02:11</span> POST /webhooks/payments
+<span class="m">14:02:11</span> type=<span class="t">payment.succeeded</span>
+<span class="m">14:02:11</span> 200 OK · order #1042 <span class="w">marked paid</span>
+<span class="m">14:02:12</span> <span class="r">packing slip printed</span></pre>
+  </div>
+  <div class="end" style="margin-top:auto;font-size:42px;max-width:780px">Every line looks normal.<br><span class="t">So who sent it? →</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 2 second hook -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>02 / 08</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:24px">
+    <div class="cm">// what a webhook really is</div>
+    <h2>A webhook is just a URL that <span class="t">accepts POSTs.</span></h2>
+  </div>
+  <svg style="margin-top:60px" width="936" height="440" viewBox="0 0 936 440">
+    <rect x="2" y="30" width="330" height="110" rx="18" fill="#111114" stroke="#2DD4BF" stroke-width="2.5"/>
+    <text x="167" y="96" text-anchor="middle" font-family="Mono" font-size="28" fill="#2DD4BF">payment provider</text>
+    <rect x="2" y="300" width="330" height="110" rx="18" fill="#111114" stroke="#F2767A" stroke-width="2.5"/>
+    <text x="167" y="366" text-anchor="middle" font-family="Mono" font-size="28" fill="#F2767A">anyone with curl</text>
+    <rect x="604" y="160" width="330" height="120" rx="18" fill="#111114" stroke="#A78BFA" stroke-width="2.5"/>
+    <text x="769" y="214" text-anchor="middle" font-family="Mono" font-size="26" fill="#F2F2F0">/webhooks/</text>
+    <text x="769" y="252" text-anchor="middle" font-family="Mono" font-size="26" fill="#F2F2F0">payments</text>
+    <path d="M332 85 C470 85 470 200 604 200" stroke="#2DD4BF" stroke-width="4" fill="none"/>
+    <path d="M332 355 C470 355 470 240 604 240" stroke="#F2767A" stroke-width="4" fill="none" stroke-dasharray="12 9"/>
+    <text x="468" y="132" text-anchor="middle" font-family="Mono" font-size="22" fill="#9A9AA3">real event</text>
+    <text x="468" y="322" text-anchor="middle" font-family="Mono" font-size="22" fill="#9A9AA3">same shape</text>
+  </svg>
+  <div class="body" style="margin-top:44px;font-size:44px;color:var(--fg)">The URL is public. Both requests arrive at the same door, in the same format.</div>
+  <div class="end" style="margin-top:auto">So how does your server <span class="t">tell them apart?</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 3 the fake -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>03 / 08</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:24px">
+    <div class="cm">// the forged request</div>
+    <h2>Checking that the JSON <span class="r">looks right</span> proves nothing.</h2>
+  </div>
+  <div class="term" style="margin-top:60px;border-color:var(--red)">
+    <div class="tb"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span style="margin-left:12px">attacker’s laptop</span></div>
+    <pre><span class="m">$</span> curl -X POST \
+   https://shop.example/webhooks/payments \
+   -d '{"type":"<span class="t">payment.succeeded</span>",
+        "order":"1042"}'
+<span class="m">→</span> <span class="r">200 OK</span></pre>
+  </div>
+  <div style="margin-top:40px;display:flex;gap:16px;flex-wrap:wrap">
+    <span class="chip" style="border:2px solid var(--edge);color:var(--fg)">valid JSON ✓</span>
+    <span class="chip" style="border:2px solid var(--edge);color:var(--fg)">known event ✓</span>
+    <span class="chip" style="border:2px solid var(--edge);color:var(--fg)">order exists ✓</span>
+  </div>
+  <div class="body" style="margin-top:40px;font-size:44px;color:var(--fg)">The fake passes all three. Event names and field shapes are in public docs.</div>
+  <div class="end" style="margin-top:auto">What the fake <span class="t">can’t</span> copy is one thing…</div>
+  <div class="grain"></div>
+</section>
+
+<!-- 4 the signature -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>04 / 08</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:24px">
+    <div class="cm">// a shared secret</div>
+    <h2>The sender <span class="t">signs every body</span> with a secret only you two know.</h2>
+  </div>
+  <div style="margin-top:56px;display:flex;align-items:center;gap:18px">
+    <div class="node">secret</div><div class="w" style="font-family:Mono;font-size:36px">+</div><div class="node">raw body</div>
+    <div style="flex:1;height:3px;background:var(--purple)"></div>
+    <div class="node" style="border-color:var(--teal);color:var(--teal)">HMAC-SHA256</div>
+  </div>
+  <div class="lbl" style="margin-top:56px">the header it arrives in</div>
+  <div style="margin-top:18px;display:flex;flex-direction:column;gap:16px">
+    <div class="card" style="display:flex;justify-content:space-between;align-items:center;padding:24px 30px"><span class="body w" style="font-size:34px">GitHub</span><span style="font-family:Mono;font-size:30px" class="t">X-Hub-Signature-256</span></div>
+    <div class="card" style="display:flex;justify-content:space-between;align-items:center;padding:24px 30px"><span class="body w" style="font-size:34px">Meta (WhatsApp)</span><span style="font-family:Mono;font-size:30px" class="t">X-Hub-Signature-256</span></div>
+    <div class="card" style="display:flex;justify-content:space-between;align-items:center;padding:24px 30px"><span class="body w" style="font-size:34px">Stripe</span><span style="font-family:Mono;font-size:30px" class="t">Stripe-Signature</span></div>
+  </div>
+  <div class="end" style="margin-top:auto">You recompute it and compare. <span class="t">Easy. Except it breaks…</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 5 trap 1 raw body -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>05 / 08</div></div>
+  <div style="margin-top:64px;display:flex;gap:30px;align-items:flex-start">
+    <div class="chip" style="background:var(--red);color:#0A0A0C;margin-top:12px">trap 1</div>
+    <h2>You hashed the <span class="r">parsed</span> JSON, not the raw bytes.</h2>
+  </div>
+  <div style="margin-top:56px;display:flex;flex-direction:column;gap:20px">
+    <div class="card"><div class="lbl">bytes the sender signed</div><div style="font-family:Mono;font-size:32px;margin-top:14px" class="t">{"type":"payment.succeeded","amount":499}</div></div>
+    <div class="card" style="border-color:var(--red)"><div class="lbl">bytes after parse + re-stringify</div><div style="font-family:Mono;font-size:32px;margin-top:14px" class="r">{"type": "payment.succeeded", "amount": 499}</div></div>
+  </div>
+  <div class="body" style="margin-top:50px;font-size:42px;color:var(--fg)">Same data. Two extra spaces. A completely different hash. Real events start failing, and someone “temporarily” switches the check off.</div>
+  <div class="end" style="margin-top:auto">Hash the raw body. <span class="t">Then don’t compare it with ==…</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 6 trap 2 compare -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>06 / 08</div></div>
+  <div style="margin-top:64px;display:flex;gap:30px;align-items:flex-start">
+    <div class="chip" style="background:var(--red);color:#0A0A0C;margin-top:12px">trap 2</div>
+    <h2>A plain <span class="r">==</span> can leak how much of the guess was right.</h2>
+  </div>
+  <div class="term" style="margin-top:56px">
+    <div class="tb"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span style="margin-left:12px">verify.js</span></div>
+    <pre><span class="m">// stops at the first wrong character</span>
+<span class="r">if (sig == expected)</span>
+
+<span class="m">// takes the same time either way</span>
+<span class="t">crypto.timingSafeEqual(</span>
+<span class="t">  Buffer.from(sig), Buffer.from(expected))</span></pre>
+  </div>
+  <div class="body" style="margin-top:50px;font-size:42px;color:var(--fg)">GitHub’s docs say it directly: compare signatures with a <span class="t">constant-time</span> function.</div>
+  <div class="end" style="margin-top:auto">Now the check is right. <span class="t">A valid signature can still hurt you…</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 7 payoff replay -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>07 / 08</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:24px">
+    <div class="cm">// the replay</div>
+    <h2>Someone captures one <span class="t">real, signed</span> request. And sends it again.</h2>
+  </div>
+  <div style="margin-top:56px;position:relative;height:250px">
+    <div style="position:absolute;left:0;right:0;top:118px;height:4px;background:var(--edge)"></div>
+    <div style="position:absolute;left:0;top:96px;width:48px;height:48px;border-radius:50%;background:var(--teal)"></div>
+    <div class="lbl" style="position:absolute;left:0;top:0;color:var(--teal)">signed 14:02</div>
+    <div style="position:absolute;left:0;top:174px;font-family:Mono;font-size:26px" class="w">accept</div>
+    <div style="position:absolute;left:360px;top:80px;width:4px;height:80px;background:var(--purple)"></div>
+    <div class="lbl" style="position:absolute;left:300px;top:0;color:var(--purple)">5-minute window</div>
+    <div style="position:absolute;right:0;top:96px;width:48px;height:48px;border-radius:50%;background:var(--red)"></div>
+    <div class="lbl" style="position:absolute;right:0;top:0;color:var(--red)">resent 16:40</div>
+    <div style="position:absolute;right:0;top:174px;font-family:Mono;font-size:26px" class="r">reject</div>
+  </div>
+  <div class="card" style="margin-top:30px;border-color:var(--teal)">
+    <div class="body w" style="font-size:40px">Stripe signs a <span class="t">timestamp</span> together with the body. Its libraries reject events older than <span class="t">5 minutes</span> by default.</div>
+  </div>
+  <div class="body" style="margin-top:40px;font-size:40px;color:var(--fg)">And keep each event ID you’ve handled, so a genuine resend is processed once.</div>
+  <div class="grain"></div>
+</section>
+
+<!-- 8 lab notes + CTA -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>08 / 08</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:24px">
+    <div class="cm">// lab notes · every webhook endpoint</div>
+    <h2>Three checks <span class="t">before</span> you trust the payload.</h2>
+  </div>
+  <div style="margin-top:56px;display:flex;flex-direction:column;gap:22px">
+    <div class="card" style="display:flex;gap:28px;align-items:center"><span class="num">[01]</span><span class="body w" style="font-size:40px">HMAC of the <span class="t">raw body</span> with your secret</span></div>
+    <div class="card" style="display:flex;gap:28px;align-items:center"><span class="num">[02]</span><span class="body w" style="font-size:40px">Compare in <span class="t">constant time</span></span></div>
+    <div class="card" style="display:flex;gap:28px;align-items:center"><span class="num">[03]</span><span class="body w" style="font-size:40px"><span class="t">Fresh timestamp</span> + event ID not seen before</span></div>
+  </div>
+  <div class="body" style="margin-top:44px;font-size:38px">Fail any one: return an error, change nothing.</div>
+  <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end">
+    <div class="end" style="max-width:600px">Save this for the next webhook you wire up.</div>
+    <div style="font-family:Mono;font-size:30px" class="t">surgeit.co.in</div>
+  </div>
+  <div class="grain"></div>
+</section>
+
+</div>
+</body>
+</html>

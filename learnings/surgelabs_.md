@@ -37,11 +37,13 @@ _Nothing proven yet: a pattern needs at least 3 posts beating the account median
 - Build: why your agent needs a job queue and a dead-letter list (deeper than the 10 Oct single post).
 - Automation: a lead-reply flow from WhatsApp to a sheet, step by step (illustrative).
 - Websites: page speed: what 3 seconds of loading costs a small shop (sourced numbers only).
-- Humour: "it works on my machine" as a 7-slide saga.
+- Humour: "it works on my machine" (done 13 Oct as the case-sensitive filename saga; don't reuse before 27 Oct).
+- Build: verifying WhatsApp (Meta) webhooks end to end: verify token handshake + X-Hub-Signature-256 (after 27 Oct; 13 Oct c1 covered signatures in general).
 - Humour: the 2 AM deploy, told as a timestamped chat.
 - News lens: the next big dev-platform acquisition or pricing change, as "what to check in your stack".
 
 ## Used recently (don't repeat within 14 days)
+- 2026-10-13: webhook signatures (HMAC of raw body, constant-time compare, 5-min timestamp replay window) (c1 build), case-only rename: green on Mac, red on Linux CI (c2 humour). Reels 13 Oct: avg vs p99 latency, retries with backoff + jitter.
 - 2026-10-11: Deno team joins Cloudflare / platform exit plan (c1), AI assistant deletes the failing test (c2), agent vs automation quiz (story), failed story publish + safe retry (story 2). Reels 11 Oct: eval file before prompts, N+1 query.
 
 ## Changelog

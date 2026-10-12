@@ -1,0 +1,136 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--bg:#F5F6FA;--blue:#2563EB;--b2:#1D4ED8;--b3:#3B76F0;--b4:#93B4F8;--b5:#DCE6FD;--b6:#EEF3FE;--ink:#111827;--grey:#6B7280}
+html,body{background:var(--bg)}
+.deck{display:flex;position:relative;width:max-content}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;background:var(--bg);color:var(--ink);font-family:"Sans";flex:none}
+.slide.white{background:#fff}
+.slide.blue{background:var(--blue);color:#fff}
+.lab{font-family:"Mono";font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.num{position:absolute;top:64px;right:72px;font-family:"Mono";font-size:24px;letter-spacing:.1em;color:var(--grey)}
+.h{font-family:"Serif";font-weight:400;line-height:.98;letter-spacing:-.01em;color:var(--ink)}
+.h em{font-style:italic;color:var(--blue)}
+.h .sub{display:block;font-family:"Sans";font-size:36px;line-height:1.35;letter-spacing:0;color:var(--grey);margin-top:30px}
+.h .sub b{color:var(--ink);font-weight:600}
+.card{position:absolute;background:#fff;border-radius:28px;box-shadow:0 18px 50px rgba(17,24,39,.10),0 2px 6px rgba(17,24,39,.06)}
+.pin{position:absolute;width:26px;height:26px;border-radius:50%;background:var(--blue);box-shadow:0 3px 6px rgba(29,78,216,.35);left:50%;top:-10px;transform:translateX(-50%)}
+.bubble{position:absolute;font-family:"Serif";font-size:60px;line-height:1;padding:30px 44px;border-radius:40px;background:#fff;box-shadow:0 14px 40px rgba(17,24,39,.10)}
+.bubble.b{background:var(--blue);color:#fff}
+.bleed{position:absolute;top:0;left:0;pointer-events:none}
+.phone{position:absolute;width:452px;height:966px;border-radius:64px;background:#111827;padding:12px;box-shadow:0 30px 80px rgba(17,24,39,.22)}
+.phone img{width:428px;height:928px;border-radius:52px;display:block}
+</style></head><body>
+<div class="deck">
+
+<!-- continuous jaali-dotted doorstep line across slides 1-6 -->
+<svg class="bleed" width="7560" height="1350" viewBox="0 0 7560 1350" style="z-index:3">
+  <defs><pattern id="jd" width="48" height="24" patternUnits="userSpaceOnUse"><path d="M24 2 L34 12 L24 22 L14 12 Z" fill="#93B4F8"/></pattern></defs>
+  <rect x="0" y="1268" width="6480" height="24" fill="url(#jd)"/>
+  <rect x="0" y="1300" width="6480" height="3" fill="#DCE6FD"/>
+</svg>
+
+<!-- 1 -->
+<section class="slide">
+  <div class="lab" style="position:absolute;left:72px;top:72px">Lucknow, a love letter</div>
+  <div class="h" style="position:absolute;left:72px;top:140px;width:940px;font-size:132px">“Pehle aap.”<span style="display:block;font-size:84px;margin-top:22px"><em>The two words that keep Lucknow waiting.</em></span></div>
+  <svg style="position:absolute;left:190px;top:580px" width="700" height="640" viewBox="0 0 700 640">
+    <!-- Awadhi multifoil arch doorway -->
+    <path d="M110 640 L110 300 Q110 250 150 236 Q160 180 210 170 Q240 110 300 104 Q330 60 350 40 Q370 60 400 104 Q460 110 490 170 Q540 180 550 236 Q590 250 590 300 L590 640 Z" fill="#DCE6FD"/>
+    <path d="M170 640 L170 320 Q170 280 200 270 Q210 225 250 216 Q275 168 320 160 Q338 128 350 112 Q362 128 380 160 Q425 168 450 216 Q490 225 500 270 Q530 280 530 320 L530 640 Z" fill="#fff"/>
+    <rect x="80" y="610" width="540" height="30" rx="6" fill="#2563EB"/>
+    <!-- two gentlemen, gesturing to each other -->
+    <g fill="#2563EB">
+      <circle cx="260" cy="400" r="34"/><path d="M215 610 L225 470 Q260 440 295 470 L305 610 Z"/>
+      <path d="M290 485 Q315 520 322 545" stroke="#2563EB" stroke-width="18" fill="none" stroke-linecap="round"/><ellipse cx="326" cy="556" rx="12" ry="16" fill="#2563EB"/>
+    </g>
+    <g fill="#1D4ED8">
+      <circle cx="440" cy="400" r="34"/><path d="M395 610 L405 470 Q440 440 475 470 L485 610 Z"/>
+      <path d="M410 485 Q385 520 378 545" stroke="#1D4ED8" stroke-width="18" fill="none" stroke-linecap="round"/><ellipse cx="374" cy="556" rx="12" ry="16" fill="#1D4ED8"/>
+    </g>
+    <path d="M232 378 Q260 350 290 378 Z" fill="#93B4F8"/><path d="M412 378 Q440 350 470 378 Z" fill="#93B4F8"/>
+  </svg>
+  <div style="position:absolute;right:72px;top:520px;font-family:'Mono';font-size:24px;color:var(--blue);letter-spacing:.1em">Who goes first? →</div>
+</section>
+
+<!-- 2 -->
+<section class="slide white">
+  <div class="num">02 / 07</div>
+  <div class="bubble" style="left:72px;top:170px;transform:rotate(-2deg)">Pehle aap.</div>
+  <div class="bubble b" style="right:72px;top:330px;transform:rotate(2deg)">Nahin, pehle aap.</div>
+  <div class="bubble" style="left:110px;top:490px;transform:rotate(-1deg)">Arre, aap hi pehle.</div>
+  <div class="bubble b" style="right:120px;top:650px;transform:rotate(1.5deg)">Bilkul nahin. Aap.</div>
+  <div class="h" style="position:absolute;left:72px;top:880px;width:940px;font-size:88px">Lucknow's tehzeeb at its finest. <em>Charming at a door…</em><span class="sub">Except the same thing is happening in your home.</span></div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <div class="num">03 / 07</div>
+  <div class="h" style="position:absolute;left:72px;top:140px;width:940px;font-size:100px">Your old cycle is waiting <em>for you to decide.</em><span class="sub">You're waiting for “the right time”. Very politely.</span></div>
+  <div class="card" style="left:170px;top:640px;width:740px;height:520px;transform:rotate(-2deg)"><div class="pin"></div>
+    <svg width="740" height="520" viewBox="0 0 740 520">
+      <rect width="740" height="520" rx="28" fill="#EEF3FE"/>
+      <!-- room corner -->
+      <path d="M520 40 L520 440 L740 520" stroke="#DCE6FD" stroke-width="6" fill="none"/>
+      <rect x="0" y="440" width="740" height="80" fill="#DCE6FD"/>
+      <!-- cycle leaning -->
+      <g transform="rotate(-4 360 360)">
+        <circle cx="230" cy="380" r="80" fill="none" stroke="#2563EB" stroke-width="14"/>
+        <circle cx="480" cy="380" r="80" fill="none" stroke="#2563EB" stroke-width="14"/>
+        <path d="M230 380 L320 270 L440 270 L480 380 M320 270 L350 380 L440 270 M350 380 L230 380" fill="none" stroke="#1D4ED8" stroke-width="12" stroke-linejoin="round"/>
+        <path d="M300 245 L345 245" stroke="#111827" stroke-width="12" stroke-linecap="round"/>
+        <path d="M440 270 L428 228 L462 222" fill="none" stroke="#1D4ED8" stroke-width="11" stroke-linecap="round"/>
+      </g>
+      <!-- cobweb hint -->
+      <path d="M520 40 Q560 60 600 40 M520 40 Q540 80 520 110 M520 40 L590 100" stroke="#93B4F8" stroke-width="3" fill="none"/>
+      <!-- dust bunny dots -->
+      <circle cx="140" cy="470" r="8" fill="#93B4F8"/><circle cx="600" cy="480" r="6" fill="#93B4F8"/>
+    </svg>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide white">
+  <div class="num">04 / 07</div>
+  <svg style="position:absolute;left:90px;top:150px" width="900" height="560" viewBox="0 0 900 560">
+    <path d="M150 300 C 300 120 600 480 750 260" fill="none" stroke="#93B4F8" stroke-width="6" stroke-dasharray="4 18" stroke-linecap="round"/>
+    <circle cx="150" cy="300" r="90" fill="#DCE6FD"/><circle cx="150" cy="300" r="46" fill="#2563EB"/>
+    <text x="150" y="312" text-anchor="middle" font-family="Mono" font-size="30" fill="#fff">YOU</text>
+    <circle cx="750" cy="260" r="90" fill="#DCE6FD"/><circle cx="750" cy="260" r="46" fill="#1D4ED8"/>
+    <text x="750" y="271" text-anchor="middle" font-family="Mono" font-size="28" fill="#fff">???</text>
+    <text x="150" y="450" text-anchor="middle" font-family="Mono" font-size="24" fill="#6B7280" letter-spacing="2">HAS A CYCLE</text>
+    <text x="750" y="410" text-anchor="middle" font-family="Mono" font-size="24" fill="#6B7280" letter-spacing="2">COULD USE ONE</text>
+  </svg>
+  <div class="h" style="position:absolute;left:72px;top:780px;width:940px;font-size:96px">Somewhere in Lucknow, someone <em>could use exactly that.</em><span class="sub">And both of you are too polite to make the first move…</span></div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <div class="num">05 / 07</div>
+  <div class="lab" style="position:absolute;left:72px;top:72px">The one exception</div>
+  <div class="h" style="position:absolute;left:72px;top:220px;width:940px;font-size:140px">Tehzeeb says <em>pehle aap.</em></div>
+  <div class="h" style="position:absolute;left:72px;top:620px;width:940px;font-size:140px;color:var(--blue)"><em>Homingo says: you go first.</em><span class="sub">One tap on Sell. A photo, a price, and it's listed. Free.</span></div>
+</section>
+
+<!-- 6 -->
+<section class="slide white">
+  <div class="num">06 / 07</div>
+  <div class="h" style="position:absolute;left:72px;top:150px;width:470px;font-size:92px">Then they make <em>the next move.</em><span class="sub">Buyers chat with you or call you, straight from your listing. Enquiries come straight to you.</span></div>
+  <div class="phone" style="left:580px;top:190px;transform:rotate(-3deg)">
+    <img src="../../brand/homingo-app/listing.jpg" alt="">
+    <div style="position:absolute;left:22px;top:812px;width:410px;height:90px;border-radius:30px;border:6px solid #2563EB;box-shadow:0 0 0 12px rgba(37,99,235,.18)"></div>
+  </div>
+  <div style="position:absolute;left:72px;top:1090px;font-family:'Mono';font-size:22px;color:var(--grey);letter-spacing:.06em">Real Homingo Listing screen</div>
+</section>
+
+<!-- 7 -->
+<section class="slide blue">
+  <img src="../../brand/homingo-app/app-icon.png" style="position:absolute;left:72px;top:110px;width:150px;height:150px;border-radius:34px;box-shadow:0 14px 40px rgba(17,24,39,.25)" alt="">
+  <div style="position:absolute;left:72px;top:330px;width:940px;font-family:'Serif';font-size:150px;line-height:.95;color:#fff">Pehle aap.<br><em>Seriously.</em></div>
+  <div style="position:absolute;left:72px;top:690px;width:900px;font-family:'Sans';font-size:44px;line-height:1.35;color:#fff;font-weight:500">Tap Sell. List it free on Homingo.<span style="display:block;font-size:34px;font-weight:400;color:#DCE6FD;margin-top:20px">Lucknow's tehzeeb, Lucknow's own marketplace.</span></div>
+  <div style="position:absolute;left:72px;top:1100px;width:936px;border-top:2px solid rgba(255,255,255,.35);padding-top:32px;display:flex;justify-content:space-between;font-family:'Mono';font-size:26px;letter-spacing:.06em;color:#fff">
+    <span>Homingo · Lucknow's local marketplace</span><span>Link in bio</span></div>
+</section>
+
+</div></body></html>

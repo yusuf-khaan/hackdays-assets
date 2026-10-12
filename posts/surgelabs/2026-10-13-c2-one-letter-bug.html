@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SurgeLabs c2 2026-10-13: green on my laptop, red on CI</title>
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+  :root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--line:#2A2A31;--edge:#3A3A42;--red:#F2767A;--card:#111114}
+  html,body{background:var(--bg)}
+  .deck{display:flex;position:relative;width:max-content}
+  .slide{width:1080px;height:1350px;flex:none;position:relative;overflow:hidden;padding:72px;display:flex;flex-direction:column;
+    background-color:var(--bg);color:var(--fg);font-family:Sans;
+    background-image:radial-gradient(800px 640px at 100% 0%,rgba(167,139,250,.15),transparent 70%),radial-gradient(700px 600px at 0% 100%,rgba(45,212,191,.10),transparent 70%)}
+  .top{display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.03em;text-transform:none;color:var(--fg)}
+  .t{color:var(--teal)} .p{color:var(--purple)} .m{color:var(--muted)} .r{color:var(--red)} .w{color:var(--fg)}
+  .cm{font-family:Mono;font-size:26px;color:var(--purple);letter-spacing:.02em}
+  h1{font-weight:600;font-size:120px;line-height:.94;letter-spacing:-.05em}
+  h2{font-weight:600;font-size:78px;line-height:1;letter-spacing:-.042em}
+  .body{font-size:40px;line-height:1.33;color:var(--soft);letter-spacing:-.01em}
+  .end{font-size:42px;line-height:1.22;font-weight:600;letter-spacing:-.02em}
+  .grain{position:absolute;inset:0;opacity:.06;pointer-events:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+  .bleed{position:absolute;pointer-events:none;z-index:3}
+  .card{border:2px solid var(--edge);border-radius:22px;padding:30px 32px;background:rgba(17,17,20,.9)}
+  .chip{display:inline-block;font-family:Mono;font-size:22px;padding:8px 16px;border-radius:10px;letter-spacing:.06em;text-transform:uppercase}
+  .term{border:2px solid var(--edge);border-radius:22px;background:rgba(8,8,10,.94);overflow:hidden}
+  .term .tb{display:flex;gap:10px;align-items:center;padding:16px 22px;border-bottom:2px solid var(--line);font-family:Mono;font-size:22px;color:var(--muted)}
+  .dot{width:14px;height:14px;border-radius:50%;background:var(--edge);display:block}
+  .term pre{font-family:Mono;font-size:32px;line-height:1.55;padding:24px 28px;white-space:pre-wrap;color:var(--soft)}
+  .badge{width:150px;height:150px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Mono;font-size:84px;font-weight:500;color:#0A0A0C;flex:none}
+  .attempt{display:flex;justify-content:space-between;align-items:center;border:2px solid var(--edge);border-radius:18px;padding:24px 30px;background:var(--card);font-family:Mono;font-size:32px}
+  .num{font-family:Mono;font-weight:500;font-size:30px;color:var(--teal)}
+</style>
+</head>
+<body>
+<div class="deck">
+
+<!-- red build line running from slide 1 into slide 2 -->
+<div class="bleed" style="left:900px;top:1150px;width:400px;height:4px;background:linear-gradient(90deg,#F2767A,#F2767A)"></div>
+
+<!-- 1 hook -->
+<section class="slide" style="padding-bottom:150px">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>LAB-10 · Humour</div></div>
+  <div style="margin-top:70px;display:flex;flex-direction:column;gap:28px">
+    <div class="cm">// a developer story you’ve probably lived</div>
+    <h1>Green on my laptop. <span class="r">Red on CI.</span> Same commit.</h1>
+  </div>
+  <div style="margin-top:64px;display:grid;grid-template-columns:1fr 1fr;gap:24px">
+    <div class="card" style="display:flex;gap:26px;align-items:center;border-color:var(--teal)"><div class="badge" style="background:var(--teal);width:110px;height:110px;font-size:60px">✓</div><div><div class="m" style="font-family:Mono;font-size:24px">my-macbook</div><div style="font-family:Mono;font-size:34px" class="t">passing</div></div></div>
+    <div class="card" style="display:flex;gap:26px;align-items:center;border-color:var(--red)"><div class="badge" style="background:var(--red);width:110px;height:110px;font-size:60px">✕</div><div><div class="m" style="font-family:Mono;font-size:24px">ci · ubuntu</div><div style="font-family:Mono;font-size:34px" class="r">failed</div></div></div>
+  </div>
+  <div style="margin-top:28px;display:flex;align-items:center;gap:20px;font-family:Mono;font-size:28px" class="m">
+    <span style="flex:1;height:2px;background:var(--edge)"></span><span>commit <span class="w">4e1d0b7</span> · on both</span><span style="flex:1;height:2px;background:var(--edge)"></span>
+  </div>
+  <div class="end" style="margin-top:auto;max-width:780px;font-size:46px">The bug is <span class="p">one letter wide.</span> →</div>
+  <div class="grain"></div>
+</section>
+
+<!-- 2 the error -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>02 / 08</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:24px">
+    <div class="cm">// 10:14 · the CI log</div>
+    <h2>CI says the file <span class="r">doesn’t exist.</span></h2>
+  </div>
+  <div class="term" style="margin-top:56px;border-color:var(--red)">
+    <div class="tb"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span style="margin-left:12px">build · step 4 of 6</span></div>
+    <pre><span class="m">$</span> npm run build
+<span class="r">Module not found:</span>
+<span class="r">Can't resolve './components/Button'</span>
+<span class="m">in /app/src/pages</span>
+<span class="r">exit code 1</span></pre>
+  </div>
+  <div class="card" style="margin-top:30px;display:flex;justify-content:space-between;align-items:center">
+    <span style="font-family:Mono;font-size:30px" class="w">src/components/Button.js</span>
+    <span class="chip" style="background:var(--teal);color:#0A0A0C">open in editor</span>
+  </div>
+  <div class="body" style="margin-top:40px;font-size:44px;color:var(--fg)">It’s right there. You can see it. So you do what every developer does…</div>
+  <div class="grain"></div>
+</section>
+
+<!-- 3 the rituals -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>03 / 08</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:24px">
+    <div class="cm">// 10:20 → 11:05 · the rituals</div>
+    <h2>You try <span class="p">everything</span> that has ever worked before.</h2>
+  </div>
+  <div style="margin-top:56px;display:flex;flex-direction:column;gap:18px">
+    <div class="attempt"><span>re-run the pipeline</span><span class="r">✕ red</span></div>
+    <div class="attempt"><span>clear the CI cache</span><span class="r">✕ red</span></div>
+    <div class="attempt"><span>rm -rf node_modules</span><span class="r">✕ red</span></div>
+    <div class="attempt"><span>“fix ci” commit, empty</span><span class="r">✕ red</span></div>
+    <div class="attempt" style="border-style:dashed"><span class="m">restart laptop (why?)</span><span class="t">✓ green, locally</span></div>
+  </div>
+  <div class="end" style="margin-top:auto">Clearly CI is broken. <span class="p">So you ask a teammate to pull it…</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 4 teammate -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>04 / 08</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:24px">
+    <div class="cm">// 11:12 · team chat</div>
+    <h2>It fails for them too. It’s <span class="r">not CI.</span></h2>
+  </div>
+  <div style="margin-top:56px;display:flex;flex-direction:column;gap:22px">
+    <div style="align-self:flex-start;max-width:760px" class="card"><div class="m" style="font-family:Mono;font-size:22px">teammate · linux laptop</div><div class="body w" style="margin-top:10px">pulled main. same error. Button not found.</div></div>
+    <div style="align-self:flex-end;max-width:760px;border-color:var(--purple)" class="card"><div class="m" style="font-family:Mono;font-size:22px;text-align:right">you</div><div class="body w" style="margin-top:10px">works on my machine though</div></div>
+    <div style="align-self:flex-start;max-width:760px" class="card"><div class="m" style="font-family:Mono;font-size:22px">teammate · linux laptop</div><div class="body w" style="margin-top:10px">then ship your machine</div></div>
+  </div>
+  <div class="end" style="margin-top:auto">It fails everywhere except one laptop. <span class="p">What does yours know that Git doesn’t?</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 5 the clue -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>05 / 08</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:24px">
+    <div class="cm">// 11:40 · the clue</div>
+    <h2>Your disk and Git <span class="p">disagree</span> about one file.</h2>
+  </div>
+  <div style="margin-top:56px;display:grid;grid-template-columns:1fr 1fr;gap:22px">
+    <div class="term"><div class="tb"><span>$ ls components</span></div><pre style="font-size:34px"><span class="t">B</span>utton.js
+Header.js</pre></div>
+    <div class="term" style="border-color:var(--red)"><div class="tb"><span>$ git ls-files</span></div><pre style="font-size:34px"><span class="r">b</span>utton.js
+Header.js</pre></div>
+  </div>
+  <div style="margin-top:44px;display:flex;align-items:center;gap:30px">
+    <div style="font-family:Mono;font-size:200px;font-weight:500;line-height:.8;letter-spacing:-.06em"><span class="t">B</span><span class="m" style="font-size:90px"> ≠ </span><span class="r">b</span></div>
+  </div>
+  <div class="end" style="margin-top:auto">Git still has the old name. <span class="p">Because last week you renamed it…</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 6 why -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>06 / 08</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:24px">
+    <div class="cm">// the rule nobody told you</div>
+    <h2>Some disks <span class="p">don’t care</span> about capital letters.</h2>
+  </div>
+  <div style="margin-top:56px;display:flex;flex-direction:column;gap:18px">
+    <div class="card" style="display:flex;justify-content:space-between;align-items:center"><span class="body w">macOS <span class="m" style="font-size:30px">(APFS default)</span></span><span style="font-family:Mono;font-size:32px" class="t">Button = button</span></div>
+    <div class="card" style="display:flex;justify-content:space-between;align-items:center"><span class="body w">Windows <span class="m" style="font-size:30px">(NTFS default)</span></span><span style="font-family:Mono;font-size:32px" class="t">Button = button</span></div>
+    <div class="card" style="display:flex;justify-content:space-between;align-items:center;border-color:var(--red)"><span class="body w">Linux <span class="m" style="font-size:30px">(CI, servers)</span></span><span style="font-family:Mono;font-size:32px" class="r">Button ≠ button</span></div>
+  </div>
+  <div class="body" style="margin-top:44px;font-size:42px;color:var(--fg)">On a case-insensitive disk Git sets <span class="t" style="font-family:Mono;font-size:38px">core.ignorecase=true</span>, so a rename that only changes case can slip past it.</div>
+  <div class="end" style="margin-top:auto">Which means the rename… <span class="p">never happened.</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 7 punchline -->
+<section class="slide" style="justify-content:center">
+  <div class="cm" style="position:absolute;top:72px;left:72px">// 11:52 · root cause</div>
+  <div class="top" style="position:absolute;top:72px;right:72px"><div>07 / 08</div></div>
+  <h1 style="font-size:104px">You renamed <span class="r">button.js</span> to <span class="t">Button.js.</span></h1>
+  <div style="margin-top:60px;display:flex;flex-direction:column;gap:20px">
+    <div class="end" style="font-size:56px">Git <span class="m">never noticed.</span></div>
+    <div class="end" style="font-size:56px">Your Mac <span class="m">never cared.</span></div>
+    <div class="end" style="font-size:56px">CI <span class="r">cared a lot.</span></div>
+  </div>
+  <div class="body" style="margin-top:60px;font-size:36px">Ninety minutes. One capital B.</div>
+  <div class="grain"></div>
+</section>
+
+<!-- 8 fix + CTA -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>08 / 08</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:24px">
+    <div class="cm">// lab notes · so it never happens again</div>
+    <h2>The fix is <span class="t">one command.</span> The habit is three.</h2>
+  </div>
+  <div class="term" style="margin-top:50px;border-color:var(--teal)">
+    <div class="tb"><span>terminal</span></div>
+    <pre><span class="m">$</span> <span class="t">git mv</span> button.js Button.js
+<span class="m">$</span> git commit -m "Fix filename case"</pre>
+  </div>
+  <div style="margin-top:30px;display:flex;flex-direction:column;gap:16px">
+    <div class="card" style="display:flex;gap:26px;align-items:center;padding:24px 30px"><span class="num">[01]</span><span class="body w" style="font-size:36px">Rename case with <span class="t">git mv</span>, not in Finder</span></div>
+    <div class="card" style="display:flex;gap:26px;align-items:center;padding:24px 30px"><span class="num">[02]</span><span class="body w" style="font-size:36px">TypeScript: <span class="t">forceConsistentCasingInFileNames</span></span></div>
+    <div class="card" style="display:flex;gap:26px;align-items:center;padding:24px 30px"><span class="num">[03]</span><span class="body w" style="font-size:36px">Let CI on Linux pass <span class="t">before</span> you merge</span></div>
+  </div>
+  <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end">
+    <div class="end" style="max-width:640px">Send this to the teammate whose laptop is always green.</div>
+    <div style="font-family:Mono;font-size:30px" class="t">surgeit.co.in</div>
+  </div>
+  <div class="grain"></div>
+</section>
+
+</div>
+</body>
+</html>

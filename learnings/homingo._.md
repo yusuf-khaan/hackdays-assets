@@ -31,6 +31,7 @@ _Nothing proven yet: a pattern needs at least 3 posts beating the account median
 
 ## Owed (promised part 2s and follow-ups)
 - "Exhibits" part 2 if c1 "Your room is full of money" teases a series (check its last slide).
+- "The Homingo Museum" Exhibit 02 (13 Oct c1, treadmill, last slide says "The museum has more exhibits. Next one soon."). Slide 3 already named the next exhibits: the guitar (02), last sem's books (03), the cycle (04), the spare mattress (05). Note: the guitar was a 12 Oct story, so pick books or the mattress for 02 within ~1 week, same frame (Mono "The Homingo Museum · Exhibit 0N" label, pinned card, museum plaque).
 
 ## Backlog (campaign ideas; verify any fact before use, every claim must be true of the app)
 - Let it go: "Moving out? Don't carry it." Hostel/PG move-out; boxes that never get unpacked.
@@ -45,6 +46,10 @@ _Nothing proven yet: a pattern needs at least 3 posts beating the account median
 - The app: "Three taps to list" on the real My Ads screen.
 - Lucknow: "Lucknow shares. Tehzeeb, chai, and now your old cycle."
 - Winter: "Your heater has one more winter in it. Someone else's." (late Oct/Nov).
+
+## Notes from runs
+- 2026-10-13 batch: first object-hero opener (c1 treadmill, W42 experiment 1) and first Lucknow-line campaign ("Pehle aap", c2). Both with conversion CTA. WebFetch and curl to most sites are blocked (proxy 403), so web research gives titles only; keep outside claims to well-known cultural facts with several matching titles.
+- lint.js does not flag text sitting on top of an SVG drawing (slide-1 swipe cue overlapped the doorstep in round 1); check swipe cues by eye.
 
 ## Changelog
 - 2026-10-10: learnings file created with the carousel system.

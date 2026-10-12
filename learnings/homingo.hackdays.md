@@ -47,3 +47,4 @@ _Nothing proven yet: a pattern needs at least 3 posts beating the account median
 - 2026-10-10: learnings file created with the carousel system.
 - 2026-10-11: decks c1/c2 quote "Serif"; c1 cancelled and remade for the 'live demo' wording; story 2 terminal checklist hit the headline/sub-line overlap trap.
 - 2026-W41 review: the Serif and overlap traps are now WARNs in `tools/carousel.js` and `tools/render.js` (tools/lint.js); carousels with 5 or fewer slides no longer crash the contact sheet.
+- 2026-10-13 batch: c1 tips README (6 slides, W42 #3 test), c2 how mentors-async '4-line ask'. Blur a withheld word on slide 1 (filter:blur ≥9px) instead of naming it; WebSearch returns titles/URLs only, so exact-phrase queries are the way to confirm a quote.
