@@ -7,7 +7,7 @@ Scheduled runs make everything and schedule it in Instahook with `publish_at`; I
 
 | Run | When | Makes |
 |---|---|---|
-| Morning batch | 04:52 | 6 carousels + story 1 on all four accounts, scheduled for today's slots (carousel 1 and story 1 go out early morning, 06:52–08:47) |
+| Morning batch | 04:52 | 6 carousels + story 1 on all four accounts, scheduled for today's slots (carousel 1 and story 1 go out early morning, 07:00–09:00 (07:12–08:47)) |
 | Morning repair | 06:12 | checks the morning batch before the first slot and repairs everything; all repairs done before 11:00 |
 | Evening run | 17:52 | catch-up, story 2 on all four accounts, trend check (may add or swap a carousel; on verse only a story) |
 | Weekly review | Sunday 23:07 | learning + system improvement |
@@ -16,7 +16,7 @@ Publishing slots and idempotency keys (IST date):
 | Account | Slots | Feed keys |
 |---|---|---|
 | @homingo.verse | none: reels come from the owner's laptop | cloud runs never create a verse feed post |
-| @surgelabs_ | 06:52, 18:12 | `surgelabs-c-YYYY-MM-DD-1`, `-2` |
+| @surgelabs_ | 08:12, 18:12 | `surgelabs-c-YYYY-MM-DD-1`, `-2` |
 | @homingo._ | 07:32, 18:52 | `homingo-c-YYYY-MM-DD-1`, `-2` |
 | @homingo.hackdays | 07:12, 17:20 | `hackdays-c-YYYY-MM-DD-1`, `-2` |
 | Stories: Hack Days + SurgeLabs | 07:40 (story 1), 19:40 (story 2) | `<hackdays\|surgelabs>-story-YYYY-MM-DD`, `…-story2-YYYY-MM-DD` |
