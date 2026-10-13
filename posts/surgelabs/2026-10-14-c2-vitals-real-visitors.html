@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SurgeLabs c2 2026-10-14: speed score vs real visitors</title>
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+  :root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--line:#2A2A31;--edge:#3A3A42;--red:#F2767A;--card:#111114}
+  html,body{background:var(--bg)}
+  .deck{display:flex;position:relative;width:max-content}
+  .slide{width:1080px;height:1350px;flex:none;position:relative;overflow:hidden;padding:72px;display:flex;flex-direction:column;
+    background-color:var(--bg);color:var(--fg);font-family:Sans;
+    background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px),radial-gradient(760px 620px at 0% 0%,rgba(167,139,250,.16),transparent 70%),radial-gradient(700px 600px at 100% 100%,rgba(45,212,191,.11),transparent 70%);
+    background-size:54px 54px,54px 54px,auto,auto}
+  .top{display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.03em;text-transform:none;color:var(--fg)}
+  .t{color:var(--teal)} .p{color:var(--purple)} .m{color:var(--muted)} .r{color:var(--red)} .w{color:var(--fg)}
+  .cm{font-family:Mono;font-size:26px;color:var(--teal);letter-spacing:.02em}
+  h1{font-weight:600;font-size:112px;line-height:.95;letter-spacing:-.045em}
+  h2{font-weight:600;font-size:76px;line-height:1;letter-spacing:-.042em}
+  .body{font-size:38px;line-height:1.35;color:var(--soft);letter-spacing:-.01em}
+  .end{font-size:42px;line-height:1.22;font-weight:600;letter-spacing:-.02em}
+  .grain{position:absolute;inset:0;opacity:.06;pointer-events:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+  .bleed{position:absolute;pointer-events:none;z-index:3}
+  .term{border:2px solid var(--edge);border-radius:22px;background:rgba(8,8,10,.92);overflow:hidden}
+  .term .tb{display:flex;gap:10px;align-items:center;padding:16px 22px;border-bottom:2px solid var(--line);font-family:Mono;font-size:22px;color:var(--muted)}
+  .dot{width:14px;height:14px;border-radius:50%;background:var(--edge);display:block}
+  .term pre{font-family:Mono;font-size:30px;line-height:1.55;padding:24px 28px;white-space:pre-wrap;color:var(--soft)}
+  .card{border:2px solid var(--edge);border-radius:22px;padding:30px 32px;background:rgba(17,17,20,.88)}
+  .chip{display:inline-block;font-family:Mono;font-size:22px;padding:8px 16px;border-radius:10px;letter-spacing:.06em;text-transform:uppercase}
+  .node{border:2px solid var(--edge);border-radius:18px;padding:22px 26px;background:var(--card);font-family:Mono;font-size:28px}
+  .num{font-family:Mono;font-weight:500;font-size:30px;color:var(--teal)}
+  .lbl{font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+</style>
+<style>
+  .phone{width:430px;height:960px;border:3px solid var(--edge);border-radius:56px;background:#0E0E11;padding:26px 22px;position:relative;overflow:hidden;flex:none}
+  .phone .notch{width:120px;height:26px;border-radius:14px;background:#1C1C21;margin:0 auto 22px}
+  .site-bar{font-family:Mono;font-size:18px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
+  .ph-hero{height:250px;border-radius:20px;background:#1A1A1F;border:2px dashed var(--edge);display:flex;align-items:center;justify-content:center;font-family:Mono;font-size:22px;color:var(--muted)}
+  .ph-line{height:18px;border-radius:9px;background:#24242A;margin-top:16px}
+  .ph-btn{margin-top:20px;height:78px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:600}
+  .two{display:flex;gap:44px;align-items:flex-start;margin-top:56px}
+  .big{font-family:Mono;font-weight:500;letter-spacing:-.03em}
+  .feel{font-family:Mono;font-size:24px;letter-spacing:.12em;text-transform:uppercase}
+</style>
+</head>
+<body>
+<div class="deck">
+
+<!-- red "failed" line bleeding from slide 1 into slide 2 -->
+<svg class="bleed" style="left:880px;top:1080px" width="440" height="40" viewBox="0 0 440 40"><path d="M0 20 H440" stroke="#F2767A" stroke-width="4" stroke-dasharray="14 10"/><circle cx="0" cy="20" r="10" fill="#F2767A"/></svg>
+
+<!-- 1 hook -->
+<section class="slide" style="padding-bottom:150px">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>LAB-11 · Websites</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:26px">
+    <div class="cm">// example site · illustrative</div>
+    <h1>Speed score: <span class="t">95.</span><br>Real visitors: <span class="r">failed.</span></h1>
+  </div>
+  <div style="margin-top:64px;display:flex;gap:30px">
+    <div class="card" style="flex:1;border-color:var(--teal);display:flex;flex-direction:column;align-items:center;gap:10px;padding:34px 20px">
+      <svg width="230" height="230" viewBox="0 0 230 230"><circle cx="115" cy="115" r="96" stroke="#2A2A31" stroke-width="16" fill="none"/><circle cx="115" cy="115" r="96" stroke="#2DD4BF" stroke-width="16" fill="none" stroke-linecap="round" stroke-dasharray="573 603" transform="rotate(-90 115 115)"/><text x="115" y="140" text-anchor="middle" font-family="Mono" font-size="72" fill="#2DD4BF">95</text></svg>
+      <div class="lbl">lab test · simulated</div>
+    </div>
+    <div class="card" style="flex:1;border-color:var(--red);display:flex;flex-direction:column;justify-content:center;gap:22px;padding:34px 30px">
+      <div class="lbl">core web vitals</div>
+      <div class="big r" style="font-size:64px">FAILED</div>
+      <div class="lbl">real visitors · 28 days</div>
+    </div>
+  </div>
+  <div class="end" style="margin-top:auto;font-size:46px">Both can be true. <span class="r">Here’s how →</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 2 lab vs field -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>02 / 08</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:24px">
+    <div class="cm">// two different tests</div>
+    <h2>The score is one test. Google also grades <span class="t">your real visitors.</span></h2>
+  </div>
+  <div style="margin-top:56px;display:flex;flex-direction:column;gap:26px">
+    <div class="card" style="display:flex;gap:30px;align-items:center;padding:38px 34px">
+      <span class="chip" style="border:2px solid var(--muted);color:var(--soft);min-width:130px;text-align:center">lab</span>
+      <span class="body w" style="font-size:40px">Lighthouse: one simulated page load, one device.</span>
+    </div>
+    <div class="card" style="display:flex;gap:30px;align-items:center;padding:38px 34px;border-color:var(--teal)">
+      <span class="chip" style="background:var(--teal);color:#0A0A0C;min-width:130px;text-align:center">field</span>
+      <span class="body w" style="font-size:40px">Chrome UX Report: <span class="t">real Chrome users</span>, the last 28 days.</span>
+    </div>
+  </div>
+  <div class="body" style="margin-top:44px;font-size:40px">PageSpeed Insights shows both. Core Web Vitals pass or fail on the <span class="w">field</span> data.</div>
+  <div class="end" style="margin-top:auto">And the field data grades three feelings. <span class="t">The first →</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 3 WAIT · LCP -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>03 / 08</div></div>
+  <div class="two">
+    <div style="flex:1;display:flex;flex-direction:column;gap:26px">
+      <div class="feel t">[01] wait</div>
+      <h2 style="font-size:80px">The big thing takes <span class="t">ages</span> to show.</h2>
+      <div class="body" style="font-size:36px">Largest Contentful Paint: when the main image or headline appears.</div>
+      <div class="card" style="border-color:var(--teal);padding:28px 30px">
+        <div class="lbl">good</div>
+        <div class="big t" style="font-size:72px;margin-top:6px">≤ 2.5 s</div>
+      </div>
+    </div>
+    <div class="phone">
+      <div class="notch"></div>
+      <div class="site-bar">example café</div>
+      <div class="ph-hero">loading…</div>
+      <div class="ph-line" style="width:90%"></div>
+      <div class="ph-line" style="width:70%"></div>
+      <div class="ph-line" style="width:80%"></div>
+      <div class="ph-line" style="width:65%"></div>
+      <div class="ph-line" style="width:85%"></div>
+      <svg style="display:block;margin:70px auto 0" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="46" stroke="#2A2A31" stroke-width="10" fill="none"/><path d="M60 14 A46 46 0 0 1 106 60" stroke="#2DD4BF" stroke-width="10" fill="none" stroke-linecap="round"/></svg>
+    </div>
+  </div>
+  <div class="end" style="margin-top:auto">Everyone knows this one. <span class="t">The second is sneakier…</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 4 JUMP · CLS -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>04 / 08</div></div>
+  <div class="two">
+    <div class="phone">
+      <div class="notch"></div>
+      <div class="site-bar">example café</div>
+      <div style="height:130px;border-radius:18px;background:rgba(167,139,250,.16);border:2px solid var(--purple);display:flex;align-items:center;justify-content:center;font-family:Mono;font-size:22px;color:var(--purple)">late banner ↓</div>
+      <div class="ph-btn" style="background:#1A1A1F;border:2px solid var(--red);color:var(--red);position:relative">Directions
+        <svg style="position:absolute;right:40px;top:30px" width="70" height="70" viewBox="0 0 70 70"><circle cx="35" cy="35" r="30" fill="rgba(242,118,122,.25)" stroke="#F2767A" stroke-width="3"/><circle cx="35" cy="35" r="10" fill="#F2767A"/></svg>
+      </div>
+      <div class="ph-btn" style="background:var(--teal);color:#0A0A0C;opacity:.55">Call now</div>
+      <div class="ph-line" style="width:85%;margin-top:26px"></div>
+      <div class="ph-line" style="width:60%"></div>
+      <div class="lbl" style="margin-top:26px;color:var(--red)">tapped the wrong one</div>
+      <div class="ph-line" style="width:90%;margin-top:40px"></div>
+      <div class="ph-line" style="width:75%"></div>
+      <div class="ph-line" style="width:55%"></div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:26px">
+      <div class="feel p">[02] jump</div>
+      <h2 style="font-size:80px">You aim for <span class="t">“Call now”</span>. The page <span class="r">moves.</span></h2>
+      <div class="body" style="font-size:36px">Cumulative Layout Shift: how much the page jumps while you use it.</div>
+      <div class="card" style="border-color:var(--purple);padding:28px 30px">
+        <div class="lbl">good</div>
+        <div class="big p" style="font-size:72px;margin-top:6px">≤ 0.1</div>
+      </div>
+    </div>
+  </div>
+  <div class="end" style="margin-top:auto">The third became a Core Web Vital in 2024. <span class="t">→</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 5 FREEZE · INP -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>05 / 08</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:24px">
+    <div class="feel r">[03] freeze</div>
+    <h2 style="font-size:84px">You tap <span class="t">“Book now”</span>. Nothing happens. You tap again.</h2>
+  </div>
+  <div class="term" style="margin-top:50px">
+    <div class="tb"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span style="margin-left:12px">one tap, step by step</span></div>
+    <pre><span class="m">tap</span>            Book now
+<span class="m">main thread</span>    <span class="r">busy with scripts…</span>
+<span class="m">next paint</span>     <span class="w">the button finally reacts</span></pre>
+  </div>
+  <div class="body" style="margin-top:40px;font-size:38px">Interaction to Next Paint: the delay between a tap and the screen responding. It replaced FID in <span class="w">March 2024</span>.</div>
+  <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:30px">
+    <div class="end" style="max-width:600px">“Good” isn’t about your average visitor, though…</div>
+    <div class="card" style="border-color:var(--red);padding:22px 28px;flex:none"><div class="lbl">good</div><div class="big r" style="font-size:60px">≤ 200 ms</div></div>
+  </div>
+  <div class="grain"></div>
+</section>
+
+<!-- 6 75th percentile -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>06 / 08</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:24px">
+    <div class="cm">// how “good” is measured</div>
+    <h2>It’s graded at the <span class="t">75th percentile</span> of real visits.</h2>
+  </div>
+  <svg id="dots" style="margin-top:56px" width="936" height="460" viewBox="0 0 936 460"></svg>
+  <div class="body" style="margin-top:40px;font-size:42px;color:var(--fg)">Roughly: for each of the three, <span class="t">3 in 4 visits</span> must be “good”. Slow phones and weak signals count too.</div>
+  <div class="end" style="margin-top:auto">So what do you fix first? <span class="t">→</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 7 payoff: fixes -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>07 / 08</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:24px">
+    <div class="cm">// the usual causes, and the fix</div>
+    <h2>Three feelings. <span class="t">Three fixes.</span></h2>
+  </div>
+  <div style="margin-top:56px;display:flex;flex-direction:column;gap:30px">
+    <div class="card" style="border-color:var(--teal);padding:40px 36px">
+      <div class="feel t">wait · lcp</div>
+      <div class="body w" style="font-size:42px;margin-top:12px">Compress the hero image. Don’t lazy-load it.</div>
+    </div>
+    <div class="card" style="border-color:var(--purple);padding:40px 36px">
+      <div class="feel p">jump · cls</div>
+      <div class="body w" style="font-size:42px;margin-top:12px">Give images <span class="p">width</span> and <span class="p">height</span>. Reserve space for banners and embeds.</div>
+    </div>
+    <div class="card" style="border-color:var(--red);padding:40px 36px">
+      <div class="feel r">freeze · inp</div>
+      <div class="body w" style="font-size:42px;margin-top:12px">Cut heavy third-party scripts. Break long tasks into small ones.</div>
+    </div>
+  </div>
+  <div class="body" style="margin-top:auto;font-size:34px">Source: Google’s web.dev guides on LCP, CLS and INP.</div>
+  <div class="grain"></div>
+</section>
+
+<!-- 8 lab notes + CTA -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>08 / 08</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:24px">
+    <div class="cm">// lab notes · check yours in 2 minutes</div>
+    <h2>Read the <span class="t">top half</span> of PageSpeed Insights first.</h2>
+  </div>
+  <div style="margin-top:56px;display:flex;flex-direction:column;gap:22px">
+    <div class="card" style="display:flex;gap:28px;align-items:center;padding:46px 34px"><span class="num">[01]</span><span class="body w" style="font-size:42px">Top: <span class="t">real visitors</span>, pass or fail.</span></div>
+    <div class="card" style="display:flex;gap:28px;align-items:center;padding:46px 34px"><span class="num">[02]</span><span class="body w" style="font-size:42px">Below: the lab score, to find <span class="t">why</span>.</span></div>
+    <div class="card" style="display:flex;gap:28px;align-items:center;padding:46px 34px"><span class="num">[03]</span><span class="body w" style="font-size:42px">No field data? Too few visits yet. Use the lab as a guide.</span></div>
+  </div>
+  <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end">
+    <div class="end" style="max-width:620px">Send this to whoever built your website.</div>
+    <div style="font-family:Mono;font-size:30px" class="t">surgeit.co.in</div>
+  </div>
+  <div class="grain"></div>
+</section>
+
+</div>
+<script>
+  // 100 visit dots, 20 columns x 5: 75 good (teal), 25 slower (muted), sorted fast to slow
+  (function(){var s=document.getElementById('dots'),h='';for(var i=0;i<100;i++){var c=Math.floor(i/5),r=i%5;var x=24+c*46.5,y=80+r*82;var good=i<75;h+='<circle cx="'+x+'" cy="'+y+'" r="18" fill="'+(good?'#2DD4BF':'#3A3A42')+'"/>';}
+  h+='<line x1="'+(24+15*46.5-23)+'" y1="30" x2="'+(24+15*46.5-23)+'" y2="460" stroke="#A78BFA" stroke-width="3" stroke-dasharray="8 8"/>';
+  h+='<text x="'+(24+15*46.5-35)+'" y="18" text-anchor="end" font-family="Mono" font-size="22" fill="#2DD4BF">75 good visits</text><text x="'+(24+15*46.5-11)+'" y="18" font-family="Mono" font-size="22" fill="#9A9AA3">25 slower</text>';
+  s.innerHTML=h;})();
+</script>
+</body>
+</html>

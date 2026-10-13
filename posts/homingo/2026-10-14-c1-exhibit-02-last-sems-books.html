@@ -1,0 +1,228 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--bg:#F5F6FA;--blue:#2563EB;--b2:#1D4ED8;--b3:#3B76F0;--b4:#93B4F8;--b5:#DCE6FD;--b6:#EEF3FE;--ink:#111827;--grey:#6B7280}
+html,body{background:var(--bg)}
+.deck{display:flex;position:relative;width:max-content}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;background:var(--bg);color:var(--ink);font-family:"Sans";flex:none}
+.slide.white{background:#fff}
+.slide.blue{background:var(--blue);color:#fff}
+.lab{font-family:"Mono";font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.num{position:absolute;top:64px;right:72px;font-family:"Mono";font-size:24px;letter-spacing:.1em;color:var(--grey)}
+.h{font-family:"Serif";font-weight:400;line-height:.98;letter-spacing:-.01em;color:var(--ink)}
+.h em{font-style:italic;color:var(--blue)}
+.h .sub{display:block;font-family:"Sans";font-size:36px;line-height:1.35;letter-spacing:0;color:var(--grey);margin-top:30px;font-weight:400}
+.h .sub b{color:var(--ink);font-weight:600}
+.card{position:absolute;background:#fff;border-radius:28px;box-shadow:0 18px 50px rgba(17,24,39,.10),0 2px 6px rgba(17,24,39,.06)}
+.pin{position:absolute;width:26px;height:26px;border-radius:50%;background:var(--blue);box-shadow:0 3px 6px rgba(29,78,216,.35);left:50%;top:-10px;transform:translateX(-50%)}
+.tag{font-family:"Mono";font-size:22px;letter-spacing:.08em;color:var(--grey);text-transform:uppercase}
+.bleed{position:absolute;top:0;left:0;pointer-events:none}
+.phone{position:absolute;width:452px;height:966px;border-radius:64px;background:#111827;padding:12px;box-shadow:0 30px 80px rgba(17,24,39,.22)}
+.phone img{width:428px;height:928px;border-radius:52px;display:block}
+.note{position:absolute;background:#FFFFFF;border:3px solid #DCE6FD;border-radius:18px;padding:26px 30px;font-family:"Serif";font-size:44px;line-height:1.05;color:var(--ink);box-shadow:0 12px 30px rgba(17,24,39,.08)}
+.note em{font-style:italic;color:var(--blue)}
+</style></head><body>
+<div class="deck">
+
+<!-- continuous dotted thread across all 8 slides (the museum's tour line) -->
+<svg class="bleed" width="8640" height="1350" viewBox="0 0 8640 1350" style="z-index:3">
+  <path d="M -20 1290 C 300 1250 700 1310 1080 1280 S 1700 1250 2160 1285 S 2900 1310 3240 1275 S 3900 1250 4320 1285 S 5000 1310 5400 1280 S 6050 1250 6480 1285 S 7100 1300 7560 1280" fill="none" stroke="#93B4F8" stroke-width="5" stroke-dasharray="2 16" stroke-linecap="round"/>
+</svg>
+
+<!-- 1: hook -->
+<section class="slide">
+  <div class="lab" style="position:absolute;left:72px;top:72px">The Homingo Museum · Exhibit 02</div>
+  <div class="h" style="position:absolute;left:72px;top:150px;width:920px;font-size:120px">You passed. <em>The books are still waiting for their result.</em></div>
+  <div class="card" style="left:170px;top:640px;width:760px;height:520px;transform:rotate(-2.5deg)">
+    <div class="pin"></div>
+    <svg width="760" height="520" viewBox="0 0 760 520">
+      <rect width="760" height="520" rx="28" fill="#EEF3FE"/>
+      <ellipse cx="400" cy="452" rx="300" ry="20" fill="#DCE6FD"/>
+      <!-- book stack -->
+      <rect x="200" y="380" width="400" height="62" rx="8" fill="#2563EB"/>
+      <rect x="200" y="380" width="22" height="62" fill="#1D4ED8"/>
+      <rect x="230" y="318" width="350" height="62" rx="8" fill="#93B4F8"/>
+      <rect x="230" y="318" width="22" height="62" fill="#3B76F0"/>
+      <rect x="190" y="252" width="390" height="66" rx="8" fill="#1D4ED8"/>
+      <rect x="270" y="276" width="160" height="12" rx="6" fill="#DCE6FD"/>
+      <rect x="240" y="196" width="320" height="56" rx="8" fill="#3B76F0"/>
+      <rect x="240" y="196" width="22" height="56" fill="#2563EB"/>
+      <rect x="260" y="146" width="290" height="50" rx="8" fill="#fff" stroke="#93B4F8" stroke-width="4"/>
+      <!-- sticky flags poking out -->
+      <rect x="560" y="210" width="34" height="20" rx="3" fill="#DCE6FD"/>
+      <rect x="575" y="262" width="34" height="20" rx="3" fill="#fff"/>
+      <rect x="590" y="392" width="34" height="20" rx="3" fill="#DCE6FD"/>
+      <!-- result slip -->
+      <g transform="rotate(6 610 120)">
+        <rect x="520" y="70" width="200" height="100" rx="12" fill="#fff" stroke="#2563EB" stroke-width="4"/>
+        <text x="540" y="108" font-family="Mono" font-size="20" fill="#6B7280" letter-spacing="2">RESULT</text>
+        <text x="540" y="146" font-family="Mono" font-size="26" fill="#2563EB" letter-spacing="2">PENDING</text>
+      </g>
+      <!-- museum plaque -->
+      <rect x="40" y="40" width="270" height="78" rx="12" fill="#fff" stroke="#DCE6FD" stroke-width="3"/>
+      <text x="60" y="74" font-family="Mono" font-size="20" fill="#2563EB" letter-spacing="2">EXHIBIT 02</text>
+      <text x="60" y="102" font-family="Sans" font-size="20" fill="#6B7280">Last sem's books</text>
+    </svg>
+  </div>
+  <div style="position:absolute;right:72px;top:1192px;font-family:'Mono';font-size:24px;color:var(--blue);letter-spacing:.1em">Swipe the tour →</div>
+</section>
+
+<!-- 2: second hook, curator's note -->
+<section class="slide white">
+  <div class="num">02 / 08</div>
+  <div class="lab" style="position:absolute;left:72px;top:72px">Curator's note</div>
+  <div class="card" style="left:120px;top:190px;width:840px;height:580px;transform:rotate(1.5deg);border:3px solid #DCE6FD">
+    <div class="pin"></div>
+    <div style="padding:70px 70px">
+      <div class="tag" style="color:var(--blue)">Exhibit 02 · Last semester's books</div>
+      <div style="font-family:'Serif';font-size:64px;line-height:1.08;margin-top:28px">Bought in week one. <em style="color:var(--blue)">Highlighted till chapter 3.</em> Survived one all-nighter.</div>
+      <div style="height:3px;background:#DCE6FD;margin:40px 0 28px"></div>
+      <div class="tag">Condition: like new · Last opened: the night before the exam</div>
+    </div>
+  </div>
+  <div class="h" style="position:absolute;left:72px;top:880px;width:930px;font-size:88px">They did their job. <em>So why are they still here?</em></div>
+</section>
+
+<!-- 3: escalate, the shelf is losing -->
+<section class="slide">
+  <div class="num">03 / 08</div>
+  <div class="h" style="position:absolute;left:72px;top:130px;width:930px;font-size:104px">Every semester, <em>the pile grows.</em></div>
+  <svg style="position:absolute;left:90px;top:420px" width="900" height="620" viewBox="0 0 900 620">
+    <!-- shelf -->
+    <rect x="30" y="520" width="840" height="26" rx="8" fill="#1D4ED8"/>
+    <rect x="70" y="546" width="20" height="60" rx="6" fill="#1D4ED8"/><rect x="810" y="546" width="20" height="60" rx="6" fill="#1D4ED8"/>
+    <!-- sem 1 -->
+    <rect x="90" y="460" width="190" height="60" rx="8" fill="#2563EB"/>
+    <rect x="105" y="404" width="170" height="56" rx="8" fill="#93B4F8"/>
+    <!-- sem 2 -->
+    <rect x="345" y="460" width="210" height="60" rx="8" fill="#3B76F0"/>
+    <rect x="355" y="404" width="190" height="56" rx="8" fill="#1D4ED8"/>
+    <rect x="340" y="348" width="210" height="56" rx="8" fill="#fff" stroke="#93B4F8" stroke-width="4"/>
+    <rect x="360" y="294" width="180" height="54" rx="8" fill="#93B4F8"/>
+    <!-- sem 3, leaning tower -->
+    <g transform="rotate(4 720 520)">
+      <rect x="620" y="460" width="200" height="60" rx="8" fill="#2563EB"/>
+      <rect x="630" y="404" width="190" height="56" rx="8" fill="#fff" stroke="#93B4F8" stroke-width="4"/>
+      <rect x="615" y="348" width="200" height="56" rx="8" fill="#3B76F0"/>
+      <rect x="640" y="292" width="170" height="56" rx="8" fill="#1D4ED8"/>
+      <rect x="625" y="236" width="190" height="56" rx="8" fill="#93B4F8"/>
+      <rect x="645" y="180" width="160" height="56" rx="8" fill="#2563EB"/>
+    </g>
+    <!-- labels -->
+    <rect x="125" y="566" width="130" height="44" rx="22" fill="#fff" stroke="#DCE6FD" stroke-width="3"/>
+    <text x="190" y="596" text-anchor="middle" font-family="Mono" font-size="20" fill="#2563EB">SEM 1</text>
+    <rect x="385" y="566" width="130" height="44" rx="22" fill="#fff" stroke="#DCE6FD" stroke-width="3"/>
+    <text x="450" y="596" text-anchor="middle" font-family="Mono" font-size="20" fill="#2563EB">SEM 2</text>
+    <rect x="650" y="566" width="130" height="44" rx="22" fill="#fff" stroke="#DCE6FD" stroke-width="3"/>
+    <text x="715" y="596" text-anchor="middle" font-family="Mono" font-size="20" fill="#2563EB">SEM 3</text>
+  </svg>
+  <div style="position:absolute;left:72px;top:1090px;width:930px;font-family:'Sans';font-size:38px;line-height:1.35;color:var(--grey)">The shelf is losing. <b style="color:var(--ink);font-weight:600">But somewhere in Lucknow, another shelf is empty…</b></div>
+</section>
+
+<!-- 4: the other side -->
+<section class="slide white">
+  <div class="num">04 / 08</div>
+  <div class="h" style="position:absolute;left:72px;top:130px;width:930px;font-size:104px">A new batch walks in <em>with an empty bag.</em><span class="sub">Same subjects you just finished. Same chapters. <b>Same books on their list.</b></span></div>
+  <!-- backpack -->
+  <div class="card" style="left:110px;top:640px;width:470px;height:520px;transform:rotate(-3deg)"><div class="pin"></div>
+    <svg width="470" height="520" viewBox="0 0 470 520">
+      <rect width="470" height="520" rx="28" fill="#EEF3FE"/>
+      <path d="M175 140 Q175 80 235 80 Q295 80 295 140" fill="none" stroke="#1D4ED8" stroke-width="16"/>
+      <rect x="110" y="130" width="250" height="310" rx="60" fill="#2563EB"/>
+      <rect x="150" y="300" width="170" height="110" rx="26" fill="#3B76F0"/>
+      <path d="M150 330 L320 330" stroke="#1D4ED8" stroke-width="6"/>
+      <path d="M150 190 Q235 230 320 190" fill="none" stroke="#93B4F8" stroke-width="6"/>
+      <circle cx="235" cy="214" r="9" fill="#DCE6FD"/>
+      <text x="235" y="485" text-anchor="middle" font-family="Mono" font-size="22" fill="#6B7280" letter-spacing="2">BAG · EMPTY</text>
+    </svg>
+  </div>
+  <!-- book list -->
+  <div class="note" style="left:620px;top:700px;width:360px;transform:rotate(3deg)">
+    <div style="font-family:'Mono';font-size:20px;letter-spacing:.1em;color:var(--blue);margin-bottom:16px">BOOK LIST</div>
+    <div style="border-bottom:3px solid #DCE6FD;padding:8px 0">Book 1 <span style="color:#93B4F8">☐</span></div>
+    <div style="border-bottom:3px solid #DCE6FD;padding:8px 0">Book 2 <span style="color:#93B4F8">☐</span></div>
+    <div style="border-bottom:3px solid #DCE6FD;padding:8px 0">Book 3 <span style="color:#93B4F8">☐</span></div>
+    <div style="padding:14px 0 0;font-family:'Sans';font-size:26px;color:var(--grey);line-height:1.3">Buy new? <em>Unless…</em></div>
+  </div>
+</section>
+
+<!-- 5: the connection, one tap -->
+<section class="slide">
+  <div class="num">05 / 08</div>
+  <div class="h" style="position:absolute;left:72px;top:130px;width:930px;font-size:104px">Your pile. Their list. <em>One button between them.</em></div>
+  <svg style="position:absolute;left:60px;top:560px" width="960" height="560" viewBox="0 0 960 560">
+    <!-- your pile -->
+    <rect x="40" y="120" width="260" height="320" rx="28" fill="#fff" stroke="#DCE6FD" stroke-width="3"/>
+    <rect x="80" y="330" width="180" height="40" rx="6" fill="#2563EB"/>
+    <rect x="92" y="290" width="160" height="40" rx="6" fill="#93B4F8"/>
+    <rect x="76" y="250" width="180" height="40" rx="6" fill="#1D4ED8"/>
+    <rect x="96" y="210" width="150" height="40" rx="6" fill="#3B76F0"/>
+    <text x="170" y="415" text-anchor="middle" font-family="Mono" font-size="22" fill="#6B7280" letter-spacing="2">YOUR PILE</text>
+    <!-- their list -->
+    <rect x="660" y="120" width="260" height="320" rx="28" fill="#fff" stroke="#DCE6FD" stroke-width="3"/>
+    <rect x="705" y="180" width="170" height="16" rx="8" fill="#DCE6FD"/>
+    <rect x="705" y="230" width="170" height="16" rx="8" fill="#DCE6FD"/>
+    <rect x="705" y="280" width="170" height="16" rx="8" fill="#DCE6FD"/>
+    <rect x="705" y="330" width="120" height="16" rx="8" fill="#DCE6FD"/>
+    <text x="790" y="415" text-anchor="middle" font-family="Mono" font-size="22" fill="#6B7280" letter-spacing="2">THEIR LIST</text>
+    <!-- thread -->
+    <path d="M300 280 C 380 200 420 200 430 260 M530 260 C 540 200 580 200 660 280" fill="none" stroke="#2563EB" stroke-width="6" stroke-dasharray="4 14" stroke-linecap="round"/>
+    <!-- sell button, as in the app's bottom nav -->
+    <circle cx="480" cy="270" r="74" fill="#DCE6FD"/>
+    <circle cx="480" cy="270" r="56" fill="#2563EB"/>
+    <path d="M480 244 L480 296 M454 270 L506 270" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+    <text x="480" y="390" text-anchor="middle" font-family="Sans" font-size="34" font-weight="600" fill="#111827">Sell</text>
+  </svg>
+  <div style="position:absolute;left:72px;top:1100px;width:930px;font-family:'Sans';font-size:38px;line-height:1.35;color:var(--grey)">One photo. One price. <b style="color:var(--ink);font-weight:600">Listed free. And then…</b></div>
+</section>
+
+<!-- 6: product hero, real My Ads -->
+<section class="slide white">
+  <div class="num">06 / 08</div>
+  <div class="h" style="position:absolute;left:72px;top:130px;width:480px;font-size:92px">Your ad <em>reports back.</em><span class="sub">Views and inquiries on every ad in My Ads. Buyers chat or call you directly.</span></div>
+  <div class="phone" style="left:580px;top:190px;transform:rotate(3deg)">
+    <img src="../../brand/homingo-app/my-ads.jpg" alt="">
+    <div style="position:absolute;left:178px;top:796px;width:98px;height:98px;border-radius:50%;border:6px solid #2563EB;box-shadow:0 0 0 12px rgba(37,99,235,.18)"></div>
+  </div>
+  <div style="position:absolute;left:72px;top:1060px;width:440px;font-family:'Mono';font-size:22px;line-height:1.4;color:var(--grey);letter-spacing:.06em">Real Homingo My Ads screen. Sell is the blue + in the middle.</div>
+</section>
+
+<!-- 7: payoff -->
+<section class="slide">
+  <div class="num">07 / 08</div>
+  <div class="lab" style="position:absolute;left:72px;top:72px">Exhibit 02 · Leaving the museum</div>
+  <div class="card" style="left:150px;top:170px;width:780px;height:560px;transform:rotate(2deg)"><div class="pin"></div>
+    <svg width="780" height="560" viewBox="0 0 780 560">
+      <rect width="780" height="560" rx="28" fill="#EEF3FE"/>
+      <!-- open backpack with books going in -->
+      <path d="M300 200 Q300 150 360 150 Q420 150 420 200" fill="none" stroke="#1D4ED8" stroke-width="14"/>
+      <rect x="230" y="200" width="260" height="290" rx="56" fill="#2563EB"/>
+      <rect x="270" y="360" width="180" height="100" rx="24" fill="#3B76F0"/>
+      <!-- books rising out of bag -->
+      <rect x="262" y="160" width="60" height="150" rx="6" fill="#fff" stroke="#93B4F8" stroke-width="4" transform="rotate(-8 292 235)"/>
+      <rect x="330" y="140" width="62" height="160" rx="6" fill="#93B4F8" transform="rotate(2 361 220)"/>
+      <rect x="400" y="160" width="58" height="150" rx="6" fill="#1D4ED8" transform="rotate(9 429 235)"/>
+      <!-- sparkle lines -->
+      <path d="M180 170 L210 190 M170 250 L205 250 M560 170 L530 190 M570 250 L535 250" stroke="#93B4F8" stroke-width="9" stroke-linecap="round"/>
+      <!-- new owner tag -->
+      <g transform="rotate(-6 620 420)">
+        <path d="M530 390 L680 390 L710 425 L680 460 L530 460 Z" fill="#fff" stroke="#2563EB" stroke-width="4"/>
+        <circle cx="675" cy="425" r="8" fill="#93B4F8"/>
+        <text x="548" y="433" font-family="Mono" font-size="22" fill="#2563EB">ROUND 2</text>
+      </g>
+    </svg>
+  </div>
+  <div class="h" style="position:absolute;left:72px;top:820px;width:940px;font-size:100px">The books pass again. <em>This time, for someone else.</em><span class="sub">And your shelf finally gets a break.</span></div>
+</section>
+
+<!-- 8: CTA -->
+<section class="slide blue">
+  <img src="../../brand/homingo-app/app-icon.png" style="position:absolute;left:72px;top:110px;width:150px;height:150px;border-radius:34px;box-shadow:0 14px 40px rgba(17,24,39,.25)" alt="">
+  <div style="position:absolute;left:72px;top:330px;width:940px;font-family:'Serif';font-size:150px;line-height:.95;color:#fff">Let it go.<br><em>Get paid.</em></div>
+  <div style="position:absolute;left:72px;top:690px;width:920px;font-family:'Sans';font-size:44px;line-height:1.35;color:#fff;font-weight:500">Send this to the friend whose books are still under the bed.<span style="display:block;font-size:34px;font-weight:400;color:#DCE6FD;margin-top:20px">Tap Sell. List it free on Homingo. Next exhibit: the spare mattress.</span></div>
+  <div style="position:absolute;left:72px;top:1100px;width:936px;border-top:2px solid rgba(255,255,255,.35);padding-top:32px;display:flex;justify-content:space-between;font-family:'Mono';font-size:26px;letter-spacing:.06em;color:#fff">
+    <span>Homingo · Lucknow's local marketplace</span><span>Link in bio</span></div>
+</section>
+
+</div></body></html>

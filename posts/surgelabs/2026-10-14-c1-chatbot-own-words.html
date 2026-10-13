@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SurgeLabs c1 2026-10-14: the chatbot is your company</title>
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+  :root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--line:#2A2A31;--edge:#3A3A42;--red:#F2767A;--card:#111114}
+  html,body{background:var(--bg)}
+  .deck{display:flex;position:relative;width:max-content}
+  .slide{width:1080px;height:1350px;flex:none;position:relative;overflow:hidden;padding:72px;display:flex;flex-direction:column;
+    background-color:var(--bg);color:var(--fg);font-family:Sans;
+    background-image:radial-gradient(760px 620px at 0% 0%,rgba(167,139,250,.16),transparent 70%),radial-gradient(700px 600px at 100% 100%,rgba(45,212,191,.11),transparent 70%);
+    background-size:auto}
+  .top{display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.03em;text-transform:none;color:var(--fg)}
+  .t{color:var(--teal)} .p{color:var(--purple)} .m{color:var(--muted)} .r{color:var(--red)} .w{color:var(--fg)}
+  .cm{font-family:Mono;font-size:26px;color:var(--teal);letter-spacing:.02em}
+  h1{font-weight:600;font-size:112px;line-height:.95;letter-spacing:-.045em}
+  h2{font-weight:600;font-size:76px;line-height:1;letter-spacing:-.042em}
+  .body{font-size:38px;line-height:1.35;color:var(--soft);letter-spacing:-.01em}
+  .end{font-size:42px;line-height:1.22;font-weight:600;letter-spacing:-.02em}
+  .grain{position:absolute;inset:0;opacity:.06;pointer-events:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+  .bleed{position:absolute;pointer-events:none;z-index:3}
+  .term{border:2px solid var(--edge);border-radius:22px;background:rgba(8,8,10,.92);overflow:hidden}
+  .term .tb{display:flex;gap:10px;align-items:center;padding:16px 22px;border-bottom:2px solid var(--line);font-family:Mono;font-size:22px;color:var(--muted)}
+  .dot{width:14px;height:14px;border-radius:50%;background:var(--edge);display:block}
+  .term pre{font-family:Mono;font-size:30px;line-height:1.55;padding:24px 28px;white-space:pre-wrap;color:var(--soft)}
+  .card{border:2px solid var(--edge);border-radius:22px;padding:30px 32px;background:rgba(17,17,20,.88)}
+  .chip{display:inline-block;font-family:Mono;font-size:22px;padding:8px 16px;border-radius:10px;letter-spacing:.06em;text-transform:uppercase}
+  .node{border:2px solid var(--edge);border-radius:18px;padding:22px 26px;background:var(--card);font-family:Mono;font-size:28px}
+  .num{font-family:Mono;font-weight:500;font-size:30px;color:var(--teal)}
+  .lbl{font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+</style>
+<style>
+  .bub{border-radius:26px;padding:26px 30px;font-size:36px;line-height:1.3;max-width:760px;letter-spacing:-.01em}
+  .bub.u{background:#1A1A1F;border:2px solid var(--edge);align-self:flex-end;color:var(--fg)}
+  .bub.b{background:rgba(45,212,191,.10);border:2px solid var(--teal);align-self:flex-start;color:var(--fg)}
+  .who{font-family:Mono;font-size:20px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+  .step{display:flex;gap:26px;align-items:center}
+  .step .d{width:36px;height:36px;border-radius:50%;flex:none}
+  .q{font-size:54px;line-height:1.18;font-weight:600;letter-spacing:-.03em}
+</style>
+</head>
+<body>
+<div class="deck">
+
+<!-- red "disagree" line from slide 1 into slide 2 -->
+<svg class="bleed" style="left:900px;top:1060px" width="420" height="40" viewBox="0 0 420 40"><path d="M0 20 H420" stroke="#F2767A" stroke-width="4" stroke-dasharray="14 10"/><circle cx="0" cy="20" r="10" fill="#F2767A"/></svg>
+
+<!-- 1 hook -->
+<section class="slide" style="padding-bottom:150px">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>LAB-10 · Agents</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:28px">
+    <div class="cm">// a real case · British Columbia · Feb 2024</div>
+    <h1 style="font-size:100px">An airline said its chatbot was <span class="t">“responsible for its own actions”.</span></h1>
+  </div>
+  <div style="margin-top:56px;display:flex;flex-direction:column;gap:18px">
+    <div><div class="who" style="text-align:right">customer · paraphrased</div><div class="bub u" style="margin-left:auto">Can I get the bereavement fare <span class="t">after</span> I fly?</div></div>
+    <div><div class="who">chatbot · paraphrased</div><div class="bub b">Yes. Book now, apply for the discount after travel.</div></div>
+  </div>
+  <div class="end" style="margin-top:auto;font-size:46px">So a tribunal had to decide. <span class="r">→</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 2 the conflict -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>02 / 08</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:24px">
+    <div class="cm">// two answers, one website</div>
+    <h2>The bot and the airline’s own policy page <span class="r">disagreed.</span></h2>
+  </div>
+  <div style="margin-top:60px;display:grid;grid-template-columns:1fr 1fr;gap:28px">
+    <div class="card" style="border-color:var(--teal);min-height:430px;display:flex;flex-direction:column;gap:22px">
+      <span class="chip" style="background:var(--teal);color:#0A0A0C;align-self:flex-start">chatbot</span>
+      <div class="body w" style="font-size:40px">Claim the bereavement discount <span class="t">after</span> your trip.</div>
+    </div>
+    <div class="card" style="border-color:var(--red);min-height:430px;display:flex;flex-direction:column;gap:22px">
+      <span class="chip" style="background:var(--red);color:#0A0A0C;align-self:flex-start">policy page</span>
+      <div class="body w" style="font-size:40px">No bereavement refunds <span class="r">after</span> travel.</div>
+    </div>
+  </div>
+  <div class="lbl" style="margin-top:22px">both paraphrased from news coverage of the ruling</div>
+  <div class="end" style="margin-top:auto">The customer believed the bot. <span class="t">Then he asked for his money…</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 3 timeline -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>03 / 08</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:24px">
+    <div class="cm">// what happened next</div>
+    <h2>He followed the bot’s advice <span class="t">step by step.</span></h2>
+  </div>
+  <div style="margin-top:80px;position:relative;display:flex;flex-direction:column;gap:70px;padding-left:8px">
+    <div style="position:absolute;left:22px;top:20px;bottom:20px;width:4px;background:var(--edge)"></div>
+    <div class="step"><span class="d" style="background:var(--teal)"></span><span class="body w" style="font-size:48px">Asked the chatbot</span></div>
+    <div class="step"><span class="d" style="background:var(--teal)"></span><span class="body w" style="font-size:48px">Booked his flights</span></div>
+    <div class="step"><span class="d" style="background:var(--teal)"></span><span class="body w" style="font-size:48px">Applied for the discount after</span></div>
+    <div class="step"><span class="d" style="background:var(--red)"></span><span class="body r" style="font-size:48px">Refused: policy says no</span></div>
+    <div class="step"><span class="d" style="background:var(--purple)"></span><span class="body p" style="font-size:48px">Took it to the Civil Resolution Tribunal</span></div>
+  </div>
+  <div class="end" style="margin-top:auto">The airline’s defence was the line on slide 1. <span class="t">Would it work?</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 4 the defence -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>04 / 08</div></div>
+  <div style="margin-top:64px" class="cm">// the airline’s argument, in short</div>
+  <div style="margin-top:60px;display:flex;flex-direction:column;gap:30px">
+    <div class="node" style="border-color:var(--purple);font-size:38px;padding:44px 40px"><span class="p">bot.answer</span> → not our statement</div>
+    <div class="node" style="border-color:var(--purple);font-size:38px;padding:44px 40px"><span class="p">bot</span> → a separate entity</div>
+    <div class="node" style="border-color:var(--purple);font-size:38px;padding:44px 40px"><span class="p">bot</span> → <span class="w">“responsible for its own actions”</span></div>
+  </div>
+  <h2 style="margin-top:90px;font-size:86px">If that holds, nobody owns what an <span class="t">AI agent</span> says.</h2>
+  <div class="end" style="margin-top:auto">So what did the tribunal say? <span class="t">→</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 5 the ruling -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>05 / 08</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:24px">
+    <div class="cm">// the ruling</div>
+    <h1 style="font-size:104px">Rejected. The bot’s words were <span class="t">the company’s words.</span></h1>
+  </div>
+  <div class="card" style="margin-top:56px;border-color:var(--teal);border-left-width:10px">
+    <div class="q">“no reason why [he] should know that one section of Air Canada’s webpage is accurate, and another is not.”</div>
+    <div class="lbl" style="margin-top:22px">tribunal decision, as quoted by CTV News</div>
+  </div>
+  <div class="body" style="margin-top:50px;font-size:44px;color:var(--fg)">The company is responsible for everything on its site, chatbot included. It was ordered to pay a <span class="t">partial refund.</span></div>
+  <div class="end" style="margin-top:auto">Now put your business in that seat…</div>
+  <div class="grain"></div>
+</section>
+
+<!-- 6 your business -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>06 / 08</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:24px">
+    <div class="cm">// imagine a typical shop with a WhatsApp agent</div>
+    <h2>The question is easy. <span class="r">The guess is expensive.</span></h2>
+  </div>
+  <div style="margin-top:80px;display:flex;flex-direction:column;gap:30px">
+    <div><div class="who" style="text-align:right">customer</div><div class="bub u" style="margin-left:auto;font-size:44px">Can I return this after 45 days?</div></div>
+    <div><div class="who">agent · no policy loaded</div><div class="bub b" style="border-color:var(--red);background:rgba(242,118,122,.08);font-size:44px">Sure, returns are always free!</div></div>
+  </div>
+  <div class="card" style="margin-top:64px;display:flex;gap:24px;align-items:center;padding:40px 34px"><span class="chip" style="border:2px solid var(--red);color:var(--red)">risk</span><span class="body w" style="font-size:42px">It sounded helpful. It may be <span class="r">a promise.</span></span></div>
+  <div class="end" style="margin-top:auto">The fix isn’t a better prompt. <span class="t">It’s the wiring →</span></div>
+  <div class="grain"></div>
+</section>
+
+<!-- 7 the fix (payoff) -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>07 / 08</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:24px">
+    <div class="cm">// under the hood · a safer agent</div>
+    <h2>Answer from <span class="t">your policy,</span> or hand it to a human.</h2>
+  </div>
+  <svg style="margin-top:50px" width="936" height="620" viewBox="0 0 936 620">
+    <rect x="268" y="2" width="400" height="96" rx="18" fill="#111114" stroke="#9A9AA3" stroke-width="2.5"/>
+    <text x="468" y="60" text-anchor="middle" font-family="Mono" font-size="28" fill="#F2F2F0">customer question</text>
+    <path d="M468 98 V150" stroke="#9A9AA3" stroke-width="4"/>
+    <rect x="208" y="150" width="520" height="110" rx="18" fill="#111114" stroke="#A78BFA" stroke-width="2.5"/>
+    <text x="468" y="198" text-anchor="middle" font-family="Mono" font-size="28" fill="#A78BFA">search YOUR policy docs</text>
+    <text x="468" y="236" text-anchor="middle" font-family="Mono" font-size="24" fill="#9A9AA3">found the rule?</text>
+    <path d="M330 260 C330 320 160 320 160 370" stroke="#2DD4BF" stroke-width="4" fill="none"/>
+    <path d="M606 260 C606 320 776 320 776 370" stroke="#F2767A" stroke-width="4" fill="none"/>
+    <text x="200" y="314" text-anchor="end" font-family="Mono" font-size="24" fill="#2DD4BF">yes</text>
+    <text x="736" y="314" font-family="Mono" font-size="24" fill="#F2767A">no</text>
+    <rect x="2" y="370" width="440" height="160" rx="18" fill="rgba(45,212,191,.08)" stroke="#2DD4BF" stroke-width="2.5"/>
+    <text x="222" y="428" text-anchor="middle" font-family="Mono" font-size="27" fill="#F2F2F0">answer + quote</text>
+    <text x="222" y="468" text-anchor="middle" font-family="Mono" font-size="27" fill="#F2F2F0">the exact line</text>
+    <text x="222" y="506" text-anchor="middle" font-family="Mono" font-size="22" fill="#2DD4BF">(and link it)</text>
+    <rect x="494" y="370" width="440" height="160" rx="18" fill="rgba(242,118,122,.07)" stroke="#F2767A" stroke-width="2.5"/>
+    <text x="714" y="428" text-anchor="middle" font-family="Mono" font-size="27" fill="#F2F2F0">“Let me check</text>
+    <text x="714" y="468" text-anchor="middle" font-family="Mono" font-size="27" fill="#F2F2F0">with the team.”</text>
+    <text x="714" y="506" text-anchor="middle" font-family="Mono" font-size="22" fill="#F2767A">hand-off to a person</text>
+    <text x="468" y="600" text-anchor="middle" font-family="Mono" font-size="26" fill="#A78BFA">refunds, discounts → human approves first</text>
+  </svg>
+  <div class="body" style="margin-top:auto;font-size:36px">OWASP’s LLM Top 10 calls this risk <span class="w">“excessive agency”</span> and recommends human approval for high-impact actions.</div>
+  <div class="grain"></div>
+</section>
+
+<!-- 8 lab notes + CTA -->
+<section class="slide">
+  <div class="top"><div class="mark">SurgeLabs<span class="t">_</span></div><div>08 / 08</div></div>
+  <div style="margin-top:64px;display:flex;flex-direction:column;gap:24px">
+    <div class="cm">// lab notes · before your agent talks to customers</div>
+    <h2>Treat it like a new hire who <span class="t">can’t invent policy.</span></h2>
+  </div>
+  <div style="margin-top:56px;display:flex;flex-direction:column;gap:22px">
+    <div class="card" style="display:flex;gap:28px;align-items:center;padding:40px 32px"><span class="num">[01]</span><span class="body w" style="font-size:40px">Load the <span class="t">real</span> policy. Answer only from it.</span></div>
+    <div class="card" style="display:flex;gap:28px;align-items:center;padding:40px 32px"><span class="num">[02]</span><span class="body w" style="font-size:40px">Not in the docs? <span class="t">Hand off</span>, don’t guess.</span></div>
+    <div class="card" style="display:flex;gap:28px;align-items:center;padding:40px 32px"><span class="num">[03]</span><span class="body w" style="font-size:40px">Money promises need a <span class="t">human yes.</span></span></div>
+  </div>
+  <div class="body" style="margin-top:60px;font-size:40px">And log every answer, so you can see what it said.</div>
+  <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end">
+    <div class="end" style="max-width:600px">Save this before you switch your bot on.</div>
+    <div style="font-family:Mono;font-size:30px" class="t">surgeit.co.in</div>
+  </div>
+  <div class="grain"></div>
+</section>
+
+</div>
+</body>
+</html>

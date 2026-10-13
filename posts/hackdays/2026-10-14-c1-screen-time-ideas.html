@@ -1,0 +1,177 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+.deck{display:flex;position:relative;width:max-content}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;background:var(--ink);color:#fff;font-family:"Sans";flex:none}
+.top{position:absolute;left:72px;right:72px;top:64px;display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+.top .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--orange);margin-right:14px;box-shadow:0 0 14px rgba(243,112,33,.9);vertical-align:middle;position:relative;top:-2px}
+.label{font-size:20px;letter-spacing:.14em;text-transform:uppercase}
+.h{position:absolute;left:72px;right:72px;font-family:"Serif";line-height:.98;letter-spacing:-.02em}
+.h em{color:var(--orange);font-style:italic}
+.body{position:absolute;left:72px;right:72px;font-size:38px;line-height:1.35;color:#D4D4D8}
+.body b{color:#fff;font-weight:600}
+.next{position:absolute;left:72px;right:72px;bottom:96px;font-family:"Serif";font-style:italic;font-size:52px;line-height:1.1;color:#fff}
+.next em{color:var(--orange)}
+.mono{font-family:"Mono"}
+.phone{position:absolute;background:var(--char);border:1px solid var(--line);border-radius:44px;padding:40px 44px}
+.phone .ttl{font-family:"Mono";font-size:22px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;display:flex;justify-content:space-between}
+.app{display:flex;align-items:center;gap:26px;margin-top:34px}
+.app .ic{width:64px;height:64px;border-radius:16px;flex:none;display:flex;align-items:center;justify-content:center;font-family:"Mono";font-size:26px;color:#fff}
+.app .nm{font-size:32px;color:#E4E4E7;width:330px;flex:none}
+.app .bar{height:18px;border-radius:9px;background:#3F3F46}
+.app.hot .nm{color:#fff}
+.app.hot .bar{background:var(--orange);box-shadow:0 0 18px rgba(243,112,33,.6)}
+.tag{display:inline-block;padding:6px 18px;border-radius:999px;font-family:"Mono";font-size:22px;letter-spacing:.06em}
+.t-ag{background:rgba(243,112,33,.14);color:#F5A574;border:1px solid rgba(243,112,33,.55)}
+.t-au{background:rgba(30,155,234,.14);color:#7CC4F2;border:1px solid rgba(30,155,234,.55)}
+.t-ll{background:rgba(255,255,255,.08);color:#E4E4E7;border:1px solid #52525B}
+.t-no{background:transparent;color:#71717A;border:1px dashed #52525B}
+.sort{position:absolute;left:72px;right:72px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding:26px 0}
+.sort .k{font-family:"Serif";font-size:54px;line-height:1}
+.sort .s{font-size:28px;color:var(--muted);margin-top:8px}
+.card{position:absolute;left:72px;right:72px;background:var(--char);border:1px solid var(--line);border-radius:26px;padding:36px 40px}
+.card .l{font-family:"Mono";font-size:22px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+.card .v{font-size:34px;line-height:1.35;color:#E4E4E7;margin-top:10px}
+.card .v b{color:#fff;font-weight:600}
+.loop{position:absolute;left:72px;right:72px;display:flex;align-items:center;justify-content:space-between}
+.loop .n{width:280px;height:230px;border-radius:24px;border:1px solid var(--line);background:#111113;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.loop .n .a{font-family:"Mono";font-size:20px;letter-spacing:.14em;color:var(--muted)}
+.loop .n .b{font-size:34px;color:#fff;margin-top:10px;line-height:1.2;padding:0 14px}
+.loop .arr{font-family:"Mono";font-size:40px;color:var(--orange)}
+.bubble{position:absolute;max-width:640px;padding:22px 30px;border-radius:28px;font-size:30px;line-height:1.3}
+.code{font-family:"Mono";font-size:34px;line-height:1.75;color:#D4D4D8}
+.code .c{color:#71717A}
+.code .o{color:var(--orange)}
+.blank{display:inline-block;width:470px;border-bottom:3px solid #52525B;height:34px;vertical-align:bottom}
+.rail{position:absolute;z-index:5;left:0;top:1296px;height:6px;width:8640px;background:linear-gradient(90deg,rgba(30,155,234,.15),rgba(30,155,234,.9) 85%,var(--orange));box-shadow:0 0 22px rgba(30,155,234,.55)}
+.sun{position:absolute;width:260px;height:130px;border-radius:130px 130px 0 0;background:var(--orange)}
+.sunglow{position:absolute;width:900px;height:520px;background:radial-gradient(closest-side,rgba(243,112,33,.26),rgba(243,112,33,0))}
+</style></head>
+<body><div class="deck">
+<div class="rail bleed"></div>
+
+<!-- 1 HOOK -->
+<section class="slide">
+<div class="sunglow" style="right:-340px;top:-60px"></div>
+<div class="top label"><div><span class="dot"></span>Hack Days · Project ideas</div><div>agents · automation · llm apps</div></div>
+<div class="h" style="top:170px;font-size:112px">Your screen-time report is a list of <em>hackathon ideas.</em></div>
+<div class="body" style="top:540px;font-size:40px;color:#A1A1AA">Most people read it as guilt. Builders read it as a backlog.</div>
+<div class="phone" style="left:72px;right:72px;top:680px;height:480px">
+  <div class="ttl"><span>Screen time · this week</span><span>example</span></div>
+  <div class="app"><div class="ic" style="background:#16A34A">◍</div><div class="nm">Class group chat</div><div class="bar" style="width:440px"></div></div>
+  <div class="app"><div class="ic" style="background:#1E9BEA">▤</div><div class="nm">College portal</div><div class="bar" style="width:300px"></div></div>
+  <div class="app hot"><div class="ic" style="background:#3F3F46">?</div><div class="nm"><span style="filter:blur(10px)">20 open tabs</span></div><div class="bar" style="width:260px"></div></div>
+  <div class="app"><div class="ic" style="background:#7C3AED">▶</div><div class="nm">Reels</div><div class="bar" style="width:200px"></div></div>
+</div>
+<div class="mono" style="position:absolute;right:72px;top:1190px;font-size:32px;color:var(--orange)">swipe →</div>
+<div class="grain"></div>
+</section>
+
+<!-- 2 SECOND HOOK -->
+<section class="slide">
+<div class="top label"><div>02 / 08</div><div>1.1 trillion hours</div></div>
+<div class="h" style="top:170px;font-size:200px;color:var(--orange)">1.1<span style="font-size:96px;color:#fff"> trillion hours</span></div>
+<div class="body" style="top:420px;font-size:40px">That's how long India spent on smartphones in 2024, <b>according to an EY report.</b></div>
+<div class="body" style="top:600px;font-size:40px">Most of those hours were fun. Leave those alone.</div>
+<div class="body" style="top:740px;font-size:40px">But some of yours went on a job you <b>hate doing</b> and do anyway: scrolling for one date, copying one link, comparing one price.</div>
+<div class="next">Those minutes have a pattern. It maps to the <em>3 tracks</em>…</div>
+<div class="grain"></div>
+</section>
+
+<!-- 3 SORT -->
+<section class="slide">
+<div class="top label"><div>03 / 08</div><div>sort your minutes</div></div>
+<div class="h" style="top:170px;font-size:96px">Sort every row into <em>one</em> of four.</div>
+<div class="sort" style="top:420px"><div><div class="k">Fun</div><div class="s">you'd miss it if it vanished</div></div><span class="tag t-no">leave it</span></div>
+<div class="sort" style="top:590px"><div><div class="k">Reading too much</div><div class="s">200 messages to find 3 that matter</div></div><span class="tag t-ll">LLM apps</span></div>
+<div class="sort" style="top:760px"><div><div class="k">Doing it again</div><div class="s">the same copy, paste, remind, every week</div></div><span class="tag t-au">Automation</span></div>
+<div class="sort" style="top:930px;border-bottom:1px solid var(--line)"><div><div class="k">Searching around</div><div class="s">ten tabs, one decision</div></div><span class="tag t-ag">Agents</span></div>
+<div class="next">Start with the row everyone in your class shares…</div>
+<div class="grain"></div>
+</section>
+
+<!-- 4 LLM APP -->
+<section class="slide">
+<div class="top label"><div>04 / 08</div><div><span class="tag t-ll">LLM apps</span></div></div>
+<div class="h" style="top:170px;font-size:92px">200 unread. You need <em>3</em> of them.</div>
+<div class="bubble" style="left:72px;top:400px;background:#1F1F23;color:#A1A1AA">ok</div>
+<div class="bubble" style="left:72px;top:490px;background:#1F1F23;color:#A1A1AA">anyone has the notes?</div>
+<div class="bubble" style="left:72px;top:580px;background:rgba(243,112,33,.16);color:#fff;border:1px solid rgba(243,112,33,.5)">lab record due Friday, 5 PM</div>
+<div class="bubble" style="left:72px;top:670px;background:#1F1F23;color:#A1A1AA">lol same</div>
+<div class="card" style="top:790px">
+  <div class="l">Idea · chat digest</div>
+  <div class="v"><b>User:</b> you and your class. <b>Loop:</b> export the chat, the model pulls out dates, links, asks, you get a 5-line digest. <b>Stretch:</b> one digest per subject.</div>
+</div>
+<div class="next" style="bottom:88px">Row two is worse. You check it, and <em>nothing changed.</em></div>
+<div class="grain"></div>
+</section>
+
+<!-- 5 AUTOMATION -->
+<section class="slide">
+<div class="top label"><div>05 / 08</div><div><span class="tag t-au">Automation</span></div></div>
+<div class="h" style="top:170px;font-size:92px">You open the portal to see if a notice <em>dropped.</em></div>
+<div class="loop" style="top:440px">
+  <div class="n"><div class="a">IN</div><div class="b">new notice PDF</div></div><div class="arr">→</div>
+  <div class="n"><div class="a">DO</div><div class="b">read the date + who it's for</div></div><div class="arr">→</div>
+  <div class="n" style="border-color:var(--blue)"><div class="a">OUT</div><div class="b">calendar event + reminder</div></div>
+</div>
+<div class="card" style="top:760px">
+  <div class="l">Idea · notice-to-calendar</div>
+  <div class="v"><b>User:</b> every student who has missed a deadline posted as a PDF. <b>Done when:</b> a notice lands and a reminder appears, with no one opening the portal. <b>Stretch:</b> filter by branch and year.</div>
+</div>
+<div class="next">Row three is the one you blurred out on slide 1…</div>
+<div class="grain"></div>
+</section>
+
+<!-- 6 AGENT -->
+<section class="slide">
+<div class="top label"><div>06 / 08</div><div><span class="tag t-ag">Agents</span></div></div>
+<div class="h" style="top:170px;font-size:100px"><em>20 open tabs</em> to choose one laptop.</div>
+<div class="card" style="top:420px;padding:30px 40px">
+  <div class="code">
+  <span class="c"># agent run · budget ₹ you set</span><br>
+  <span class="o">plan</span>   list 3 must-haves<br>
+  <span class="o">tool</span>   search → read 10 pages<br>
+  <span class="o">tool</span>   write rows to a sheet<br>
+  <span class="o">check</span>  drop anything over budget<br>
+  <span class="o">stop</span>   shortlist of 3 + why
+  </div>
+</div>
+<div class="body" style="top:900px;font-size:34px">An agent plans, uses tools and <b>finishes the task</b>: that's the Agents track. Swap "laptop" for a course, a hostel, an internship.</div>
+<div class="next">Three rows, three ideas. Now the rule that picks <em>yours</em>…</div>
+<div class="grain"></div>
+</section>
+
+<!-- 7 PAYOFF + TEMPLATE -->
+<section class="slide">
+<div class="sunglow" style="left:-300px;top:120px"></div>
+<div class="top label"><div>07 / 08</div><div>the rule</div></div>
+<div class="h" style="top:170px;font-size:96px">Build for the app you open most and <em>enjoy least.</em></div>
+<div class="body" style="top:470px;font-size:34px;color:#A1A1AA">You already know the user (you), the pain (daily) and the test (did the minutes drop?).</div>
+<div class="card" style="top:640px">
+  <div class="l">scope.md · fill it in tonight</div>
+  <div class="code" style="margin-top:18px;font-size:32px">
+  <span class="o">row:</span>   <span class="blank"></span><br>
+  <span class="o">user:</span>  <span class="blank"></span><br>
+  <span class="o">task:</span>  <span class="blank"></span><br>
+  <span class="o">done:</span>  <span class="blank"></span>
+  </div>
+</div>
+<div class="next" style="font-size:46px">Then pick the track it falls in…</div>
+<div class="grain"></div>
+</section>
+
+<!-- 8 CTA -->
+<section class="slide">
+<div class="sunglow" style="left:90px;top:760px"></div>
+<div class="sun" style="left:410px;top:1166px"></div>
+<div class="top label"><div>08 / 08</div><div>hackathon.homingo.co.in</div></div>
+<div class="h" style="top:170px;font-size:100px">Your phone already <em>wrote the brief.</em></div>
+<div class="body" style="top:420px;font-size:36px">Homingo Hack Days, Edition 01. Online, all of India. Solo or teams of 2–4. Tracks: <b>Agents, Automation, LLM apps.</b></div>
+<div class="body" style="top:640px;font-size:36px">Registration closes <b>15 Nov, 11:59 PM IST.</b> Build phase 21 Nov – 6 Dec.</div>
+<div class="body" style="top:820px;font-size:40px;color:#fff">Save this. Open your screen time tonight and circle <span style="color:var(--orange)">one row.</span></div>
+<div class="mono" style="position:absolute;left:72px;top:1000px;font-size:30px;color:var(--blue)">Link in bio →</div>
+<div class="grain"></div>
+</section>
+
+</div></body></html>

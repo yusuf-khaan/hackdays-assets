@@ -1,0 +1,182 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+.deck{display:flex;position:relative;width:max-content}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;background:var(--ink);color:#fff;font-family:"Sans";flex:none}
+.top{position:absolute;left:72px;right:72px;top:64px;display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+.top .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--orange);margin-right:14px;box-shadow:0 0 14px rgba(243,112,33,.9);vertical-align:middle;position:relative;top:-2px}
+.label{font-size:20px;letter-spacing:.14em;text-transform:uppercase}
+.h{position:absolute;left:72px;right:72px;font-family:"Serif";line-height:.98;letter-spacing:-.02em}
+.h em{color:var(--orange);font-style:italic}
+.body{position:absolute;left:72px;right:72px;font-size:38px;line-height:1.35;color:#D4D4D8}
+.body b{color:#fff;font-weight:600}
+.next{position:absolute;left:72px;right:72px;bottom:96px;font-family:"Serif";font-style:italic;font-size:52px;line-height:1.1;color:#fff}
+.next em{color:var(--orange)}
+.mono{font-family:"Mono"}
+.cal{position:absolute;left:72px;right:72px;background:var(--char);border:1px solid var(--line);border-radius:30px;padding:34px 40px}
+.cal .ttl{display:flex;justify-content:space-between;font-family:"Mono";font-size:24px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;margin-bottom:22px}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}
+.grid div{height:74px;display:flex;align-items:center;justify-content:center;font-family:"Mono";font-size:28px;color:#A1A1AA;border-radius:16px}
+.grid .wd{height:40px;font-size:20px;color:#71717A;letter-spacing:.1em}
+.grid .mute{color:#3F3F46}
+.grid .fest{background:rgba(243,112,33,.18);color:#fff;border:2px solid var(--orange);box-shadow:0 0 26px rgba(243,112,33,.55)}
+.grid .wk{background:rgba(243,112,33,.07);color:#E4E4E7}
+.grid .dl{border:2px solid var(--blue);color:#fff;box-shadow:0 0 22px rgba(30,155,234,.5)}
+.grid .today{background:#fff;color:#0A0A0B}
+.legend{display:flex;gap:40px;margin-top:24px;font-size:26px;color:#A1A1AA}
+.legend i{display:inline-block;width:20px;height:20px;border-radius:6px;margin-right:12px;vertical-align:middle}
+.clock{position:absolute;left:72px;right:72px;display:flex;gap:24px}
+.clock .u{flex:1;background:var(--char);border:1px solid var(--line);border-radius:26px;padding:30px 0;text-align:center}
+.clock .u .v{font-family:"Mono";font-size:120px;line-height:1;color:#fff}
+.clock .u .l{font-family:"Mono";font-size:22px;letter-spacing:.14em;color:var(--muted);margin-top:14px}
+.bars{position:absolute;left:72px;right:72px}
+.bars .r{display:flex;align-items:center;gap:24px;margin-bottom:26px}
+.bars .k{width:250px;flex:none;font-family:"Mono";font-size:26px;color:#A1A1AA}
+.bars .b{height:56px;border-radius:14px;display:flex;align-items:center;padding-left:20px;font-family:"Mono";font-size:26px;color:#0A0A0B;font-weight:600}
+.bubble{position:absolute;max-width:700px;padding:22px 30px;border-radius:28px;font-size:32px;line-height:1.3}
+.win{position:absolute;left:72px;right:72px;background:var(--char);border:1px solid var(--line);border-radius:24px;overflow:hidden}
+.win .bar{display:flex;justify-content:space-between;align-items:center;padding:22px 32px;border-bottom:1px solid var(--line);font-family:"Mono";font-size:24px;color:var(--muted)}
+.code{font-family:"Mono";font-size:34px;line-height:1.8;padding:28px 34px;color:#D4D4D8}
+.del{color:#F87171;background:rgba(248,113,113,.08);display:block;margin:0 -34px;padding:0 34px}
+.add{color:#86EFAC;background:rgba(134,239,172,.07);display:block;margin:0 -34px;padding:0 34px}
+.c{color:#71717A}
+.todo{position:absolute;left:72px;right:72px}
+.todo .t{display:flex;gap:26px;align-items:center;border-top:1px solid var(--line);padding:26px 0;font-size:36px;color:#E4E4E7}
+.todo .t .bx{width:40px;height:40px;border:3px solid #52525B;border-radius:10px;flex:none}
+.todo .t b{color:#fff}
+.rail{position:absolute;z-index:5;left:0;top:1296px;height:6px;width:7560px;background:linear-gradient(90deg,rgba(30,155,234,.15),rgba(30,155,234,.9) 85%,var(--orange));box-shadow:0 0 22px rgba(30,155,234,.55)}
+.sun{position:absolute;width:260px;height:130px;border-radius:130px 130px 0 0;background:var(--orange)}
+.sunglow{position:absolute;width:900px;height:520px;background:radial-gradient(closest-side,rgba(243,112,33,.26),rgba(243,112,33,0))}
+</style></head>
+<body><div class="deck">
+<div class="rail bleed"></div>
+
+<!-- 1 HOOK -->
+<section class="slide">
+<div class="sunglow" style="right:-340px;top:-60px"></div>
+<div class="top label"><div><span class="dot"></span>Hack Days · Countdown</div><div>november 2026</div></div>
+<div class="h" style="top:170px;font-size:104px">Diwali is on 8 Nov. Registration closes <em>7 days later.</em></div>
+<div class="body" style="top:520px;font-size:40px;color:#A1A1AA">Both are Sundays. One of them will eat the other.</div>
+<div class="cal" style="top:640px">
+  <div class="ttl"><span>Nov 2026</span><span>ist</span></div>
+  <div class="grid">
+    <div class="wd">SUN</div><div class="wd">MON</div><div class="wd">TUE</div><div class="wd">WED</div><div class="wd">THU</div><div class="wd">FRI</div><div class="wd">SAT</div>
+    <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div>
+    <div class="fest">8</div><div class="wk">9</div><div class="wk">10</div><div class="wk">11</div><div class="wk">12</div><div class="wk">13</div><div class="wk">14</div>
+    <div class="dl">15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div>
+  </div>
+</div>
+<div class="mono" style="position:absolute;right:72px;top:1190px;font-size:32px;color:var(--orange)">swipe →</div>
+<div class="grain"></div>
+</section>
+
+<!-- 2 CLOCK -->
+<section class="slide">
+<div class="top label"><div>02 / 07</div><div>from today, 14 Oct</div></div>
+<div class="h" style="top:170px;font-size:96px">The form says <em>32 days</em> left.</div>
+<div class="clock" style="top:360px">
+  <div class="u"><div class="v">32</div><div class="l">DAYS TO 15 NOV</div></div>
+  <div class="u" style="border-color:var(--orange)"><div class="v" style="color:var(--orange)">25</div><div class="l">DAYS TO DIWALI</div></div>
+</div>
+<div class="bars" style="top:690px">
+  <div class="r"><div class="k">14 Oct → 7 Nov</div><div class="b" style="width:560px;background:var(--blue)">25 normal days</div></div>
+  <div class="r"><div class="k">8 → 14 Nov</div><div class="b" style="width:200px;background:var(--orange)">festive 7</div></div>
+  <div class="r"><div class="k">15 Nov</div><div class="b" style="width:60px;background:#fff"></div><span class="mono" style="font-size:26px;color:#A1A1AA">11:59 PM IST</span></div>
+</div>
+<div class="body" style="top:1000px;font-size:36px;color:#A1A1AA">The last 7 sit right after Diwali.</div>
+<div class="next">And you know what that week <em>actually</em> looks like…</div>
+<div class="grain"></div>
+</section>
+
+<!-- 3 FESTIVE WEEK -->
+<section class="slide">
+<div class="top label"><div>03 / 07</div><div>8 – 14 nov</div></div>
+<div class="h" style="top:170px;font-size:96px">Diyas. Cousins. Travel. <em>Mithai.</em></div>
+<div class="bubble" style="left:72px;top:420px;background:#1F1F23;color:#D4D4D8">Mom: come down, everyone is here</div>
+<div class="bubble" style="right:72px;top:530px;background:rgba(30,155,234,.18);color:#fff;border:1px solid rgba(30,155,234,.5)">5 min, filling a form</div>
+<div class="bubble" style="left:72px;top:640px;background:#1F1F23;color:#D4D4D8">Mom: NOW</div>
+<div class="bubble" style="right:72px;top:750px;background:rgba(30,155,234,.18);color:#fff;border:1px solid rgba(30,155,234,.5)">coming</div>
+<div class="mono" style="position:absolute;left:72px;top:880px;font-size:26px;color:#71717A">form.tab · still open · day 6</div>
+<div class="body" style="top:960px;font-size:38px">Nobody plans to miss a deadline. They just <b>plan to do it later</b>, and later is a festival.</div>
+<div class="next">The good news: registering isn't the hard part…</div>
+<div class="grain"></div>
+</section>
+
+<!-- 4 WHAT COMES AFTER -->
+<section class="slide">
+<div class="top label"><div>04 / 07</div><div>what registering starts</div></div>
+<div class="h" style="top:170px;font-size:92px">Registering today doesn't mean <em>building</em> today.</div>
+<div class="win" style="top:470px">
+  <div class="bar"><span>edition-01.timeline</span><span>IST</span></div>
+  <div class="code" style="font-size:31px">
+  <span style="color:var(--blue)">15 Nov</span>  registration closes, 11:59 PM<br>
+  <span style="color:var(--blue)">18 Nov</span>  team formation ends<br>
+  <span style="color:var(--orange)">21 Nov</span>  kick-off + problem statements<br>
+  <span style="color:var(--blue)">21 Nov – 6 Dec</span>  build phase<br>
+  <span style="color:var(--blue)">19 Dec</span>  finals &amp; review day, online
+  </div>
+</div>
+<div class="body" style="top:950px;font-size:36px">The build starts 13 days after Diwali. Your festival stays a festival.</div>
+<div class="next">And Diwali hands you something useful…</div>
+<div class="grain"></div>
+</section>
+
+<!-- 5 TEAM -->
+<section class="slide">
+<div class="top label"><div>05 / 07</div><div>solo or 2–4</div></div>
+<div class="h" style="top:170px;font-size:96px">A room full of cousins. One of them <em>codes.</em></div>
+<div style="position:absolute;left:72px;right:72px;top:470px;display:flex;justify-content:space-between">
+  <svg width="936" height="300" viewBox="0 0 936 300">
+    <g fill="none" stroke-width="3">
+      <circle cx="120" cy="110" r="60" stroke="#52525B"/><circle cx="300" cy="110" r="60" stroke="#52525B"/>
+      <circle cx="480" cy="110" r="60" stroke="#F37021" fill="rgba(243,112,33,.15)"/>
+      <circle cx="660" cy="110" r="60" stroke="#52525B"/><circle cx="830" cy="110" r="60" stroke="#1E9BEA" fill="rgba(30,155,234,.15)"/>
+    </g>
+    <g font-family="Mono" font-size="24" fill="#A1A1AA" text-anchor="middle">
+      <text x="120" y="215">cousin</text><text x="300" y="215">uncle</text>
+      <text x="480" y="215" fill="#F5A574">you</text><text x="660" y="215">cousin</text>
+      <text x="830" y="215" fill="#7CC4F2">codes</text>
+    </g>
+    <path d="M540 110 H770" stroke="#F37021" stroke-width="4" stroke-dasharray="10 10"/>
+  </svg>
+</div>
+<div class="body" style="top:820px;font-size:38px">Hack Days is <b>solo or teams of 2–4</b>, and team formation runs until <b>18 Nov</b>, three days after registration closes.</div>
+<div class="next">So here's the one date to change in your calendar…</div>
+<div class="grain"></div>
+</section>
+
+<!-- 6 PAYOFF -->
+<section class="slide">
+<div class="sunglow" style="left:-300px;top:120px"></div>
+<div class="top label"><div>06 / 07</div><div>the real deadline</div></div>
+<div class="h" style="top:170px;font-size:104px">Make <em>7 Nov</em> your deadline.</div>
+<div class="win" style="top:400px">
+  <div class="bar"><span>my-calendar.diff</span><span>1 change</span></div>
+  <div class="code" style="font-size:30px">
+  <span class="del">- register by: 15 Nov</span>
+  <span class="add">+ register by: 7 Nov  <span class="c"># the day before Diwali</span></span>
+  <span class="c">  8 – 14 Nov: festival, no forms</span>
+  </div>
+</div>
+<div class="body" style="top:820px;font-size:38px">The official close is still <b>15 Nov, 11:59 PM IST</b>. Yours is a week earlier, so the festive week costs you nothing.</div>
+<div class="next">And 7 Nov is still 24 days away. Today…</div>
+<div class="grain"></div>
+</section>
+
+<!-- 7 CTA -->
+<section class="slide">
+<div class="sunglow" style="left:90px;top:760px"></div>
+<div class="sun" style="left:410px;top:1166px"></div>
+<div class="top label"><div>07 / 07</div><div>hackathon.homingo.co.in</div></div>
+<div class="h" style="top:170px;font-size:100px">Do it before the <em>diyas</em> are out.</div>
+<div class="todo" style="top:420px">
+  <div class="t"><span class="bx" style="border-color:var(--orange)"></span><span><b>Register</b> · link in bio</span></div>
+  <div class="t"><span class="bx"></span><span>Pick a track: Agents, Automation or LLM apps</span></div>
+  <div class="t" style="border-bottom:1px solid var(--line)"><span class="bx"></span><span>Send this to the cousin who codes</span></div>
+</div>
+<div class="body" style="top:780px;font-size:32px;color:#A1A1AA">Homingo Hack Days, Edition 01. Online, all of India. Students 16+ and early-career developers.</div>
+<div class="mono" style="position:absolute;left:72px;top:930px;font-size:30px;color:var(--blue)">Link in bio →</div>
+<div class="grain"></div>
+</section>
+
+</div></body></html>

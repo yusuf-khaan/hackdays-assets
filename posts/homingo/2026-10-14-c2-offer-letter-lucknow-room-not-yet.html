@@ -1,0 +1,194 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--bg:#F5F6FA;--blue:#2563EB;--b2:#1D4ED8;--b3:#3B76F0;--b4:#93B4F8;--b5:#DCE6FD;--b6:#EEF3FE;--ink:#111827;--grey:#6B7280}
+html,body{background:var(--bg)}
+.deck{display:flex;position:relative;width:max-content}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;background:var(--bg);color:var(--ink);font-family:"Sans";flex:none}
+.slide.white{background:#fff}
+.slide.blue{background:var(--blue);color:#fff}
+.lab{font-family:"Mono";font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.num{position:absolute;top:64px;right:72px;font-family:"Mono";font-size:24px;letter-spacing:.1em;color:var(--grey)}
+.h{font-family:"Serif";font-weight:400;line-height:.98;letter-spacing:-.01em;color:var(--ink)}
+.h em{font-style:italic;color:var(--blue)}
+.h .sub{display:block;font-family:"Sans";font-size:36px;line-height:1.35;letter-spacing:0;color:var(--grey);margin-top:30px;font-weight:400}
+.h .sub b{color:var(--ink);font-weight:600}
+.card{position:absolute;background:#fff;border-radius:28px;box-shadow:0 18px 50px rgba(17,24,39,.10),0 2px 6px rgba(17,24,39,.06)}
+.pin{position:absolute;width:26px;height:26px;border-radius:50%;background:var(--blue);box-shadow:0 3px 6px rgba(29,78,216,.35);left:50%;top:-10px;transform:translateX(-50%)}
+.tag{font-family:"Mono";font-size:22px;letter-spacing:.08em;color:var(--grey);text-transform:uppercase}
+.bleed{position:absolute;top:0;left:0;pointer-events:none}
+.phone{position:absolute;width:452px;height:966px;border-radius:64px;background:#111827;padding:12px;box-shadow:0 30px 80px rgba(17,24,39,.22)}
+.phone img{width:428px;height:928px;border-radius:52px;display:block}
+</style></head><body>
+<div class="deck">
+
+<!-- continuous dotted route across slides 1-6, ending at a map pin on slide 6 -->
+<svg class="bleed" width="7560" height="1350" viewBox="0 0 7560 1350" style="z-index:3">
+  <path d="M -20 1290 C 300 1250 700 1310 1080 1280 S 1700 1250 2160 1285 S 2900 1310 3240 1275 S 3900 1250 4320 1285 S 5000 1310 5400 1280 S 6000 1260 6200 1280" fill="none" stroke="#93B4F8" stroke-width="5" stroke-dasharray="2 16" stroke-linecap="round"/>
+  <path d="M6230 1282 c0 -26 -20 -40 -20 -58 a20 20 0 0 1 40 0 c0 18 -20 32 -20 58 z" fill="#2563EB"/>
+  <circle cx="6230" cy="1224" r="7" fill="#fff"/>
+</svg>
+
+<!-- 1: hook -->
+<section class="slide">
+  <div class="lab" style="position:absolute;left:72px;top:72px">Find it here · New in Lucknow</div>
+  <div class="h" style="position:absolute;left:72px;top:150px;width:960px;font-size:122px">Offer letter: Lucknow.<br><em>Room: not yet.</em></div>
+  <!-- offer letter -->
+  <div class="card" style="left:110px;top:520px;width:520px;height:560px;transform:rotate(-4deg)"><div class="pin"></div>
+    <div style="padding:64px 56px">
+      <div class="tag" style="color:var(--blue)">Offer letter</div>
+      <div style="height:14px;width:300px;background:#DCE6FD;border-radius:7px;margin-top:34px"></div>
+      <div style="height:14px;width:380px;background:#EEF3FE;border-radius:7px;margin-top:22px"></div>
+      <div style="height:14px;width:340px;background:#EEF3FE;border-radius:7px;margin-top:22px"></div>
+      <div style="font-family:'Serif';font-size:56px;margin-top:44px;line-height:1.05">Location: <em style="color:var(--blue)">Lucknow</em></div>
+      <div style="font-family:'Serif';font-size:56px;margin-top:10px;line-height:1.05">Joining: <em style="color:var(--blue)">Monday</em></div>
+      <div style="height:14px;width:260px;background:#EEF3FE;border-radius:7px;margin-top:40px"></div>
+    </div>
+  </div>
+  <!-- empty key tag -->
+  <svg style="position:absolute;left:640px;top:600px;transform:rotate(8deg)" width="340" height="420" viewBox="0 0 340 420">
+    <path d="M170 20 L170 90" stroke="#93B4F8" stroke-width="6"/>
+    <circle cx="170" cy="110" r="26" fill="none" stroke="#1D4ED8" stroke-width="10"/>
+    <rect x="40" y="140" width="260" height="230" rx="30" fill="#fff" stroke="#2563EB" stroke-width="5"/>
+    <circle cx="170" cy="175" r="12" fill="#DCE6FD"/>
+    <text x="170" y="250" text-anchor="middle" font-family="Mono" font-size="28" fill="#6B7280" letter-spacing="3">ROOM</text>
+    <path d="M90 315 L250 315" stroke="#93B4F8" stroke-width="5" stroke-dasharray="10 10"/>
+  </svg>
+  <div style="position:absolute;right:72px;top:1192px;font-family:'Mono';font-size:24px;color:var(--blue);letter-spacing:.1em">Swipe →</div>
+</section>
+
+<!-- 2: second hook -->
+<section class="slide white">
+  <div class="num">02 / 07</div>
+  <!-- calendar -->
+  <div class="card" style="left:150px;top:150px;width:780px;height:520px;transform:rotate(1.5deg);border:3px solid #DCE6FD"><div class="pin"></div>
+    <svg width="780" height="520" viewBox="0 0 780 520">
+      <rect x="0" y="0" width="780" height="96" rx="28" fill="#2563EB"/>
+      <rect x="0" y="60" width="780" height="36" fill="#2563EB"/>
+      <text x="56" y="62" font-family="Mono" font-size="26" fill="#fff" letter-spacing="3">THIS WEEK</text>
+      <g font-family="Mono" font-size="22" fill="#6B7280" letter-spacing="2" text-anchor="middle">
+        <text x="110" y="160">FRI</text><text x="280" y="160">SAT</text><text x="450" y="160">SUN</text><text x="640" y="160">MON</text>
+      </g>
+      <rect x="40" y="190" width="140" height="250" rx="18" fill="#F5F6FA"/>
+      <rect x="210" y="190" width="140" height="250" rx="18" fill="#F5F6FA"/>
+      <rect x="380" y="190" width="140" height="250" rx="18" fill="#EEF3FE" stroke="#93B4F8" stroke-width="4" stroke-dasharray="10 8"/>
+      <text x="450" y="330" text-anchor="middle" font-family="Serif" font-style="italic" font-size="80" fill="#2563EB">?</text>
+      <rect x="550" y="190" width="180" height="250" rx="18" fill="#2563EB"/>
+      <text x="640" y="300" text-anchor="middle" font-family="Serif" font-size="44" fill="#fff">Day 1</text>
+      <text x="640" y="350" text-anchor="middle" font-family="Mono" font-size="20" fill="#DCE6FD" letter-spacing="2">NEW JOB</text>
+    </svg>
+  </div>
+  <div class="h" style="position:absolute;left:72px;top:780px;width:940px;font-size:96px">Monday, you join. <em>Sunday night, where do you sleep?</em><span class="sub">New city. No address. And every lead is "a friend of a friend"…</span></div>
+</section>
+
+<!-- 3: desire moodboard -->
+<section class="slide">
+  <div class="num">03 / 07</div>
+  <div class="h" style="position:absolute;left:72px;top:130px;width:940px;font-size:104px">You already know <em>the room you want.</em></div>
+  <!-- window -->
+  <div class="card" style="left:90px;top:440px;width:440px;height:380px;transform:rotate(-3deg)"><div class="pin"></div>
+    <svg width="440" height="300" viewBox="0 0 440 300">
+      <rect x="110" y="40" width="220" height="230" rx="14" fill="#DCE6FD" stroke="#1D4ED8" stroke-width="10"/>
+      <path d="M220 40 L220 270 M110 155 L330 155" stroke="#1D4ED8" stroke-width="8"/>
+      <circle cx="285" cy="95" r="26" fill="#fff"/>
+      <path d="M330 150 L420 280 L330 280 Z" fill="#EEF3FE" opacity=".9"/>
+    </svg>
+    <div class="tag" style="text-align:center">Morning light</div></div>
+  <!-- desk -->
+  <div class="card" style="left:570px;top:410px;width:430px;height:380px;transform:rotate(3deg)"><div class="pin"></div>
+    <svg width="430" height="300" viewBox="0 0 430 300">
+      <rect x="60" y="180" width="310" height="20" rx="6" fill="#1D4ED8"/>
+      <rect x="80" y="200" width="16" height="80" fill="#1D4ED8"/><rect x="334" y="200" width="16" height="80" fill="#1D4ED8"/>
+      <rect x="150" y="90" width="150" height="90" rx="10" fill="#2563EB"/>
+      <rect x="162" y="102" width="126" height="66" rx="6" fill="#93B4F8"/>
+      <rect x="130" y="176" width="190" height="10" rx="5" fill="#3B76F0"/>
+      <path d="M330 180 L330 120 L310 100" fill="none" stroke="#3B76F0" stroke-width="8" stroke-linecap="round"/>
+      <path d="M290 95 L325 95 L315 112 Z" fill="#DCE6FD"/>
+    </svg>
+    <div class="tag" style="text-align:center">A desk for late calls</div></div>
+  <!-- chai -->
+  <div class="card" style="left:150px;top:880px;width:400px;height:330px;transform:rotate(2deg)"><div class="pin"></div>
+    <svg width="400" height="250" viewBox="0 0 400 250">
+      <path d="M150 90 L250 90 L238 210 L162 210 Z" fill="#fff" stroke="#2563EB" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M156 130 L244 130 L238 210 L162 210 Z" fill="#93B4F8"/>
+      <path d="M180 70 Q170 50 185 34 M215 70 Q205 50 220 34" fill="none" stroke="#93B4F8" stroke-width="6" stroke-linecap="round"/>
+    </svg>
+    <div class="tag" style="text-align:center">Chai, close by</div></div>
+  <div style="position:absolute;left:600px;top:930px;width:400px;font-family:'Serif';font-size:64px;line-height:1.02;color:var(--ink)">So where <em style="color:var(--blue)">is it?</em></div>
+</section>
+
+<!-- 4: budget + distance -->
+<section class="slide white">
+  <div class="num">04 / 07</div>
+  <div class="h" style="position:absolute;left:72px;top:130px;width:940px;font-size:100px">You know your budget. <em>You know your commute.</em><span class="sub">What you need is a search that knows <b>both</b>…</span></div>
+  <!-- budget slider card -->
+  <div class="card" style="left:110px;top:640px;width:860px;height:220px;transform:rotate(-1.5deg);border:3px solid #DCE6FD"><div class="pin"></div>
+    <div style="position:absolute;left:56px;top:46px" class="tag">Budget</div>
+    <svg style="position:absolute;left:56px;top:110px" width="750" height="70" viewBox="0 0 750 70">
+      <rect x="0" y="28" width="750" height="14" rx="7" fill="#EEF3FE"/>
+      <rect x="170" y="28" width="300" height="14" rx="7" fill="#2563EB"/>
+      <circle cx="170" cy="35" r="26" fill="#fff" stroke="#2563EB" stroke-width="7"/>
+      <circle cx="470" cy="35" r="26" fill="#fff" stroke="#2563EB" stroke-width="7"/>
+    </svg>
+  </div>
+  <!-- distance slider card -->
+  <div class="card" style="left:110px;top:930px;width:860px;height:220px;transform:rotate(1.5deg);border:3px solid #DCE6FD"><div class="pin"></div>
+    <div style="position:absolute;left:56px;top:46px" class="tag">Distance</div>
+    <svg style="position:absolute;left:56px;top:110px" width="750" height="70" viewBox="0 0 750 70">
+      <rect x="0" y="28" width="750" height="14" rx="7" fill="#EEF3FE"/>
+      <rect x="0" y="28" width="280" height="14" rx="7" fill="#2563EB"/>
+      <circle cx="280" cy="35" r="26" fill="#fff" stroke="#2563EB" stroke-width="7"/>
+      <path d="M690 60 c0 -22 -18 -34 -18 -48 a18 18 0 0 1 36 0 c0 14 -18 26 -18 48 z" fill="#93B4F8"/>
+    </svg>
+  </div>
+</section>
+
+<!-- 5: product hero, real Search -->
+<section class="slide">
+  <div class="num">05 / 07</div>
+  <div class="h" style="position:absolute;left:72px;top:130px;width:480px;font-size:96px">Type “rent.” <em>Lucknow answers.</em><span class="sub">Rooms, flats and PGs on Homingo. Then filter by budget and distance. <b>And when one fits…</b></span></div>
+  <div class="phone" style="left:580px;top:190px;transform:rotate(3deg)">
+    <img src="../../brand/homingo-app/search-rent.jpg" alt="">
+    <div style="position:absolute;left:344px;top:126px;width:92px;height:92px;border-radius:50%;border:6px solid #2563EB;box-shadow:0 0 0 12px rgba(37,99,235,.18)"></div>
+  </div>
+  <div style="position:absolute;left:72px;top:1080px;width:440px;font-family:'Mono';font-size:22px;line-height:1.4;color:var(--grey);letter-spacing:.06em">Real Homingo Search screen. Filters: top right.</div>
+</section>
+
+<!-- 6: payoff -->
+<section class="slide white">
+  <div class="num">06 / 07</div>
+  <div class="card" style="left:170px;top:150px;width:740px;height:580px;transform:rotate(-2deg)"><div class="pin"></div>
+    <svg width="740" height="580" viewBox="0 0 740 580">
+      <rect width="740" height="580" rx="28" fill="#EEF3FE"/>
+      <!-- door -->
+      <rect x="250" y="80" width="240" height="420" rx="16" fill="#2563EB"/>
+      <rect x="250" y="80" width="240" height="420" rx="16" fill="none" stroke="#1D4ED8" stroke-width="12"/>
+      <rect x="282" y="120" width="176" height="150" rx="10" fill="#3B76F0"/>
+      <rect x="282" y="300" width="176" height="160" rx="10" fill="#3B76F0"/>
+      <circle cx="450" cy="290" r="12" fill="#DCE6FD"/>
+      <rect x="200" y="500" width="340" height="20" rx="8" fill="#93B4F8"/>
+      <!-- key with tag -->
+      <g transform="rotate(-18 600 300)">
+        <circle cx="600" cy="230" r="34" fill="none" stroke="#1D4ED8" stroke-width="12"/>
+        <rect x="594" y="262" width="12" height="130" rx="4" fill="#1D4ED8"/>
+        <rect x="606" y="350" width="26" height="12" fill="#1D4ED8"/><rect x="606" y="374" width="18" height="12" fill="#1D4ED8"/>
+      </g>
+      <path d="M580 210 Q540 150 600 120" fill="none" stroke="#93B4F8" stroke-width="5"/>
+      <rect x="560" y="70" width="140" height="70" rx="16" fill="#fff" stroke="#2563EB" stroke-width="4"/>
+      <text x="630" y="114" text-anchor="middle" font-family="Mono" font-size="22" fill="#2563EB" letter-spacing="2">ROOM ✓</text>
+    </svg>
+  </div>
+  <div class="h" style="position:absolute;left:72px;top:820px;width:940px;font-size:96px">Chat or call the person who listed it. <em>Directly.</em><span class="sub">Your enquiry goes straight to them. The rest is just unpacking.</span></div>
+</section>
+
+<!-- 7: CTA -->
+<section class="slide blue">
+  <img src="../../brand/homingo-app/app-icon.png" style="position:absolute;left:72px;top:110px;width:150px;height:150px;border-radius:34px;box-shadow:0 14px 40px rgba(17,24,39,.25)" alt="">
+  <div style="position:absolute;left:72px;top:330px;width:940px;font-family:'Serif';font-size:150px;line-height:.95;color:#fff">New city.<br><em>First room.</em></div>
+  <div style="position:absolute;left:72px;top:690px;width:920px;font-family:'Sans';font-size:44px;line-height:1.35;color:#fff;font-weight:500">Find it on Homingo. Search, then filter by budget and distance.<span style="display:block;font-size:34px;font-weight:400;color:#DCE6FD;margin-top:20px">Got a room to rent out? List it free.</span></div>
+  <div style="position:absolute;left:72px;top:1100px;width:936px;border-top:2px solid rgba(255,255,255,.35);padding-top:32px;display:flex;justify-content:space-between;font-family:'Mono';font-size:26px;letter-spacing:.06em;color:#fff">
+    <span>Homingo · Lucknow's local marketplace</span><span>Link in bio</span></div>
+</section>
+
+</div></body></html>

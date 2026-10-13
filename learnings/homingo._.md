@@ -33,6 +33,8 @@ _Nothing proven yet: a pattern needs at least 3 posts beating the account median
 - "Exhibits" part 2 if c1 "Your room is full of money" teases a series (check its last slide).
 - "The Homingo Museum" Exhibit 02 (13 Oct c1, treadmill, last slide says "The museum has more exhibits. Next one soon."). Slide 3 already named the next exhibits: the guitar (02), last sem's books (03), the cycle (04), the spare mattress (05). Note: the guitar was a 12 Oct story, so pick books or the mattress for 02 within ~1 week, same frame (Mono "The Homingo Museum · Exhibit 0N" label, pinned card, museum plaque).
 
+- "The Homingo Museum" Exhibit 03: the spare mattress (14 Oct c1 Exhibit 02 = last sem's books; its last slide says "Next exhibit: the spare mattress."). Post within ~1 week, same frame.
+
 ## Backlog (campaign ideas; verify any fact before use, every claim must be true of the app)
 - Let it go: "Moving out? Don't carry it." Hostel/PG move-out; boxes that never get unpacked.
 - Let it go: "The treadmill is now a clothes stand." Exhibits: treadmill, exam books, the second mattress.
@@ -49,6 +51,7 @@ _Nothing proven yet: a pattern needs at least 3 posts beating the account median
 
 ## Notes from runs
 - 2026-10-13 batch: first object-hero opener (c1 treadmill, W42 experiment 1) and first Lucknow-line campaign ("Pehle aap", c2). Both with conversion CTA. WebFetch and curl to most sites are blocked (proxy 403), so web research gives titles only; keep outside claims to well-known cultural facts with several matching titles.
+- 2026-10-14 batch: c1 Museum Exhibit 02 (books) with the first share CTA (W42 #3), product shot on my-ads.jpg with Sell circled; c2 first "Find it here" campaign (first room after a job offer) on the real search-rent.jpg. claims.js flags "Search Homingo" in captions (unrelated App Store app): write "On Homingo, search…" instead.
 - lint.js does not flag text sitting on top of an SVG drawing (slide-1 swipe cue overlapped the doorstep in round 1); check swipe cues by eye.
 
 ## Changelog
