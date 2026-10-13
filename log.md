@@ -89,3 +89,14 @@
 - 2026-10-13 · homingo._ · story2 20:22 · teaser: Pehle aap carousel · cliffhanger-story · scheduled
 - 2026-10-13 · homingo.verse · story2 21:47 · mythology: Dussehra, two epics · question · scheduled
 - 2026-10-13 · evening run · trend scan (3 searches): no fitting signal; no trend post · jsdelivr 403 on one image, raw.githubusercontent at pinned SHA worked
+- 2026-10-14 · homingo.hackdays · c1 07:12 · ideas: screen-time report as an idea list · you-in-it · scheduled
+- 2026-10-14 · homingo._ · c1 07:32 · sell: Museum Exhibit 02, last semester's books · you-in-it · scheduled
+- 2026-10-14 · surgelabs_ · c1 08:12 · agents: Moffatt v. Air Canada, a chatbot's words are the company's · impossible · scheduled
+- 2026-10-14 · homingo.hackdays · story 07:40 · teaser: which app do you open without thinking · question · scheduled
+- 2026-10-14 · surgelabs_ · story 07:40 · teaser: whose promise is a chatbot's promise · question · scheduled
+- 2026-10-14 · homingo._ · story 08:22 · teaser: Exhibit 02 books · before-after · scheduled
+- 2026-10-14 · homingo.verse · story 08:47 · technology: Bell X-1 sound barrier, 14 Oct 1947 · impossible · scheduled
+- 2026-10-14 · homingo.hackdays · c2 17:20 · countdown: Diwali 8 Nov vs registration close 15 Nov · number-twist · scheduled
+- 2026-10-14 · surgelabs_ · c2 18:12 · websites: lab score vs Core Web Vitals · you-are-wrong · scheduled
+- 2026-10-14 · homingo._ · c2 18:52 · find: first job in Lucknow, first room · cliffhanger-story · scheduled
+- 2026-10-14 · morning batch · trend scan (3 searches): no fitting signal · raw.githubusercontent timed out on 3 imports; jsdelivr at pinned SHA worked for all 43
