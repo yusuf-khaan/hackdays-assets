@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>SurgeLabs story: orders without copy-paste</title>
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--line:#2A2A31;--grid:#16161B}
+html,body{margin:0;background:var(--bg)}
+.frame{width:1080px;height:1920px;position:relative;overflow:hidden;color:var(--fg);font-family:Sans;background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:90px 90px}
+.glow{position:absolute;width:1100px;height:1000px;pointer-events:none}
+.top{position:absolute;left:72px;right:72px;top:270px;display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.03em;text-transform:none;color:var(--fg)}
+.mark span{color:var(--teal)}
+h1{position:absolute;left:72px;right:72px;top:360px;font-size:96px;font-weight:600;letter-spacing:-.045em;line-height:1.02;margin:0}
+.t{color:var(--teal)}
+.sub{display:block;font-size:34px;line-height:1.35;color:var(--soft);font-weight:400;letter-spacing:0;margin-top:30px}
+.ba{position:absolute;left:72px;right:72px;top:930px;display:flex;flex-direction:column;gap:22px}
+.card{background:#111114;border:1px solid var(--line);border-radius:22px;padding:28px 32px}
+.card .k{font:500 22px Mono;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.card .row{display:flex;align-items:center;gap:14px;font-size:30px;line-height:1.25}
+.card .row span.n{border:2px solid var(--line);border-radius:14px;padding:14px 18px;flex:1;text-align:center;color:var(--soft)}
+.card .row i{font-style:normal;color:var(--muted);font-family:Mono;font-size:28px}
+.card.after{border-color:var(--teal);background:#0E1F1D}
+.card.after .k{color:var(--teal)}
+.card.after .row span.n{border-color:var(--teal);color:var(--fg)}
+.card.after .row i{color:var(--teal)}
+.ex{position:absolute;left:72px;top:1470px;font:500 22px Mono;letter-spacing:.1em;color:var(--muted);text-transform:uppercase}
+.chip{position:absolute;left:72px;top:1530px;font-family:Mono;font-size:26px;color:var(--teal);border:2px solid var(--teal);border-radius:999px;padding:14px 28px}
+</style></head>
+<body><div class="frame">
+<div class="glow" style="left:-300px;top:-200px;background:radial-gradient(closest-side,rgba(139,108,255,.22),transparent)"></div>
+<div class="glow" style="right:-400px;bottom:-200px;background:radial-gradient(closest-side,rgba(45,212,191,.14),transparent)"></div>
+<div class="top"><div class="mark"><span>&#9632;</span> SURGELABS</div><div>Automation idea</div></div>
+<h1>Still copy-pasting orders <span class="t">into a sheet?</span><span class="sub">Imagine a small shop that takes orders on WhatsApp. Someone retypes every one. That is a job for backend automation, not a person.</span></h1>
+<div class="ba">
+<div class="card"><div class="k">Before · by hand</div><div class="row"><span class="n">Read</span><i>&rarr;</i><span class="n">Copy</span><i>&rarr;</i><span class="n">Paste</span><i>&rarr;</i><span class="n">Reply</span></div></div>
+<div class="card after"><div class="k">After · automated</div><div class="row"><span class="n">Order in</span><i>&rarr;</i><span class="n">Row added</span><i>&rarr;</i><span class="n">Reply sent</span></div></div>
+</div>
+<div class="ex">Illustrative example, not a client</div>
+<div class="chip">surgeit.co.in</div>
+</div></body></html>
