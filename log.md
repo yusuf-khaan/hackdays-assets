@@ -84,3 +84,8 @@
 - 2026-10-13 · surgelabs_ · c2 · humour: green on laptop, red on CI (case-only rename) · cliffhanger-story · scheduled 18:12
 - 2026-10-13 · homingo._ · c2 · lucknow: Pehle aap, you go first · cliffhanger-story · scheduled 18:52
 - 2026-10-13 · morning batch · all 10 scheduled by 05:13; trend scan (5 searches): no fresh fitting signal (AI chatbot outage was 4 Sept); Hack Days story 1 sent back once (perks topic repeated 12 Oct reel), remade as README teaser
+- 2026-10-13 · homingo.hackdays · story2 19:40 · track-spotlight: LLM apps, ship to a real user · impossible · scheduled
+- 2026-10-13 · surgelabs_ · story2 19:40 · automation-idea: WhatsApp orders into a sheet · question · scheduled
+- 2026-10-13 · homingo._ · story2 20:22 · teaser: Pehle aap carousel · cliffhanger-story · scheduled
+- 2026-10-13 · homingo.verse · story2 21:47 · mythology: Dussehra, two epics · question · scheduled
+- 2026-10-13 · evening run · trend scan (3 searches): no fitting signal; no trend post · jsdelivr 403 on one image, raw.githubusercontent at pinned SHA worked
