@@ -100,3 +100,7 @@
 - 2026-10-14 · surgelabs_ · c2 18:12 · websites: lab score vs Core Web Vitals · you-are-wrong · scheduled
 - 2026-10-14 · homingo._ · c2 18:52 · find: first job in Lucknow, first room · cliffhanger-story · scheduled
 - 2026-10-14 · morning batch · trend scan (3 searches): no fitting signal · raw.githubusercontent timed out on 3 imports; jsdelivr at pinned SHA worked for all 43
+- 2026-10-14 · homingo.hackdays · story2 · benefits: perks that outlast Hack Days · question · scheduled 19:40
+- 2026-10-14 · surgelabs_ · story2 · capabilities: scalable infrastructure, launch day · question · scheduled 19:40
+- 2026-10-14 · homingo._ · story2 · app: chat or call the seller directly · question · scheduled 20:22
+- 2026-10-14 · homingo.verse · story2 · space: Orionids, Halley's Comet dust · question · scheduled 21:47

@@ -52,3 +52,4 @@ _Nothing proven yet: a pattern needs at least 3 posts beating the account median
 - 2026-10-11 (owner): feed switched to reels only, made by the owner's laptop; cloud runs make only verse stories in the logo palette.
 - 2026-10-11: WebFetch fails in the cloud workspace (DNS); WebSearch summaries with the outlet named work.
 - 2026-W41 review: closed the carousel experiments (posts removed or never live); backlog turned into story and reel ideas. Overlap and unquoted-Serif checks now in `tools/render.js` (tools/lint.js).
+- 2026-10-14: Orionids (Halley's dust, peak 21-22 Oct) used as verse story 2; reels can skip it.
