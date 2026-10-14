@@ -104,3 +104,7 @@
 - 2026-10-14 · surgelabs_ · story2 · capabilities: scalable infrastructure, launch day · question · scheduled 19:40
 - 2026-10-14 · homingo._ · story2 · app: chat or call the seller directly · question · scheduled 20:22
 - 2026-10-14 · homingo.verse · story2 · space: Orionids, Halley's Comet dust · question · scheduled 21:47
+- 2026-10-15 · homingo.hackdays · story · timeline: Edition 01 key dates as a git log (registration close 15 Nov, team formation ends 18 Nov, kick-off 21 Nov, submissions, finals); teases today's 08:05 teams reel · mood · scheduled 07:40
+- 2026-10-15 · surgelabs_ · story · teaser: teaser of today's 08:29 reel: 0.1 + 0.2 is not 0.3, never store money as float (integer paise or decimal type) · impossible · scheduled 07:40
+- 2026-10-15 · homingo._ · story · app: product hero: real Home screen, search for anything in Lucknow, rooms, flats and PGs to bikes, phones and furniture · impossible · scheduled 08:22
+- 2026-10-15 · homingo.verse · story · indian-history: on this day: A. P. J. Abdul Kalam born 15 Oct 1931; his birthday is observed as World Students' Day in India · impossible · scheduled 08:47
