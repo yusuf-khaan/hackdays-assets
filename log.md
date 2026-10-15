@@ -108,3 +108,7 @@
 - 2026-10-15 · surgelabs_ · story · teaser: teaser of today's 08:29 reel: 0.1 + 0.2 is not 0.3, never store money as float (integer paise or decimal type) · impossible · scheduled 07:40
 - 2026-10-15 · homingo._ · story · app: product hero: real Home screen, search for anything in Lucknow, rooms, flats and PGs to bikes, phones and furniture · impossible · scheduled 08:22
 - 2026-10-15 · homingo.verse · story · indian-history: on this day: A. P. J. Abdul Kalam born 15 Oct 1931; his birthday is observed as World Students' Day in India · impossible · scheduled 08:47
+- 2026-10-15 · homingo.hackdays · story2 · track-spotlight: Agents track spotlight: a chatbot answers, an agent finishes the job;  · impossible · scheduled 19:40
+- 2026-10-15 · surgelabs_ · story2 · explainer: pattern of the day: idempotency key, tap Pay twice, charged once; our  · question · scheduled 19:40
+- 2026-10-15 · homingo._ · story2 · sell: Let it go: the cooler still in your room in October (summer over) · question · scheduled 20:22
+- 2026-10-15 · homingo.verse · story2 · indian-history: word origin: shampoo from Hindi champo (press, knead); Sake Dean Mahom · impossible · scheduled 21:47
