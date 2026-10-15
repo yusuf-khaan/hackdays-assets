@@ -112,3 +112,7 @@
 - 2026-10-15 · surgelabs_ · story2 · explainer: pattern of the day: idempotency key, tap Pay twice, charged once; our  · question · scheduled 19:40
 - 2026-10-15 · homingo._ · story2 · sell: Let it go: the cooler still in your room in October (summer over) · question · scheduled 20:22
 - 2026-10-15 · homingo.verse · story2 · indian-history: word origin: shampoo from Hindi champo (press, knead); Sake Dean Mahom · impossible · scheduled 21:47
+- 2026-10-16 · homingo.hackdays · story1 · faq: Do I need a team? Solo or 2-4 · question · scheduled 07:40
+- 2026-10-16 · surgelabs_ · story1 · hackdays-promo: SurgeLabs powers Hack Days, what builders get · question · scheduled 07:40
+- 2026-10-16 · homingo._ · story1 · app: My Ads, views and inquiries on every ad · impossible · scheduled 08:22
+- 2026-10-16 · homingo.verse · story1 · science: Ether Day, first public ether anaesthesia 1846 · impossible · scheduled 08:47
