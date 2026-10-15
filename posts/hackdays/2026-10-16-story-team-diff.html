@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Hack Days story: team config diff</title><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+.frame{height:1920px}
+.top{position:absolute;left:72px;right:72px;top:262px;display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+.top .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--blue);margin-right:14px;box-shadow:0 0 14px rgba(30,155,234,.9);vertical-align:middle;position:relative;top:-2px}
+.head{position:absolute;left:72px;right:72px;top:340px;font-family:"Serif";font-size:132px;line-height:.96;letter-spacing:-.02em}
+.head .sub{display:block;font-family:Sans;font-size:36px;line-height:1.35;color:#C9C9CF;letter-spacing:0;margin-top:34px}
+.head em{color:var(--orange);font-style:italic}
+.diff{position:absolute;left:72px;right:72px;top:690px;background:var(--char);border:1px solid var(--line);border-radius:26px;padding:30px 0;font-family:Mono;font-size:29px}
+.diff .cmd{color:var(--muted);font-size:24px;padding:0 34px 18px;border-bottom:1px solid var(--line)}
+.diff .r{padding:20px 34px;color:#E4E4E7}
+.diff .m{background:rgba(239,68,68,.12);color:#F4A3A3}
+.diff .p{background:rgba(30,155,234,.12)}
+.diff .p b{color:var(--blue);font-weight:500}
+.diff .p.hl{background:rgba(243,112,33,.14)}
+.diff .p.hl b{color:var(--orange)}
+.diff .g{color:var(--muted)}
+.tease{position:absolute;left:72px;right:72px;top:1200px;font-size:36px;color:#fff;line-height:1.35}
+.tease b{color:var(--orange);font-weight:600}
+.cta{position:absolute;left:72px;right:72px;top:1340px;display:flex;justify-content:space-between;align-items:flex-end}
+.cta .label{color:var(--muted);font-size:19px;display:block;margin-bottom:14px}
+.cta .u2{font-family:Mono;font-size:30px;color:#fff}
+.cta .r2{font-family:"Serif";font-style:italic;font-size:48px;color:var(--orange)}
+.glow{position:absolute;left:-200px;top:900px;width:1400px;height:900px;background:radial-gradient(closest-side,rgba(30,155,234,.12),rgba(30,155,234,0))}
+</style></head>
+<body><div class="frame">
+<div class="glow"></div>
+<div class="top label"><div><span class="dot"></span>FAQ</div><div>Hack Days · Ed. 01</div></div>
+<div class="head">Do I need a team? <em>No.</em><span class="sub">Go solo or bring 2–4 people. Your call.</span></div>
+<div class="diff">
+<div class="cmd">$ git diff hackdays.config</div>
+<div class="r g"># solo? squad? both are in</div>
+<div class="r p hl"><b>+</b> team: solo | 2–4 people</div>
+<div class="r p"><b>+</b> where: online, all of India</div>
+<div class="r p"><b>+</b> who: students 16+ and early-career devs</div>
+</div>
+<div class="tease">No squad yet? <b>Team formation runs until 18 Nov.</b></div>
+<div class="cta"><div><span class="label">Registration closes 15 Nov, 11:59 PM IST</span><div class="u2">hackathon.homingo.co.in</div></div><div class="r2">Link in bio</div></div>
+<div class="grain"></div>
+</div></body></html>
