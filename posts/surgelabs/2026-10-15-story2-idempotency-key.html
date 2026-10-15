@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>SurgeLabs story: idempotency key</title>
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--line:#2A2A31;--grid:#16161B}
+html,body{margin:0;background:var(--bg)}
+.frame{width:1080px;height:1920px;position:relative;overflow:hidden;color:var(--fg);font-family:Sans;background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:90px 90px}
+.glow{position:absolute;width:1100px;height:1000px;pointer-events:none}
+.top{position:absolute;left:72px;right:72px;top:270px;display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.03em;text-transform:none;color:var(--fg)}
+.mark span{color:var(--teal)}
+h1{position:absolute;left:72px;right:72px;top:360px;font-size:100px;font-weight:600;letter-spacing:-.045em;line-height:1.02;margin:0}
+.t{color:var(--teal)}
+.sub{display:block;font-size:34px;line-height:1.35;color:var(--soft);font-weight:400;letter-spacing:0;margin-top:30px}
+.term{position:absolute;left:72px;right:72px;top:930px;background:#111114;border:1px solid var(--line);border-radius:22px;padding:30px 38px;font-family:Mono;font-size:30px;line-height:1.75}
+.term .c{color:var(--muted)}
+.term .o{color:var(--purple)}
+.term .ok{color:var(--teal)}
+.fix{position:absolute;left:72px;right:72px;top:1340px;font-size:34px;line-height:1.38}
+.fix b{color:var(--teal);font-weight:600}
+</style></head>
+<body><div class="frame">
+<div class="glow" style="left:-300px;top:-200px;background:radial-gradient(closest-side,rgba(139,108,255,.22),transparent)"></div>
+<div class="glow" style="right:-400px;bottom:-200px;background:radial-gradient(closest-side,rgba(45,212,191,.14),transparent)"></div>
+<div class="top"><div class="mark"><span>&#9632;</span> SURGELABS</div><div>Pattern of the day</div></div>
+<h1>You tapped Pay twice. Were you <span class="t">charged twice?</span><span class="sub">Not if the app sends an idempotency key: one ID per intended action.</span></h1>
+<div class="term"><div class="c"># tap 1</div><div>POST /pay  key=<span class="o">a7f3</span></div><div class="ok">→ charged</div><div class="c"># tap 2, same key</div><div>POST /pay  key=<span class="o">a7f3</span></div><div class="ok">→ same result, no new charge</div></div>
+<div class="fix">Retries become safe. Our own posting pipeline uses <b>one key per post</b>, so a retry never posts twice.</div>
+</div></body></html>
