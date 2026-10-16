@@ -116,3 +116,7 @@
 - 2026-10-16 · surgelabs_ · story1 · hackdays-promo: SurgeLabs powers Hack Days, what builders get · question · scheduled 07:40
 - 2026-10-16 · homingo._ · story1 · app: My Ads, views and inquiries on every ad · impossible · scheduled 08:22
 - 2026-10-16 · homingo.verse · story1 · science: Ether Day, first public ether anaesthesia 1846 · impossible · scheduled 08:47
+- 2026-10-16 · homingo.hackdays · story2 · culture: culture: 3 AM it finally runs, a chat-bubble mood story from 3:12 AM to sunrise, tagline a · mood · scheduled 19:40 (post 7088c2ac-6a3b-4913-9449-ca8f920642a1)
+- 2026-10-16 · surgelabs_ · story2 · pattern: pattern of the day: Promise.all throws on the first failed call and drops the other result · question · scheduled 19:40 (post 4caba8f3-c1f4-41a3-a9e9-ad938d33ed7c)
+- 2026-10-16 · homingo._ · story2 · sell: Let it go: the old phone in the drawer since the upgrade, ends at Tap Sell (real Sell butt · you-in-it · scheduled 20:22 (post 203eb226-b0eb-42d3-9552-efad4bc68797)
+- 2026-10-16 · homingo.verse · story2 · indian-history: map moment: Nalanda (Buddhist learning centre, Bihar, c. 5th-13th century CE, UNESCO World · impossible · scheduled 21:47 (post a566a3d4-d32d-4559-9ab7-8c2d2381619e)
