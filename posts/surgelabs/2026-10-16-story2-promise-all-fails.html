@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>SurgeLabs story: Promise.all and one failure</title>
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--line:#2A2A31;--grid:#16161B}
+html,body{margin:0;background:var(--bg)}
+.frame{width:1080px;height:1920px;position:relative;overflow:hidden;color:var(--fg);font-family:Sans;background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:90px 90px}
+.glow{position:absolute;width:1100px;height:1000px;pointer-events:none}
+.top{position:absolute;left:72px;right:72px;top:270px;display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.03em;text-transform:none;color:var(--fg)}
+.mark span{color:var(--teal)}
+h1{position:absolute;left:72px;right:72px;top:360px;font-size:94px;font-weight:600;letter-spacing:-.045em;line-height:1.04;margin:0}
+.t{color:var(--teal)}
+.sub{display:block;font-size:34px;line-height:1.35;color:var(--soft);font-weight:400;letter-spacing:0;margin-top:30px}
+.term{position:absolute;left:72px;right:72px;top:960px;background:#111114;border:1px solid var(--line);border-radius:22px;padding:28px 38px;font-family:Mono;font-size:29px;line-height:1.7}
+.term .c{color:var(--muted)}
+.term .o{color:var(--purple)}
+.term .ok{color:var(--teal)}
+.term .bad{color:#F87171}
+.term hr{border:0;border-top:1px solid var(--line);margin:14px 0}
+.fix{position:absolute;left:72px;right:72px;top:1420px;font-size:34px;line-height:1.38}
+.fix b{color:var(--teal);font-weight:600}
+</style></head>
+<body><div class="frame">
+<div class="glow" style="left:-300px;top:-200px;background:radial-gradient(closest-side,rgba(139,108,255,.22),transparent)"></div>
+<div class="glow" style="right:-400px;bottom:-200px;background:radial-gradient(closest-side,rgba(45,212,191,.14),transparent)"></div>
+<div class="top"><div class="mark"><span>&#9632;</span> SURGELABS</div><div>Pattern of the day</div></div>
+<h1>5 calls. Call #3 fails. What does <span class="t">Promise.all</span> give you?<span class="sub">Only the error. No results from the 4 calls that worked.</span></h1>
+<div class="term"><div class="c">// all-or-nothing</div><div>await Promise.all(calls)</div><div class="bad">→ throws the error from call #3</div><hr><div class="c">// every outcome, kept</div><div>await Promise.<span class="o">allSettled</span>(calls)</div><div class="ok">→ 4 fulfilled, 1 rejected</div></div>
+<div class="fix">Faster is not the same as safe. Use <b>allSettled</b> when partial results still matter.</div>
+</div></body></html>
