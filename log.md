@@ -120,3 +120,7 @@
 - 2026-10-16 · surgelabs_ · story2 · pattern: pattern of the day: Promise.all throws on the first failed call and drops the other result · question · scheduled 19:40 (post 4caba8f3-c1f4-41a3-a9e9-ad938d33ed7c)
 - 2026-10-16 · homingo._ · story2 · sell: Let it go: the old phone in the drawer since the upgrade, ends at Tap Sell (real Sell butt · you-in-it · scheduled 20:22 (post 203eb226-b0eb-42d3-9552-efad4bc68797)
 - 2026-10-16 · homingo.verse · story2 · indian-history: map moment: Nalanda (Buddhist learning centre, Bihar, c. 5th-13th century CE, UNESCO World · impossible · scheduled 21:47 (post a566a3d4-d32d-4559-9ab7-8c2d2381619e)
+- 2026-10-17 · homingo.hackdays · story · track-spotlight: Automation track, pipeline idea (hostel requests) · statement · scheduled 07:40 (post a6e1435c-5a5d-48f9-836e-1037c04a173f)
+- 2026-10-17 · surgelabs_ · story · myth-vs-fact: an AI agent is not a chatbot with a new name · myth · scheduled 07:40 (post 9c9a8bb9-5de6-4f6a-a718-6317dd494c88)
+- 2026-10-17 · homingo._ · story · sell: keep it or sell it, the unused cycle · question · scheduled 08:22 (post 83eef74b-028d-4869-825e-82c816c9e757)
+- 2026-10-17 · homingo.verse · story · space: one-frame wonder, a day on Venus is longer than its year · impossible · scheduled 08:47 (post 1cc01069-7646-46fc-8209-72563aba28da)
