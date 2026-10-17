@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>SurgeLabs story: map and parseInt</title>
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--line:#2A2A31;--grid:#16161B}
+html,body{margin:0;background:var(--bg)}
+.frame{width:1080px;height:1920px;position:relative;overflow:hidden;color:var(--fg);font-family:Sans;background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:90px 90px}
+.glow{position:absolute;width:1100px;height:1000px;pointer-events:none}
+.top{position:absolute;left:72px;right:72px;top:270px;display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.045em;text-transform:none;color:var(--fg)}
+.mark span{color:var(--teal)}
+h1{position:absolute;left:72px;right:72px;top:360px;font-size:84px;font-weight:600;letter-spacing:-.045em;line-height:1.06;margin:0}
+h1 code{display:block;font-family:Mono;font-weight:500;font-size:55px;letter-spacing:-.02em;color:var(--purple);margin-bottom:18px}
+.t{color:var(--teal)}
+.sub{display:block;font-size:34px;line-height:1.35;color:var(--soft);font-weight:400;letter-spacing:0;margin-top:30px}
+.opts{position:absolute;left:72px;right:72px;top:880px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.o{background:#111114;border:1px solid var(--line);border-radius:22px;padding:22px 24px;font-family:Mono;font-size:30px;color:var(--soft)}
+.o b{display:block;font-size:22px;letter-spacing:.12em;color:var(--muted);margin-bottom:10px;font-weight:500}
+.o.win{border-color:var(--teal);background:rgba(45,212,191,.1);color:var(--fg)}
+.o.win b{color:var(--teal)}
+.term{position:absolute;left:72px;right:72px;top:1090px;background:#111114;border:1px solid var(--line);border-radius:22px;padding:26px 38px;font-family:Mono;font-size:29px;line-height:1.75}
+.term .c{color:var(--muted)}
+.term .o2{color:var(--purple)}
+.term .ok{color:var(--teal)}
+.fix{position:absolute;left:72px;right:72px;top:1470px;font-size:32px;line-height:1.4;color:var(--soft)}
+.fix b{color:var(--teal);font-weight:600;font-family:Mono;font-size:30px}
+</style></head>
+<body><div class="frame">
+<div class="glow" style="left:-300px;top:-200px;background:radial-gradient(closest-side,rgba(139,108,255,.22),transparent)"></div>
+<div class="glow" style="right:-400px;bottom:-200px;background:radial-gradient(closest-side,rgba(45,212,191,.14),transparent)"></div>
+<div class="top"><div class="mark"><span>&#9632;</span> SURGELABS</div><div>JS quiz</div></div>
+<h1><code>["1","2","3"].map(parseInt)</code>Not <span class="t">[1, 2, 3].</span><span class="sub">map passes the index as a second argument. parseInt reads it as the radix.</span></h1>
+<div class="opts"><div class="o"><b>A</b>[1, 2, 3]</div><div class="o win"><b>B &#10003;</b>[1, NaN, NaN]</div><div class="o"><b>C</b>throws</div></div>
+<div class="term"><div class="c">// what parseInt actually receives</div><div>parseInt("1", <span class="o2">0</span>) <span class="ok">→ 1</span></div><div>parseInt("2", <span class="o2">1</span>) <span class="ok">→ NaN</span></div><div>parseInt("3", <span class="o2">2</span>) <span class="ok">→ NaN</span></div></div>
+<div class="fix">Fix: <b>.map(Number)</b> or <b>.map(s =&gt; parseInt(s, 10))</b></div>
+</div></body></html>
