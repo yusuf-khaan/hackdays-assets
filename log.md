@@ -124,3 +124,7 @@
 - 2026-10-17 · surgelabs_ · story · myth-vs-fact: an AI agent is not a chatbot with a new name · myth · scheduled 07:40 (post 9c9a8bb9-5de6-4f6a-a718-6317dd494c88)
 - 2026-10-17 · homingo._ · story · sell: keep it or sell it, the unused cycle · question · scheduled 08:22 (post 83eef74b-028d-4869-825e-82c816c9e757)
 - 2026-10-17 · homingo.verse · story · space: one-frame wonder, a day on Venus is longer than its year · impossible · scheduled 08:47 (post 1cc01069-7646-46fc-8209-72563aba28da)
+- 2026-10-17 · homingo.hackdays · story2 · builder-tip: README in one scroll · impossible · scheduled 19:40
+- 2026-10-17 · surgelabs_ · story2 · quiz: map(parseInt) gives [1, NaN, NaN] · you-are-wrong · scheduled 19:40
+- 2026-10-17 · homingo._ · story2 · find: budget and distance filters · impossible · scheduled 20:22
+- 2026-10-17 · homingo.verse · story2 · technology: Calder Hall 17 Oct 1956 · number-twist · scheduled 21:47
