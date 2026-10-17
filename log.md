@@ -128,3 +128,7 @@
 - 2026-10-17 · surgelabs_ · story2 · quiz: map(parseInt) gives [1, NaN, NaN] · you-are-wrong · scheduled 19:40
 - 2026-10-17 · homingo._ · story2 · find: budget and distance filters · impossible · scheduled 20:22
 - 2026-10-17 · homingo.verse · story2 · technology: Calder Hall 17 Oct 1956 · number-twist · scheduled 21:47
+- 2026-10-18 · homingo.hackdays · story · countdown: 28 days left to register · countdown-list · scheduled 07:40
+- 2026-10-18 · surgelabs_ · story · explainer: observability in three lines · statement · scheduled 07:40
+- 2026-10-18 · homingo._ · story · lucknow: Diwali is 8 Nov, make room · countdown-list · scheduled 08:22
+- 2026-10-18 · homingo.verse · story · space: Galileo launched toward Jupiter, 18 Oct 1989 · number-twist · scheduled 08:47
