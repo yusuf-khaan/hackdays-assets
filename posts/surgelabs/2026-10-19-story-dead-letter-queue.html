@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>SurgeLabs story: dead-letter queue</title>
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--line:#2A2A31;--grid:#16161B}
+html,body{margin:0;background:var(--bg)}
+.frame{width:1080px;height:1920px;position:relative;overflow:hidden;color:var(--fg);font-family:Sans;background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:90px 90px}
+.glow{position:absolute;width:1100px;height:1000px;pointer-events:none}
+.top{position:absolute;left:72px;right:72px;top:270px;display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.045em;text-transform:none;color:var(--fg)}
+.mark span{color:var(--teal)}
+h1{position:absolute;left:72px;right:72px;top:360px;font-size:96px;font-weight:600;letter-spacing:-.045em;line-height:1.04;margin:0}
+.t{color:var(--teal)}
+.sub{display:block;font-size:34px;line-height:1.35;color:var(--soft);font-weight:400;letter-spacing:0;margin-top:30px}
+.d{position:absolute;left:72px;right:72px;top:840px;height:640px}
+.box{position:absolute;background:#111114;border:1px solid var(--line);border-radius:22px;padding:22px 26px;font-family:Mono;font-size:28px;line-height:1.35}
+.k{font-family:Mono;font-size:19px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:8px}
+.arrow{position:absolute;font-family:Mono;color:var(--purple);font-size:26px;text-align:center}
+.foot{position:absolute;left:72px;right:72px;top:1500px;font-family:Mono;font-size:24px;line-height:1.6;color:var(--muted)}
+.foot b{color:var(--fg);font-weight:500}
+</style></head>
+<body><div class="frame">
+<div class="glow" style="left:-300px;top:-200px;background:radial-gradient(closest-side,rgba(139,108,255,.22),transparent)"></div>
+<div class="glow" style="right:-400px;bottom:-200px;background:radial-gradient(closest-side,rgba(45,212,191,.14),transparent)"></div>
+<div class="top"><div class="mark"><span>&#9632;</span> SURGELABS</div><div>Pattern of the day</div></div>
+<h1>One message fails every time. <span class="t">Then what?</span><span class="sub">A queue, a worker, and a message the worker can never finish.</span></h1>
+<div class="d">
+ <div class="box" style="left:0;top:0;width:430px"><span class="k">Queue</span>msg #1 ok<br>msg #2 ok<br><span style="color:var(--purple)">msg #3 bad</span></div>
+ <div class="box" style="right:0;top:0;width:430px"><span class="k">Worker</span>try 1 fail<br>try 2 fail<br>try 3 fail</div>
+ <div class="arrow" style="left:430px;width:120px;top:70px;font-size:56px">&rarr;</div>
+ <div class="arrow" style="left:0;right:0;top:250px;font-size:30px;color:var(--soft)">limit reached &darr;</div>
+ <div class="box" style="left:0;right:0;top:330px;border-color:var(--teal);box-shadow:0 0 40px rgba(45,212,191,.18)"><span class="k" style="color:var(--teal)">Dead-letter queue</span><span style="color:var(--teal)">msg #3 parked here</span><br><span style="color:var(--soft);font-size:26px">Set aside after a set number of failed attempts, so you can inspect it. The main queue keeps moving.</span></div>
+ <div class="arrow" style="left:0;right:0;top:590px;font-size:20px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase">Illustrative</div>
+</div>
+<div class="foot"><b>Have you set a retry limit yet?</b><br>SurgeLabs also powers @homingo.hackdays</div>
+</div></body></html>
