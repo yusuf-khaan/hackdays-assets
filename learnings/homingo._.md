@@ -1,61 +1,62 @@
 # Learnings: @homingo._
 
-Read on every run; the weekly review rewrites it. Keep it under about 120 lines. Evidence lives in data/homingo._.jsonl. Last rewrite: weekly review 2026-W41 (11 Oct).
+Read on every run; the weekly review rewrites it. Keep it under about 120 lines. Evidence lives in data/homingo._.jsonl (cloud posts) and list_posts (the owner's reels). Last rewrite: weekly review 2026-W42 (18 Oct).
 
-## State of the evidence (2026-W41)
-- No post is 48 h old yet (the system started 11 Oct), so no `metrics` are filled and nothing is proven or ruled out by numbers.
-- Early snapshot, NOT a metric (11 Oct, 23:09 IST, posts 4-7 h old): carousels reached 5-12 accounts (bike checks 12, which-ad 8, app overview 5); the reels (not made by the cloud runs) reached 66-117 (finding reel 66 after 3 h, list-free reel 117). Reels out-reach carousels here by roughly 10×. Same pattern on all four accounts; raised with the owner.
-- Two @homingo._ reels on 10-11 Oct (74eeeb16 "PG or room in Lucknow") are no longer readable on Instagram (probably deleted by the owner).
+## State of the evidence (2026-W42)
+- Since 15 Oct the cloud runs make only stories here; the feed is the owner's reels (no cloud carousel after 14 Oct). Raised with the owner: RUN.md still says 2 carousels a day.
+- Cloud carousels, 11-14 Oct (8, measured 18 Oct 23:09, 4-7 days old): reach 11-23, median 14; likes 2-6; **0 saves and 0 shares on all 8.** Best: bike checks 23 and which-ad 19 (the two 11 Oct explainers, first posts on the feed); campaign ads 11-15.
+- Owner's reels (latest stored readings, 1-7 days old): median ~96 reach, 7× the carousels. Top: "furnish your room without buying anything new" 147 (1 save), real Alto listing 121, "list it free" 118, real iPad mini listing 112 (12 h), used-bike checks 106, sofa 96.
+- Stories: Instagram only reports them while live (24 h). First reading: 18 Oct story 1 (Diwali, make room) reach 17 at 15 h; story 2 (1K+ listings) 9 at 3 h. From now on the evening run records every story (RUN.md "Story metrics").
+- The 18 Oct 17:17 reel (Yamaha Fazer, 2c5bb764) is published in Instahook but unreadable on Instagram 2 h later; raised with the owner.
 
 ## Proven (do more)
-_Nothing proven yet: a pattern needs at least 3 posts beating the account median. Until metrics exist, follow homingo.md "Campaign lines" and CAROUSEL.md._
+_Nothing proven by the rule (3+ posts beating the median). Carousel reach sat in a tight 11-23 band whatever the hook, CTA or format, so no carousel pattern separates._
+- Leading signal from the owner's reels (not cloud data): a real listing with its price in the first line (Alto Rs 2.95 lakh 121, iPad mini Rs 26,000 112, bed Rs 8,500 73). Stories can borrow it: real listing screen + price from brand/homingo-app/ or a live listing the owner names; never invent a listing or price.
 
 ## Avoid
-- (Owner, 2026-10-11) Explainer, how-to and checklist carousels. The feed advertises Homingo like a marketing agency: Pinterest-level campaign creative with a storyline (unused goods → sell on Homingo with one tap).
-- (Owner, 2026-10-11) Dark backgrounds and orange. Blue and white only, like the app (#F5F6FA / white ground, #2563EB, #111827 text). The 11 Oct bike carousel and red-flag story went out in the old dark/orange style: don't reuse them as references.
+- (Owner, 2026-10-11) Explainer, how-to and checklist carousels. The feed advertises Homingo like a marketing agency: campaign creative with a storyline (unused goods → sell on Homingo with one tap). Note: the two explainers out-reached the campaign ads (23, 19 vs 11-15), but they were also the first two posts; the owner's rule stands.
+- (Owner, 2026-10-11) Dark backgrounds and orange. Blue and white only, like the app (#F5F6FA / white ground, #2563EB, #111827 text).
 - (Owner, 2026-10-11) The Chats screen in any post. Reference the real app UI from brand/homingo-app/ (Home, Listing, My Ads, Search).
-- Repeating the reels' generic app overview (10-11 Oct). A campaign carousel sells one feeling or one object, not the whole app.
-- Middle slides as text lists with no visual (self-reviews, 2 of 3 carousels). One hero visual per slide.
-- Two absolutely positioned text blocks for a headline and its sub-line (overlapped three times on 11 Oct). `render.js`/`carousel.js` now WARN on it.
+- Invented listings or prices. A price on a story must be on a real screen (the 17 Oct Rs 11,000 story used a real listing screen: keep doing that).
+- "Search Homingo" in captions (claims.js flags it: an unrelated App Store app). Write "On Homingo, search…".
+- Text over an SVG drawing near the swipe cue or story edges: lint.js doesn't catch it; check by eye.
+- Middle slides or story halves left empty (most common self-review complaint, 5 of 8 carousels). One hero visual filling the frame.
 
-## Experiments running
-- From 12 Oct: stories by a Sonnet helper, carousels on Opus. Next review: compare `sent_back` and self-reviews of Sonnet stories with the 11 Oct Opus stories; if they fall short, move stories back to Opus.
-- From 12 Oct: campaign-ad format (reference deck c1 "Your room is full of money", hook 25). Measure it against the 11 Oct explainers once both are 48 h+ old: reach first, then saves+shares. A campaign deck should still beat the 24/30 hook gate.
-- Carried over, unmeasured: interactive A-vs-B opener ("Which ad do you tap?", 11 Oct c2). Verdict waits for its 48 h metrics (fill on 13 Oct+).
-- Closed: `mistake-warning` vs `countdown-list` hooks and save vs share CTA (explainer-only tests; explainers are retired by the owner).
+## Experiments closed (2026-W42)
+- Object-hero vs moodboard opener: object-hero (Museum 01, 02) reached 13 and 13, the same as everything else. No effect at this reach. Closed.
+- "Exhibits" series: 2 parts, 13 each, 0 saves. No lift. Closed; Exhibit 03 (mattress) can run as a story.
+- Share CTA vs "List it free": share 13 vs conversion median 13; 0 shares either way. Closed, no difference.
+- A-vs-B "which ad do you tap" opener: 19, second-best carousel, but 1 post. Not proven.
+- Sonnet story helper: 16 stories, 0 sent back, no owner complaint. Keep Sonnet. (Evidence weak: 12 of 16 story lines had no self_review.)
 
-## Next week's experiments (open 2026-W42)
-1. Object-hero vs moodboard-collage opener: alternate campaign carousels between a single drawn object on slide 1 ("The treadmill is now a clothes stand") and a pin-board collage. Hypothesis: one object reads faster in the feed and lifts reach.
-2. A recurring campaign series ("Exhibits": one forgotten object per post, same frame and numbering). Hypothesis: a series lifts follows and saves vs one-off ads.
-3. CTA "Send this to the friend with the treadmill" (share) vs "List it free" (conversion) on the last slide. Record which in `cta`.
+## Next week's experiments (open 2026-W42; stories, measured by reach at the evening run)
+1. Real-listing story (real screen + price, like the best reels) vs "Let it go" object story. Hypothesis: a concrete price lifts story reach. Record `experiment` on both.
+2. Story 1 (08:22) vs story 2 (20:22): which slot reaches more over the week. No change to slots; just compare.
+3. A story that points at that day's reel ("New on the feed: …") vs a standalone story. Hypothesis: tie-in stories pull reel views and reach the same.
 
 ## Owed (promised part 2s and follow-ups)
-- "Exhibits" part 2 if c1 "Your room is full of money" teases a series (check its last slide).
-- "The Homingo Museum" Exhibit 02 (13 Oct c1, treadmill, last slide says "The museum has more exhibits. Next one soon."). Slide 3 already named the next exhibits: the guitar (02), last sem's books (03), the cycle (04), the spare mattress (05). Note: the guitar was a 12 Oct story, so pick books or the mattress for 02 within ~1 week, same frame (Mono "The Homingo Museum · Exhibit 0N" label, pinned card, museum plaque).
+- "The Homingo Museum" Exhibit 03: the spare mattress (Exhibit 02's last slide promised it). Carousels have stopped: make it a story frame in the same Museum style, or drop it after 28 Oct.
 
-- "The Homingo Museum" Exhibit 03: the spare mattress (14 Oct c1 Exhibit 02 = last sem's books; its last slide says "Next exhibit: the spare mattress."). Post within ~1 week, same frame.
-
-## Backlog (campaign ideas; verify any fact before use, every claim must be true of the app)
+## Backlog (verify any fact before use; every claim must be true of the app)
 - Let it go: "Moving out? Don't carry it." Hostel/PG move-out; boxes that never get unpacked.
-- Let it go: "The treadmill is now a clothes stand." Exhibits: treadmill, exam books, the second mattress.
+- Let it go: Diwali safai (8 Nov 2026): "Clean the house. Fill the wallet." (18 Oct story used "make room": next angle is the cleaning itself.)
 - Let it go: "Upgraded your phone? Your old one has a second life waiting." (time with a phone launch).
-- Let it go: Diwali safai (around 8 Nov 2026, verify date): "Clean the house. Fill the wallet."
-- Let it go: "Semester over. Your books aren't." Exam books to the next batch.
-- Let it go: "The cycle you rode once." Gym/fitness gear bought in January.
-- Find it here: "Furnish a whole room. Buy nothing new." Room built object by object from listings.
+- Let it go: "Semester over. Your books aren't." (Museum 02 covered books on 14 Oct; wait until 28 Oct.)
+- Let it go: "The cycle you rode once." (17 Oct story was the cycle; wait until 31 Oct.)
+- Let it go: "Your heater has one more winter in it. Someone else's." (late Oct/Nov).
+- Find it here: "Furnish a whole room. Buy nothing new." (the owner's best reel; a story version with real screens).
 - Find it here: "First job in Lucknow, first room." Bed, desk, cooler from local sellers.
-- The app: product hero "Chat or Call: straight to the person who listed it" (Listing screen, never Chats).
 - The app: "Three taps to list" on the real My Ads screen.
+- The app: Listing screen product hero: "Chat or Call: straight to the person who listed it" (never Chats).
 - Lucknow: "Lucknow shares. Tehzeeb, chai, and now your old cycle."
-- Winter: "Your heater has one more winter in it. Someone else's." (late Oct/Nov).
+- Lucknow: Diwali week countdown frames (1-8 Nov): one object to clear per day.
 
 ## Notes from runs
-- 2026-10-13 batch: first object-hero opener (c1 treadmill, W42 experiment 1) and first Lucknow-line campaign ("Pehle aap", c2). Both with conversion CTA. WebFetch and curl to most sites are blocked (proxy 403), so web research gives titles only; keep outside claims to well-known cultural facts with several matching titles.
-- 2026-10-14 batch: c1 Museum Exhibit 02 (books) with the first share CTA (W42 #3), product shot on my-ads.jpg with Sell circled; c2 first "Find it here" campaign (first room after a job offer) on the real search-rent.jpg. claims.js flags "Search Homingo" in captions (unrelated App Store app): write "On Homingo, search…" instead.
-- lint.js does not flag text sitting on top of an SVG drawing (slide-1 swipe cue overlapped the doorstep in round 1); check swipe cues by eye.
+- WebFetch and curl to most sites are blocked (proxy 403); web research gives titles only. Keep outside claims to well-known cultural facts with several matching titles.
 
 ## Changelog
 - 2026-10-10: learnings file created with the carousel system.
-- 2026-10-11: first decks (bike papers-first, which-ad-would-you-tap, red-flag deposit story). Blue #2563EB from the app theme.
-- 2026-10-11 (owner): blue-and-white rule; real app UI; switch from explainers to campaign ads. Reference deck 2026-10-12 c1.
-- 2026-W41 review: overlap trap logged here is now a WARN in `tools/carousel.js` and `tools/render.js` (tools/lint.js); carousels with 5 or fewer slides no longer crash the contact sheet. Old how-to backlog and explainer experiments retired.
+- 2026-10-11 (owner): blue-and-white rule; real app UI; switch from explainers to campaign ads.
+- 2026-W41 review: overlap trap became a WARN (tools/lint.js); small-deck contact-sheet crash fixed.
+- 2026-10-13/14: first object-hero opener, first Lucknow line, first share CTA, first "Find it here" campaign.
+- 2026-W42 review: carousel metrics filled (8); stories now measured by the evening run (RUN.md "Story metrics"); `stats.js` compares reach when no post has a save or share; experiments closed, story experiments opened.

@@ -27,7 +27,7 @@ Stories get a line too, with `"kind":"story"` (no hook score needed). Every line
 - When a post is replaced (keys ending `-f`, `-r`, `-b`, `-t`), keep the original line and add `"final_post_id"` for the live replacement, so the evening run fills `permalink` from the post that actually published. Record `idempotency_key` on new lines.
 
 ## Weekly review: measure what's measurable
-Daily runs skip this. The weekly review looks for an Instahook tool that returns post insights (a tool whose name contains "insight", "metric" or "stat"; check with ToolSearch). If one exists, fill `metrics` for this account's posts that are 48 hours to 14 days old and still have `metrics: null`: reach, views, likes, comments, saves, shares, as available, plus `"measured_at"`. If no such tool exists, leave metrics null; the loop then learns from self-reviews and owner feedback only, and says so in the weekly review.
+Daily runs skip this for carousels (the evening run records story metrics, RUN.md "Story metrics", because stories lose their insights after 24 h). The weekly review looks for an Instahook tool that returns post insights (`get_post_insights`, or the insights inside `list_posts`). If one exists, call it with `refresh=true` and fill `metrics` for this account's posts that are 48 hours to 28 days old and still have `metrics: null`: reach, views, likes, comments, saves, shares, as available, plus `"measured_at"`. Stories past 24 h and posts removed from Instagram return nothing: leave those null and say so in the review. If no such tool exists, leave metrics null; the loop then learns from self-reviews and owner feedback only, and says so in the weekly review.
 
 ## Improve the system
 Daily runs fix the repo only when something broke or blocked them in that run (a tool bug, a wrong or contradictory line), small and safe. Every other improvement idea goes as one line in the learnings changelog, and the weekly review does it:
@@ -38,7 +38,7 @@ Write one line under "Changelog" in learnings/<account>.md (or in the review if 
 
 ## Weekly review (Sunday night, its own scheduled task)
 1. `git pull`; run `node tools/stats.js` for each account over 7 and 28 days. Work from the stats output and the learnings files; read raw data lines or log.md only for a specific question (`grep`, `tail`), never whole.
-2. If metrics exist, rank by **share + save rate** (saves + shares divided by reach) first, then reach. Without metrics, use self-reviews, hook scores and owner feedback, and say the evidence is weak.
+2. If metrics exist, rank by **share + save rate** (saves + shares divided by reach) first, then reach. When no measured post on an account has a save or share, rank by reach (`stats.js` then shows "vs median" as a reach ratio). The owner's reels on the same accounts (in `list_posts`, not in data/) are the comparison point for what the audience responds to; read them with `list_posts compact=true`. Without metrics, use self-reviews, hook scores and owner feedback, and say the evidence is weak.
 3. Per account, rewrite learnings/<account>.md:
    - **Proven** (do more): a pattern goes here only after at least 3 posts beat the account's median.
    - **Avoid**: a pattern goes here after at least 3 posts below 0.7 × median, or after any owner complaint.
