@@ -136,3 +136,7 @@
 - 2026-10-18 · surgelabs_ · story2 · capabilities: problem to build (agents, automation, infrastructure) · challenge · scheduled 19:40
 - 2026-10-18 · homingo._ · story2 · download: 1K+ listings, room for one more, tap Sell · number-twist · scheduled 20:22
 - 2026-10-18 · homingo.verse · story2 · indian-history: word origin, "loot" from Hindi lūṭ · impossible · scheduled 21:47
+- 2026-10-19 · homingo.hackdays · story1 · mentors: no fixed hours · question · scheduled 07:40
+- 2026-10-19 · surgelabs_ · story1 · pattern: dead-letter queue · question · scheduled 07:40
+- 2026-10-19 · homingo._ · story1 · sell: Let it go, the study table you outgrew · you-in-it · scheduled 08:22
+- 2026-10-19 · homingo.verse · story1 · mythology: the Gita opens with a question (1.1) · statement · scheduled 08:47
