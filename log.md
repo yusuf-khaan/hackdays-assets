@@ -145,3 +145,7 @@
 - 2026-10-19 · surgelabs_ · story2 · automation-idea: illustrative fee ledger · statement · scheduled 19:40
 - 2026-10-19 · homingo._ · story2 · app: My Ads, Mark Sold · question · scheduled 20:22
 - 2026-10-19 · homingo.verse · story2 · space: Chandrasekhar limit (on this day) · statement · scheduled 21:47
+- 2026-10-20 · homingo.hackdays · story1 · track-spotlight: LLM apps track · question · scheduled 07:40
+- 2026-10-20 · surgelabs_ · story1 · tool-or-pattern: circuit breaker · statement · scheduled 07:40
+- 2026-10-20 · homingo._ · story1 · sell: keep it or sell it, the chair · question · scheduled 08:22
+- 2026-10-20 · homingo.verse · story1 · technology: Sydney Opera House opened (on this day) · statement · scheduled 08:47
