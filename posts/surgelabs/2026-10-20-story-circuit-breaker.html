@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>SurgeLabs story: circuit breaker</title>
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--line:#2A2A31;--grid:#16161B}
+html,body{margin:0;background:var(--bg)}
+.frame{width:1080px;height:1920px;position:relative;overflow:hidden;color:var(--fg);font-family:Sans;background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:90px 90px}
+.glow{position:absolute;width:1100px;height:1000px;pointer-events:none}
+.top{position:absolute;left:72px;right:72px;top:270px;display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.045em;text-transform:none;color:var(--fg)}
+.mark span{color:var(--teal)}
+h1{position:absolute;left:72px;right:72px;top:360px;font-size:96px;font-weight:600;letter-spacing:-.045em;line-height:1.04;margin:0}
+.t{color:var(--teal)}
+.sub{display:block;font-size:34px;line-height:1.35;color:var(--soft);font-weight:400;letter-spacing:0;margin-top:30px}
+.d{position:absolute;left:72px;right:72px;top:860px;height:680px}
+.box{position:absolute;left:0;right:0;height:170px;background:#111114;border:1px solid var(--line);border-radius:22px;padding:22px 28px;font-family:Mono;font-size:27px;line-height:1.35;color:var(--soft)}
+.k{font-family:Mono;font-size:22px;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:8px}
+.arrow{position:absolute;left:0;right:0;text-align:center;font-family:Mono;font-size:22px;color:var(--muted);letter-spacing:.06em}
+.foot{position:absolute;left:72px;right:72px;top:1550px;font-family:Mono;font-size:24px;line-height:1.6;color:var(--muted)}
+.foot b{color:var(--fg);font-weight:500}
+</style></head>
+<body><div class="frame">
+<div class="glow" style="left:-300px;top:-200px;background:radial-gradient(closest-side,rgba(139,108,255,.22),transparent)"></div>
+<div class="glow" style="right:-400px;bottom:-200px;background:radial-gradient(closest-side,rgba(45,212,191,.14),transparent)"></div>
+<div class="top"><div class="mark"><span>&#9632;</span> SURGELABS</div><div>Pattern of the day</div></div>
+<h1>A service is down. <span class="t">Stop calling it.</span><span class="sub">The circuit breaker: a switch between your code and a dependency, in three states.</span></h1>
+<div class="d">
+ <div class="box" style="top:0"><span class="k" style="color:var(--teal)">1 &middot; Closed</span>Calls go through. Failures are counted.</div>
+ <div class="arrow" style="top:176px">&darr; failures reach the threshold</div>
+ <div class="box" style="top:220px;border-color:var(--purple)"><span class="k" style="color:var(--purple)">2 &middot; Open</span>Calls fail fast, without even trying.</div>
+ <div class="arrow" style="top:396px">&darr; after a timeout</div>
+ <div class="box" style="top:440px;border-color:var(--teal);box-shadow:0 0 40px rgba(45,212,191,.18)"><span class="k" style="color:var(--teal)">3 &middot; Half-open</span>A trial call. Success closes it; failure reopens it.</div>
+ <div class="arrow" style="top:636px;font-size:20px;text-transform:uppercase">Illustrative</div>
+</div>
+<div class="foot"><b>What does your app do when a dependency is down?</b><br>SurgeLabs also powers @homingo.hackdays</div>
+</div></body></html>
