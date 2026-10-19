@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>SurgeLabs story: receipts automation</title>
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--line:#2A2A31;--grid:#16161B}
+html,body{margin:0;background:var(--bg)}
+.frame{width:1080px;height:1920px;position:relative;overflow:hidden;color:var(--fg);font-family:Sans;background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:90px 90px}
+.glow{position:absolute;width:1100px;height:1000px;pointer-events:none}
+.top{position:absolute;left:72px;right:72px;top:270px;display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.045em;text-transform:none;color:var(--fg)}
+.mark span{color:var(--teal)}
+h1{position:absolute;left:72px;right:72px;top:360px;font-size:96px;font-weight:600;letter-spacing:-.045em;line-height:1.04;margin:0}
+.t{color:var(--teal)}
+.sub{display:block;font-size:34px;line-height:1.35;color:var(--soft);font-weight:400;letter-spacing:0;margin-top:30px}
+.cols{position:absolute;left:72px;right:72px;top:880px;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.col{border-radius:24px;padding:30px 30px 34px;background:#111114;border:1px solid var(--line);font-family:Mono;font-size:27px;line-height:1.35}
+.col h3{font:500 21px Mono;letter-spacing:.16em;text-transform:uppercase;margin:0 0 22px}
+.col .s{padding:16px 0;border-top:1px solid var(--line);color:var(--soft)}
+.col .s:first-of-type{border-top:0}
+.b h3{color:var(--purple)}
+.b .s{color:#B9B9C2}
+.a{border-color:rgba(45,212,191,.55);box-shadow:0 0 40px rgba(45,212,191,.14)}
+.a h3{color:var(--teal)}
+.a .s.h{color:var(--teal)}
+.foot{position:absolute;left:72px;right:72px;top:1400px;font-family:Mono;font-size:24px;line-height:1.6;color:var(--muted)}
+.foot b{color:var(--fg);font-weight:500}
+</style></head>
+<body><div class="frame">
+<div class="glow" style="left:-300px;top:-200px;background:radial-gradient(closest-side,rgba(139,108,255,.22),transparent)"></div>
+<div class="glow" style="right:-400px;bottom:-200px;background:radial-gradient(closest-side,rgba(45,212,191,.14),transparent)"></div>
+<div class="top"><div class="mark"><span>&#9632;</span> SURGELABS</div><div>Automation idea</div></div>
+<h1>Imagine a fee ledger that <span class="t">updates itself.</span><span class="sub">Illustrative: a small institute collects payment receipts in a chat group and retypes each one into a sheet.</span></h1>
+<div class="cols">
+<div class="col b"><h3>Today</h3><div class="s">Open the receipt</div><div class="s">Find the student</div><div class="s">Retype the amount</div><div class="s">Hope it matches</div></div>
+<div class="col a"><h3>Automated</h3><div class="s">Receipt arrives</div><div class="s">Read + match student</div><div class="s">Write the ledger row</div><div class="s h">Odd ones go to a human</div></div>
+</div>
+<div class="foot"><b>Illustrative example, not a client.</b><br>Backend automation: SurgeLabs builds it.</div>
+</div></body></html>
