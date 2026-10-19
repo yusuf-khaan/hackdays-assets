@@ -140,3 +140,8 @@
 - 2026-10-19 · surgelabs_ · story1 · pattern: dead-letter queue · question · scheduled 07:40
 - 2026-10-19 · homingo._ · story1 · sell: Let it go, the study table you outgrew · you-in-it · scheduled 08:22
 - 2026-10-19 · homingo.verse · story1 · mythology: the Gita opens with a question (1.1) · statement · scheduled 08:47
+- 2026-10-19 · homingo._ · story 1 · sell: the study table you outgrew · caught up late 17:55 (08:22 FAILED, publish_post) · https://www.instagram.com/stories/homingo._/4011370936930141627
+- 2026-10-19 · homingo.hackdays · story2 · benefits: rewards tiers · question · scheduled 19:40
+- 2026-10-19 · surgelabs_ · story2 · automation-idea: illustrative fee ledger · statement · scheduled 19:40
+- 2026-10-19 · homingo._ · story2 · app: My Ads, Mark Sold · question · scheduled 20:22
+- 2026-10-19 · homingo.verse · story2 · space: Chandrasekhar limit (on this day) · statement · scheduled 21:47
