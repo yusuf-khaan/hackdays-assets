@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>SurgeLabs story: webhook vs polling</title>
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--line:#2A2A31;--grid:#16161B}
+html,body{margin:0;background:var(--bg)}
+.frame{width:1080px;height:1920px;position:relative;overflow:hidden;color:var(--fg);font-family:Sans;background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:90px 90px}
+.glow{position:absolute;width:1100px;height:1000px;pointer-events:none}
+.top{position:absolute;left:72px;right:72px;top:270px;display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.045em;text-transform:none;color:var(--fg)}
+.mark span{color:var(--teal)}
+h1{position:absolute;left:72px;right:72px;top:360px;font-size:96px;font-weight:600;letter-spacing:-.045em;line-height:1.04;margin:0}
+.t{color:var(--teal)}
+.sub{display:block;font-size:34px;line-height:1.35;color:var(--soft);font-weight:400;letter-spacing:0;margin-top:30px}
+.d{position:absolute;left:72px;right:72px;top:800px}
+.box{background:#111114;border:1px solid var(--line);border-radius:22px;padding:24px 30px 26px;font-family:Mono;font-size:28px;line-height:1.5;color:var(--soft);margin-bottom:26px}
+.k{font-family:Mono;font-size:23px;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:10px}
+.q{color:var(--fg)}
+.foot{position:absolute;left:72px;right:72px;top:1500px;font-family:Mono;font-size:24px;line-height:1.6;color:var(--muted)}
+.foot b{color:var(--fg);font-weight:500}
+</style></head>
+<body><div class="frame">
+<div class="glow" style="left:-300px;top:-200px;background:radial-gradient(closest-side,rgba(139,108,255,.22),transparent)"></div>
+<div class="glow" style="right:-400px;bottom:-200px;background:radial-gradient(closest-side,rgba(45,212,191,.14),transparent)"></div>
+<div class="top"><div class="mark"><span>&#9632;</span> SURGELABS</div><div>Mini explainer</div></div>
+<h1>Stop asking. <span class="t">Let them call you.</span><span class="sub">Polling vs webhooks: two ways to learn that something happened in another system.</span></h1>
+<div class="d">
+ <div class="box"><span class="k" style="color:var(--purple)">Polling</span><span class="q">You: "anything new?"</span><br>Them: "no." &nbsp;"no." &nbsp;"no." &nbsp;"yes."</div>
+ <div class="box" style="border-color:var(--teal);box-shadow:0 0 40px rgba(45,212,191,.18)"><span class="k" style="color:var(--teal)">Webhook</span><span class="q">Them: POST /your-url</span><br>Sent once, when it happens.</div>
+ <div class="box" style="margin-bottom:0"><span class="k" style="color:var(--muted)">The catch</span>Your endpoint must be reachable, and must check who is really calling.</div>
+</div>
+<div class="foot"><b>Which one does your stack use today?</b><br>SurgeLabs also powers @homingo.hackdays</div>
+</div></body></html>
