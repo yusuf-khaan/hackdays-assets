@@ -149,3 +149,7 @@
 - 2026-10-20 · surgelabs_ · story1 · tool-or-pattern: circuit breaker · statement · scheduled 07:40
 - 2026-10-20 · homingo._ · story1 · sell: keep it or sell it, the chair · question · scheduled 08:22
 - 2026-10-20 · homingo.verse · story1 · technology: Sydney Opera House opened (on this day) · statement · scheduled 08:47
+- 2026-10-20 · homingo.hackdays · story2 · faq: Your laptop is the venue. · statement · scheduled 19:40
+- 2026-10-20 · surgelabs_ · story2 · quiz: typeof null is "object". · statement · scheduled 19:40
+- 2026-10-20 · homingo._ · story2 · lucknow: Happy Dussehra, Lucknow. · mood · scheduled 20:22
+- 2026-10-20 · homingo.verse · story2 · space: Sunsets on Mars are blue. · statement · scheduled 21:47
