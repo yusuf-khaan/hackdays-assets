@@ -153,3 +153,7 @@
 - 2026-10-20 · surgelabs_ · story2 · quiz: typeof null is "object". · statement · scheduled 19:40
 - 2026-10-20 · homingo._ · story2 · lucknow: Happy Dussehra, Lucknow. · mood · scheduled 20:22
 - 2026-10-20 · homingo.verse · story2 · space: Sunsets on Mars are blue. · statement · scheduled 21:47
+- 2026-10-21 · homingo.hackdays · story · builder-tip: open your demo video with it working · command · scheduled 07:40
+- 2026-10-21 · surgelabs_ · story · explainer: polling vs webhooks · contrast · scheduled 07:40
+- 2026-10-21 · homingo._ · story · app: rooms, flats and PGs (real Listing screen) · statement · scheduled 08:22
+- 2026-10-21 · homingo.verse · story · indian-history: Azad Hind, 21 Oct 1943 · paradox · scheduled 08:47
