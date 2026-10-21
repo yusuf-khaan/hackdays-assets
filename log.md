@@ -157,3 +157,7 @@
 - 2026-10-21 · surgelabs_ · story · explainer: polling vs webhooks · contrast · scheduled 07:40
 - 2026-10-21 · homingo._ · story · app: rooms, flats and PGs (real Listing screen) · statement · scheduled 08:22
 - 2026-10-21 · homingo.verse · story · indian-history: Azad Hind, 21 Oct 1943 · paradox · scheduled 08:47
+- 2026-10-21 · homingo.hackdays · story2 · benefits: Submit a repo. Open a door. · command · scheduled 19:40
+- 2026-10-21 · surgelabs_ · story2 · humour: It is a small fix. Ship it. · statement · scheduled 19:40
+- 2026-10-21 · homingo._ · story2 · sell: Moving out? Don't carry it. · command · scheduled 20:22
+- 2026-10-21 · homingo.verse · story2 · china: Paper money began in China. · statement · scheduled 21:47
