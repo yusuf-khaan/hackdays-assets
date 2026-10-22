@@ -165,3 +165,8 @@
 - 2026-10-22 · surgelabs_ · story · quiz: Logged in, but not allowed. Which status code? · question · scheduled 07:40
 - 2026-10-22 · homingo._ · story · sell: Keep it, or sell it? · question · scheduled 08:22
 - 2026-10-22 · homingo.verse · story · space: India's first Moon mission lifted off. · statement · scheduled 08:47
+- 2026-10-22 · homingo.hackdays · story2 19:40 · culture: sleep on it or ship it · question · scheduled
+- 2026-10-22 · surgelabs_ · story2 19:40 · teaser: DEBUG=false reel tease · paradox · scheduled
+- 2026-10-22 · homingo._ · story2 20:22 · find: furnish a room, buy nothing new · paradox · scheduled
+- 2026-10-22 · homingo.verse · story2 21:47 · mythology: avatar word origin · paradox · scheduled
+- 2026-10-22 · evening · trend scan (4 searches): no qualifying signal, no trend story
