@@ -170,3 +170,8 @@
 - 2026-10-22 · homingo._ · story2 20:22 · find: furnish a room, buy nothing new · paradox · scheduled
 - 2026-10-22 · homingo.verse · story2 21:47 · mythology: avatar word origin · paradox · scheduled
 - 2026-10-22 · evening · trend scan (4 searches): no qualifying signal, no trend story
+- 2026-10-23 · homingo._ · story1 08:22 · download: download nudge: Homingo on Android and iPhone; search rentals and seco · statement · scheduled
+- 2026-10-23 · homingo.hackdays · story1 07:40 · new-post-teaser: teaser of today's 08:05 reel (five AI agents, same prompt, only the wi · statement · scheduled
+- 2026-10-23 · surgelabs_ · story1 07:40 · teaser: teaser of today's 08:29 reel: a LEFT JOIN with a WHERE on the right ta · impossible · scheduled
+- 2026-10-23 · homingo.verse · story1 08:47 · technology: on this day: 23 Oct 1911, Captain Carlo Piazza flew a Blériot XI recon · impossible · scheduled
+- 2026-10-23 · morning · stories only (carousels discontinued by owner); no trend scan
