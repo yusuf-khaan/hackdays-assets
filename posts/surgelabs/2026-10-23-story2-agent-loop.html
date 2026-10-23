@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>SurgeLabs story 2: agent loop</title>
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--line:#2A2A31;--grid:#16161B}
+html,body{margin:0;background:var(--bg)}
+.frame{width:1080px;height:1920px;position:relative;overflow:hidden;color:var(--fg);font-family:Sans;background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:90px 90px}
+.glow{position:absolute;width:1100px;height:1000px;pointer-events:none}
+.top{position:absolute;left:72px;right:72px;top:270px;display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.045em;text-transform:none;color:var(--fg)}
+.mark span{color:var(--teal)}
+h1{position:absolute;left:72px;right:72px;top:360px;font-size:88px;font-weight:600;letter-spacing:-.045em;line-height:1.04;margin:0}
+.t{color:var(--teal)}
+.sub{display:block;font-size:36px;line-height:1.35;color:var(--soft);font-weight:400;letter-spacing:0;margin-top:30px}
+.dia{position:absolute;left:72px;right:72px;top:930px;height:560px}
+.foot{position:absolute;left:72px;right:72px;top:1520px;font-family:Mono;font-size:24px;line-height:1.6;color:var(--muted)}
+.foot b{color:var(--fg);font-weight:500}
+</style></head>
+<body><div class="frame">
+<div class="glow" style="left:-300px;top:-200px;background:radial-gradient(closest-side,rgba(139,108,255,.22),transparent)"></div>
+<div class="glow" style="right:-400px;bottom:-200px;background:radial-gradient(closest-side,rgba(45,212,191,.14),transparent)"></div>
+<div class="top"><div class="mark"><span>&#9632;</span> SURGELABS</div><div>Explained</div></div>
+<h1>A chatbot answers. An agent <span class="t">finishes the job.</span><span class="sub">The difference is one loop: plan, act, check, repeat until it is done.</span></h1>
+<div class="dia"><svg width="936" height="560" viewBox="0 0 936 560">
+<text x="0" y="30" font-family="Mono" font-size="22" letter-spacing="3" fill="#9A9AA3">CHATBOT</text>
+<g font-family="Mono" font-size="28">
+<rect x="0" y="50" width="240" height="80" rx="18" fill="#111114" stroke="#2A2A31" stroke-width="2"/><text x="120" y="100" text-anchor="middle" fill="#C8C8CE">question</text>
+<path d="M240 90 L330 90" stroke="#9A9AA3" stroke-width="3" stroke-linecap="round"/><path d="M318 80 L332 90 L318 100" fill="none" stroke="#9A9AA3" stroke-width="3" stroke-linecap="round"/>
+<rect x="330" y="50" width="240" height="80" rx="18" fill="#111114" stroke="#2A2A31" stroke-width="2"/><text x="450" y="100" text-anchor="middle" fill="#C8C8CE">answer</text>
+<text x="600" y="100" fill="#9A9AA3" font-size="26">and it stops</text></g>
+<line x1="0" y1="185" x2="936" y2="185" stroke="#2A2A31" stroke-width="2"/>
+<text x="0" y="245" font-family="Mono" font-size="22" letter-spacing="3" fill="#2DD4BF">AGENT</text>
+<g font-family="Mono" font-size="28">
+<rect x="0" y="285" width="190" height="80" rx="18" fill="#111114" stroke="#2A2A31" stroke-width="2"/><text x="95" y="335" text-anchor="middle" fill="#C8C8CE">goal</text>
+<rect x="250" y="285" width="190" height="80" rx="18" fill="#111114" stroke="#8B6CFF" stroke-width="2"/><text x="345" y="335" text-anchor="middle" fill="#F2F2F0">plan</text>
+<rect x="500" y="285" width="190" height="80" rx="18" fill="#111114" stroke="#8B6CFF" stroke-width="2"/><text x="595" y="335" text-anchor="middle" fill="#F2F2F0">use tool</text>
+<rect x="500" y="460" width="190" height="80" rx="18" fill="#111114" stroke="#8B6CFF" stroke-width="2"/><text x="595" y="510" text-anchor="middle" fill="#F2F2F0">check</text>
+<rect x="746" y="460" width="190" height="80" rx="18" fill="#2DD4BF"/><text x="841" y="510" text-anchor="middle" fill="#08080A" font-weight="600">done</text></g>
+<g stroke="#9A9AA3" stroke-width="3" fill="none" stroke-linecap="round">
+<path d="M190 325 L250 325"/><path d="M440 325 L500 325"/><path d="M595 365 L595 460"/><path d="M690 500 L746 500" stroke="#2DD4BF"/>
+<path d="M500 500 C345 500 345 440 345 365" stroke="#8B6CFF" stroke-dasharray="2 12"/></g>
+<text x="340" y="448" font-family="Mono" font-size="22" fill="#A78BFA" text-anchor="end">not done: loop</text>
+<text x="936" y="30" text-anchor="end" font-family="Mono" font-size="20" letter-spacing="2" fill="#9A9AA3">SIMPLIFIED</text>
+</svg></div>
+<div class="foot"><b>SurgeLabs builds agent systems, backend automation and scalable infrastructure.</b><br>Build your own in the Agents track at @homingo.hackdays</div>
+</div></body></html>
