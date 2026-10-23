@@ -179,3 +179,7 @@
 - 2026-10-23 · surgelabs_ · story2 · explainer: mini explainer: a chatbot answers, an agent loops plan-act-check until the job i · contrast · scheduled 19:40
 - 2026-10-23 · homingo._ · story2 · app: product hero: real listing screen, Chat with seller and Call buttons; enquiries  · imperative · scheduled 20:22
 - 2026-10-23 · homingo.verse · story2 · indian-history: one-frame wonder: Gwalior Chaturbhuj temple inscription (876 CE) records a 270-h · impossible · scheduled 21:47
+- 2026-10-24 · homingo.hackdays · story1 · teaser: tease of today's 08:05 reel: one line turns your coding agent into a security au · tease · scheduled 07:40
+- 2026-10-24 · surgelabs_ · story1 · teaser: teaser of today's 08:29 reel: a one-hour token expired right after Python issued · mystery · scheduled 07:40
+- 2026-10-24 · homingo._ · story1 · sell: bikes: from one rider to the next; real Home screen bike listing card, Tap Sell, · you-in-it · scheduled 08:22
+- 2026-10-24 · homingo.verse · story1 · space: on this day: 24 Oct 1946, a captured German V-2 rocket from White Sands carried  · impossible · scheduled 08:47
