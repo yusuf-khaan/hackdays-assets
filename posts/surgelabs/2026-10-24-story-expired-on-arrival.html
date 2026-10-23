@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>SurgeLabs story: expired on arrival</title>
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--line:#2A2A31;--grid:#16161B}
+html,body{margin:0;background:var(--bg)}
+.frame{width:1080px;height:1920px;position:relative;overflow:hidden;color:var(--fg);font-family:Sans;background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:90px 90px}
+.glow{position:absolute;width:1100px;height:1000px;pointer-events:none}
+.top{position:absolute;left:72px;right:72px;top:270px;display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.045em;text-transform:none;color:var(--fg)}
+.mark span{color:var(--teal)}
+h1{position:absolute;left:72px;right:72px;top:360px;font-size:100px;font-weight:600;letter-spacing:-.045em;line-height:1.05;margin:0}
+.t{color:var(--teal)}
+.sub{display:block;font-size:34px;line-height:1.35;color:var(--soft);font-weight:400;letter-spacing:0;margin-top:30px}
+.tok{position:absolute;left:72px;right:72px;top:880px;height:300px;background:#111114;border:1px solid var(--line);border-radius:26px;overflow:hidden}
+.tok:before,.tok:after{content:"";position:absolute;top:118px;width:44px;height:44px;border-radius:50%;background:var(--bg);border:1px solid var(--line)}
+.tok:before{left:-24px}.tok:after{right:-24px}
+.tok .l{position:absolute;left:64px;top:38px;font-family:Mono;font-size:22px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.tok .v{position:absolute;left:64px;top:84px;font-family:Mono;font-size:56px;font-weight:500;line-height:1.25}
+.tok .v small{display:block;font-size:26px;color:var(--soft);font-weight:400;letter-spacing:.02em}
+.tok .st{position:absolute;right:60px;top:80px;border:5px solid var(--purple);color:var(--purple);font-family:Mono;font-weight:500;font-size:54px;letter-spacing:.12em;padding:12px 28px;border-radius:14px;transform:rotate(-6deg)}
+.tok .d{position:absolute;left:64px;right:64px;top:226px;border-top:2px dashed var(--line);padding-top:18px;font-family:Mono;font-size:22px;color:var(--muted);letter-spacing:.06em}
+.code{position:absolute;left:72px;right:72px;top:1230px;background:#111114;border:1px solid var(--line);border-radius:22px;padding:28px 34px;font-family:Mono;font-size:30px;line-height:1.65;color:var(--soft)}
+.code b{color:var(--fg);font-weight:500}
+.bl{filter:blur(9px);display:inline-block;color:var(--teal)}
+.dim{color:var(--muted)}
+.foot{position:absolute;left:72px;right:72px;top:1530px;font-family:Mono;font-size:24px;line-height:1.6;color:var(--muted)}
+.foot b{color:var(--fg);font-weight:500}
+</style></head>
+<body><div class="frame">
+<div class="glow" style="left:-300px;top:-200px;background:radial-gradient(closest-side,rgba(139,108,255,.22),transparent)"></div>
+<div class="glow" style="right:-400px;bottom:-200px;background:radial-gradient(closest-side,rgba(45,212,191,.14),transparent)"></div>
+<div class="top"><div class="mark"><span>&#9632;</span> SURGELABS</div><div>Python &middot; Teaser</div></div>
+<h1>Valid for one hour.<br><span class="t">Dead on arrival.</span><span class="sub">Python made the token. The server refused it a moment later: expired. Which line of the code is lying?</span></h1>
+<div class="tok"><div class="l">Access token</div><div class="v">valid for 1 h<small>checked right away</small></div><div class="st">EXPIRED</div><div class="d">ILLUSTRATIVE &middot; NOT A REAL TOKEN</div></div>
+<div class="code"><b>now</b> = <span class="bl">a line we are hiding</span><br><b>exp</b> = now + timedelta(hours=1)<br><b>token</b> = issue(exp)<br><span class="dim"># server: expired</span></div>
+<div class="foot"><b>Illustrative code.</b><br>The hidden line is in today's reel on our feed.</div>
+</div></body></html>
