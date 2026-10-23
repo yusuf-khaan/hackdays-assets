@@ -175,3 +175,7 @@
 - 2026-10-23 · surgelabs_ · story1 07:40 · teaser: teaser of today's 08:29 reel: a LEFT JOIN with a WHERE on the right ta · impossible · scheduled
 - 2026-10-23 · homingo.verse · story1 08:47 · technology: on this day: 23 Oct 1911, Captain Carlo Piazza flew a Blériot XI recon · impossible · scheduled
 - 2026-10-23 · morning · stories only (carousels discontinued by owner); no trend scan
+- 2026-10-23 · homingo.hackdays · story2 · myth-vs-fact: myth vs fact: do you need a team? solo or teams of 2-4, online, all of India; re · question · scheduled 19:40
+- 2026-10-23 · surgelabs_ · story2 · explainer: mini explainer: a chatbot answers, an agent loops plan-act-check until the job i · contrast · scheduled 19:40
+- 2026-10-23 · homingo._ · story2 · app: product hero: real listing screen, Chat with seller and Call buttons; enquiries  · imperative · scheduled 20:22
+- 2026-10-23 · homingo.verse · story2 · indian-history: one-frame wonder: Gwalior Chaturbhuj temple inscription (876 CE) records a 270-h · impossible · scheduled 21:47

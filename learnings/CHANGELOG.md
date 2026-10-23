@@ -1,0 +1,1 @@
+- 2026-10-23: render.js hardcodes chromium-1194; this sandbox had chromium-1243 (helper symlinked it). Consider auto-detecting /opt/pw-browsers/chromium-*.
