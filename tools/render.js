@@ -4,7 +4,15 @@ const claims = require('./claims');
 const lint = require('./lint');
 (async () => {
   const [file, out, w = '1080', h = '1350'] = process.argv.slice(2);
-  const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
+  // Use CHROME_PATH, else the newest /opt/pw-browsers/chromium-*/chrome-linux(64)/chrome that exists (2026-10-25: 1194 was missing).
+  const fs = require('fs');
+  let exe = process.env.CHROME_PATH;
+  if (!exe || !fs.existsSync(exe)) {
+    const base = '/opt/pw-browsers';
+    const dirs = fs.existsSync(base) ? fs.readdirSync(base).filter(d => /^chromium-\d+$/.test(d)).sort((a, b) => +b.split('-')[1] - +a.split('-')[1]) : [];
+    exe = dirs.flatMap(d => ['chrome-linux', 'chrome-linux64'].map(s => path.join(base, d, s, 'chrome'))).find(p => fs.existsSync(p));
+  }
+  const browser = await chromium.launch({ executablePath: exe });
   const page = await browser.newPage({ viewport: { width: +w, height: +h }, deviceScaleFactor: 1 });
   await page.goto('file://' + path.resolve(file));
   await page.evaluate(() => document.fonts.ready);
