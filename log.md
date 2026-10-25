@@ -183,3 +183,12 @@
 - 2026-10-24 · surgelabs_ · story1 · teaser: teaser of today's 08:29 reel: a one-hour token expired right after Python issued · mystery · scheduled 07:40
 - 2026-10-24 · homingo._ · story1 · sell: bikes: from one rider to the next; real Home screen bike listing card, Tap Sell, · you-in-it · scheduled 08:22
 - 2026-10-24 · homingo.verse · story1 · space: on this day: 24 Oct 1946, a captured German V-2 rocket from White Sands carried  · impossible · scheduled 08:47
+- 2026-10-25 · homingo.hackdays · story1 18:40 (late catch-up) · countdown: 21 days. Then the door shuts. · deadline · scheduled
+- 2026-10-25 · homingo.hackdays · story2 19:40 · track-spotlight: Give it a task. Not a prompt. · contrast · scheduled
+- 2026-10-25 · surgelabs_ · story1 18:40 (late catch-up) · quiz: Is NaN equal to NaN? · question · scheduled
+- 2026-10-25 · surgelabs_ · story2 19:40 · capabilities: Three problems. Three systems. · contrast · scheduled
+- 2026-10-25 · homingo._ · story1 18:50 (late catch-up) · sell: Dust it off. Don't dump it. · command · scheduled
+- 2026-10-25 · homingo._ · story2 20:22 · find: Their upgrade. Your find. · paradox · scheduled
+- 2026-10-25 · homingo.verse · story1 19:00 (late catch-up) · indian-history: 75 years ago today, free India went to vote. · statement · scheduled
+- 2026-10-25 · homingo.verse · story2 21:47 · china: Farmers digging a well found an army. · paradox · scheduled
+- 2026-10-25 · evening · morning batch and 24 Oct evening run did not run; story 1s caught up late; trend scan (3 searches): no qualifying signal, no trend story
