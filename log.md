@@ -193,3 +193,8 @@
 - 2026-10-25 · homingo.verse · story2 21:47 · china: Farmers digging a well found an army. · paradox · scheduled
 - 2026-10-25 · evening · morning batch and 24 Oct evening run did not run; story 1s caught up late; trend scan (3 searches): no qualifying signal, no trend story
 - 2026-10-25 · homingo.hackdays · story1 FAILED at 18:40 (media not found), published on retry at 19:07
+- 2026-10-26 · homingo.hackdays · story1 07:40 · benefits: verifiable participation certificate · contrast · scheduled
+- 2026-10-26 · surgelabs_ · story1 07:40 · pattern: retry backoff + jitter · paradox · scheduled
+- 2026-10-26 · homingo._ · story1 08:22 · app: the Sell button, list free · contrast · scheduled
+- 2026-10-26 · homingo.verse · story1 08:47 · mythology: Samudra Manthan, poison first · paradox · scheduled
+- 2026-10-26 · morning · stories only (carousels discontinued by owner); yesterday's story 1 re-read at ~10 h (late catch-ups)
