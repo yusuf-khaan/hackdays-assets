@@ -192,3 +192,4 @@
 - 2026-10-25 · homingo.verse · story1 19:00 (late catch-up) · indian-history: 75 years ago today, free India went to vote. · statement · scheduled
 - 2026-10-25 · homingo.verse · story2 21:47 · china: Farmers digging a well found an army. · paradox · scheduled
 - 2026-10-25 · evening · morning batch and 24 Oct evening run did not run; story 1s caught up late; trend scan (3 searches): no qualifying signal, no trend story
+- 2026-10-25 · homingo.hackdays · story1 FAILED at 18:40 (media not found), published on retry at 19:07
