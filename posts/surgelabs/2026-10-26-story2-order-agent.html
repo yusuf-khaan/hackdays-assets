@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>SurgeLabs story: order agent</title>
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--line:#2A2A31;--grid:#16161B}
+html,body{margin:0;background:var(--bg)}
+.frame{width:1080px;height:1920px;position:relative;overflow:hidden;color:var(--fg);font-family:Sans;background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:90px 90px}
+.glow{position:absolute;width:1100px;height:1000px;pointer-events:none}
+.top{position:absolute;left:72px;right:72px;top:270px;display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.045em;text-transform:none;color:var(--fg)}
+.mark span{color:var(--teal)}
+h1{position:absolute;left:72px;right:72px;top:360px;font-size:96px;font-weight:600;letter-spacing:-.045em;line-height:1.05;margin:0}
+.t{color:var(--teal)}
+.sub{display:block;font-size:34px;line-height:1.35;color:var(--soft);font-weight:400;letter-spacing:0;margin-top:30px}
+.flow{position:absolute;left:72px;right:72px;top:910px}
+.row{display:flex;align-items:center;gap:0}
+.chat{width:300px;background:#111114;border:1px solid var(--line);border-radius:22px;padding:22px 24px;font-size:26px;line-height:1.35}
+.chat small{display:block;font-family:Mono;font-size:18px;letter-spacing:.12em;color:var(--purple);text-transform:uppercase;margin-bottom:8px}
+.arrow{flex:1;height:2px;background:var(--line);position:relative}
+.arrow:after{content:"";position:absolute;right:-2px;top:-7px;border-left:14px solid var(--teal);border-top:8px solid transparent;border-bottom:8px solid transparent}
+.agent{width:200px;height:200px;border-radius:50%;border:3px solid var(--teal);display:flex;align-items:center;justify-content:center;text-align:center;font-family:Mono;font-size:24px;letter-spacing:.08em;color:var(--teal);box-shadow:0 0 60px rgba(45,212,191,.25);flex:none}
+.sheet{margin-top:40px;background:#111114;border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.sheet .h{display:flex;font-family:Mono;font-size:20px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:16px 28px;border-bottom:1px solid var(--line)}
+.sheet .r{display:flex;font-size:28px;padding:20px 28px;border-bottom:1px solid var(--line)}
+.sheet .r:last-child{border-bottom:none}
+.sheet .a{flex:1.6}.sheet .b{flex:.6}.sheet .s{flex:1.2;text-align:right;font-family:Mono;font-size:24px;color:var(--teal)}
+.sheet .r.flag{background:rgba(167,139,250,.1)}.sheet .r.flag .s{color:var(--purple)}
+.lab{position:absolute;left:72px;top:1500px;font-family:Mono;font-size:20px;letter-spacing:.12em;color:var(--muted)}
+.foot{position:absolute;left:72px;right:72px;top:1540px;font-family:Mono;font-size:24px;line-height:1.6;color:var(--muted)}
+.foot b{color:var(--fg);font-weight:500}
+</style></head>
+<body><div class="frame">
+<div class="glow" style="left:-300px;top:-200px;background:radial-gradient(closest-side,rgba(139,108,255,.22),transparent)"></div>
+<div class="glow" style="right:-400px;bottom:-200px;background:radial-gradient(closest-side,rgba(45,212,191,.14),transparent)"></div>
+<div class="top"><div class="mark"><span>&#9632;</span> SURGELABS</div><div>Automation idea</div></div>
+<h1>The order came in at 11 PM. <span class="t">The sheet updated itself.</span><span class="sub">Imagine a small shop. An agent reads each chat order, fills the sheet, and flags the unclear ones for a human.</span></h1>
+<div class="flow"><div class="row"><div class="chat"><small>Chat order</small>"Two notebooks, tomorrow?"</div><div class="arrow"></div><div class="agent">AGENT</div></div>
+<div class="sheet"><div class="h"><div class="a">Item</div><div class="b">Qty</div><div class="s">Status</div></div>
+<div class="r"><div class="a">Notebook</div><div class="b">2</div><div class="s">logged</div></div>
+<div class="r flag"><div class="a">Unclear message</div><div class="b">?</div><div class="s">ask a human</div></div></div></div>
+<div class="lab">ILLUSTRATIVE SCENARIO &middot; SAMPLE DATA</div>
+<div class="foot"><b>Build one in the Automation track at @homingo.hackdays.</b><br>SurgeLabs powers Hack Days &middot; surgeit.co.in</div>
+</div></body></html>
