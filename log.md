@@ -203,3 +203,7 @@
 - 2026-10-26 · homingo._ · story2 20:22 · sell: A treadmill, or a clothes stand? · question · scheduled
 - 2026-10-26 · homingo.verse · story2 21:47 · space: Ask Voyager 1 a question. Wait two days. · you-in-it · scheduled
 - 2026-10-26 · evening · stories only; all 4 story 1s live, nothing to catch up; story metrics read; trend scan (3 searches): no qualifying signal, no trend story
+- 2026-10-27 · surgelabs_ · story 07:40 · quiz: Five rows in the table. What does COUNT(email) return? · question · scheduled
+- 2026-10-27 · homingo._ · story 08:22 · find: Somewhere in Lucknow, a heater is waiting out the summer. · curiosity-gap · scheduled
+- 2026-10-27 · homingo.verse · story 08:47 · indian-history: Turn over a ₹10 note. That wheel is a sundial. · you-in-it · scheduled
+- 2026-10-27 · morning · stories only (carousels discontinued by owner); @homingo.hackdays missing from Instahook list_accounts, its story 1 not made; 26 Oct story 1 and story 2 re-read on the other three accounts
