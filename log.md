@@ -198,3 +198,8 @@
 - 2026-10-26 · homingo._ · story1 08:22 · app: the Sell button, list free · contrast · scheduled
 - 2026-10-26 · homingo.verse · story1 08:47 · mythology: Samudra Manthan, poison first · paradox · scheduled
 - 2026-10-26 · morning · stories only (carousels discontinued by owner); yesterday's story 1 re-read at ~10 h (late catch-ups)
+- 2026-10-26 · homingo.hackdays · story2 19:40 · timeline: Five dates. One closes first. · number-twist · scheduled
+- 2026-10-26 · surgelabs_ · story2 19:40 · automation-idea: chat orders to a sheet · before-after · scheduled
+- 2026-10-26 · homingo._ · story2 20:22 · sell: A treadmill, or a clothes stand? · question · scheduled
+- 2026-10-26 · homingo.verse · story2 21:47 · space: Ask Voyager 1 a question. Wait two days. · you-in-it · scheduled
+- 2026-10-26 · evening · stories only; all 4 story 1s live, nothing to catch up; story metrics read; trend scan (3 searches): no qualifying signal, no trend story
