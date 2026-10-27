@@ -211,3 +211,7 @@
 - 2026-10-27 · homingo._ · story2 20:22 · download: Lucknow is already trading here. · statement · scheduled
 - 2026-10-27 · homingo.verse · story2 21:47 · china: Chai or tea? Your word shows the road it took. · paradox · scheduled
 - 2026-10-27 · evening · stories only; @homingo.hackdays still missing from Instahook list_accounts (no story 1 or story 2 today); other 3 story 1s live; story metrics read; trend scan (3 searches): no qualifying signal, no trend story; jsDelivr returned 403 once, raw.githubusercontent.com pinned SHA worked
+- 2026-10-28 · surgelabs_ · story 07:40 · pattern: Anyone can POST to your webhook URL. How do you know it was Meta? · question · scheduled
+- 2026-10-28 · homingo._ · story 08:22 · sell: Upgraded your phone? The old one isn't done. · paradox · scheduled
+- 2026-10-28 · homingo.verse · story 08:47 · space: Which satellite did Britain launch on its own rocket? · question · scheduled
+- 2026-10-28 · morning · stories only (carousels discontinued by owner); @homingo.hackdays still missing from Instahook list_accounts, its story 1 not made; 27 Oct story 1 re-read on the other three accounts
