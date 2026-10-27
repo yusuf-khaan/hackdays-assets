@@ -207,3 +207,7 @@
 - 2026-10-27 · homingo._ · story 08:22 · find: Somewhere in Lucknow, a heater is waiting out the summer. · curiosity-gap · scheduled
 - 2026-10-27 · homingo.verse · story 08:47 · indian-history: Turn over a ₹10 note. That wheel is a sundial. · you-in-it · scheduled
 - 2026-10-27 · morning · stories only (carousels discontinued by owner); @homingo.hackdays missing from Instahook list_accounts, its story 1 not made; 26 Oct story 1 and story 2 re-read on the other three accounts
+- 2026-10-27 · surgelabs_ · story2 19:40 · myth-vs-fact: Myth: a 200 OK means it worked. · contrast · scheduled
+- 2026-10-27 · homingo._ · story2 20:22 · download: Lucknow is already trading here. · statement · scheduled
+- 2026-10-27 · homingo.verse · story2 21:47 · china: Chai or tea? Your word shows the road it took. · paradox · scheduled
+- 2026-10-27 · evening · stories only; @homingo.hackdays still missing from Instahook list_accounts (no story 1 or story 2 today); other 3 story 1s live; story metrics read; trend scan (3 searches): no qualifying signal, no trend story; jsDelivr returned 403 once, raw.githubusercontent.com pinned SHA worked
