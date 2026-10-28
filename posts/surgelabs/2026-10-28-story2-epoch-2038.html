@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>SurgeLabs story 2: Unix time 2038</title>
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--line:#2A2A31;--grid:#16161B}
+html,body{margin:0;background:var(--bg)}
+.frame{width:1080px;height:1920px;position:relative;overflow:hidden;color:var(--fg);font-family:Sans;background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:90px 90px}
+.glow{position:absolute;width:1100px;height:1000px;pointer-events:none}
+.top{position:absolute;left:72px;right:72px;top:270px;display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.045em;text-transform:none;color:var(--fg)}
+.mark span{color:var(--teal)}
+h1{position:absolute;left:72px;right:72px;top:350px;font-size:88px;font-weight:600;letter-spacing:-.045em;line-height:1.06;margin:0}
+.t{color:var(--teal)}
+.sub{display:block;font-size:34px;line-height:1.35;color:var(--soft);font-weight:400;letter-spacing:0;margin-top:26px}
+.cards{position:absolute;left:72px;right:72px;top:900px}
+.c{background:#111114;border:1px solid var(--line);border-radius:24px;padding:26px 34px}
+.c .l{font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.c .v{font-family:Mono;font-size:70px;font-weight:600;letter-spacing:-.03em;margin-top:6px}
+.c .d{font-size:28px;color:var(--soft);margin-top:6px}
+.arr{height:92px;display:flex;align-items:center;gap:20px;padding-left:34px;font-family:Mono;font-size:28px;color:var(--purple)}
+.arr b{font-size:44px;font-weight:600}
+.bad{border-color:#5b4a99}
+.foot{position:absolute;left:72px;right:72px;top:1500px;font-family:Mono;font-size:23px;line-height:1.6;color:var(--muted)}
+.foot b{color:var(--fg);font-weight:500}
+</style></head>
+<body><div class="frame">
+<div class="glow" style="left:-300px;top:-200px;background:radial-gradient(closest-side,rgba(139,108,255,.22),transparent)"></div>
+<div class="glow" style="right:-400px;bottom:-200px;background:radial-gradient(closest-side,rgba(45,212,191,.14),transparent)"></div>
+<div class="top"><div class="mark"><span>&#9632;</span> SURGELABS</div><div>Mini explainer &middot; Unix time</div></div>
+<h1>One second after <span class="t">2,147,483,647,</span> the clock jumps back to 1901.<span class="sub">The Year 2038 problem, in three lines.</span></h1>
+<div class="cards">
+<div class="c"><div class="l">Largest signed 32-bit value</div><div class="v" style="color:var(--teal)">2,147,483,647</div><div class="d">Seconds since 1 Jan 1970 UTC = 03:14:07 UTC, 19 Jan 2038</div></div>
+<div class="arr"><b>&darr;</b> +1 second</div>
+<div class="c bad"><div class="l">Wraps around to</div><div class="v" style="color:var(--purple)">-2,147,483,648</div><div class="d">Read back as 13 Dec 1901 on systems that store time this way</div></div>
+</div>
+<div class="foot"><b>The fix: store time in 64 bits.</b><br>Illustrative. Follow @homingo.hackdays &middot; surgeit.co.in</div>
+</div></body></html>
