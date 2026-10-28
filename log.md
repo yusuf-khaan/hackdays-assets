@@ -219,3 +219,7 @@
 - 2026-10-28 · homingo._ · story2 20:22 · find: Your first room in Lucknow. · you-in-it · scheduled
 - 2026-10-28 · homingo.verse · story2 21:47 · indian-history: Around 1025 CE, an Indian navy crossed the sea to strike an empire. · impossible · scheduled (account went RECONNECT_REQUIRED during the run; will fail unless the owner reconnects before 21:47)
 - 2026-10-28 · evening · stories only; @homingo.hackdays still missing from Instahook (no story 1 or 2 today); 27 Oct story 2 and 28 Oct story 1 read on surgelabs_ and homingo._, verse readings failed (INSTAGRAM_TOKEN_EXPIRED); Instahook returned 502 once on insights, retry worked; trend scan (3 searches): no qualifying signal, no trend story
+- 2026-10-29 · surgelabs_ · story 07:40 · quiz: What does this print? console.log(Math.max()) · question · scheduled
+- 2026-10-29 · homingo._ · story 08:22 · app: Every ad, with its numbers (My Ads) · payoff · scheduled
+- 2026-10-29 · homingo.verse · story 08:47 · mythology: He couldn't tell which herb it was, so he lifted the mountain. · paradox · scheduled
+- 2026-10-29 · morning · stories only (carousels discontinued); @homingo.hackdays still missing from Instahook list_accounts, its story 1 not made; 28 Oct story 1 re-read on the other three accounts (verse reading worked again); jsDelivr returned 403 once, raw.githubusercontent worked
