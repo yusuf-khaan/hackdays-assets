@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>SurgeLabs story 2: Math.max answer</title>
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--line:#2A2A31;--grid:#16161B}
+html,body{margin:0;background:var(--bg)}
+.frame{width:1080px;height:1920px;position:relative;overflow:hidden;color:var(--fg);font-family:Sans;background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:90px 90px}
+.glow{position:absolute;width:1100px;height:1000px;pointer-events:none}
+.top{position:absolute;left:72px;right:72px;top:270px;display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.045em;text-transform:none;color:var(--fg)}
+.mark span{color:var(--teal)}
+h1{position:absolute;left:72px;right:72px;top:350px;font-size:92px;font-weight:600;letter-spacing:-.045em;line-height:1.05;margin:0}
+.t{color:var(--teal)}
+.sub{display:block;font-size:34px;line-height:1.35;color:var(--soft);font-weight:400;letter-spacing:0;margin-top:26px}
+.code{position:absolute;left:72px;right:72px;top:760px;background:#111114;border:1px solid var(--line);border-radius:24px;padding:30px 40px;font-family:Mono;font-size:40px;font-weight:500}
+.code .c{display:block;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;font-weight:400}
+.code .r{display:flex;justify-content:space-between;padding:14px 0;border-top:1px solid var(--line)}
+.code .r:first-of-type{border-top:0}
+.p{color:var(--purple)}
+.v{color:var(--teal)}
+.why{position:absolute;left:72px;right:72px;top:1130px}
+.why .lab{font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+.step{display:flex;align-items:center;gap:24px;background:#111114;border:1px solid var(--line);border-radius:20px;padding:22px 28px;margin-bottom:16px;font-size:32px;line-height:1.3;color:var(--soft)}
+.step b{flex:none;width:56px;height:56px;border-radius:14px;background:#1B1B21;border:1px solid #34343C;display:flex;align-items:center;justify-content:center;font-family:Mono;font-size:28px;color:var(--teal)}
+.step code{font-family:Mono;color:var(--purple);font-size:30px}
+.foot{position:absolute;left:72px;right:72px;top:1530px;font-family:Mono;font-size:23px;line-height:1.6;color:var(--muted)}
+</style></head>
+<body><div class="frame">
+<div class="glow" style="left:-300px;top:-200px;background:radial-gradient(closest-side,rgba(139,108,255,.22),transparent)"></div>
+<div class="glow" style="right:-400px;bottom:-200px;background:radial-gradient(closest-side,rgba(45,212,191,.14),transparent)"></div>
+<div class="top"><div class="mark"><span>&#9632;</span> SURGELABS</div><div>Answer: D</div></div>
+<h1><span class="t">Math.max()</span> is less than Math.min().<span class="sub">This morning's quiz answer is -Infinity. Here is why it is also true.</span></h1>
+<div class="code"><span class="c">JavaScript console</span>
+<div class="r"><span><span class="p">Math.max</span>()</span><span class="v">-Infinity</span></div>
+<div class="r"><span><span class="p">Math.min</span>()</span><span class="v">Infinity</span></div>
+<div class="r"><span><span class="p">Math.max</span>() &lt; <span class="p">Math.min</span>()</span><span class="v">true</span></div>
+</div>
+<div class="why"><div class="lab">How it works</div>
+<div class="step"><b>1</b><span><code>max</code> starts at -Infinity, so any number beats it</span></div>
+<div class="step"><b>2</b><span>It checks each argument and keeps the bigger one</span></div>
+<div class="step"><b>3</b><span>No arguments? Nothing replaces the start value</span></div>
+</div>
+<div class="foot">Follow @homingo.hackdays &middot; surgeit.co.in</div>
+</div></body></html>
