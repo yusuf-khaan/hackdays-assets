@@ -227,3 +227,8 @@
 - 2026-10-29 · homingo._ · story2 · sell: Let it go, semester-end books · contrast · scheduled 20:22 (post eadd9b32-af49-494a-bc1a-5a37f68e7077)
 - 2026-10-29 · homingo.verse · story2 · space: on this day, John Glenn flies again on STS-95 (1998) · paradox · scheduled 21:47 (post 61f4f4b5-8a22-418d-a16f-f483b7ad0c24)
 - 2026-10-29 · evening · story 2 scheduled on surgelabs_, homingo._, verse; @homingo.hackdays still missing from Instahook (no story 1 or 2 today); permalinks + story metrics filled for 28 Oct story 2 and 29 Oct story 1; trend scan 3 searches, no fitting mass-reaction signal
+- 2026-10-30 · surgelabs_ · story 07:40 · hackdays-promo: Two links. The deck is optional. · contrast · scheduled (post 34403a08-3276-4036-a08a-972a21cf5337)
+- 2026-10-30 · homingo.hackdays · story 07:40 · builder-tip: Your agent will fail on step 3. · paradox · scheduled (post 3f1ff435-38b9-4cd3-af58-c053f44554a9)
+- 2026-10-30 · homingo._ · story 08:22 · find: Good finds are close to home. · payoff · scheduled (post 238277a8-0a19-4fc9-bff9-3d6ccba137fc)
+- 2026-10-30 · homingo.verse · story 08:47 · indian-history: Ashoka's edicts, Prinsep decodes Brahmi (1837) · paradox · scheduled (post a36a3dba-9323-4c45-a247-4f812f9c1339)
+- 2026-10-30 · morning · stories only (carousels discontinued); @homingo.hackdays back in Instahook, story 1 scheduled again; 29 Oct story 1 re-read at ~20 h on surgelabs_, homingo._, verse; jsDelivr 403 once then worked, raw.githubusercontent timed out
