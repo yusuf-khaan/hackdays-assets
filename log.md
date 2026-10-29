@@ -223,3 +223,7 @@
 - 2026-10-29 · homingo._ · story 08:22 · app: Every ad, with its numbers (My Ads) · payoff · scheduled
 - 2026-10-29 · homingo.verse · story 08:47 · mythology: He couldn't tell which herb it was, so he lifted the mountain. · paradox · scheduled
 - 2026-10-29 · morning · stories only (carousels discontinued); @homingo.hackdays still missing from Instahook list_accounts, its story 1 not made; 28 Oct story 1 re-read on the other three accounts (verse reading worked again); jsDelivr returned 403 once, raw.githubusercontent worked
+- 2026-10-29 · surgelabs_ · story2 · reveal: Math.max() < Math.min() (answer to the morning quiz) · paradox · scheduled 19:40 (post fa3a81da-428c-4d4c-af36-f55b67753f48)
+- 2026-10-29 · homingo._ · story2 · sell: Let it go, semester-end books · contrast · scheduled 20:22 (post eadd9b32-af49-494a-bc1a-5a37f68e7077)
+- 2026-10-29 · homingo.verse · story2 · space: on this day, John Glenn flies again on STS-95 (1998) · paradox · scheduled 21:47 (post 61f4f4b5-8a22-418d-a16f-f483b7ad0c24)
+- 2026-10-29 · evening · story 2 scheduled on surgelabs_, homingo._, verse; @homingo.hackdays still missing from Instahook (no story 1 or 2 today); permalinks + story metrics filled for 28 Oct story 2 and 29 Oct story 1; trend scan 3 searches, no fitting mass-reaction signal
