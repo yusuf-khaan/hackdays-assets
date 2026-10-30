@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Hack Days story: mentor at midnight</title><link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+.frame{height:1920px}
+.top{position:absolute;left:72px;right:72px;top:262px;display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+.top .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--blue);margin-right:14px;box-shadow:0 0 14px rgba(30,155,234,.9);vertical-align:middle;position:relative;top:-2px}
+.head{position:absolute;left:72px;right:72px;top:340px;font-family:"Serif";font-size:132px;line-height:.98;letter-spacing:-.02em}
+.head .sub{display:block;font-family:Sans;font-size:35px;line-height:1.35;color:#C9C9CF;letter-spacing:0;margin-top:28px}
+.head em{color:var(--orange);font-style:italic}
+.glow{position:absolute;left:-200px;top:950px;width:1400px;height:800px;background:radial-gradient(closest-side,rgba(30,155,234,.14),rgba(30,155,234,0))}
+.chat{position:absolute;left:72px;right:72px;top:930px;background:var(--char);border:2px solid var(--line);border-radius:26px;padding:30px 36px 30px;font-family:Mono;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.chat .cmd{font-size:24px;letter-spacing:.04em;color:var(--muted);margin-bottom:18px}
+.chat .cmd b{color:var(--blue);font-weight:500}
+.b1{background:#1d1d21;border:1px solid var(--line);border-radius:18px;padding:20px 26px;font:500 29px/1.35 Sans;color:#fff;margin-bottom:16px;width:80%}
+.b1 small{display:block;font:400 20px Mono;color:var(--muted);letter-spacing:.08em;margin-bottom:6px}
+.b2{margin-left:auto;background:rgba(243,112,33,.1);border:1px solid var(--orange);border-radius:18px;padding:20px 26px;font:500 29px/1.35 Sans;color:#fff;width:84%}
+.b2 small{display:block;font:400 20px Mono;color:var(--orange);letter-spacing:.08em;margin-bottom:6px}
+.modes{position:absolute;left:72px;right:72px;top:1405px;display:flex;gap:16px;font-family:Mono;font-size:22px;letter-spacing:.06em}
+.modes div{border:1px solid var(--line);border-radius:999px;padding:12px 22px;color:#C9C9CF;background:var(--char)}
+.modes .o{border-color:var(--orange);color:var(--orange)}
+.cta{position:absolute;left:72px;right:72px;top:1500px;display:flex;justify-content:space-between;align-items:flex-end}
+.cta .label{color:var(--muted);font-size:19px;display:block;margin-bottom:12px}
+.cta .u2{font-family:Mono;font-size:30px;color:#fff}
+.cta .r2{white-space:nowrap;font-family:"Serif";font-style:italic;font-size:48px;color:var(--orange)}
+.lb{position:absolute;right:30px;top:-34px;font:400 19px Mono;color:var(--muted)}
+.chat{overflow:visible}
+</style></head>
+<body><div class="frame">
+<div class="glow"></div>
+<div class="top label"><div><span class="dot"></span>Mentors &middot; Halloween night</div><div>Hack Days &middot; Ed. 01</div></div>
+<div class="head">A bug at midnight? <em>Ask a mentor.</em><span class="sub">Nothing scarier than debugging alone. Mentoring is fully online and flexible.</span></div>
+<div class="chat"><div class="lb">Illustrative example</div><div class="cmd"><b>$</b> mentor --ask "agent loops on step 3"</div>
+<div class="b1"><small>YOU</small>My agent keeps calling the same tool. Where do I look first?</div>
+<div class="b2"><small>MENTOR &middot; ASYNC FEEDBACK</small>Log every tool call. Add a stop rule. Send me the trace.</div></div>
+<div class="modes"><div class="o">video call</div><div>chat</div><div>async feedback</div><div>no fixed hours</div></div>
+<div class="cta"><div><span class="label">Registration closes 15 Nov, 11:59 PM IST</span><div class="u2">hackathon.homingo.co.in</div></div><div class="r2">Link in bio</div></div>
+<div class="grain"></div>
+</div></body></html>
