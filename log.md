@@ -232,3 +232,7 @@
 - 2026-10-30 · homingo._ · story 08:22 · find: Good finds are close to home. · payoff · scheduled (post 238277a8-0a19-4fc9-bff9-3d6ccba137fc)
 - 2026-10-30 · homingo.verse · story 08:47 · indian-history: Ashoka's edicts, Prinsep decodes Brahmi (1837) · paradox · scheduled (post a36a3dba-9323-4c45-a247-4f812f9c1339)
 - 2026-10-30 · morning · stories only (carousels discontinued); @homingo.hackdays back in Instahook, story 1 scheduled again; 29 Oct story 1 re-read at ~20 h on surgelabs_, homingo._, verse; jsDelivr 403 once then worked, raw.githubusercontent timed out
+- 2026-10-30 · homingo.hackdays · story2 19:40 · culture: code till dawn, 5:58 AM the last test passes · cliffhanger-story · scheduled
+- 2026-10-30 · surgelabs_ · story2 19:40 · humour: the temporary fix that ships · forbidden-secret · scheduled
+- 2026-10-30 · homingo._ · story2 20:22 · download: find a room, sell a bike, one app · contrast · scheduled
+- 2026-10-30 · homingo.verse · story2 21:47 · technology: on this day 1938, War of the Worlds radio play · paradox · scheduled
