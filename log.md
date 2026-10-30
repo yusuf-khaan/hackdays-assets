@@ -236,3 +236,7 @@
 - 2026-10-30 · surgelabs_ · story2 19:40 · humour: the temporary fix that ships · forbidden-secret · scheduled
 - 2026-10-30 · homingo._ · story2 20:22 · download: find a room, sell a bike, one app · contrast · scheduled
 - 2026-10-30 · homingo.verse · story2 21:47 · technology: on this day 1938, War of the Worlds radio play · paradox · scheduled
+- 2026-10-31 · homingo.hackdays · story1 07:40 · mentors: a bug at midnight, ask a mentor · question · scheduled
+- 2026-10-31 · surgelabs_ · story1 07:40 · explainer: zombie process (Halloween) · paradox · scheduled
+- 2026-10-31 · homingo._ · story1 08:22 · sell: Let it go, Halloween, the monitor haunting your corner · mystery · scheduled
+- 2026-10-31 · homingo.verse · story1 08:47 · word-origin: Halloween from All Hallows' Even · paradox · scheduled
