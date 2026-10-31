@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>SurgeLabs story: fee reminder automation</title>
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--line:#2A2A31;--grid:#16161B}
+html,body{margin:0;background:var(--bg)}
+.frame{width:1080px;height:1920px;position:relative;overflow:hidden;color:var(--fg);font-family:Sans;background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:90px 90px}
+.glow{position:absolute;width:1100px;height:1000px;pointer-events:none}
+.top{position:absolute;left:72px;right:72px;top:270px;display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.045em;text-transform:none;color:var(--fg)}
+.mark span{color:var(--teal)}
+h1{position:absolute;left:72px;right:72px;top:350px;font-size:104px;font-weight:600;letter-spacing:-.045em;line-height:1.02;margin:0}
+.t{color:var(--teal)}
+.sub{display:block;font-size:34px;line-height:1.35;color:var(--soft);font-weight:400;letter-spacing:0;margin-top:26px}
+.flow{position:absolute;left:72px;right:72px;top:800px}
+.n{position:relative;background:#111114;border:1px solid var(--line);border-radius:22px;padding:22px 30px 22px 100px;margin-bottom:34px}
+.n:after{content:"";position:absolute;left:50px;top:100%;height:34px;border-left:3px dashed var(--purple)}
+.n:last-child:after{display:none}
+.n .b{position:absolute;left:26px;top:50%;margin-top:-24px;width:48px;height:48px;border-radius:50%;border:2px solid var(--purple);color:var(--purple);font:600 24px Mono;display:flex;align-items:center;justify-content:center}
+.n small{display:block;font:500 20px Mono;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.n span{display:block;font:500 31px/1.25 Mono;color:var(--fg)}
+.n.hot{border-color:var(--teal);background:rgba(45,212,191,.08)}
+.n.hot .b{border-color:var(--teal);color:var(--teal)}
+.n.hot:after{border-color:var(--teal)}
+.foot{position:absolute;left:72px;right:72px;top:1500px;font-family:Mono;font-size:23px;line-height:1.7;color:var(--muted)}
+.foot b{color:var(--fg);font-weight:500}.foot .q{color:var(--teal);font-size:27px}
+.lb{position:absolute;right:34px;top:20px;font:500 20px Mono;color:var(--muted)}
+</style></head>
+<body><div class="frame">
+<div class="glow" style="left:-300px;top:-200px;background:radial-gradient(closest-side,rgba(139,108,255,.22),transparent)"></div>
+<div class="glow" style="right:-400px;bottom:-200px;background:radial-gradient(closest-side,rgba(45,212,191,.14),transparent)"></div>
+<div class="top"><div class="mark"><span>&#9632;</span> SURGELABS</div><div>Automation idea</div></div>
+<h1>Imagine nobody ever <span class="t">chasing a fee</span> again.<span class="sub">Illustrative: a small coaching class and one sheet.</span></h1>
+<div class="flow">
+ <div class="n"><div class="b">1</div><small>Trigger</small><span>A due date in the sheet arrives</span></div>
+ <div class="n"><div class="b">2</div><small>Action</small><span>A polite reminder goes to the parent</span></div>
+ <div class="n"><div class="b">3</div><small>Check</small><span>Marked paid? Stop. Nothing more is sent</span></div>
+ <div class="n hot"><div class="b">4</div><small>Escalate</small><span>Still open after two reminders? A human gets flagged</span></div>
+</div>
+<div class="foot"><span class="q">Reply with the chore you would automate first.</span><br><b>surgeit.co.in</b> &middot; Follow @homingo.hackdays</div>
+</div></body></html>
