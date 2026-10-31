@@ -240,3 +240,7 @@
 - 2026-10-31 · surgelabs_ · story1 07:40 · explainer: zombie process (Halloween) · paradox · scheduled
 - 2026-10-31 · homingo._ · story1 08:22 · sell: Let it go, Halloween, the monitor haunting your corner · mystery · scheduled
 - 2026-10-31 · homingo.verse · story1 08:47 · word-origin: Halloween from All Hallows' Even · paradox · scheduled
+- 2026-10-31 · homingo.hackdays · story2 · benefits: The hackathon ends. These four stay. · scheduled 19:40
+- 2026-10-31 · surgelabs_ · story2 · quiz: Can JavaScript spell banana? · scheduled 19:40
+- 2026-10-31 · homingo._ · story2 · lucknow: Eight days to Diwali. Clear one corner. · scheduled 20:22
+- 2026-10-31 · homingo.verse · story2 · space: A crew launched 26 years ago today. The ISS has been crewed ever since. · scheduled 21:47
