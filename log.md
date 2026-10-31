@@ -244,3 +244,7 @@
 - 2026-10-31 · surgelabs_ · story2 · quiz: Can JavaScript spell banana? · scheduled 19:40
 - 2026-10-31 · homingo._ · story2 · lucknow: Eight days to Diwali. Clear one corner. · scheduled 20:22
 - 2026-10-31 · homingo.verse · story2 · space: A crew launched 26 years ago today. The ISS has been crewed ever since. · scheduled 21:47
+- 2026-11-01 · homingo.hackdays · story1 · countdown: 14 days left. It closes on a Sunday. · scheduled 07:40
+- 2026-11-01 · surgelabs_ · story1 · automation-idea: Imagine nobody ever chasing a fee again. · scheduled 07:40
+- 2026-11-01 · homingo._ · story1 · app: Found it? Ask the seller directly. · scheduled 08:22
+- 2026-11-01 · homingo.verse · story1 08:47 · indian-history: Many Indian states share one birthday: 1 November. · scheduled
