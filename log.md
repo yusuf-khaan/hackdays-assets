@@ -248,3 +248,8 @@
 - 2026-11-01 · surgelabs_ · story1 · automation-idea: Imagine nobody ever chasing a fee again. · scheduled 07:40
 - 2026-11-01 · homingo._ · story1 · app: Found it? Ask the seller directly. · scheduled 08:22
 - 2026-11-01 · homingo.verse · story1 08:47 · indian-history: Many Indian states share one birthday: 1 November. · scheduled
+- 2026-11-01 · homingo.hackdays · story2 · track-spotlight: Someone is retyping this sheet right now. · scheduled 19:40
+- 2026-11-01 · surgelabs_ · story2 · explainer: Your computer says 0.1 + 0.2 is not 0.3. · scheduled 19:40
+- 2026-11-01 · homingo._ · story2 · sell: Your guitar has become a coat hook. · scheduled 20:22
+- 2026-11-01 · homingo.verse · story2 · china: China, 132 CE: eight dragons each held a ball. An earthquake dropped one. · scheduled 21:47
+- 2026-10-31 · homingo._ · story2 · FAILED at 20:22 and not retried on 1 Nov: its "eight days to Diwali" line was no longer true; never went live

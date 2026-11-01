@@ -83,6 +83,8 @@ Only what Token budget rule 2 lists. playbook/FEEDBACK.md always (the owner's wo
 - **Story insights** exist only while the story is live (24 h); after that `get_post_insights` says "could not read this media". Hence the evening run's story-metrics step (2026-W42). Readings grow with age, so both story slots are read at ~20 h (evening run for story 2, next morning batch for story 1).
 - **Missed runs (24-25 Oct):** the 24 Oct evening run and the 25 Oct morning batch did not run; 24 Oct story 2 was never made on any account and two days of story readings were lost. The next run that starts checks yesterday's keys too and reports any item that never went live.
 - **Owner reels unreadable:** 9 of 14 @homingo.hackdays reels since 17 Oct (and one @homingo._ reel) return "could not read this media; it may have been deleted" while Instahook shows PUBLISHED. Not ours to fix; the weekly review reports them.
+- **jsDelivr 403 (1 Nov):** one of four imports from `cdn.jsdelivr.net/gh/...@<full-sha>/` kept returning HTTP 403 (raw.githubusercontent and github.com/raw timed out); the same file with the 7-character short SHA (`@223b229`) imported at once. Try the short SHA before falling back to `upload_media`.
+- **Date-bound FAILED stories (1 Nov):** a FAILED story whose image names a countdown or "today" (e.g. "eight days to Diwali") must not be retried on a later day, since the claim is no longer true; report it as never live instead.
 - **Fonts:** write `font-family:"Serif"` with quotes. Unquoted `Serif` is the generic CSS keyword and renders Times, not Instrument Serif.
 
 ## Making one carousel (used by helpers; the lead does the git and Instahook steps)
