@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>SurgeLabs story: 0.1 plus 0.2</title>
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--line:#2A2A31;--grid:#16161B}
+html,body{margin:0;background:var(--bg)}
+.frame{width:1080px;height:1920px;position:relative;overflow:hidden;color:var(--fg);font-family:Sans;background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:90px 90px}
+.glow{position:absolute;width:1100px;height:1000px;pointer-events:none}
+.top{position:absolute;left:72px;right:72px;top:270px;display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.045em;text-transform:none;color:var(--fg)}
+.mark span{color:var(--teal)}
+h1{position:absolute;left:72px;right:72px;top:350px;font-size:100px;font-weight:600;letter-spacing:-.045em;line-height:1.03;margin:0}
+.t{color:var(--teal)}
+.sub{display:block;font-size:34px;line-height:1.35;color:var(--soft);font-weight:400;letter-spacing:0;margin-top:26px}
+.con{position:absolute;left:72px;right:72px;top:930px;background:#111114;border:1px solid var(--line);border-radius:22px;font-family:Mono;overflow:hidden}
+.con .bar{padding:18px 30px;border-bottom:1px solid var(--line);font-size:21px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase}
+.con .r{padding:22px 30px 6px;font-size:34px;color:var(--soft)}
+.con .o{padding:0 30px 22px;font-size:40px;font-weight:500;color:var(--fg);border-bottom:1px solid #1d1d22}
+.con .o.hot{color:var(--teal)}
+.con .o.pu{color:var(--purple)}
+.why{position:absolute;left:72px;right:72px;top:1370px;font-size:31px;line-height:1.4;color:var(--soft)}
+.why b{color:var(--fg);font-weight:600}
+.foot{position:absolute;left:72px;right:72px;top:1530px;font-family:Mono;font-size:23px;line-height:1.7;color:var(--muted)}
+.foot b{color:var(--fg);font-weight:500}
+</style></head>
+<body><div class="frame">
+<div class="glow" style="left:-300px;top:-200px;background:radial-gradient(closest-side,rgba(139,108,255,.22),transparent)"></div>
+<div class="glow" style="right:-400px;bottom:-200px;background:radial-gradient(closest-side,rgba(45,212,191,.14),transparent)"></div>
+<div class="top"><div class="mark"><span>&#9632;</span> SURGELABS</div><div>Wrong number</div></div>
+<h1>Your computer says 0.1 + 0.2 is <span class="t">not 0.3.</span><span class="sub">It is not a bug. It is how decimals are stored.</span></h1>
+<div class="con">
+<div class="bar">JavaScript console</div>
+<div class="r">&gt; 0.1 + 0.2</div><div class="o hot">0.30000000000000004</div>
+<div class="r">&gt; 0.1 + 0.2 === 0.3</div><div class="o pu">false</div>
+</div>
+<div class="why"><b>Why:</b> 0.1 and 0.2 have no exact binary form, so they are stored as close approximations (IEEE 754 doubles). The tiny error shows up in the sum.</div>
+<div class="foot"><b>Money?</b> Keep whole paise as integers.<br>surgeit.co.in &middot; Follow @homingo.hackdays</div>
+</div></body></html>
