@@ -1,63 +1,65 @@
 # Learnings: @homingo.verse
 
-Read on every run; the weekly review rewrites it. Keep it under about 120 lines. Evidence lives in data/homingo.verse.jsonl (cloud stories) and list_posts (the owner's reels). Last rewrite: weekly review 2026-W43 (25 Oct).
+Read on every run; the weekly review rewrites it. Keep it under about 120 lines. Evidence lives in data/homingo.verse.jsonl (cloud stories) and list_posts (the owner's reels). Last rewrite: weekly review 2026-W44 (1 Nov).
 
 Cloud runs make only this account's stories (logo palette, verse.md "Stories"). The feed is reels from the owner's laptop (owner, 2026-10-11).
 
-## State of the evidence (2026-W43)
-- Stories, 18-23 Oct (11 measured): reach 11-26, median 18; 0 replies or shares. Story 2s (read ~20 h) 17-26; story 1s (read ~9 h) 11-18, except the 18 Oct Galileo story (26 at 14.5 h). From W43 story 1 is re-read at ~20 h.
-- Lost readings: 23 Oct s2 (Gwalior zero), 24 Oct s1 (V-2 photo: unreadable 5 h after publishing). 24 Oct story 2 never made. 17 Oct story 2 (Calder Hall) still FAILED, never published.
-- Owner's reels: about 5 a day this week (08:30, 10:45, 12:45, 18:15, 20:15). Best of the week:
-  - Still Standing #3, Dancing Girl of Mohenjo-daro: **3,237 reach, 9 shares, 14 saves** (best reel in the system). Still Standing #2 (Lion Capital) only 259.
-  - Made in Ancient China: Terracotta Army ears 2,030; jade suit 2,623; Sanxingdui mask 1,688; Houmuwu Ding 1,610; Fu Hao owl 1,535; Flying Horse 1,238; Qin chariots 221.
-  - Dark Sky Files: Orionids 2,009 (24 shares, 22 saves: 2.3%, best rate); Hoag's Object 1,856; Phobos/MMX 1,480; Boomerang 1,374; Saturn beside the Moon 1,360 (13 shares: 1.3%); Eta Carinae 1,332; Bullet Cluster 1,044. Unnumbered space reels: Venus day/year 1,558, Moon's far side 1,522, planets fit between Earth and Moon 1,468, Mars blue sunset 965.
-  - Under 500: Betelgeuse 414, Hanny's Voorwerp 395, Hand of God 468, Horsehead 243, Southern Ring 263, Stephan's Quintet 194, Pleiades 182.
-- The 08:30 reel reached 1,000+ on all six days (median ~1,500). The 12:45 and 20:15 reels mostly sat at 200-470 (Terracotta ears and Eta Carinae the exceptions). Readings are 1-7 days old, so this is a strong lean, not proof.
+## State of the evidence (2026-W44)
+- Stories 25-31 Oct, read at ~20 h (12): reach 12-18, median 16.5; views 16-23. 0 replies or shares. Lost: 27 Oct story 2 (tea word origin) has no reading (verse insights failed that evening with INSTAGRAM_TOKEN_EXPIRED).
+- Equal-age slot test: story 1 median 15.5, story 2 median 17. Within noise (n=6 each).
+- Owner's reels, 25-31 Oct (21 with readings ≥1 day old): median reach ~1,360. Now 3 fixed slots (08:30, 12:45, 18:15) plus an occasional extra. Slot medians: **12:45 ~1,460**, 08:30 ~1,150, 18:15 ~950. Last week's "08:30 is the strong slot" lean did not hold.
+  - Made in Ancient China #13-#18: 1,358 (Jiahu flute, 4 saves), 1,384 (oracle bone), 1,408 (Sanxingdui tree, 4 saves), 1,614 (crossbow trigger), 1,725 (kneeling archer), 1,404 (Tang incense ball).
+  - Dark Sky Files, top: Valles Marineris "longer than India" 1,822, Neptune "discovered with a pen" 1,711, Great Red Spot 1,518, Saturn's hexagon 1,512, Titan "rains liquid gas" 1,413, Pluto's heart 1,115.
+  - Dark Sky Files, low: Europa 932, Io 789, Uranus on its side 754, Enceladus 620, Moon drifting 3.8 cm/yr 244, Olympus Mons "too big to notice" 218, Uranus rotten eggs (witty) 214 (but 3 shares, the week's best share rate).
+  - New series: Eye of the Storm #1 (stars in a hurricane's eye) 1,286; Dark Pages #1 Mary Celeste 136; the 1 Nov reels (tornado, dancing plague, loop of fire, Jaivana) too new to judge.
+- Saves and shares stay tiny everywhere (0-5 saves, 0-3 shares); reach is the only signal with spread.
 
 ## Proven (do more)
-- Leading signal, 2 of 3 (one short of the rule): a dated sky event + series name earns shares. Orionids (24 shares) and Saturn beside the Moon on 24 Oct (13 shares) are the top two share counts among ~40 reels; Pleiades + Moon 27 Oct got 182 and 0 shares, so the event must be big or easy to see.
-- Space and ancient-object reels with one impossible-sounding fact out-reach mythology and humour by about 10× (W42, held this week).
-_Cloud stories: nothing proven (reach 11-26)._
+- **Made in Ancient China** (owner's reels): 6 of 6 this week at or above the account median (1,358-1,725), and 6 of 7 last week above 1,200. One ancient object + one impossible-sounding fact.
+- Space and ancient-object reels with one impossible-sounding fact out-reach mythology and humour by about 10× (W42, held W43-W44).
+- Leading signal, still 2 of 3: a dated, easy-to-see sky event + series name earns shares (Orionids 24, Saturn beside the Moon 13; Pleiades 0).
+_Cloud stories: nothing proven (reach 11-26 for five weeks)._
 
 ## Avoid
 - (Owner, 2026-10-11) Any cloud-made verse feed post. Stories only.
 - (Owner, 2026-10-11) Old per-category palettes. Navy #0B1640, logo blue #1F50FE, logo orange #F3701F, white text, orbit-dot mark in the same place (assets/components/verse-brand.css).
-- Story topics a verse reel covered in the last 14 days (check list_posts): Dark Sky Files #2-#23 and the unnumbered space reels (Cygnus X-1, Pillars, 3C 273, S2, Centaurus A, Crab, Einstein Cross, V838 Mon, Orionids, Hoag's Object, Phobos, Boomerang, Eta Carinae, Betelgeuse, Saturn, Hand of God, Bullet Cluster, Stephan's Quintet, Hanny's Voorwerp, Southern Ring, Pleiades, Horsehead, Venus day/year, Moon far side, planets between Earth and Moon, Mars blue sunset, Cosmic Cliffs, Great Red Spot); Made in Ancient China #1-#13 (incl. Sanxingdui, Qin chariots, Houmuwu Ding, Fu Hao, Terracotta ears, Jiahu flute); Still Standing (Iron Pillar, Lion Capital, Dancing Girl); M87*.
-- Note: the 25 Oct story 2 (Terracotta Army found by farmers) sat next to the 23 Oct Terracotta ears reel. Different fact, same object: avoid that closeness.
+- Story topics a verse reel covered in the last 14 days (check list_posts): Dark Sky Files (Great Red Spot, Saturn's hexagon, Moon drifting, Olympus Mons, Valles Marineris, Uranus x2, Io, Neptune, Pluto, Europa, Enceladus, Titan, loop of fire, coronal rain, WASP-76b) and earlier space reels listed in W43 (Orionids, Hoag's Object, Phobos, Boomerang, Eta Carinae, Betelgeuse, Saturn, Venus, Moon far side, Mars sunset); Made in Ancient China #1-#18 (incl. Jiahu flute, oracle bones, Sanxingdui tree, Han crossbow trigger, kneeling archer, Tang incense ball); Still Standing #1-#5 (Iron Pillar, Lion Capital, Dancing Girl, Kailasa at Ellora, Jaivana cannon); Eye of the Storm; Dark Pages (Mary Celeste, 1518 dancing plague, Somerton Man).
+- Same object as a recent reel with a different fact (25 Oct Terracotta story next to the Terracotta ears reel).
 - A "+" on a hill reads as a cross; draw temple markers as a small shikhara.
 - Exact figures where sources disagree.
 
-## Experiments closed (2026-W43)
-- Space/ancient-object story vs word-origin story: word origins 26 and 17 (s2), space/China story 2s 26, 22, 18. No difference. Closed.
-- Series tie-in story vs "on this day": no tie-in ran; on-this-day story 1s 11-26 (mostly early readings). Dropped; the reels carry the series.
-- "Tonight's sky" story: did not run. Carried over.
-- Sonnet story helper: 13 stories, 0 sent back, no owner complaint. Keep Sonnet.
+## Experiments closed (2026-W44)
+- Indian-history object story with a twist vs on-this-day: object/twist 17, 15, 13; on-this-day 12, 17, 18, 17. No difference. Closed.
+- Story 1 vs story 2 at equal age: 15.5 vs 17. Closed: no meaningful gap.
+- "Tonight's sky" story: did not run (second week). Carried over once more, last time.
+- Sonnet story helper: 14 stories, 0 sent back. Keep Sonnet.
 
-## Next week's experiments (stories, reach read at ~20 h)
-1. "Tonight's sky" viewing story for a real event this week (date and time verified in 2 sources, not a reel topic). Hypothesis: the share pull of dated sky reels carries to stories.
-2. Story 1 vs story 2 at equal age (morning batch re-reads story 1). Hypothesis: evening reaches more.
-3. Indian-history object story in the Still Standing style (one object, one surprising twist) vs on-this-day anniversary. Hypothesis: the Dancing Girl signal (object + twist) beats anniversaries.
+## Next week's experiments (stories, read at ~20 h; judge by views as well as reach)
+1. Motion story: 2 story 2s as a 6-10 s silent MP4 (tools/reel.js, logo palette, mark in place) vs stills. Hypothesis: motion gets more views. Tag `"experiment": "motion story"`.
+2. "Tonight's sky" story for a real event this week or next (date and visibility from India in 2 sources; e.g. the Leonids peak in mid-November). Hypothesis: the share pull of dated sky reels carries to stories (look for the first story share).
+3. Made-in-Ancient-China-style object story (one Chinese or Indian object, one impossible fact; not a reel topic) vs other story categories. Hypothesis: the strongest reel shape lifts story views.
 
 ## Owed
 - Chandrayaan-3 part 2, "Why make a lander hop on the Moon?" (10 Oct reel): suggest to the owner or tell as a two-frame story.
 - China part 2: "Where did the emperor's mercury come from?" (verify first).
 
 ## Backlog (stories now; also reel ideas for the owner; verify every fact)
+- Space: Leonid meteor shower, mid-November (verify peak date and best time for India).
 - Space: why Saturn's rings "disappear" every ~15 years (verify the cycle).
-- Space: Voyager 1's signal takes about a day to reach us (verify the current figure).
-- Space: Leonid meteor shower, mid-November (verify peak date for India).
 - China: the south-pointing chariot, a compass with no magnet.
-- China: Zhang Heng's seismoscope (reel 11 Oct; story ok now).
-- Indian history: the Chola navy that sailed to Southeast Asia.
+- China: Su Song's astronomical clock tower (1090s; verify).
 - Indian history: Nalanda (map story ran 16 Oct; a Still Standing reel idea).
-- Indian history: Konark Sun Temple wheels as sundials (verify).
-- Indian history: Gwalior zero inscription (23 Oct story was never measured; reel idea).
+- Indian history: Gwalior zero inscription (23 Oct story never measured; reel idea).
+- Indian history: the Delhi Iron Pillar's rust-free secret (reel #1 exists; story only with a new fact).
+- Indian history: stepwells: Chand Baori's 3,500 steps (verify count).
 - Mythology: Ram Setu: what the Ramayana says and what geology says.
-- Mythology: Chhath Puja (verify 2026 date): the story behind the setting-sun offering.
+- Word origin: "jungle", "shampoo", "loot": Indian words in English (verify each).
+- Technology: the first SMS, 3 Dec 1992 (dated story for 3 Dec).
 
 ## Changelog
 - 2026-10-10: file created with the carousel system.
 - 2026-10-11 (owner): feed switched to reels only from the owner's laptop; cloud makes stories in the logo palette.
 - 2026-W41 review: carousel experiments closed; lint WARNs.
 - 2026-W42 review: stories measured by the evening run; reel series list added to Avoid.
-- 2026-W43 review: dated sky event marked proven (2 top share counts); reel slot pattern noted for the owner; story 1 re-read at ~20 h; Avoid list updated with this week's reels.
+- 2026-W43 review: dated sky event leading signal; story 1 re-read at ~20 h.
+- 2026-W44 review: Made in Ancient China marked proven (12 of 13 reels over two weeks); slot lean revised (12:45 now strongest); story experiments closed; `stats.js` story view; motion-story experiment opened.

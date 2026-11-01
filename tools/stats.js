@@ -27,7 +27,8 @@ for (const f of fs.readdirSync(dir).filter(f => f.endsWith('.jsonl'))) {
   if (measured.length && !accRate) console.log('   no saves or shares on any measured post: "vs median" compares reach (Proven/Avoid by reach, LEARNING.md)');
   const top = [...measured].sort((a, b) => b.metrics.reach - a.metrics.reach);
   if (top.length) console.log('   reach high→low: ' + top.map(p => `${p.metrics.reach} ${p.date} c${p.slot}`).join(' · '));
-  for (const key of ['hook_archetype', 'category', 'format', 'slot', 'cta', 'trend', 'slides']) {
+  // Accounts with no carousels in the window skip the empty carousel tables (W44).
+  for (const key of car.length ? ['hook_archetype', 'category', 'format', 'slot', 'cta', 'trend', 'slides'] : []) {
     const groups = {};
     for (const p of car) { const k = String(p[key]); (groups[k] = groups[k] || []).push(p); }
     console.log(`\n   by ${key}:`);
@@ -41,14 +42,22 @@ for (const f of fs.readdirSync(dir).filter(f => f.endsWith('.jsonl'))) {
     }
   }
   // Stories: Instagram only reports them while live (24 h), so daily runs record them (RUN.md "Story metrics").
-  const st = posts.filter(p => p.kind === 'story' && p.metrics && p.metrics.reach != null);
-  if (st.length) {
-    const sReach = med(st.map(p => p.metrics.reach));
-    console.log(`\n   stories with metrics: ${st.length} · median reach ${fmtN(sReach)} (read at ${fmtN(med(st.map(p => p.metrics.age_h).filter(x => x != null)))} h)`);
-    for (const key of ['category', 'hook_archetype', 'slot']) {
+  // Readings grow with age, so comparisons use only readings taken at >= 18 h (W44); earlier ones are counted, not compared.
+  // Each group shows median reach and median views (views carry the signal where reach is always 0, e.g. @homingo.hackdays).
+  const stAll = posts.filter(p => p.kind === 'story' && p.metrics && p.metrics.reach != null);
+  const st = stAll.filter(p => (p.metrics.age_h || 0) >= 18);
+  if (stAll.length) {
+    const rv = g => `reach ${med(g.map(p => p.metrics.reach))} views ${med(g.map(p => p.metrics.views).filter(x => x != null))}`;
+    console.log(`\n   stories with metrics: ${stAll.length} (${stAll.length - st.length} early readings < 18 h left out) · ${st.length ? rv(st) : 'none at >= 18 h'} (read at ${fmtN(med(st.map(p => p.metrics.age_h).filter(x => x != null)))} h)`);
+    for (const key of st.length ? ['category', 'hook_archetype', 'slot'] : []) {
       const groups = {};
       for (const p of st) { const k = String(p[key]); (groups[k] = groups[k] || []).push(p); }
-      console.log('   by ' + key + ': ' + Object.entries(groups).map(([k, g]) => `${k} ${g.length}× reach ${med(g.map(p => p.metrics.reach))}`).join(' · '));
+      console.log('   by ' + key + ': ' + Object.entries(groups).sort((a, b) => b[1].length - a[1].length).map(([k, g]) => `${k} ${g.length}× ${rv(g)}`).join(' · '));
+    }
+    const sexp = st.filter(p => p.experiment);
+    if (sexp.length) {
+      console.log('   story experiments (>= 18 h):');
+      sexp.forEach(p => console.log(`   ${p.date} s${p.slot} reach ${p.metrics.reach} views ${p.metrics.views}: ${String(p.experiment).slice(0, 90)}`));
     }
   }
   const exps = car.filter(p => p.experiment);

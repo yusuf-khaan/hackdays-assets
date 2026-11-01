@@ -1,2 +1,3 @@
 - 2026-10-23: render.js hardcodes chromium-1194; this sandbox had chromium-1243 (helper symlinked it). Consider auto-detecting /opt/pw-browsers/chromium-*.
 - 2026-W43 review: render.js now auto-detects /opt/pw-browsers/chromium-* (done 25 Oct, 61c499b). carousel.js still defaults to chromium-1194 and falls back to Playwright's own browser; give it the same lookup when carousels return.
+- 2026-W44 review: stats.js skips empty carousel tables, compares only story readings taken at >= 18 h, and shows views and story experiments (the stats.js item left over from W43). carousel.js Chromium lookup still waits for carousels to return. RUN.md "Making a story": motion-story experiment line.
