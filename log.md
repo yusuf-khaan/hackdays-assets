@@ -253,3 +253,7 @@
 - 2026-11-01 · homingo._ · story2 · sell: Your guitar has become a coat hook. · scheduled 20:22
 - 2026-11-01 · homingo.verse · story2 · china: China, 132 CE: eight dragons each held a ball. An earthquake dropped one. · scheduled 21:47
 - 2026-10-31 · homingo._ · story2 · FAILED at 20:22 and not retried on 1 Nov: its "eight days to Diwali" line was no longer true; never went live
+- 2026-11-02 · homingo._ · story · find: Need a room? Just type "rent". · scheduled 08:22
+- 2026-11-02 · homingo.hackdays · story · promotion: who Hack Days is for (16+, online, solo or 2-4) · scheduled 07:40
+- 2026-11-02 · surgelabs_ · story · pattern: The request is sent twice. Why is only one order made? · scheduled 07:40
+- 2026-11-02 · homingo.verse · story · mythology: Four Pandavas drank from the lake. A crane had asked them to answer first. · scheduled 08:47
