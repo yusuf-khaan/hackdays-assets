@@ -257,3 +257,7 @@
 - 2026-11-02 · homingo.hackdays · story · promotion: who Hack Days is for (16+, online, solo or 2-4) · scheduled 07:40
 - 2026-11-02 · surgelabs_ · story · pattern: The request is sent twice. Why is only one order made? · scheduled 07:40
 - 2026-11-02 · homingo.verse · story · mythology: Four Pandavas drank from the lake. A crane had asked them to answer first. · scheduled 08:47
+- 2026-11-02 · homingo.hackdays · story2 · builder-tip: builder tip: end the demo video on the finished result and the repo link, not a  · contrast · scheduled 19:40
+- 2026-11-02 · surgelabs_ · story2 · myth-vs-fact: myth vs fact: committing the removal of a secret file does not remove it from gi · paradox · scheduled 19:40
+- 2026-11-02 · homingo._ · story2 · app: app: My Ads shows views and inquiries on every ad (real My Ads screenshot, Total · you-in-it · scheduled 20:22
+- 2026-11-02 · homingo.verse · story2 · technology: on this day: 2 Nov 1936 the BBC Television Service went on air from Alexandra Pa · withheld-name · scheduled 21:47
