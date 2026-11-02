@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>SurgeLabs story: deleted key</title>
+<link rel="stylesheet" href="../../tools/fonts.css">
+<style>
+:root{--bg:#0A0A0C;--fg:#F2F2F0;--teal:#2DD4BF;--purple:#A78BFA;--muted:#9A9AA3;--soft:#C8C8CE;--line:#2A2A31;--grid:#16161B}
+html,body{margin:0;background:var(--bg)}
+.frame{width:1080px;height:1920px;position:relative;overflow:hidden;color:var(--fg);font-family:Sans;background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:90px 90px}
+.glow{position:absolute;width:1100px;height:1000px;pointer-events:none}
+.top{position:absolute;left:72px;right:72px;top:270px;display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mark{font-family:Sans;font-weight:600;font-size:34px;letter-spacing:-.045em;text-transform:none;color:var(--fg)}
+.mark span{color:var(--teal)}
+h1{position:absolute;left:72px;right:72px;top:350px;font-size:96px;font-weight:600;letter-spacing:-.045em;line-height:1.03;margin:0}
+.t{color:var(--teal)}
+.sub{display:block;font-size:34px;line-height:1.35;color:var(--soft);font-weight:400;letter-spacing:0;margin-top:26px}
+.con{position:absolute;left:72px;right:72px;top:880px;background:#111114;border:1px solid var(--line);border-radius:22px;font-family:Mono;overflow:hidden}
+.con .bar{padding:18px 30px;border-bottom:1px solid var(--line);font-size:21px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;display:flex;justify-content:space-between}
+.ln{padding:13px 30px;font-size:27px;color:var(--soft);white-space:nowrap}
+.ln b{color:var(--purple);font-weight:500}
+.ln.out{color:var(--fg);padding-left:62px}
+.ln.out em{font-style:normal;color:var(--teal)}
+.ln.hot{background:rgba(45,212,191,.09)}
+.fix{position:absolute;left:72px;right:72px;top:1385px;font-size:31px;line-height:1.4;color:var(--soft)}
+.fix b{color:var(--fg);font-weight:600}
+.foot{position:absolute;left:72px;right:72px;top:1500px;font-family:Mono;font-size:23px;line-height:1.7;color:var(--muted)}
+</style></head>
+<body><div class="frame">
+<div class="glow" style="left:-300px;top:-200px;background:radial-gradient(closest-side,rgba(139,108,255,.22),transparent)"></div>
+<div class="glow" style="right:-400px;bottom:-200px;background:radial-gradient(closest-side,rgba(45,212,191,.14),transparent)"></div>
+<div class="top"><div class="mark"><span>&#9632;</span> SURGELABS</div><div>Myth vs fact</div></div>
+<h1>You deleted the key from the repo. <span class="t">Git still has it.</span><span class="sub">Myth: &ldquo;I committed the removal, so it&rsquo;s gone.&rdquo;</span></h1>
+<div class="con">
+<div class="bar"><span>Run locally &middot; fake key</span><span>git 2.43</span></div>
+<div class="ln"><b>$</b> git rm .env &amp;&amp; git commit -m "remove env"</div>
+<div class="ln"><b>$</b> git log --oneline -- .env</div>
+<div class="ln out">2ef03be remove env</div>
+<div class="ln out">00f8681 add env</div>
+<div class="ln hot"><b>$</b> git show 00f8681:.env</div>
+<div class="ln out hot"><em>API_KEY=sk_test_demo</em></div>
+</div>
+<div class="fix"><b>Fix:</b> treat a committed secret as leaked. Rotate the key first, then clean the history.</div>
+<div class="foot">Sources: GitHub Docs (removing sensitive data), Oasis Security<br>surgeit.co.in &middot; Follow @homingo.hackdays</div>
+</div></body></html>
