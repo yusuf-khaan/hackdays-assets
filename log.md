@@ -261,3 +261,7 @@
 - 2026-11-02 · surgelabs_ · story2 · myth-vs-fact: myth vs fact: committing the removal of a secret file does not remove it from gi · paradox · scheduled 19:40
 - 2026-11-02 · homingo._ · story2 · app: app: My Ads shows views and inquiries on every ad (real My Ads screenshot, Total · you-in-it · scheduled 20:22
 - 2026-11-02 · homingo.verse · story2 · technology: on this day: 2 Nov 1936 the BBC Television Service went on air from Alexandra Pa · withheld-name · scheduled 21:47
+- 2026-11-03 · homingo.hackdays · story · how-it-works: Two links make a submission. · number · scheduled 07:40
+- 2026-11-03 · surgelabs_ · story · quiz: Sort three numbers. Which order comes back? · question · scheduled 07:40
+- 2026-11-03 · homingo._ · story · sell: Your cooler is asleep till summer. · you-in-it · scheduled 08:22
+- 2026-11-03 · homingo.verse · story · space: 69 years ago today, an animal went round the Earth for the first time. · withheld-name · scheduled 08:47
