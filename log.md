@@ -270,3 +270,4 @@
 - 2026-11-04 · homingo._ · story · find: Moved in. Now it echoes. · twist · scheduled 08:22 (repair run)
 - 2026-11-04 · homingo.verse · story · indian-history: Shampoo began as an order in Hindi. · paradox · scheduled 08:47 (repair run)
 - 2026-11-04 · repair · 04:52 morning batch and 3 Nov evening run left no posts (3 Nov story 2 never went live on any account); cause not visible from the cloud (likely missed/usage-limited runs)
+- 2026-11-04 · homingo._ · story 1 FAILED at 08:22 (media not found); publish_post retry published it at 10:31
