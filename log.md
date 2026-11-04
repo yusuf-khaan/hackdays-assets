@@ -265,3 +265,8 @@
 - 2026-11-03 · surgelabs_ · story · quiz: Sort three numbers. Which order comes back? · question · scheduled 07:40
 - 2026-11-03 · homingo._ · story · sell: Your cooler is asleep till summer. · you-in-it · scheduled 08:22
 - 2026-11-03 · homingo.verse · story · space: 69 years ago today, an animal went round the Earth for the first time. · withheld-name · scheduled 08:47
+- 2026-11-04 · homingo.hackdays · story · benefits: A certificate you can scan. · curiosity-gap · NOT scheduled: account needs reconnecting (repair run)
+- 2026-11-04 · surgelabs_ · story · explainer: Same call. Different answer. · paradox · scheduled 07:40 (repair run)
+- 2026-11-04 · homingo._ · story · find: Moved in. Now it echoes. · twist · scheduled 08:22 (repair run)
+- 2026-11-04 · homingo.verse · story · indian-history: Shampoo began as an order in Hindi. · paradox · scheduled 08:47 (repair run)
+- 2026-11-04 · repair · 04:52 morning batch and 3 Nov evening run left no posts (3 Nov story 2 never went live on any account); cause not visible from the cloud (likely missed/usage-limited runs)
