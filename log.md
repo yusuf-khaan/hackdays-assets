@@ -276,3 +276,7 @@
 - 2026-11-04 · homingo.verse · story2 · china: A clock tower ran on falling water. · withheld-name · scheduled 21:47
 - 2026-11-04 · homingo.hackdays · story 1 and story 2 NOT live: account still needs reconnecting in Instahook (token rejected); story 2 not made
 - 2026-11-04 · evening · trend scan (3 searches): no fitting mass-reaction signal; no trend story
+- 2026-11-05 · surgelabs_ · story · myth-vs-fact: One flag. Three lengths. · paradox · scheduled 07:40
+- 2026-11-05 · homingo._ · story · download: 1,000+ listings. One search away. · number · scheduled 08:22
+- 2026-11-05 · homingo.verse · story · space: 13 years ago today, India left for Mars. · payoff · scheduled 08:47
+- 2026-11-05 · homingo.hackdays · story · track-spotlight: Prompt in. Real users out. · payoff · NOT scheduled: account still needs reconnecting (INSTAGRAM_ACCOUNT_INACTIVE); image ready at bb905a0
