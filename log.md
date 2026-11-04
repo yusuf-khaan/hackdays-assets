@@ -271,3 +271,8 @@
 - 2026-11-04 · homingo.verse · story · indian-history: Shampoo began as an order in Hindi. · paradox · scheduled 08:47 (repair run)
 - 2026-11-04 · repair · 04:52 morning batch and 3 Nov evening run left no posts (3 Nov story 2 never went live on any account); cause not visible from the cloud (likely missed/usage-limited runs)
 - 2026-11-04 · homingo._ · story 1 FAILED at 08:22 (media not found); publish_post retry published it at 10:31
+- 2026-11-04 · surgelabs_ · story2 · humour: All tests passed. Nothing was tested. · paradox · scheduled 19:40
+- 2026-11-04 · homingo._ · story2 · lucknow: In Lucknow, we share. · payoff · scheduled 20:22
+- 2026-11-04 · homingo.verse · story2 · china: A clock tower ran on falling water. · withheld-name · scheduled 21:47
+- 2026-11-04 · homingo.hackdays · story 1 and story 2 NOT live: account still needs reconnecting in Instahook (token rejected); story 2 not made
+- 2026-11-04 · evening · trend scan (3 searches): no fitting mass-reaction signal; no trend story
